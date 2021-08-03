@@ -4,10 +4,6 @@
 
 - 
 
-## Linked Project Board issues (if any)
-
-- 
-
 ## Issues, comments, questions, or concerns (if any)
 
 - 
