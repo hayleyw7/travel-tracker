@@ -1,7 +1,7 @@
 import chai from 'chai';
 const expect = chai.expect;
 
-import Traveler from '../src/Trip.js';
+import Trip from '../src/Trip.js';
 
 describe('Trip', () => {
   // beforeEach(() => {
