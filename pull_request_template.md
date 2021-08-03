@@ -1,10 +1,14 @@
 # Pull Request
 
-## What (if any) features are you implementing, or what did you refactor?
+## What was implemented, refactored, or otherwise changed (if any)
 
 - 
 
-## Any issues, comments, questions, or concerns?
+## Linked Project Board issues (if any)
+
+- 
+
+## Issues, comments, questions, or concerns (if any)
 
 - 
 
@@ -16,7 +20,7 @@
 - [ ] Refactor
 - [ ] Setup
 
-## How Has This Been Tested?
+## How tested
 - [ ] View in browser
 - [ ] console.log()
 - [ ] Dev tools
