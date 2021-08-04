@@ -44,10 +44,21 @@ describe('Traveler', () => {
     expect(traveler0.id).to.equal(1);
   });
 
-  it('should initialize with a type', function() {
+  it('should get traveler type', function() {
     instantiateTraveler()
 
     expect(traveler0.travelerType).to.equal('relaxer');
   });
 
+  it('should initialize with empty trips array', function() {
+    instantiateTraveler()
+
+    expect(traveler0.trips).to.deep.equal([]);
+  });
+
+  it('should initialize with 0 spent this year', function() {
+    instantiateTraveler()
+
+    expect(traveler0.spentThisYear).to.equal(0);
+  });
 });
