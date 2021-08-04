@@ -5,6 +5,7 @@ class Traveler {
     this.id = travelersData.id,
     this.name = travelersData.name,
     this.travelerType = travelersData.travelerType,
+    this.trips = [],
     this.currentTrip = [],
     this.pendingTrips = [],
     this.pastTrips = [],
@@ -14,6 +15,23 @@ class Traveler {
   getName() {
     return this.name[0];
   }
+
+  getPastTrips() {
+
+  }
+
+  getCurrentTrip() {
+
+  }
+
+  getPendingTrips() {
+
+  }
+
+  getSpentThisYear() {
+
+  }
+
 }
 
 export default Traveler;
