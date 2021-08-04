@@ -56,12 +56,6 @@ describe('Traveler', () => {
     expect(traveler0.trips).to.deep.equal([]);
   });
 
-    it('should initialize with empty trips array', function() {
-    instantiateTraveler()
-
-    expect(traveler0.trips).to.deep.equal([]);
-  });
-
     it('should initialize with empty currentTrip array', function() {
     instantiateTraveler()
 
