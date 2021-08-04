@@ -1,7 +1,7 @@
 import Trip from '../src/Trip.js';
 
 class Traveler {
-  constructor(travelersData) {
+  constructor(travelersData, destinationsData) {
     this.id = travelersData.id,
     this.name = travelersData.name,
     this.travelerType = travelersData.travelerType,
@@ -10,17 +10,34 @@ class Traveler {
     this.pendingTrips = [],
     this.pastTrips = [],
     this.spentThisYear = 0
+    this.destinationsData = destinationsData;
   }
 
   getName() {
     return this.name.split(' ')[0];
   }
 
-  getTrips() {
+  getTrips(trips, destinationsData) {
+    let trip = new Trip(tripsData[0], destinationData[0]);
+    // let tripDestination
 
-    return this.trips;
-  }
+    // const destinationsVar = destinationsData;
 
+    // const result = destinationsVar.find(destination => {
+      // let trip0 = new Trip(tripsData[0], destinationsData)
+
+      // if (trip0.destinationID = destination.id) {
+        // tripDestination = destination
+    //   }
+    // })
+    // if (trip0.userID === this.id) {
+      this.trips.push(trip)
+    // }
+
+    // return result;
+    }
+  
+  
   getPastTrips() {
 
     return this.pastTrips;
@@ -40,7 +57,6 @@ class Traveler {
 
     return this.spentThisYear;
   }
-
 }
 
 export default Traveler;
