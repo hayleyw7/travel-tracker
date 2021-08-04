@@ -8,4 +8,4 @@
 
 console.log('This is the JavaScript entry file - your code begins here.');
 
-import Traveler from './Traveler.js'
+// import Traveler from './Traveler.js'
