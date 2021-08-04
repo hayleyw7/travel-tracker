@@ -17,13 +17,6 @@ class Traveler {
   }
 
   getTrips() {
-    allTrips.forEach(trip => {
-      if (trip.userID === this.id) {
-        this.trips.push(new Trip(trip));
-      }
-    });
-    this.trips.forEach(trip => trip.getTripDates());
-    this.sortTripsByDate();
 
     return this.trips;
   }
