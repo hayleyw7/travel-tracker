@@ -79,4 +79,10 @@ describe('Traveler', () => {
 
     expect(traveler0.spentThisYear).to.equal(0);
   });
+
+  it('should push to trips array', function() {
+    instantiateTraveler()
+
+    expect(traveler0.getTrips(trips, destinationsData).length).to.equal(1);
+  });
 });
