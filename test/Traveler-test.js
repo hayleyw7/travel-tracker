@@ -56,6 +56,30 @@ describe('Traveler', () => {
     expect(traveler0.trips).to.deep.equal([]);
   });
 
+    it('should initialize with empty trips array', function() {
+    instantiateTraveler()
+
+    expect(traveler0.trips).to.deep.equal([]);
+  });
+
+    it('should initialize with empty currentTrip array', function() {
+    instantiateTraveler()
+
+    expect(traveler0.currentTrip).to.deep.equal([]);
+  });
+
+    it('should initialize with empty pendingTrips array', function() {
+    instantiateTraveler()
+
+    expect(traveler0.pendingTrips).to.deep.equal([]);
+  });
+
+    it('should initialize with pastTrips array', function() {
+    instantiateTraveler()
+
+    expect(traveler0.pastTrips).to.deep.equal([]);
+  });
+
   it('should initialize with 0 spent this year', function() {
     instantiateTraveler()
 
