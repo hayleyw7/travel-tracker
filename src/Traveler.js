@@ -10,6 +10,10 @@ class Traveler {
     this.pastTrips = [],
     this.spentThisYear = 0
   }
+
+  getName() {
+    return this.name[0];
+  }
 }
 
 export default Traveler;
