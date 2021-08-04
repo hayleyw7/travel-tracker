@@ -13,7 +13,7 @@ class Traveler {
   }
 
   getName() {
-    return this.name[0];
+    return this.name.split(' ')[0];
   }
 
   getPastTrips() {

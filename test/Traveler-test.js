@@ -13,9 +13,15 @@ describe('Traveler', () => {
   });
 
   it('should be an instance of Traveler', function() {
-    const traveler = new Traveler(travelersData.travelers[0]);
+    const traveler0 = new Traveler(travelersData.travelers[0]);
 
-    expect(traveler).to.be.an.instanceof(Traveler);
+    expect(traveler0).to.be.an.instanceof(Traveler);
+  });
+
+    it('should get Traveler name', function() {
+    const traveler0 = new Traveler(travelersData.travelers[0]);
+
+    expect(traveler0.getName()).to.equal('Ham')
   });
 
 });
