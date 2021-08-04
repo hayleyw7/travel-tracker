@@ -1,4 +1,4 @@
-// import Trip from '../src/Trip.js';
+import Trip from '../src/Trip.js';
 
 class Traveler {
   constructor(travelersData) {
@@ -16,20 +16,36 @@ class Traveler {
     return this.name.split(' ')[0];
   }
 
+  getTrips() {
+    allTrips.forEach(trip => {
+      if (trip.userID === this.id) {
+        this.trips.push(new Trip(trip));
+      }
+    });
+    this.trips.forEach(trip => trip.getTripDates());
+    this.sortTripsByDate();
+
+    return this.trips;
+  }
+
   getPastTrips() {
 
+    return this.pastTrips;
   }
 
   getCurrentTrip() {
 
+    return this.currentTrip;
   }
 
   getPendingTrips() {
 
+    return this.pendingTrips;
   }
 
   getSpentThisYear() {
 
+    return this.spentThisYear;
   }
 
 }
