@@ -6,6 +6,7 @@ const expect = chai.expect;
 const travelers = require('../src/travelers');
 const trips = require('../src/trips');
 
+
 const data = travelers.find(traveler => traveler.id === 1)
 
 const bob = new Traveler(data, trips);
