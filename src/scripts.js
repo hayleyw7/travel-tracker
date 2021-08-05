@@ -7,19 +7,18 @@ import './css/base.scss';
 // import './css/styles.scss';
 
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)
-import './images/turing-logo.png'
+// import './images/turing-logo.png'
 
 
 
 
-import {
-  fetchData,
-  postTravelerData,
-  postDestinationData,
-  postSleepData
-} from './apiCalls';
+// import {
+//   fetchData,
+//   postTravelerData,
+//   postDestinationData,
+//   postTripData
+// } from './apiCalls';
 
-import User from './User';
 import Traveler from './Traveler';
 import Trip from './Trip';
 import domUpdates from './domUpdates';
@@ -29,7 +28,7 @@ import domUpdates from './domUpdates';
 //   hydrationButton
 // } = domUpdates;
 
-window.addEventListener('load', returnData);
+// window.addEventListener('load', returnData);
 
 let travelers, trips, destinations, activityData, currentUser, userRepo, currentUserId, currentDate, startDate;
 
