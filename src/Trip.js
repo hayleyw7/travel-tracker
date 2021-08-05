@@ -12,16 +12,15 @@ const data = travelers.find(traveler => traveler.id === 1)
 const bob = new Traveler(data, trips);
 
 class Trip {
-  constructor(tripsData, destinationsData) {
-    this.id = tripsData.id,
-    this.userID = tripsData.userID,
-    this.destinationID = tripsData.destinationID,
-    this.travelers = tripsData.travelers,
-    this.date = tripsData.date,
-    this.duration = tripsData.duration,
-    this.status = tripsData.status,
-    this.destinationsData = destinationsData
+  constructor(tripData) {
+    this.tripData = tripData
+    // maybe pass in destinations later?
+    // this.destinations = destinations
   }
+
+  // findTripByUser() {
+    // might have to make this to access specific trip inside that big trip array
+  // }
 }
 
 export default Trip;
