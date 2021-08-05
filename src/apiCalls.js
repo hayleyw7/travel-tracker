@@ -35,4 +35,20 @@ export function postTravelerData(travelerID, travelerName, travelerType) {
       'Content-type': 'application/json'
     }
   })
+
+  export function postDestiationData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg) {
+  let body = {
+    "id": destinationID,
+    "destination": destinationLocation,
+    "estimatedLodgingCostPerDay": dailyLodgingCost,
+    "estimatedFlightCostPerPerson": flightTicketCost,
+    "image": destinationImg
+  }
+  return fetch(`http://localhost:3001/api/v1/destinations`, {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: {
+      'Content-type': 'application/json'
+    }
+  })
 }
