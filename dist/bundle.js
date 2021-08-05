@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
-/******/ })()
-;
+  var __webpack_exports__ = {};
+  /******/
+})()
+  ;

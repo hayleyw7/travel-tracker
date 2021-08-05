@@ -1,7 +1,4 @@
-
-16 lines (14 sloc)  504 Bytes
-  
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,7 +18,7 @@
     </section>
     <section class='navbar-right'>
       <section class='username-section'>
-        <!-- <img src='./assets/recipient-icon.png' alt='Recipient icon' class='navbar-icon'> -->
+        <img src='./assets/recipient-icon.png' alt='Recipient icon' class='navbar-icon'>
         <p class='username'>[Name]</p>
       </section>
       <section class='logo-section'>
@@ -37,7 +34,7 @@
 
       <article class='card'>
         <article class='photo-container'>
-          <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'> -->
+           <img src='destination-pic' alt='Destination photo' class='destination-photo'> 
         </article>
         <article class='recipient-info-container'>
           <h1 class='recipient-name'>[DESTINATION NAME]</h1>
@@ -59,7 +56,7 @@
 
       <article class='card'>
         <article class='photo-container'>
-          <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'> -->
+           <img src='destination-pic' alt='Destination photo' class='destination-photo'> 
         </article>
         <article class='recipient-info-container'>
           <h1 class='recipient-name'>[DESTINATION NAME]</h1>
@@ -69,7 +66,7 @@
       
       <article class='card'>
         <article class='photo-container'>
-          <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'> -->
+           <img src='destination-pic' alt='Destination photo' class='destination-photo'> 
         </article>
         <article class='recipient-info-container'>
           <h1 class='recipient-name'>[DESTINATION NAME]</h1>
@@ -88,7 +85,7 @@
 
       <article class='card'>
         <article class='photo-container'>
-          <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'> -->
+           <img src='destination-pic' alt='Destination photo' class='destination-photo'> 
         </article>
         <article class='recipient-info-container'>
           <h1 class='recipient-name'>[DESTINATION NAME]</h1>
@@ -98,7 +95,7 @@
       
       <article class='card'>
         <article class='photo-container'>
-          <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'> -->
+           <img src='destination-pic' alt='Destination photo' class='destination-photo'> 
         </article>
         <article class='recipient-info-container'>
           <h1 class='recipient-name'>[DESTINATION NAME]</h1>
@@ -110,6 +107,36 @@
 
 
   <script src="bundle.js"></script>
+
+</body>
+</html>   -->
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack Starter Kit</title>
+</head>
+<body>
+  <img src="./images/turing-logo.png" alt="turing logo" height="100px" width="100px">
+
+  <!-- Do not include the index.js or main.bundle.js file here - it is done automatically by the webpack server -->
+  <script src="bundle.js"></script>
+
+  <script>
+    function hello() {
+      fetch('http://localhost:3001/api/v1/travelers/1')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("output").innerHTML = data.name;
+      })
+    }
+  </script>
+  <button onclick="hello()">Click me</button>
+  <p id="output"></p>
 
 </body>
 </html>
