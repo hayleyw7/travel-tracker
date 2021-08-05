@@ -36,7 +36,7 @@ export function postTravelerData(travelerID, travelerName, travelerType) {
     }
   })
 
-  export function postDestiationData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg) {
+  export function postDestinationData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg) {
   let body = {
     "id": destinationID,
     "destination": destinationLocation,

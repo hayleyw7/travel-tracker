@@ -4,6 +4,7 @@
 
 // An example of how you tell webpack to use a CSS (SCSS) file
 import './css/base.scss';
+// import './css/styles.scss';
 
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)
 import './images/turing-logo.png'
@@ -11,46 +12,32 @@ import './images/turing-logo.png'
 
 
 
+import {
+  fetchData,
+  postTravelerData,
+  postDestinationData,
+  postSleepData
+} from './apiCalls';
 
-// import './css/styles.scss';
-
-// import {
-//   fetchData,
-//   postHydrationData,
-//   postActivityData,
-//   postSleepData
-// } from './apiCalls';
-
-// import User from './User';
-// import Activity from './Activity';
-// import Hydration from './Hydration';
-// import Sleep from './Sleep';
-// import UserRepo from './User-repo';
-// import domUpdates from './domUpdates';
+import User from './User';
+import Traveler from './Traveler';
+import Trip from './Trip';
+import domUpdates from './domUpdates';
 
 // const {
-//   hydrationButton,
-//   hydrationInput,
-//   hydrationHeader,
-//   activityButton,
-//   stepsInput,
-//   minInput,
-//   stairsInput,
-//   activityHeader,
-//   sleepButton,
-//   hrInput,
-//   qualInput,
-//   sleepHeader
+//  html item names here (example below)
+//   hydrationButton
 // } = domUpdates;
 
-// window.addEventListener('load', returnData);
-// hydrationButton.addEventListener('click', postHydrationInputs)
+window.addEventListener('load', returnData);
 
-// let userData, hydrationData, sleepData, activityData, currentUser, userRepo, currentUserId, currentDate, startDate;
+let travelers, trips, destinations, activityData, currentUser, userRepo, currentUserId, currentDate, startDate;
 
-// function getData() {
-//   return Promise.all([fetchData('users'), fetchData('hydration'), fetchData('sleep'), fetchData('activity')]);
-// }
+function getData() {
+  return Promise.all([fetchData('travelers'), fetchData('trips'), fetchData('destinations')]);
+}
+
+// idk what to put below
 
 // function returnData() {
 //   getData()
@@ -64,46 +51,79 @@ import './images/turing-logo.png'
 //     }).then(startApp);
 // }
 
+// add parameters/arguments
+
 // function startApp() {
-//   let hydrationRepo = new Hydration(hydrationData);
-//   let sleepRepo = new Sleep(sleepData);
+//   let traveler = new Traveler()
+//   let trip = new Trip()
 
-//   displayHistoricalWeek(randomHistory);
-//   addInfoToSidebar(currentUser, userRepo);
+///
+
+// add name functions
+
+//   addName(currentUser, userRepo);
 // }
 
-// function displayHistoricalWeek(randomHistory) {
-//   domUpdates.renderHistoricalWeek(randomHistory);
-// }
-
-// function addInfoToSidebar(user, userStorage) {
-//   const avStepGoal = userStorage.calculateAverageStepGoal();
+// function addName() {
 //   displayFirstName(user);
-//   displayInfoCard(user.name, user.address, user.email, user.strideLength, user.dailyStepGoal, avStepGoal);
 // }
 
 // function displayFirstName(user) {
 //   domUpdates.renderFirstName(user);
 // }
 
-// function postHydrationInputs() {
-//   if (hydrationInput.value > 0 && hydrationInput.value < 200) {
-//     postHydrationData(currentUserId, currentDate, hydrationInput.value)
-//       .then((response) => {
-//         if (!response.ok) {
-//           throw Error(response.statusText);
-//         } else {
-//           hydrationHeader.innerText = "Great job! You have submitted your hydration data!"
-//           domUpdates.renderSubmittedHydration(hydrationInput.value)
-//         }
-//       })
-//       .catch(error => {
-//         hydrationHeader.innerText = "Could not Fetch :( Check Internet?";
-//         console.log(error)
-//       })
-//   } else if (hydrationInput.value > 200) {
-//     hydrationHeader.innerText = "Calm down Aquaman - Input too high!"
-//   } else {
-//     hydrationHeader.innerText = "Please enter a number 0 or higher"
-//   }
+//
+
+function postTravelerInputs() {
+  postTravelerData(travelerID, travelerName, travelerType)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      } else {
+        // hydrationHeader.innerText = "Success"
+        // domUpdates.renderSubmittedHydration(hydrationInput.value)
+      }
+    })
+    .catch(error => {
+      // hydrationHeader.innerText = "Fail";
+      console.log(error)
+    })
+}
+
+function postTripInputs() {
+  postTripData(tripID, tripTravelerID, destinationID, numTravelers, tripDate, tripDuration, travelerStatus, tripStatus, suggestedActivities)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      } else {
+        // hydrationHeader.innerText = "Success"
+        // domUpdates.renderSubmittedHydration(hydrationInput.value)
+      }
+    })
+    .catch(error => {
+      // hydrationHeader.innerText = "Fail";
+      console.log(error)
+    })
+}
+
+function postDestinationInputs() {
+  postTravelerData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      } else {
+        // hydrationHeader.innerText = "Success"
+        // domUpdates.renderSubmittedHydration(hydrationInput.value)
+      }
+    })
+    .catch(error => {
+      // hydrationHeader.innerText = "Fail";
+      console.log(error)
+    })
+}
+
+
+
+// function displayHistoricalWeek(randomHistory) {
+//   domUpdates.renderHistoricalWeek(randomHistory);
 // }
