@@ -9,15 +9,14 @@ import './css/base.scss';
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)
 // import './images/turing-logo.png'
 
+//////////////
 
-
-
-// import {
-//   fetchData,
-//   postTravelerData,
-//   postDestinationData,
-//   postTripData
-// } from './apiCalls';
+import {
+  fetchData
+  // postTravelerData,
+  // postDestinationData,
+  // postTripData
+} from './apiCalls';
 
 import Traveler from './Traveler';
 import Trip from './Trip';
@@ -28,9 +27,9 @@ import domUpdates from './domUpdates';
 //   hydrationButton
 // } = domUpdates;
 
-// window.addEventListener('load', returnData);
+window.addEventListener('load', returnData);
 
-let travelers, trips, destinations, activityData, currentUser, userRepo, currentUserId, currentDate, startDate;
+let travelers, trips, destinations
 
 function getData() {
   return Promise.all([fetchData('travelers'), fetchData('trips'), fetchData('destinations')]);
@@ -38,23 +37,25 @@ function getData() {
 
 // idk what to put below
 
-// function returnData() {
-//   getData()
-//     .then(promiseArray => {
-//       userData = promiseArray[0].userData;
-//       userRepo = new UserRepo(userData);
-//       currentUser = new User(userRepo.getDataFromID(2));
-//       currentUserId = currentUser.id;
-//       currentDate = "2020/01/22";
-//       startDate = "2020/01/15";
-//     }).then(startApp);
-// }
+function returnData() {
+  getData()
+    .then(promiseArray => {
+      travelers = promiseArray[0].travelers;
+      trips = promiseArray[1].trips;
+      destinations = promiseArray[2].destinations;
+      // currentUserId = currentUser.id;
+      // currentDate = "2020/01/22";
+      // startDate = "2020/01/15";
+    })
+    // .then(startApp);
+}
 
 // add parameters/arguments
 
 // function startApp() {
 //   let traveler = new Traveler()
 //   let trip = new Trip()
+// }
 
 ///
 
