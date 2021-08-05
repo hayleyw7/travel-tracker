@@ -1,7 +1,215 @@
-/* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-;
+// /* This is an example of using Sass, otherwise plain CSS works too*/
+// $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+// ;
+
+// body {
+//   background: $primary-background;
+// }
+
+/* UTILITY */
+
+:root {
+  --white: #FFF;
+  --black: #000000;
+  --mediumgray: #828282;
+  --darkgray: #222222;
+  --lightgray: #DCDCDC;
+  --blue: #ABEAE1;
+  --pink: #FFC0CB;
+  --green: #E5F3B3;
+}
 
 body {
-  background: $primary-background;
+  background: var(--darkgray);
+  color: var(--darkgray);
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: var(--pink);
+  color: var(--darkgray);
+  flex-direction: row;
+  height: 15rem;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  display: grid;
+  padding: 1.5em 0 0 0;
+  margin: 0 0 0 0;
+  width: 40rem;
+}
+
+.navbar-right {
+  width: 20rem;
+}
+
+.username-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0.5rem 2.2rem 0 0;
+}
+
+.username {
+  margin: 0.7rem 0 0 0;
+}
+
+.navbar-links-section {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.6rem;
+  margin: 0 0 0 0.6rem;
+  padding: 0;
+}
+
+.navbar-icon {
+  height: 1.3rem;
+  padding: 0.5rem;
+  width: 1.3rem;
+}
+
+.logo-icon {
+  height: 4rem;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 2.1rem 0.5rem 0 0.8rem;
+  width: 4rem;
+}
+
+.logo-section {
+  display: flex;
+  font-size: 2.3rem;
+  justify-content: flex-end;
+}
+
+/* MAIN */
+
+h3 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin: 1.9rem 0 1rem 0;
+  padding: 0 0 0 1.3rem;
+}
+
+.card-container-1,
+.card-container-2 {
+  display: grid;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0.5rem; 
+}
+
+.card-container-2 {
+  margin-bottom: 1rem;  
+}
+
+.card {
+  background: var(--white);
+  border: 1px var(--lightgray) solid;
+  margin: 0.3rem;
+  width: 20rem;
+}
+
+/* ON CARD */
+
+/* photo section */
+
+.recipient-info-container {
+  max-width: 20rem;
+  padding: 1rem;
+}
+
+.recipient-photo {
+  margin: 0;
+  width: 20rem;
+}
+
+.photo-container {
+  position: relative;
+}
+
+.right-arrow {
+  background: var(--blue);
+  border-radius: 10rem;
+  height: 3rem;
+  left: 0.5rem;
+  padding: 0.1rem;
+  position: absolute;
+  top: 0.5rem;
+  width: 3rem;
+}
+
+.views,
+.num-views {
+  color: var(--white);
+  padding: 0;
+  position: absolute;
+}
+
+.views {
+  bottom: 11.4rem;
+  font-size: 0.8rem;
+  right: 0.9rem;
+}
+
+.num-views {
+  bottom: 7.9rem;
+  font-size: 2rem;
+  right: 1.1rem;
+}
+
+/* recipient info section */
+
+.recipient-name {
+  margin: 0;
+}
+
+.date-time {
+  color: var(--mediumgray);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.recipient-link {
+  background: var(--green);
+  padding: 0.5rem
+}
+
+.play-attach {
+  font-size: 0.8rem;
+}
+
+.num-attachments {
+  color: var(--blue);
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (min-width: 680px) {
+
+  .card-container-1,
+  .card-container-2 {
+    display: flex;
+  }
+
+  .navbar {
+    display: flex;
+    margin: 0;
+  }
+ 
+  .navbar-links-section {
+    display: flex;
+    margin: 5rem 0 0 1.3rem;
+  }
+
+  .navbar {
+    height: 11rem;
+  }
 }
