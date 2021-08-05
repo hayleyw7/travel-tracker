@@ -30,6 +30,7 @@
     "lint": "./node_modules/.bin/eslint 'src/**.js' 'test/**.js'"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.6.1"
   }
 }
