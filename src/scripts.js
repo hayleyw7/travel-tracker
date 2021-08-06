@@ -1,8 +1,206 @@
-  
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
+import './css/base.scss';
+// import './css/styles.scss';
 
-// An example of how you tell webpack to use a CSS (SCSS) file
+// ***** QUERY SELECTORS *****
+
+// NAVBAR
+
+const yourTripsBtn = document.querySelector('#yourTripsBtn');
+const tripPlannerBtn = document.querySelector('#tripPlannerBtn');
+
+// LOGIN PAGE
+
+const loginFormUsername = document.querySelector('#loginFormUsername');
+const loginFormPassword = document.querySelector('#loginFormPassword');
+const loginFormSubmitBtn = document.querySelector('#loginFormSubmitBtn');
+
+// WANNA JET PAGE
+
+// rps images
+
+const jetFormDate = document.querySelector('#jetFormDate');
+const jetFormDuration = document.querySelector('#jetFormDuration');
+const jetFormNumHumans = document.querySelector('#jetFormNumHumans');
+const jetFormDestination = document.querySelector('#jetFormDestination');
+const jetFormSubmitBtn = document.querySelector('#jetFormSubmitBtn');
+const estimatedCostHTML = document.querySelector('#estimatedCostHTML');
+
+// ***** EVENT LISTENERS *****
+
+// BUTTONS
+
+changeFormatBtn.addEventListener('click', showHomePage);
+startOverBtn.addEventListener('click', startOverListener);
+rpsBtn.addEventListener('click', rpsGamePage);
+mtgBtn.addEventListener('click', mtgGamePage);
+
+// IMAGES
+
+// rps images
+
+rpsImgRock.addEventListener('click', rpsHumanChoiceRock);
+rpsImgPaper.addEventListener('click', rpsHumanChoicePaper);
+rpsImgScissors.addEventListener('click', rpsHumanChoiceScissors);
+
+// mtg images
+
+mtgImgRock.addEventListener('click', mtgHumanChoiceRock);
+mtgImgScissors.addEventListener('click', mtgHumanChoiceScissors);
+mtgImgPaper.addEventListener('click', mtgHumanChoicePaper);
+mtgImgLizard.addEventListener('click', mtgHumanChoiceLizard);
+mtgImgAlien.addEventListener('click', mtgHumanChoiceAlien);
+
+// ***** FUNCTIONS *****
+
+// * HUMAN SELECTIONS *
+
+// RPS HUMAN SELECTIONS
+
+function rpsHumanChoiceRock() {
+  game.determineWinner('rock');
+}
+
+function rpsHumanChoicePaper() {
+  game.determineWinner('paper');
+}
+
+function rpsHumanChoiceScissors() {
+  game.determineWinner('scissors');
+}
+
+// MTG HUMAN SELECTIONS
+
+function mtgHumanChoiceRock() {
+  game.determineWinner('rock');
+}
+
+function mtgHumanChoicePaper() {
+  game.determineWinner('paper');
+}
+
+function mtgHumanChoiceScissors() {
+  game.determineWinner('scissors');
+}
+
+function mtgHumanChoiceLizard() {
+  game.determineWinner('lizard');
+}
+
+function mtgHumanChoiceAlien() {
+  game.determineWinner('alien');
+}
+
+// SHOW & HIDE HELPER FUNCTIONS
+
+function hide(elements) {
+  elements.forEach(element => {
+    element.classList.add('hidden');
+  });
+}
+
+function show(elements) {
+  elements.forEach(element => {
+    element.classList.remove('hidden');
+  });
+}
+
+// * HIDE & SHOW ELEMENTS *
+
+// FEATURES
+
+// rps game features
+
+function hideRpsGameFeatures() {
+  hide([rpsHeading, rpsImgRock, rpsImgScissors, rpsImgPaper]);
+}
+
+function showRpsGameFeatures() {
+  show([rpsHeading, rpsImgRock, rpsImgScissors, rpsImgPaper]);
+}
+
+// mtg game features
+
+function hideMtgGameFeatures() {
+  hide([mtgHeading, mtgImgRock, mtgImgPaper, mtgImgScissors, mtgImgLizard, mtgImgAlien]);
+}
+
+function showMtgGameFeatures() {
+  show([mtgHeading, mtgImgRock, mtgImgPaper, mtgImgScissors, mtgImgLizard, mtgImgAlien]);
+}
+
+// all game features
+
+function hideGameFeatures() {
+  hide([changeFormatBtn, rpsSelections, mtgSelections]);
+  hideRpsGameFeatures();
+  hideMtgGameFeatures();
+}
+
+// home features
+
+function hideHomeFeatures() {
+  hide([chooseFormatHeading, startOverBtn, mtgBtn, rpsBtn]);
+}
+
+function showHomeFeatures() {
+  show([chooseFormatHeading, startOverBtn, mtgBtn, rpsBtn]);
+}
+
+// PAGES
+
+// home page
+
+function showHomePage() {
+  hideGameFeatures();
+  showHomeFeatures();
+}
+
+// game pages
+
+function rpsGamePage() {
+  game.playRps();
+  hideHomeFeatures();
+  showRpsGameFeatures();
+  hide([rpsSelections, whoWon]);
+  show([changeFormatBtn]);
+}
+
+function mtgGamePage() {
+  game.playMtg();
+  hideHomeFeatures();
+  showMtgGameFeatures();
+  hide([mtgSelections, whoWon]);
+  show([changeFormatBtn]);
+}
+
+// selections pages
+
+function rpsSelectionsPage() {
+  hideRpsGameFeatures();
+  hideHomeFeatures();
+  show([rpsSelections, whoWon]);
+  hide([changeFormatBtn]);
+  setTimeout(function () { rpsGamePage(); }, 1200);
+}
+
+function mtgSelectionsPage() {
+  hideMtgGameFeatures();
+  hideHomeFeatures();
+  show([mtgSelections, whoWon]);
+  hide([changeFormatBtn]);
+  setTimeout(function () { mtgGamePage(); }, 1200);
+}
+
+// LOCAL STORAGE MGMT
+
+function startOverListener() {
+  game.startOver();
+}
+
+
+///////////////
+
+
 import './css/base.scss';
 // import './css/styles.scss';
 
@@ -121,9 +319,3 @@ function postDestinationInputs() {
       console.log(error)
     })
 }
-
-
-
-// function displayHistoricalWeek(randomHistory) {
-//   domUpdates.renderHistoricalWeek(randomHistory);
-// }
