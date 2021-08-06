@@ -59,6 +59,11 @@ body {
   margin: 0.7rem 0 0 0;
 }
 
+.navbar-links {
+  margin: 0 1rem 0 0;
+  padding: 0;
+}
+
 .navbar-links-section {
   display: flex;
   flex-direction: row;
@@ -119,12 +124,12 @@ h3 {
 
 /* photo section */
 
-.recipient-info-container {
+.destination-info-container {
   max-width: 20rem;
   padding: 1rem;
 }
 
-.recipient-photo {
+.destination-photo {
   margin: 0;
   width: 20rem;
 }
@@ -163,9 +168,9 @@ h3 {
   right: 1.1rem;
 }
 
-/* recipient info section */
+/* destination info section */
 
-.recipient-name {
+.destination-name {
   margin: 0;
 }
 
@@ -175,7 +180,7 @@ h3 {
   margin: 0;
 }
 
-.recipient-link {
+.destination-link {
   background: var(--green);
   padding: 0.5rem
 }
