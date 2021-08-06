@@ -5,8 +5,8 @@ import './css/base.scss';
 
 // NAVBAR
 
-const yourTripsBtn = document.querySelector('#yourTripsBtn');
-const tripPlannerBtn = document.querySelector('#tripPlannerBtn');
+const navBarYourTripsBtn = document.querySelector('#yourTripsBtn');
+const navBarTripPlannerBtn = document.querySelector('#tripPlannerBtn');
 
 // LOGIN PAGE
 
@@ -15,8 +15,6 @@ const loginFormPassword = document.querySelector('#loginFormPassword');
 const loginFormSubmitBtn = document.querySelector('#loginFormSubmitBtn');
 
 // WANNA JET PAGE
-
-// rps images
 
 const jetFormDate = document.querySelector('#jetFormDate');
 const jetFormDuration = document.querySelector('#jetFormDuration');
@@ -27,68 +25,26 @@ const estimatedCostHTML = document.querySelector('#estimatedCostHTML');
 
 // ***** EVENT LISTENERS *****
 
-// BUTTONS
+// NAVBAR
 
-changeFormatBtn.addEventListener('click', showHomePage);
-startOverBtn.addEventListener('click', startOverListener);
-rpsBtn.addEventListener('click', rpsGamePage);
-mtgBtn.addEventListener('click', mtgGamePage);
+navBarYourTripsBtn.addEventListener('click', functionhere);
+navBarTripPlannerBtn.addEventListener('click', functionhere);
 
-// IMAGES
+// LOGIN PAGE
 
-// rps images
+loginFormUsername.addEventListener('click', functionhere);
+loginFormPassword.addEventListener('click', functionhere);
+loginFormSubmitBtn.addEventListener('click', functionhere);
 
-rpsImgRock.addEventListener('click', rpsHumanChoiceRock);
-rpsImgPaper.addEventListener('click', rpsHumanChoicePaper);
-rpsImgScissors.addEventListener('click', rpsHumanChoiceScissors);
-
-// mtg images
-
-mtgImgRock.addEventListener('click', mtgHumanChoiceRock);
-mtgImgScissors.addEventListener('click', mtgHumanChoiceScissors);
-mtgImgPaper.addEventListener('click', mtgHumanChoicePaper);
-mtgImgLizard.addEventListener('click', mtgHumanChoiceLizard);
-mtgImgAlien.addEventListener('click', mtgHumanChoiceAlien);
+// WANNA JET PAGE
+jetFormDate.addEventListener('click', functionhere);
+jetFormDuration.addEventListener('click', functionhere);
+jetFormNumHumans.addEventListener('click', functionhere);
+jetFormDestination.addEventListener('click', functionhere);
+jetFormSubmitBtn.addEventListener('click', functionhere);
+estimatedCostHTML.addEventListener('click', functionhere);
 
 // ***** FUNCTIONS *****
-
-// * HUMAN SELECTIONS *
-
-// RPS HUMAN SELECTIONS
-
-function rpsHumanChoiceRock() {
-  game.determineWinner('rock');
-}
-
-function rpsHumanChoicePaper() {
-  game.determineWinner('paper');
-}
-
-function rpsHumanChoiceScissors() {
-  game.determineWinner('scissors');
-}
-
-// MTG HUMAN SELECTIONS
-
-function mtgHumanChoiceRock() {
-  game.determineWinner('rock');
-}
-
-function mtgHumanChoicePaper() {
-  game.determineWinner('paper');
-}
-
-function mtgHumanChoiceScissors() {
-  game.determineWinner('scissors');
-}
-
-function mtgHumanChoiceLizard() {
-  game.determineWinner('lizard');
-}
-
-function mtgHumanChoiceAlien() {
-  game.determineWinner('alien');
-}
 
 // SHOW & HIDE HELPER FUNCTIONS
 
@@ -105,50 +61,6 @@ function show(elements) {
 }
 
 // * HIDE & SHOW ELEMENTS *
-
-// FEATURES
-
-// rps game features
-
-function hideRpsGameFeatures() {
-  hide([rpsHeading, rpsImgRock, rpsImgScissors, rpsImgPaper]);
-}
-
-function showRpsGameFeatures() {
-  show([rpsHeading, rpsImgRock, rpsImgScissors, rpsImgPaper]);
-}
-
-// mtg game features
-
-function hideMtgGameFeatures() {
-  hide([mtgHeading, mtgImgRock, mtgImgPaper, mtgImgScissors, mtgImgLizard, mtgImgAlien]);
-}
-
-function showMtgGameFeatures() {
-  show([mtgHeading, mtgImgRock, mtgImgPaper, mtgImgScissors, mtgImgLizard, mtgImgAlien]);
-}
-
-// all game features
-
-function hideGameFeatures() {
-  hide([changeFormatBtn, rpsSelections, mtgSelections]);
-  hideRpsGameFeatures();
-  hideMtgGameFeatures();
-}
-
-// home features
-
-function hideHomeFeatures() {
-  hide([chooseFormatHeading, startOverBtn, mtgBtn, rpsBtn]);
-}
-
-function showHomeFeatures() {
-  show([chooseFormatHeading, startOverBtn, mtgBtn, rpsBtn]);
-}
-
-// PAGES
-
-// home page
 
 function showHomePage() {
   hideGameFeatures();
