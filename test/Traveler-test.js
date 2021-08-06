@@ -3,12 +3,17 @@ import Traveler from '../src/Traveler.js';
 
 const expect = chai.expect;
 
-const travelers = require('../src/travelers');
-const trips = require('../src/trips');
+const travelers = require('../src/travelers.js');
 
 const data = travelers.find(traveler => traveler.id === 1)
 
-const bob = new Traveler(data, trips);
+const trips = require('../src/trips.js').filter(trip => trip.userID === data.id);
+
+const destinations = require('../src/destinations.js').filter(destination => {
+  return trips.some(trip => trip.destinationID === destination.id)
+});
+
+const bob = new Traveler(data, trips, destinations);
 
 describe('An individual Traveler', function() {
 
@@ -33,6 +38,12 @@ describe('An individual Traveler', function() {
   it('should be able to return trip data', function() {
 
     expect(bob.getTrips()[0].date).to.equal("2021/01/09");
+
+  });
+
+  it('should be able to calculate the cost of all trips', function() {
+
+    expect(bob.getTotalSpent()).to.equal(3750);
 
   });
 
