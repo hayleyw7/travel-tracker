@@ -1,8 +1,95 @@
-  
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
+import './css/base.scss';
+// import './css/styles.scss';
 
-// An example of how you tell webpack to use a CSS (SCSS) file
+// ***** QUERY SELECTORS *****
+
+// NAVBAR
+
+const navBarLinksSection = document.querySelector('#navBarLinksSection');
+
+const navBarYourTripsBtn = document.querySelector('#navBarYourTripsBtn');
+const navBarTripPlannerBtn = document.querySelector('#navBarTripPlannerBtn');
+
+// LOGIN PAGE
+
+const loginPage = document.querySelector('#loginPage');
+
+const loginFormUsername = document.querySelector('#loginFormUsername');
+const loginFormPassword = document.querySelector('#loginFormPassword');
+const loginFormSubmitBtn = document.querySelector('#loginFormSubmitBtn');
+
+// YOUR TRIPS DASHBOARD PAGE
+
+const yourTripsDashboardPage = document.querySelector('#yourTripsDashboardPage');
+
+// WANNA JET PAGE
+
+const wannaJetPage = document.querySelector('#wannaJetPage');
+
+const jetFormDate = document.querySelector('#jetFormDate');
+const jetFormDuration = document.querySelector('#jetFormDuration');
+const jetFormNumHumans = document.querySelector('#jetFormNumHumans');
+const jetFormDestination = document.querySelector('#jetFormDestination');
+const jetFormSubmitBtn = document.querySelector('#jetFormSubmitBtn');
+const estimatedCostHTML = document.querySelector('#estimatedCostHTML');
+
+// ***** EVENT LISTENERS *****
+
+// NAVBAR
+
+navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
+navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
+
+// // LOGIN PAGE
+
+// loginFormUsername.addEventListener('click', functionhere);
+// loginFormPassword.addEventListener('click', functionhere);
+// loginFormSubmitBtn.addEventListener('click', functionhere);
+
+// // WANNA JET PAGE
+// jetFormDate.addEventListener('click', functionhere);
+// jetFormDuration.addEventListener('click', functionhere);
+// jetFormNumHumans.addEventListener('click', functionhere);
+// jetFormDestination.addEventListener('click', functionhere);
+// jetFormSubmitBtn.addEventListener('click', functionhere);
+// estimatedCostHTML.addEventListener('click', functionhere);
+
+// ***** FUNCTIONS *****
+
+// SHOW & HIDE HELPER FUNCTIONS
+
+function hide(elements) {
+  elements.forEach(element => {
+    element.classList.add('hidden');
+  });
+}
+
+function show(elements) {
+  elements.forEach(element => {
+    element.classList.remove('hidden');
+  });
+}
+
+// * PAGES *
+
+function showLoginPage() {
+  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection]);
+  show([loginPage])
+}
+
+function showWannaJetPage() {
+  hide([loginPage, navBarLinksSection]);
+  show([wannaJetPage, navBarLinksSection])
+}
+
+function showYourTripsDashboardPage() {
+  hide([loginPage, wannaJetPage]);
+  show([navBarLinksSection, navBarLinksSection])
+}
+
+///////////////
+
+
 import './css/base.scss';
 // import './css/styles.scss';
 
@@ -121,9 +208,3 @@ function postDestinationInputs() {
       console.log(error)
     })
 }
-
-
-
-// function displayHistoricalWeek(randomHistory) {
-//   domUpdates.renderHistoricalWeek(randomHistory);
-// }
