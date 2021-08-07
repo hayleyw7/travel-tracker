@@ -1,9 +1,12 @@
+
 import './css/base.scss';
 // import './css/styles.scss';
 
 // ***** QUERY SELECTORS *****
 
 // NAVBAR
+
+const test = document.querySelector('#test');
 
 const navBarLinksSection = document.querySelector('#navBarLinksSection');
 
@@ -74,17 +77,17 @@ function show(elements) {
 
 function showLoginPage() {
   hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection]);
-  show([loginPage])
+  show([loginPage]);
 }
 
 function showWannaJetPage() {
   hide([loginPage, navBarLinksSection]);
-  show([wannaJetPage, navBarLinksSection])
+  show([wannaJetPage, navBarLinksSection]);
 }
 
 function showYourTripsDashboardPage() {
-  hide([loginPage, wannaJetPage]);
-  show([navBarLinksSection, navBarLinksSection])
+  hide([loginPage, wannaJetPage, test]);
+  show([navBarLinksSection, navBarLinksSection]);
 }
 
 ///////////////
@@ -134,15 +137,15 @@ function returnData() {
       // currentDate = "2020/01/22";
       // startDate = "2020/01/15";
     })
-    // .then(startApp);
+    .then(startApp);
 }
 
 // add parameters/arguments
 
-// function startApp() {
-//   let traveler = new Traveler()
-//   let trip = new Trip()
-// }
+function startApp() {
+  // let traveler = new Traveler()
+  // let trip = new Trip()
+}
 
 ///
 
