@@ -22,7 +22,7 @@ window.fetchTraveler = () => {
 
   } else {
 
-    document.getElementById("dashboard").innerHTML = "Sorry, bad password!"
+    document.getElementById("dashboard").innerHTML = "No dice! Try another password."
 
   }
 
