@@ -228,3 +228,6 @@ function displayFirstName() {
   const name = traveler.getName();
   name.innerText = `${name}`;
 }
+
+
+// fetch the data. assign it to a variable. then filter the results based off your form values and present the options to the user (i.e. .map to return HTML cards)

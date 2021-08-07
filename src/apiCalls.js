@@ -2,6 +2,54 @@ export function fetchData(file) {
   return fetch(`http://localhost:3001/api/v1/${file}`).then(response => response.json());
 }
 
+//////
+
+
+window.fetchTraveler = () => {
+
+  var username = document.querySelector("#username").value;
+  var password = document.querySelector("#password").value;
+
+  if (password === "travel") {
+
+    id = getID(username);
+
+    const url = 'http://localhost:3001/api/v1/travelers/' + id;
+
+    fetch(url)
+    .then(response => response.json())
+    .then(data => document.getElementById("dashboard").innerHTML = data.name);
+
+  } else {
+
+    document.getElementById("dashboard").innerHTML = "Sorry, bad password!"
+
+  }
+
+}
+
+window.getTravelers = () => {
+
+  fetch('http://localhost:3001/api/v1/travelers/')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("dashboard").innerHTML = data.travelers;
+  })
+
+}
+
+function getID(username) {
+
+  console.log(username);
+  return username.replace('traveler','');
+
+}
+
+
+
+///////
+
+
 // export function postTravelerData(travelerID, travelerName, travelerType) {
 //   let body = {
 //     "id": travelerID,
@@ -52,3 +100,4 @@ export function fetchData(file) {
 //     }
 //   })
 // }
+
