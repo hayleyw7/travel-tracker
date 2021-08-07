@@ -4,16 +4,19 @@ import './css/base.scss';
 
 // ***** QUERY SELECTORS *****
 
-// const test = document.querySelector('#test');
-// const test2 = document.querySelector('#test2');
+// move all query selectors to domUpdates and then use this in scripts:
+  // const {
+  //  name
+  //  navBarLinksSection
+  //  navBarYourTripsBtn
+  //  [etc for all]
+  // } = domUpdates;
 
 
 // NAVBAR
 
 const name = document.querySelector('#name');
-
 const navBarLinksSection = document.querySelector('#navBarLinksSection');
-
 const navBarYourTripsBtn = document.querySelector('#navBarYourTripsBtn');
 const navBarTripPlannerBtn = document.querySelector('#navBarTripPlannerBtn');
 
@@ -50,10 +53,6 @@ const letsJetBtn = document.querySelector('#letsJetBtn');
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 
-
-function testAlert() {
-  alert("I am an alert box!");
-}
 // // LOGIN PAGE
 
 // loginFormUsername.addEventListener('click', functionhere);
@@ -68,7 +67,7 @@ function testAlert() {
 jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
 
 // estimatedCostHTML.addEventListener('click', functionhere);
-letJetBtn.addEventListener('click', createTrip);
+letsJetBtn.addEventListener('click', createTrip);
 
 
 // ***** API STUFF *****
@@ -78,16 +77,16 @@ import {
   // postTravelerData,
   // postDestinationData,
   // postTripData
+  // fetchTraveler
+  // getTravelers
+  
 } from './apiCalls';
 
 import Traveler from './Traveler';
 import Trip from './Trip';
 import domUpdates from './domUpdates';
 
-// const {
-//  html item names here (example below)
-//   hydrationButton
-// } = domUpdates;
+
 
 window.addEventListener('load', returnData);
 
@@ -212,16 +211,19 @@ function createTrip() {
 // DOM UPDATES
 
 function showEstimatedCost() {
-  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
-    alert('Please tell us all of the things!')
-  }
-  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
+
+  // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+  // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
   // const costToDisplay = flightCost + lodgingCost;
   // estimatedCostHTML.innerHTML = `${costToDisplay}`
 
-  estimatedCostHTML.innerText = `test`
+
+  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
+    alert('Please tell us all of the things!');
+  }  else {
+    estimatedCostHTML.innerText = `test`;
+  }
 }
 
 function displayFirstName() {
@@ -231,3 +233,12 @@ function displayFirstName() {
 
 
 // fetch the data. assign it to a variable. then filter the results based off your form values and present the options to the user (i.e. .map to return HTML cards)
+
+
+
+
+// test
+
+function testAlert() {
+  alert("I am an alert box!");
+}
