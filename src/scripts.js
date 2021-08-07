@@ -5,16 +5,26 @@ import './css/base.scss';
 
 // NAVBAR
 
-const navBarYourTripsBtn = document.querySelector('#yourTripsBtn');
-const navBarTripPlannerBtn = document.querySelector('#tripPlannerBtn');
+const navBarLinksSection = document.querySelector('#navBarLinksSection');
+
+const navBarYourTripsBtn = document.querySelector('#navBarYourTripsBtn');
+const navBarTripPlannerBtn = document.querySelector('#navBarTripPlannerBtn');
 
 // LOGIN PAGE
+
+const loginPage = document.querySelector('#loginPage');
 
 const loginFormUsername = document.querySelector('#loginFormUsername');
 const loginFormPassword = document.querySelector('#loginFormPassword');
 const loginFormSubmitBtn = document.querySelector('#loginFormSubmitBtn');
 
+// YOUR TRIPS DASHBOARD PAGE
+
+const yourTripsDashboardPage = document.querySelector('#yourTripsDashboardPage');
+
 // WANNA JET PAGE
+
+const wannaJetPage = document.querySelector('#wannaJetPage');
 
 const jetFormDate = document.querySelector('#jetFormDate');
 const jetFormDuration = document.querySelector('#jetFormDuration');
@@ -27,22 +37,22 @@ const estimatedCostHTML = document.querySelector('#estimatedCostHTML');
 
 // NAVBAR
 
-navBarYourTripsBtn.addEventListener('click', functionhere);
-navBarTripPlannerBtn.addEventListener('click', functionhere);
+navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
+navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 
-// LOGIN PAGE
+// // LOGIN PAGE
 
-loginFormUsername.addEventListener('click', functionhere);
-loginFormPassword.addEventListener('click', functionhere);
-loginFormSubmitBtn.addEventListener('click', functionhere);
+// loginFormUsername.addEventListener('click', functionhere);
+// loginFormPassword.addEventListener('click', functionhere);
+// loginFormSubmitBtn.addEventListener('click', functionhere);
 
-// WANNA JET PAGE
-jetFormDate.addEventListener('click', functionhere);
-jetFormDuration.addEventListener('click', functionhere);
-jetFormNumHumans.addEventListener('click', functionhere);
-jetFormDestination.addEventListener('click', functionhere);
-jetFormSubmitBtn.addEventListener('click', functionhere);
-estimatedCostHTML.addEventListener('click', functionhere);
+// // WANNA JET PAGE
+// jetFormDate.addEventListener('click', functionhere);
+// jetFormDuration.addEventListener('click', functionhere);
+// jetFormNumHumans.addEventListener('click', functionhere);
+// jetFormDestination.addEventListener('click', functionhere);
+// jetFormSubmitBtn.addEventListener('click', functionhere);
+// estimatedCostHTML.addEventListener('click', functionhere);
 
 // ***** FUNCTIONS *****
 
@@ -60,55 +70,22 @@ function show(elements) {
   });
 }
 
-// * HIDE & SHOW ELEMENTS *
+// * PAGES *
 
-function showHomePage() {
-  hideGameFeatures();
-  showHomeFeatures();
+function showLoginPage() {
+  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection]);
+  show([loginPage])
 }
 
-// game pages
-
-function rpsGamePage() {
-  game.playRps();
-  hideHomeFeatures();
-  showRpsGameFeatures();
-  hide([rpsSelections, whoWon]);
-  show([changeFormatBtn]);
+function showWannaJetPage() {
+  hide([loginPage, navBarLinksSection]);
+  show([wannaJetPage, navBarLinksSection])
 }
 
-function mtgGamePage() {
-  game.playMtg();
-  hideHomeFeatures();
-  showMtgGameFeatures();
-  hide([mtgSelections, whoWon]);
-  show([changeFormatBtn]);
+function showYourTripsDashboardPage() {
+  hide([loginPage, wannaJetPage]);
+  show([navBarLinksSection, navBarLinksSection])
 }
-
-// selections pages
-
-function rpsSelectionsPage() {
-  hideRpsGameFeatures();
-  hideHomeFeatures();
-  show([rpsSelections, whoWon]);
-  hide([changeFormatBtn]);
-  setTimeout(function () { rpsGamePage(); }, 1200);
-}
-
-function mtgSelectionsPage() {
-  hideMtgGameFeatures();
-  hideHomeFeatures();
-  show([mtgSelections, whoWon]);
-  hide([changeFormatBtn]);
-  setTimeout(function () { mtgGamePage(); }, 1200);
-}
-
-// LOCAL STORAGE MGMT
-
-function startOverListener() {
-  game.startOver();
-}
-
 
 ///////////////
 
