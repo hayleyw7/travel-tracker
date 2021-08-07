@@ -1,4 +1,5 @@
 // NAVBAR
+const name = document.getElementById('name');
 const navBarLinksSection = document.getElementById('navBarLinksSection');
 const navBarYourTripsBtn = document.getElementById('navBarYourTripsBtn');
 const navBarTripPlannerBtn = document.getElementById('navBarTripPlannerBtn');
@@ -25,7 +26,7 @@ const letsJetBtn = document.getElementById('letsJetBtn');
 const domUpdates = {
 
   renderFirstName(user) {
-    const name = document.getElementById('name');
+    // const name = document.getElementById('name');
     name.innerText = `${traveler.getName()}`;
   },
 

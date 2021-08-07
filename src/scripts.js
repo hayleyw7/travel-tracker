@@ -15,7 +15,6 @@ import Traveler from './Traveler';
 import Trip from './Trip';
 
 const {
-  name,
   navBarLinksSection,
   navBarYourTripsBtn,
   navBarTripPlannerBtn,
@@ -31,7 +30,7 @@ const {
   jetFormDestination,
   jetFormSubmitBtn,
   estimatedCostHTML,
-  letsJetBtn
+  letsJetBtn,
 } = domUpdates;
 
 // ***** EVENT LISTENERS *****
@@ -80,57 +79,57 @@ function returnData() {
 function startApp() {
   // let traveler = new Traveler()
   // let trip = new Trip()
-  renderFirstName()
+  domUpdates.renderFirstName()
 }
 
 ///
 
 
-function postTravelerInputs() {
-  postTravelerData(travelerID, travelerName, travelerType)
-    .then((response) => {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      } else {
-        //?.innerText = "Success"
-        // domUpdates.renderSubmittedHydration(hydrationInput.value)
-      }
-    })
-    .catch(error => {
-      // ?.innerText = "Fail";
-      console.log(error)
-    })
-}
+// function postTravelerInputs() {
+//   postTravelerData(travelerID, travelerName, travelerType)
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw Error(response.statusText);
+//       } else {
+//         //?.innerText = "Success"
+//         // domUpdates.renderSubmittedHydration(hydrationInput.value)
+//       }
+//     })
+//     .catch(error => {
+//       // ?.innerText = "Fail";
+//       console.log(error)
+//     })
+// }
 
-function postTripInputs() {
-  postTripData(tripID, tripTravelerID, destinationID, numTravelers, tripDate, tripDuration, travelerStatus, tripStatus, suggestedActivities)
-    .then((response) => {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      } else {
-        // ???
-      }
-    })
-    .catch(error => {
-        // ???
-      console.log(error)
-    })
-}
+// function postTripInputs() {
+//   postTripData(tripID, tripTravelerID, destinationID, numTravelers, tripDate, tripDuration, travelerStatus, tripStatus, suggestedActivities)
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw Error(response.statusText);
+//       } else {
+//         // ???
+//       }
+//     })
+//     .catch(error => {
+//         // ???
+//       console.log(error)
+//     })
+// }
 
-function postDestinationInputs() {
-  postTravelerData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg)
-    .then((response) => {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      } else {
-        // ???
-      }
-    })
-    .catch(error => {
-        // ???
-      console.log(error)
-    })
-}
+// function postDestinationInputs() {
+//   postTravelerData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg)
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw Error(response.statusText);
+//       } else {
+//         // ???
+//       }
+//     })
+//     .catch(error => {
+//         // ???
+//       console.log(error)
+//     })
+// }
 
 
 // ***** FUNCTIONS *****
@@ -152,7 +151,7 @@ function show(elements) {
 // SHOW & HIDE PAGE FUNCTIONS
 
 function showLoginPage() {
-  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection, name]);
+  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection]);
   show([loginPage]);
 }
 
@@ -188,7 +187,8 @@ function showEstimatedCost() {
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
     estimatedCostHTML.innerText = `test`;
   }  else {
-    alert('Please tell us all of the things!');
+    // alert('Please tell us all of the things!');
+    estimatedCostHTML.innerText = `Please tell us all of the things!`;
   }
 }
 

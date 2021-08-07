@@ -5,45 +5,45 @@ export function fetchData(file) {
 //////
 
 
-window.fetchTraveler = () => {
+// window.fetchTraveler = () => {
 
-  var username = document.querySelector("#username").value;
-  var password = document.querySelector("#password").value;
+//   var username = document.querySelector("#username").value;
+//   var password = document.querySelector("#password").value;
 
-  if (password === "travel") {
+//   if (password === "travel") {
 
-    id = getID(username);
+//     id = getID(username);
 
-    const url = 'http://localhost:3001/api/v1/travelers/' + id;
+//     const url = 'http://localhost:3001/api/v1/travelers/' + id;
 
-    fetch(url)
-    .then(response => response.json())
-    .then(data => document.getElementById("dashboard").innerHTML = data.name);
+//     fetch(url)
+//     .then(response => response.json())
+//     .then(data => document.getElementById("dashboard").innerHTML = data.name);
 
-  } else {
+//   } else {
 
-    document.getElementById("dashboard").innerHTML = "No dice! Try another password."
+//     document.getElementById("dashboard").innerHTML = "No dice! Try another password."
 
-  }
+//   }
 
-}
+// }
 
-window.getTravelers = () => {
+// window.getTravelers = () => {
 
-  fetch('http://localhost:3001/api/v1/travelers/')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById("dashboard").innerHTML = data.travelers;
-  })
+//   fetch('http://localhost:3001/api/v1/travelers/')
+//   .then(response => response.json())
+//   .then(data => {
+//     document.getElementById("dashboard").innerHTML = data.travelers;
+//   })
 
-}
+// }
 
-function getID(username) {
+// function getID(username) {
 
-  console.log(username);
-  return username.replace('traveler','');
+//   console.log(username);
+//   return username.replace('traveler','');
 
-}
+// }
 
 
 
