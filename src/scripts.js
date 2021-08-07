@@ -1,97 +1,62 @@
-
 import './css/base.scss';
-// import './css/styles.scss';
-
-// ***** QUERY SELECTORS *****
-
-// const test = document.querySelector('#test');
-// const test2 = document.querySelector('#test2');
-
-
-// NAVBAR
-
-const name = document.querySelector('#name');
-
-const navBarLinksSection = document.querySelector('#navBarLinksSection');
-
-const navBarYourTripsBtn = document.querySelector('#navBarYourTripsBtn');
-const navBarTripPlannerBtn = document.querySelector('#navBarTripPlannerBtn');
-
-// LOGIN PAGE
-
-const loginPage = document.querySelector('#loginPage');
-
-const loginFormUsername = document.querySelector('#loginFormUsername');
-const loginFormPassword = document.querySelector('#loginFormPassword');
-const loginFormSubmitBtn = document.querySelector('#loginFormSubmitBtn');
-
-// YOUR TRIPS DASHBOARD PAGE
-
-const yourTripsDashboardPage = document.querySelector('#yourTripsDashboardPage');
-
-// WANNA JET PAGE
-
-const wannaJetPage = document.querySelector('#wannaJetPage');
-
-const jetFormDate = document.querySelector('#jetFormDate');
-const jetFormDuration = document.querySelector('#jetFormDuration');
-const jetFormNumHumans = document.querySelector('#jetFormNumHumans');
-const jetFormDestination = document.querySelector('#jetFormDestination');
-const jetFormSubmitBtn = document.querySelector('#jetFormSubmitBtn');
-
-const estimatedCostHTML = document.querySelector('#estimatedCostHTML');
-const letsJetBtn = document.querySelector('#letsJetBtn');
-
-
-// ***** EVENT LISTENERS *****
-
-// NAVBAR
-
-navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
-navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
-
-
-function testAlert() {
-  alert("I am an alert box!");
-}
-// // LOGIN PAGE
-
-// loginFormUsername.addEventListener('click', functionhere);
-// loginFormPassword.addEventListener('click', functionhere);
-// loginFormSubmitBtn.addEventListener('click', functionhere);
-
-// // WANNA JET PAGE
-// jetFormDate.addEventListener('click', functionhere);
-// jetFormDuration.addEventListener('click', functionhere);
-// jetFormNumHumans.addEventListener('click', functionhere);
-// jetFormDestination.addEventListener('click', functionhere);
-jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
-
-// estimatedCostHTML.addEventListener('click', functionhere);
-letJetBtn.addEventListener('click', createTrip);
-
-
-// ***** API STUFF *****
 
 import {
   fetchData
   // postTravelerData,
   // postDestinationData,
   // postTripData
+  // fetchTraveler
+  // getTravelers
+  
 } from './apiCalls';
 
+import domUpdates from './domUpdates';
 import Traveler from './Traveler';
 import Trip from './Trip';
-import domUpdates from './domUpdates';
 
-// const {
-//  html item names here (example below)
-//   hydrationButton
-// } = domUpdates;
+const {
+  name,
+  navBarLinksSection,
+  navBarYourTripsBtn,
+  navBarTripPlannerBtn,
+  loginPage,
+  loginFormUsername,
+  loginFormPassword,
+  loginFormSubmitBtn,
+  yourTripsDashboardPage,
+  wannaJetPage,
+  jetFormDate,
+  jetFormDuration,
+  jetFormHumans,
+  jetFormDestination,
+  jetFormSubmitBtn,
+  estimatedCostHTML,
+  letsJetBtn
+} = domUpdates;
+
+// ***** EVENT LISTENERS *****
 
 window.addEventListener('load', returnData);
 
-let travelers, trips, destinations
+// NAVBAR
+navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
+navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
+
+// LOGIN PAGE
+// loginFormUsername.addEventListener('click', functionhere);
+// loginFormPassword.addEventListener('click', functionhere);
+// loginFormSubmitBtn.addEventListener('click', functionhere);
+
+// WANNA JET PAGE
+// jetFormDate.addEventListener('click', functionhere);
+// jetFormDuration.addEventListener('click', functionhere);
+// jetFormHumans.addEventListener('click', functionhere);
+// jetFormDestination.addEventListener('click', functionhere);
+jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
+// estimatedCostHTML.addEventListener('click', functionhere);
+letsJetBtn.addEventListener('click', createTrip);
+
+// ***** API STUFF *****
 
 function getData() {
   return Promise.all([fetchData('travelers'), fetchData('trips'), fetchData('destinations')]);
@@ -115,7 +80,7 @@ function returnData() {
 function startApp() {
   // let traveler = new Traveler()
   // let trip = new Trip()
-  displayFirstName()
+  renderFirstName()
 }
 
 ///
@@ -204,27 +169,35 @@ function showYourTripsDashboardPage() {
 // INSTANTIATE TRIP
 
 function createTrip() {
-  if (jetFormDate.value && jetFormDuration.value && jetFormNumHuman.value && jetFormDestinatio.value) {
+  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestinatio.value) {
     currentTrip = new Trip();
   }
 }
 
-// DOM UPDATES
+// DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
-    alert('Please tell us all of the things!')
-  }
-  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
+
+  // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+  // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
   // const costToDisplay = flightCost + lodgingCost;
   // estimatedCostHTML.innerHTML = `${costToDisplay}`
 
-  estimatedCostHTML.innerText = `test`
+
+  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
+    estimatedCostHTML.innerText = `test`;
+  }  else {
+    alert('Please tell us all of the things!');
+  }
 }
 
-function displayFirstName() {
-  const name = traveler.getName();
-  name.innerText = `${name}`;
+// test
+
+function testAlert() {
+  alert("I am an alert box!");
 }
+
+// help
+
+// fetch the data. assign it to a variable. then filter the results based off your form values and present the options to the user (i.e. .map to return HTML cards)
