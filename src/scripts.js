@@ -185,8 +185,9 @@ function showEstimatedCost() {
 
 
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
-    estimatedCostHTML.innerText = `test`;
+    estimatedCostHTML.innerText = `If you see this & filled in all 4 input boxes, the bug is fixed!`;
   }  else {
+      event.preventDefault()
     // alert('Please tell us all of the things!');
     estimatedCostHTML.innerText = `Please tell us all of the things!`;
   }
