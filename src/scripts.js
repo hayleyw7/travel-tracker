@@ -65,84 +65,8 @@ function testAlert() {
 // jetFormSubmitBtn.addEventListener('click', functionhere);
 // estimatedCostHTML.addEventListener('click', functionhere);
 
-// ***** FUNCTIONS *****
 
-// SHOW & HIDE HELPER FUNCTIONS
-
-function hide(elements) {
-  elements.forEach(element => {
-    element.classList.add('hidden');
-  });
-}
-
-function show(elements) {
-  elements.forEach(element => {
-    element.classList.remove('hidden');
-  });
-}
-
-// * PAGES *
-
-function showLoginPage() {
-  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection, name]);
-  show([loginPage]);
-}
-
-function showWannaJetPage() {
-  hide([loginPage, yourTripsDashboardPage]);
-  show([wannaJetPage, navBarLinksSection]);
-}
-
-function showYourTripsDashboardPage() {
-  hide([loginPage, wannaJetPage]);
-  show([navBarLinksSection, yourTripsDashboardPage]);
-}
-
-///////////////
-
-function createTrip() {
-  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
-    alert('Please tell us all of the things!')
-}
-  if(jetFormDate.value && jetFormDuration.value && jetFormNumHuman.value && jetFormDestinatio.value) {
-    currentTrip = new Trip();
-    showEstimatedCost();
-  }
-}
-
-//// DOM UDPATES
-
-function showEstimatedCost() {
-  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
-
-  const costToDisplay = flightCost + lodgingCost;
-
-  estimatedCostHTML.innerHTML = costToDisplay
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import './css/base.scss';
-// import './css/styles.scss';
-
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
-// import './images/turing-logo.png'
-
-//////////////
+// ***** API STUFF *****
 
 import {
   fetchData
@@ -168,8 +92,6 @@ function getData() {
   return Promise.all([fetchData('travelers'), fetchData('trips'), fetchData('destinations')]);
 }
 
-// idk what to put below
-
 function returnData() {
   getData()
     .then(promiseArray => {
@@ -192,20 +114,6 @@ function startApp() {
 
 ///
 
-// add name functions
-
-//   addName(currentUser, userRepo);
-// }
-
-// function addName() {
-//   displayFirstName(user);
-// }
-
-// function displayFirstName(user) {
-//   domUpdates.renderFirstName(user);
-// }
-
-//
 
 function postTravelerInputs() {
   postTravelerData(travelerID, travelerName, travelerType)
@@ -254,3 +162,66 @@ function postDestinationInputs() {
       console.log(error)
     })
 }
+
+
+// ***** FUNCTIONS *****
+
+// SHOW & HIDE HELPER FUNCTIONS
+
+function hide(elements) {
+  elements.forEach(element => {
+    element.classList.add('hidden');
+  });
+}
+
+function show(elements) {
+  elements.forEach(element => {
+    element.classList.remove('hidden');
+  });
+}
+
+// SHOW & HIDE PAGE FUNCTIONS
+
+function showLoginPage() {
+  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection, name]);
+  show([loginPage]);
+}
+
+function showWannaJetPage() {
+  hide([loginPage, yourTripsDashboardPage]);
+  show([wannaJetPage, navBarLinksSection]);
+}
+
+function showYourTripsDashboardPage() {
+  hide([loginPage, wannaJetPage]);
+  show([navBarLinksSection, yourTripsDashboardPage]);
+}
+
+// INSTANTIATE TRIP
+
+function createTrip() {
+  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
+    alert('Please tell us all of the things!')
+}
+  if(jetFormDate.value && jetFormDuration.value && jetFormNumHuman.value && jetFormDestinatio.value) {
+    currentTrip = new Trip();
+    showEstimatedCost();
+  }
+}
+
+// DOM UPDATES
+
+function showEstimatedCost() {
+  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
+
+  const costToDisplay = flightCost + lodgingCost;
+
+  estimatedCostHTML.innerHTML = `${costToDisplay}`
+}
+
+function displayFirstName() {
+  const name = traveler.getName();
+  name.innerHTML = `${name}`;
+}
+
