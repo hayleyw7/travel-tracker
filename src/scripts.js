@@ -4,9 +4,13 @@ import './css/base.scss';
 
 // ***** QUERY SELECTORS *****
 
+// const test = document.querySelector('#test');
+// const test2 = document.querySelector('#test2');
+
+
 // NAVBAR
 
-const test = document.querySelector('#test');
+const name = document.querySelector('#name');
 
 const navBarLinksSection = document.querySelector('#navBarLinksSection');
 
@@ -43,6 +47,10 @@ const estimatedCostHTML = document.querySelector('#estimatedCostHTML');
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 
+
+function testAlert() {
+  alert("I am an alert box!");
+}
 // // LOGIN PAGE
 
 // loginFormUsername.addEventListener('click', functionhere);
@@ -76,18 +84,18 @@ function show(elements) {
 // * PAGES *
 
 function showLoginPage() {
-  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection]);
+  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection, name]);
   show([loginPage]);
 }
 
 function showWannaJetPage() {
-  hide([loginPage, navBarLinksSection]);
+  hide([loginPage, yourTripsDashboardPage]);
   show([wannaJetPage, navBarLinksSection]);
 }
 
 function showYourTripsDashboardPage() {
-  hide([loginPage, wannaJetPage, test]);
-  show([navBarLinksSection, navBarLinksSection]);
+  hide([loginPage, wannaJetPage]);
+  show([navBarLinksSection, yourTripsDashboardPage]);
 }
 
 ///////////////
