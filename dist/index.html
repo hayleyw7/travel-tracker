@@ -11,7 +11,7 @@
 
   <div class='navbar'>
     <section class='navbar-left'>
-      <section class='navbar-links-section' id='navBarLinksSection'>
+      <section class='navbar-links-section hidden' id='navBarLinksSection'>
         <button class="navbar-links" id='navBarYourTripsBtn'>YOUR TRIPS</button>
         <button class="navbar-links" id='navBarTripPlannerBtn'>TRIP PLANNER</button>
       </section>
@@ -19,7 +19,7 @@
     <section class='navbar-right'>
       <section class='username-section'>
         <!-- <img src='./assets/destination-icon.png' alt='destination icon' class='navbar-icon'> -->
-        <p class='name' id='name'>[Name]</p>
+        <p class='name hidden' id='name'>[Name]</p>
       </section>
       <section class='logo-section'>
         <h1 class'logo'>#JustVibin</h1>
@@ -39,7 +39,7 @@
           <article class='photo-container'>
             <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'>  -->
           </article>
-          <article class='destination-info-container'>
+          <article class='destination-info-container' id='test2'>
             <form action="/action_page.php">
 
               <label for="fname" id='loginFormUsername'>Username:</label><br>
@@ -74,7 +74,7 @@
 
     <!-- YOUR TRIPS DASHBOARD!!!!!! -->
 
-    <div id='yourTripsDashboardPage'>
+    <div id='yourTripsDashboardPage' class='hidden'>
       <h3>PRESENT TRIP</h3>
 
       <section class='card-container-1'>
@@ -157,7 +157,7 @@
 
     <!-- TRIP PLANNER!!!!!! -->
 
-    <div id='wannaJetPage'>
+    <div id='wannaJetPage' class='hidden'>
 
       <h3>Wanna jet?</h2>
 
