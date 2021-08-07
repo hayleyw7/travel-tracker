@@ -38,7 +38,10 @@ const jetFormDuration = document.querySelector('#jetFormDuration');
 const jetFormNumHumans = document.querySelector('#jetFormNumHumans');
 const jetFormDestination = document.querySelector('#jetFormDestination');
 const jetFormSubmitBtn = document.querySelector('#jetFormSubmitBtn');
+
 const estimatedCostHTML = document.querySelector('#estimatedCostHTML');
+const letsJetBtn = document.querySelector('#letsJetBtn');
+
 
 // ***** EVENT LISTENERS *****
 
@@ -62,52 +65,13 @@ function testAlert() {
 // jetFormDuration.addEventListener('click', functionhere);
 // jetFormNumHumans.addEventListener('click', functionhere);
 // jetFormDestination.addEventListener('click', functionhere);
-// jetFormSubmitBtn.addEventListener('click', functionhere);
+jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
+
 // estimatedCostHTML.addEventListener('click', functionhere);
-
-// ***** FUNCTIONS *****
-
-// SHOW & HIDE HELPER FUNCTIONS
-
-function hide(elements) {
-  elements.forEach(element => {
-    element.classList.add('hidden');
-  });
-}
-
-function show(elements) {
-  elements.forEach(element => {
-    element.classList.remove('hidden');
-  });
-}
-
-// * PAGES *
-
-function showLoginPage() {
-  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection, name]);
-  show([loginPage]);
-}
-
-function showWannaJetPage() {
-  hide([loginPage, yourTripsDashboardPage]);
-  show([wannaJetPage, navBarLinksSection]);
-}
-
-function showYourTripsDashboardPage() {
-  hide([loginPage, wannaJetPage]);
-  show([navBarLinksSection, yourTripsDashboardPage]);
-}
-
-///////////////
+letJetBtn.addEventListener('click', createTrip);
 
 
-import './css/base.scss';
-// import './css/styles.scss';
-
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
-// import './images/turing-logo.png'
-
-//////////////
+// ***** API STUFF *****
 
 import {
   fetchData
@@ -133,8 +97,6 @@ function getData() {
   return Promise.all([fetchData('travelers'), fetchData('trips'), fetchData('destinations')]);
 }
 
-// idk what to put below
-
 function returnData() {
   getData()
     .then(promiseArray => {
@@ -153,24 +115,11 @@ function returnData() {
 function startApp() {
   // let traveler = new Traveler()
   // let trip = new Trip()
+  displayFirstName()
 }
 
 ///
 
-// add name functions
-
-//   addName(currentUser, userRepo);
-// }
-
-// function addName() {
-//   displayFirstName(user);
-// }
-
-// function displayFirstName(user) {
-//   domUpdates.renderFirstName(user);
-// }
-
-//
 
 function postTravelerInputs() {
   postTravelerData(travelerID, travelerName, travelerType)
@@ -178,12 +127,12 @@ function postTravelerInputs() {
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
-        // hydrationHeader.innerText = "Success"
+        //?.innerText = "Success"
         // domUpdates.renderSubmittedHydration(hydrationInput.value)
       }
     })
     .catch(error => {
-      // hydrationHeader.innerText = "Fail";
+      // ?.innerText = "Fail";
       console.log(error)
     })
 }
@@ -194,12 +143,11 @@ function postTripInputs() {
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
-        // hydrationHeader.innerText = "Success"
-        // domUpdates.renderSubmittedHydration(hydrationInput.value)
+        // ???
       }
     })
     .catch(error => {
-      // hydrationHeader.innerText = "Fail";
+        // ???
       console.log(error)
     })
 }
@@ -210,12 +158,73 @@ function postDestinationInputs() {
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
-        // hydrationHeader.innerText = "Success"
-        // domUpdates.renderSubmittedHydration(hydrationInput.value)
+        // ???
       }
     })
     .catch(error => {
-      // hydrationHeader.innerText = "Fail";
+        // ???
       console.log(error)
     })
+}
+
+
+// ***** FUNCTIONS *****
+
+// SHOW & HIDE HELPER FUNCTIONS
+
+function hide(elements) {
+  elements.forEach(element => {
+    element.classList.add('hidden');
+  });
+}
+
+function show(elements) {
+  elements.forEach(element => {
+    element.classList.remove('hidden');
+  });
+}
+
+// SHOW & HIDE PAGE FUNCTIONS
+
+function showLoginPage() {
+  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection, name]);
+  show([loginPage]);
+}
+
+function showWannaJetPage() {
+  hide([loginPage, yourTripsDashboardPage]);
+  show([wannaJetPage, navBarLinksSection]);
+}
+
+function showYourTripsDashboardPage() {
+  hide([loginPage, wannaJetPage]);
+  show([navBarLinksSection, yourTripsDashboardPage]);
+}
+
+// INSTANTIATE TRIP
+
+function createTrip() {
+  if (jetFormDate.value && jetFormDuration.value && jetFormNumHuman.value && jetFormDestinatio.value) {
+    currentTrip = new Trip();
+  }
+}
+
+// DOM UPDATES
+
+function showEstimatedCost() {
+  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
+    alert('Please tell us all of the things!')
+  }
+  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
+
+  // const costToDisplay = flightCost + lodgingCost;
+  // estimatedCostHTML.innerHTML = `${costToDisplay}`
+
+  estimatedCostHTML.innerText = `test`
+}
+
+function displayFirstName() {
+  const name = traveler.getName();
+  name.innerText = `${name}`;
 }
