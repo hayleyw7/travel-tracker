@@ -39,26 +39,22 @@ const {
 window.addEventListener('load', returnData);
 
 // NAVBAR
-
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 
-// // LOGIN PAGE
-
+// LOGIN PAGE
 // loginFormUsername.addEventListener('click', functionhere);
 // loginFormPassword.addEventListener('click', functionhere);
 // loginFormSubmitBtn.addEventListener('click', functionhere);
 
-// // WANNA JET PAGE
+// WANNA JET PAGE
 // jetFormDate.addEventListener('click', functionhere);
 // jetFormDuration.addEventListener('click', functionhere);
 // jetFormHumans.addEventListener('click', functionhere);
 // jetFormDestination.addEventListener('click', functionhere);
 jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
-
 // estimatedCostHTML.addEventListener('click', functionhere);
 letsJetBtn.addEventListener('click', createTrip);
-
 
 // ***** API STUFF *****
 
@@ -189,10 +185,10 @@ function showEstimatedCost() {
   // estimatedCostHTML.innerHTML = `${costToDisplay}`
 
 
-  if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
-    alert('Please tell us all of the things!');
-  }  else {
+  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
     estimatedCostHTML.innerText = `test`;
+  }  else {
+    alert('Please tell us all of the things!');
   }
 }
 
