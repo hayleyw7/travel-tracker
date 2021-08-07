@@ -100,6 +100,41 @@ function showYourTripsDashboardPage() {
 
 ///////////////
 
+function createTrip() {
+  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
+    alert('Please tell us all of the things!')
+}
+  if(jetFormDate.value && jetFormDuration.value && jetFormNumHuman.value && jetFormDestinatio.value) {
+    currentTrip = new Trip();
+    showEstimatedCost();
+  }
+}
+
+//// DOM UDPATES
+
+function showEstimatedCost() {
+  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
+
+  const costToDisplay = flightCost + lodgingCost;
+
+  estimatedCostHTML.innerHTML = costToDisplay
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 import './css/base.scss';
 // import './css/styles.scss';
