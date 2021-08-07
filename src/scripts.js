@@ -1,52 +1,42 @@
-
 import './css/base.scss';
-// import './css/styles.scss';
 
-// ***** QUERY SELECTORS *****
+import {
+  fetchData
+  // postTravelerData,
+  // postDestinationData,
+  // postTripData
+  // fetchTraveler
+  // getTravelers
+  
+} from './apiCalls';
 
-// move all query selectors to domUpdates and then use this in scripts:
-  // const {
-  //  name
-  //  navBarLinksSection
-  //  navBarYourTripsBtn
-  //  [etc for all]
-  // } = domUpdates;
+import domUpdates from './domUpdates';
+import Traveler from './Traveler';
+import Trip from './Trip';
 
-
-// NAVBAR
-
-const name = document.querySelector('#name');
-const navBarLinksSection = document.querySelector('#navBarLinksSection');
-const navBarYourTripsBtn = document.querySelector('#navBarYourTripsBtn');
-const navBarTripPlannerBtn = document.querySelector('#navBarTripPlannerBtn');
-
-// LOGIN PAGE
-
-const loginPage = document.querySelector('#loginPage');
-
-const loginFormUsername = document.querySelector('#loginFormUsername');
-const loginFormPassword = document.querySelector('#loginFormPassword');
-const loginFormSubmitBtn = document.querySelector('#loginFormSubmitBtn');
-
-// YOUR TRIPS DASHBOARD PAGE
-
-const yourTripsDashboardPage = document.querySelector('#yourTripsDashboardPage');
-
-// WANNA JET PAGE
-
-const wannaJetPage = document.querySelector('#wannaJetPage');
-
-const jetFormDate = document.querySelector('#jetFormDate');
-const jetFormDuration = document.querySelector('#jetFormDuration');
-const jetFormNumHumans = document.querySelector('#jetFormNumHumans');
-const jetFormDestination = document.querySelector('#jetFormDestination');
-const jetFormSubmitBtn = document.querySelector('#jetFormSubmitBtn');
-
-const estimatedCostHTML = document.querySelector('#estimatedCostHTML');
-const letsJetBtn = document.querySelector('#letsJetBtn');
-
+const {
+  name,
+  navBarLinksSection,
+  navBarYourTripsBtn,
+  navBarTripPlannerBtn,
+  loginPage,
+  loginFormUsername,
+  loginFormPassword,
+  loginFormSubmitBtn,
+  yourTripsDashboardPage,
+  wannaJetPage,
+  jetFormDate,
+  jetFormDuration,
+  jetFormHumans,
+  jetFormDestination,
+  jetFormSubmitBtn,
+  estimatedCostHTML,
+  letsJetBtn
+} = domUpdates;
 
 // ***** EVENT LISTENERS *****
+
+window.addEventListener('load', returnData);
 
 // NAVBAR
 
@@ -62,7 +52,7 @@ navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 // // WANNA JET PAGE
 // jetFormDate.addEventListener('click', functionhere);
 // jetFormDuration.addEventListener('click', functionhere);
-// jetFormNumHumans.addEventListener('click', functionhere);
+// jetFormHumans.addEventListener('click', functionhere);
 // jetFormDestination.addEventListener('click', functionhere);
 jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
 
@@ -71,26 +61,6 @@ letsJetBtn.addEventListener('click', createTrip);
 
 
 // ***** API STUFF *****
-
-import {
-  fetchData
-  // postTravelerData,
-  // postDestinationData,
-  // postTripData
-  // fetchTraveler
-  // getTravelers
-  
-} from './apiCalls';
-
-import Traveler from './Traveler';
-import Trip from './Trip';
-import domUpdates from './domUpdates';
-
-
-
-window.addEventListener('load', returnData);
-
-let travelers, trips, destinations
 
 function getData() {
   return Promise.all([fetchData('travelers'), fetchData('trips'), fetchData('destinations')]);
@@ -114,7 +84,7 @@ function returnData() {
 function startApp() {
   // let traveler = new Traveler()
   // let trip = new Trip()
-  displayFirstName()
+  renderFirstName()
 }
 
 ///
@@ -203,12 +173,12 @@ function showYourTripsDashboardPage() {
 // INSTANTIATE TRIP
 
 function createTrip() {
-  if (jetFormDate.value && jetFormDuration.value && jetFormNumHuman.value && jetFormDestinatio.value) {
+  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestinatio.value) {
     currentTrip = new Trip();
   }
 }
 
-// DOM UPDATES
+// DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
 
@@ -219,26 +189,19 @@ function showEstimatedCost() {
   // estimatedCostHTML.innerHTML = `${costToDisplay}`
 
 
-  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
+  if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
     alert('Please tell us all of the things!');
   }  else {
     estimatedCostHTML.innerText = `test`;
   }
 }
 
-function displayFirstName() {
-  const name = traveler.getName();
-  name.innerText = `${name}`;
-}
-
-
-// fetch the data. assign it to a variable. then filter the results based off your form values and present the options to the user (i.e. .map to return HTML cards)
-
-
-
-
 // test
 
 function testAlert() {
   alert("I am an alert box!");
 }
+
+// help
+
+// fetch the data. assign it to a variable. then filter the results based off your form values and present the options to the user (i.e. .map to return HTML cards)
