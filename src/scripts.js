@@ -38,7 +38,10 @@ const jetFormDuration = document.querySelector('#jetFormDuration');
 const jetFormNumHumans = document.querySelector('#jetFormNumHumans');
 const jetFormDestination = document.querySelector('#jetFormDestination');
 const jetFormSubmitBtn = document.querySelector('#jetFormSubmitBtn');
+
 const estimatedCostHTML = document.querySelector('#estimatedCostHTML');
+const letsJetBtn = document.querySelector('#letsJetBtn');
+
 
 // ***** EVENT LISTENERS *****
 
@@ -62,8 +65,10 @@ function testAlert() {
 // jetFormDuration.addEventListener('click', functionhere);
 // jetFormNumHumans.addEventListener('click', functionhere);
 // jetFormDestination.addEventListener('click', functionhere);
-// jetFormSubmitBtn.addEventListener('click', functionhere);
+jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
+
 // estimatedCostHTML.addEventListener('click', functionhere);
+letJetBtn.addEventListener('click', createTrip);
 
 
 // ***** API STUFF *****
@@ -110,6 +115,7 @@ function returnData() {
 function startApp() {
   // let traveler = new Traveler()
   // let trip = new Trip()
+  displayFirstName()
 }
 
 ///
@@ -121,12 +127,12 @@ function postTravelerInputs() {
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
-        // hydrationHeader.innerText = "Success"
+        //?.innerText = "Success"
         // domUpdates.renderSubmittedHydration(hydrationInput.value)
       }
     })
     .catch(error => {
-      // hydrationHeader.innerText = "Fail";
+      // ?.innerText = "Fail";
       console.log(error)
     })
 }
@@ -137,12 +143,11 @@ function postTripInputs() {
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
-        // hydrationHeader.innerText = "Success"
-        // domUpdates.renderSubmittedHydration(hydrationInput.value)
+        // ???
       }
     })
     .catch(error => {
-      // hydrationHeader.innerText = "Fail";
+        // ???
       console.log(error)
     })
 }
@@ -153,12 +158,11 @@ function postDestinationInputs() {
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
-        // hydrationHeader.innerText = "Success"
-        // domUpdates.renderSubmittedHydration(hydrationInput.value)
+        // ???
       }
     })
     .catch(error => {
-      // hydrationHeader.innerText = "Fail";
+        // ???
       console.log(error)
     })
 }
@@ -200,28 +204,27 @@ function showYourTripsDashboardPage() {
 // INSTANTIATE TRIP
 
 function createTrip() {
-  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
-    alert('Please tell us all of the things!')
-}
-  if(jetFormDate.value && jetFormDuration.value && jetFormNumHuman.value && jetFormDestinatio.value) {
+  if (jetFormDate.value && jetFormDuration.value && jetFormNumHuman.value && jetFormDestinatio.value) {
     currentTrip = new Trip();
-    showEstimatedCost();
   }
 }
 
 // DOM UPDATES
 
 function showEstimatedCost() {
+  if (!jetFormDate.value || !jetFormDuration.value || !jetFormNumHumans.value || !jetFormDestination.value) {
+    alert('Please tell us all of the things!')
+  }
   const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
   const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-  const costToDisplay = flightCost + lodgingCost;
+  // const costToDisplay = flightCost + lodgingCost;
+  // estimatedCostHTML.innerHTML = `${costToDisplay}`
 
-  estimatedCostHTML.innerHTML = `${costToDisplay}`
+  estimatedCostHTML.innerText = `test`
 }
 
 function displayFirstName() {
   const name = traveler.getName();
-  name.innerHTML = `${name}`;
+  name.innerText = `${name}`;
 }
-
