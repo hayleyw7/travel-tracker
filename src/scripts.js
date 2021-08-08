@@ -142,6 +142,7 @@ function showLoginPage() {
 function showWannaJetPage() {
   hide([loginPage, yourTripsDashboardPage]);
   show([wannaJetPage, navBarLinksSection]);
+  // populateDestinationsDropDown();
 }
 
 function showYourTripsDashboardPage() {
@@ -256,6 +257,15 @@ function showTrips() {
   showPendingTrips();
   showFutureTrips();
   showPastTrips();
+}
+
+function populateDestinationsDropDown() {
+  const result = this.destinations.map((destination) => {
+  jetFormDestination.innerHTML += `
+    <option value="${destination.destination}">${destination.destination}</option>
+  `
+  })
+  return result;
 }
 
 
