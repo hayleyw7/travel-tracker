@@ -142,7 +142,7 @@ function showLoginPage() {
 function showWannaJetPage() {
   hide([loginPage, yourTripsDashboardPage]);
   show([wannaJetPage, navBarLinksSection]);
-  // populateDestinationsDropDown();
+  populateDestinationsDropDown();
 }
 
 function showYourTripsDashboardPage() {
@@ -260,12 +260,11 @@ function showTrips() {
 }
 
 function populateDestinationsDropDown() {
-  const result = this.destinations.map((destination) => {
-  jetFormDestination.innerHTML += `
-    <option value="${destination.destination}">${destination.destination}</option>
-  `
+  this.destinations.forEach((destination) => {
+    jetFormDestination.innerHTML('afterend', `
+      <option value="${destination.destination}">${destination.destination}</option>
+    `)
   })
-  return result;
 }
 
 
