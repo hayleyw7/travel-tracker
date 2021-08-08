@@ -27,7 +27,7 @@ class Traveler {
   getTripsByStatus(dateToday, status) {
     let today = this.trips.today;
     let current = this.trip.startDate <= today && this.trip.endDate >= today
-    let future = trip.startDate > today
+    let future = this.trip.startDate > today
     let pending = this.trip.status === 'pending'
     let past =  this.trip.status === 'past'
 
@@ -43,11 +43,6 @@ class Traveler {
         return past;
       }
     })
-  }
-
-
-  getPastTrips() {
-    return this.trips;
   }
 
   getTripsString() {

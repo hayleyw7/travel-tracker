@@ -22,10 +22,6 @@ class Trip {
     // this.destinations = destinations
   }
 
-  // findTripByUser() {
-    // might have to make this to access specific trip inside that big trip array
-  // }
-
   getUserTripDates() {
     let tripDuration = this.tripData.duration;
     this.startDate = new Date(this.tripData.date);

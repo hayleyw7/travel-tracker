@@ -162,9 +162,11 @@ function showEstimatedCost() {
   // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
   // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-  // const costToDisplay = flightCost + lodgingCost;
-  // estimatedCostHTML.innerHTML = `${costToDisplay}`
+  // const costWithoutAgent = (flightCost + lodgingCost) * 2;
+  // const travelAgentFactor = 1.1;
+  // const costToDisplay = travelAgentFactor * costWithoutAgent;
 
+  // estimatedCostHTML.innerHTML = `${costToDisplay}`
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
     estimatedCostHTML.innerText = `Please tell us all of the things if you want us to make stuff happen and such!`;
