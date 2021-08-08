@@ -9,6 +9,7 @@ const loginPage = document.getElementById('loginPage');
 const loginFormUsername = document.getElementById('loginFormUsername');
 const loginFormPassword = document.getElementById('loginFormPassword');
 const loginFormSubmitBtn = document.getElementById('loginFormSubmitBtn');
+const enterYourPassToPlan = document.getElementById('enterYourPassToPlan');
 
 // YOUR TRIPS DASHBOARD PAGE
 const yourTripsDashboardPage = document.getElementById('yourTripsDashboardPage');
