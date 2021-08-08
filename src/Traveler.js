@@ -26,10 +26,10 @@ class Traveler {
 
   getTripsByStatus(dateToday, status) {
     let today = this.trips.today;
-    let current = this.trip.startDate <= today && this.trip.endDate >= today
-    let future = this.trip.startDate > today
-    let pending = this.trip.status === 'pending'
-    let past =  this.trip.status === 'past'
+    let current = this.trip.startDate <= today && this.trip.endDate >= today;
+    let future = this.trip.startDate > today;
+    let pending = this.trip.status === 'pending';
+    let past =  this.trip.status === 'past';
 
     const result = this.trips.filter(trip => {
       if (current) {
@@ -51,7 +51,7 @@ class Traveler {
   getTripsString() {
     const result = this.trips.reduce((tripString, trip) => {
 
-      let destination = this.destinations.find(destination => destination.id === trip.destinationID).destination
+      let destination = this.destinations.find(destination => destination.id === trip.destinationID).destination;
 
       tripString = tripString.concat(destination + '<br>');
 
