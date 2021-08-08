@@ -1,18 +1,29 @@
 import './css/base.scss';
 
 import {
-  fetchData
+  fetchData,
+  fetchTraveler,
+  fetchTravelers,
+  fetchTrips,
+  fetchDestinations,
+  getID
   // postTravelerData,
   // postDestinationData,
   // postTripData
-  // fetchTraveler
-  // getTravelers
-  
 } from './apiCalls';
 
-import domUpdates from './domUpdates';
+import dom from './domUpdates';
 import Traveler from './Traveler';
 import Trip from './Trip';
+
+// const {
+
+//   usernameInput, ---> loginFormUsername
+//   passwordInput, ---> loginFormPassword
+//   loginButton, ---> loginFormSubmitBtn
+//   loginForm ---> loginPage
+
+// } = dom;
 
 const {
   navBarLinksSection,
@@ -32,7 +43,15 @@ const {
   estimatedCostHTML,
   letsJetBtn,
   enterYourPassToPlan
-} = domUpdates;
+} = dom;
+
+// ***** STORAGE & SETUP *****
+
+const storage = window.localStorage;
+storage.setItem('activeUser', null);
+storage.setItem('activeUserType', null);
+
+let travelers, trips, destinations, data;
 
 // ***** EVENT LISTENERS *****
 
@@ -43,7 +62,7 @@ navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 
 // LOGIN PAGE
-loginFormSubmitBtn.addEventListener('click', submitPassword);
+loginFormSubmitBtn.addEventListener('click', login);
 
 // WANNA JET PAGE
 jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
@@ -51,8 +70,10 @@ letsJetBtn.addEventListener('click', createTrip);
 
 // ***** API STUFF *****
 
-function getData() {
-  return Promise.all([fetchData('travelers'), fetchData('trips'), fetchData('destinations')]);
+function packPromises() {
+
+  return Promise.all([fetchTravelers(), fetchTrips(), fetchDestinations()]);
+
 }
 
 function returnData() {
@@ -73,7 +94,7 @@ function returnData() {
 function startApp() {
   // let traveler = new Traveler()
   // let trip = new Trip()
-  domUpdates.renderFirstName()
+  dom.renderFirstName()
 }
 
 ///
@@ -86,7 +107,7 @@ function startApp() {
 //         throw Error(response.statusText);
 //       } else {
 //         //?.innerText = "Success"
-//         // domUpdates.renderSubmittedHydration(hydrationInput.value)
+//         // dom.renderSubmittedHydration(hydrationInput.value)
 //       }
 //     })
 //     .catch(error => {
@@ -186,12 +207,53 @@ function showEstimatedCost() {
   }
 }
 
-function submitPassword() {
-  event.preventDefault();
+function login() {
+
   if (!loginFormPassword.value || !loginFormUsername.value) { 
-    enterYourPassToPlan.innerText = `Please fill in both fields.`
+    enterYourPassToPlan.innerText = `Please fill in both fields.`;
   } else {
-    showYourTripsDashboardPage()
+  
+    const password = dom.passwordInput.value;
+
+    if (password === "travel") {
+
+      const username = dom.usernameInput.value;
+
+      const id = getID(username);
+
+      packPromises().then(
+
+        promises => {
+
+          travelers = promises[0].travelers;
+
+          console.log(travelers[0] + " and id is " + id);
+
+          data = travelers.find(traveler => traveler.id === id);
+
+          trips = promises[1].trips.filter(trip => trip.userID === id);
+
+          destinations = promises[2].destinations.filter(destination => {
+            return trips.some(trip => trip.destinationID === destination.id);
+          });
+
+          window.user = new Traveler(data, trips, destinations);
+
+          storage.setItem('activeUser', id);
+
+          storage.setItem('activeUserType', 'Traveler');
+        }
+
+      event.preventDefault();
+      showYourTripsDashboardPage();
+
+      );
+
+    } else {
+
+      dom.updateDashboard("No dice. Need the right password.");
+
+    }
   }
 }
 
