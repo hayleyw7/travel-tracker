@@ -135,17 +135,20 @@ function show(elements) {
 // SHOW & HIDE PAGE FUNCTIONS
 
 function showLoginPage() {
+  event.preventDefault()
   hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection]);
   show([loginPage]);
 }
 
 function showWannaJetPage() {
+  event.preventDefault()
   hide([loginPage, yourTripsDashboardPage]);
   show([wannaJetPage, navBarLinksSection]);
   populateDestinationsDropDown();
 }
 
 function showYourTripsDashboardPage() {
+  event.preventDefault()
   hide([loginPage, wannaJetPage]);
   show([navBarLinksSection, yourTripsDashboardPage]);
   showTrips()
@@ -169,7 +172,7 @@ function showEstimatedCost() {
 
   const costWithoutAgent = (flightCost + lodgingCost) * 2;
   const travelAgentFactor = 1.1;
-  
+
   const costToDisplay = travelAgentFactor * costWithoutAgent;
 
 
@@ -264,9 +267,10 @@ function showTrips() {
 }
 
 function populateDestinationsDropDown() {
-  this.destinations.forEach((destination) => {
+  console.log(destinations)
+  destinations.forEach((destinationObj) => {
     jetFormDestination.innerHTML('afterend', `
-      <option value="${destination.destination}">${destination.destination}</option>
+      <option value="${destinationObj.destination}">${destinationObj.destination}</option>
     `)
   })
 }
