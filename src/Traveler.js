@@ -1,11 +1,11 @@
 class Traveler {
 
   constructor(data, trips, destinations) {
-    this.id = data.id;
-    this.name = data.name;
-    this.trips = trips;
-    this.destinations = destinations;
-    this.travelerType = data.travelerType;
+    this.id = data.id,
+    this.name = data.name,
+    this.trips = trips,
+    this.destinations = destinations,
+    this.travelerType = data.travelerType
   }
 
   getName() {
@@ -26,10 +26,10 @@ class Traveler {
 
   getTripsByStatus(dateToday, status) {
     let today = this.trips.today;
-    let current = this.trip.startDate <= today && this.trip.endDate >= today;
-    let future = this.trip.startDate > today;
-    let pending = this.trip.status === 'pending';
-    let past =  this.trip.status === 'past';
+    let current = trip.startDate <= today && trip.endDate >= today;
+    let future = trip.startDate > today;
+    let pending = trip.status === 'pending';
+    let past =  trip.status === 'past';
 
     const result = this.trips.filter(trip => {
       if (current) {
