@@ -1,11 +1,11 @@
 class Traveler {
 
   constructor(data, trips, destinations) {
-    this.id = data.id;
-    this.name = data.name;
-    this.trips = trips;
-    this.destinations = destinations;
-    this.travelerType = data.travelerType;
+    this.id = data.id,
+    this.name = data.name,
+    this.trips = trips,
+    this.destinations = destinations,
+    this.travelerType = data.travelerType
   }
 
   getName() {
@@ -26,23 +26,23 @@ class Traveler {
 
   getTripsByStatus(dateToday, status) {
     let today = this.trips.today;
-    let current = this.trip.startDate <= today && this.trip.endDate >= today
-    let future = this.trip.startDate > today
-    let pending = this.trip.status === 'pending'
-    let past =  this.trip.status === 'past'
+    let current = trip.startDate <= today && trip.endDate >= today;
+    let future = trip.startDate > today;
+    let pending = trip.status === 'pending';
+    let past = trip.status === 'past';
 
     const result = this.trips.filter(trip => {
       if (current) {
-        this.trips.status = current;
+        trip.status = current;
         return current;
       } else if (future) {
-        this.trips.status = approved;
+        trip.status = approved;
         return future;
       } else if (pending) {
-        this.trips.status = pending;
+        trip.status = pending;
         return pending;
       } else {
-        this.trips.status = complete;
+        trip.status = complete;
         return past;
       }
     })
@@ -51,7 +51,7 @@ class Traveler {
   getTripsString() {
     const result = this.trips.reduce((tripString, trip) => {
 
-      let destination = this.destinations.find(destination => destination.id === trip.destinationID).destination
+      let destination = this.destinations.find(destination => destination.id === trip.destinationID).destination;
 
       tripString = tripString.concat(destination + '<br>');
 
@@ -66,22 +66,19 @@ class Traveler {
   }
 
   getTotalSpent() {
-
     return this.trips.reduce((sum, trip) => {
 
       const destination = this.getDestination(trip);
-
       const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-
       const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
       const travelAgentFactor = 1.1;
-
       sum += travelAgentFactor * (flightCost + lodgingCost);
-
       return sum;
     }, 0);
   }
+
+  
 }
 
 export default Traveler
