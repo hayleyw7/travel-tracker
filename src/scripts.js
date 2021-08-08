@@ -46,8 +46,6 @@ let travelers, trips, destinations, data;
 
 // ***** EVENT LISTENERS *****
 
-window.addEventListener('load', returnData);
-
 // NAVBAR
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
@@ -67,29 +65,7 @@ function packPromises() {
 
 }
 
-function returnData() {
-  getData()
-    .then(promiseArray => {
-      travelers = promiseArray[0].travelers;
-      trips = promiseArray[1].trips;
-      destinations = promiseArray[2].destinations;
-      // currentUserId = currentUser.id;
-      // currentDate = "2020/01/22";
-      // startDate = "2020/01/15";
-    })
-    .then(startApp);
-}
-
-// add parameters/arguments
-
-function startApp() {
-  // let traveler = new Traveler()
-  // let trip = new Trip()
-  dom.renderFirstName()
-}
-
 ///
-
 
 // function postTravelerInputs() {
 //   postTravelerData(travelerID, travelerName, travelerType)
@@ -209,7 +185,6 @@ function login() {
     if (password === "travel") {
 
       const username = dom.loginFormUsername.value;
-
       const id = getID(username);
 
       packPromises().then(
@@ -226,7 +201,6 @@ function login() {
           window.user = new Traveler(data, trips, destinations);
 
           storage.setItem('activeUser', id);
-          storage.setItem('activeUserType', 'Traveler');
         }
       );
 
