@@ -163,20 +163,24 @@ function createTrip() {
 
 function showEstimatedCost() {
   event.preventDefault()
-  // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-  // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-  // const costWithoutAgent = (flightCost + lodgingCost) * 2;
-  // const travelAgentFactor = 1.1;
-  // const costToDisplay = travelAgentFactor * costWithoutAgent;
+  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-  // estimatedCostHTML.innerHTML = `${costToDisplay}`
+  const costWithoutAgent = (flightCost + lodgingCost) * 2;
+  const travelAgentFactor = 1.1;
+  
+  const costToDisplay = travelAgentFactor * costWithoutAgent;
+
+
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
-    estimatedCostHTML.innerText = `Please tell us all of the things if you want us to make stuff happen and such!`;
+    estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
   }  else {
     // alert('Please tell us all of the things!');
-    estimatedCostHTML.innerText = `If you see this, THE BUG IS FIXED!`;
+    // estimatedCostHTML.innerText = `If you see this, THE BUG IS FIXED!`;
+
+    estimatedCostHTML.innerHTML = `${costToDisplay}`
   }
 }
 
