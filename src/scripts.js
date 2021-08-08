@@ -33,7 +33,9 @@ const {
   jetFormSubmitBtn,
   estimatedCostHTML,
   letsJetBtn,
-  enterYourPassToPlan
+  enterYourPassToPlan,
+  destinationNameHTML,
+  dateTime
 } = dom;
 
 // ***** STORAGE & SETUP *****
@@ -145,6 +147,7 @@ function showWannaJetPage() {
 function showYourTripsDashboardPage() {
   hide([loginPage, wannaJetPage]);
   show([navBarLinksSection, yourTripsDashboardPage]);
+  showTrips()
 }
 
 // INSTANTIATE TRIP
@@ -162,9 +165,11 @@ function showEstimatedCost() {
   // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
   // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-  // const costToDisplay = flightCost + lodgingCost;
-  // estimatedCostHTML.innerHTML = `${costToDisplay}`
+  // const costWithoutAgent = (flightCost + lodgingCost) * 2;
+  // const travelAgentFactor = 1.1;
+  // const costToDisplay = travelAgentFactor * costWithoutAgent;
 
+  // estimatedCostHTML.innerHTML = `${costToDisplay}`
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
     estimatedCostHTML.innerText = `Please tell us all of the things if you want us to make stuff happen and such!`;
@@ -213,6 +218,50 @@ function login() {
     }
   }
 }
+
+function showCurrentTrip() {
+  const displayThis = user.getTripsByStatus(trip.today, 'current')
+
+  destinationNameHTML.innerText(`${displayThis.destination}`)
+
+  dateTimeHTML.innerText(`${displayThis.date}`)
+}
+
+function showPendingTrips() {
+  const displayThis = user.getTripsByStatus(trip.today, 'pending')
+
+  destinationNameHTML.innerText(`${displayThis.destination}`)
+
+  dateTimeHTML.innerText(`${displayThis.date}`)
+}
+
+function showFutureTrips() {
+  const displayThis = user.getTripsByStatus(trip.today, 'approved')
+
+  destinationNameHTML.innerText(`${displayThis.destination}`)
+
+  dateTimeHTML.innerText(`${displayThis.date}`)
+}
+
+function showPastTrips() {
+  const displayThis = user.getTripsByStatus(trip.today, 'past')
+
+  destinationNameHTML.innerText(`${displayThis.destination}`)
+
+  dateTimeHTML.innerText(`${displayThis.date}`)
+}
+
+function showTrips() {
+  showCurrentTrip()
+  showPendingTrips()
+  showFutureTrips()
+  showPastTrips()
+}
+
+
+
+
+
 
 // test
 

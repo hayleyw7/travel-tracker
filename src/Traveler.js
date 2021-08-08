@@ -24,6 +24,30 @@ class Traveler {
     return this.trips;
   }
 
+  getTripsByStatus(dateToday, status) {
+    let today = this.trips.today;
+    let current = this.trip.startDate <= today && this.trip.endDate >= today
+    let future = this.trip.startDate > today
+    let pending = this.trip.status === 'pending'
+    let past =  this.trip.status === 'past'
+
+    const result = this.trips.filter(trip => {
+      if (current) {
+        this.trips.status = current;
+        return current;
+      } else if (future) {
+        this.trips.status = approved;
+        return future;
+      } else if (pending) {
+        this.trips.status = pending;
+        return pending;
+      } else {
+        this.trips.status = complete;
+        return past;
+      }
+    })
+  }
+
   getTripsString() {
     const result = this.trips.reduce((tripString, trip) => {
 

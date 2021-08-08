@@ -24,6 +24,8 @@ const dom = {
 
   // YOUR TRIPS DASHBOARD PAGE
   yourTripsDashboardPage: document.getElementById('yourTripsDashboardPage'),
+  destinationNameHTML: document.getElementById('destinationNameHTML'),
+  dateTimeHTML: document.getElementById('dateTimeHTML'),
 
   // WANNA JET PAGE
   wannaJetPage: document.getElementById('wannaJetPage'),

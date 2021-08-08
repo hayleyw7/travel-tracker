@@ -1,5 +1,6 @@
 import chai from 'chai';
 import Traveler from '../src/Traveler.js';
+import Trip from '../src/Trip.js';
 
 const expect = chai.expect;
 
@@ -14,6 +15,7 @@ const destinations = require('../src/destinations.js').filter(destination => {
 });
 
 const bob = new Traveler(data, trips, destinations);
+const trip = new Trip(trips)
 
 describe('An individual Traveler', function() {
 
@@ -38,6 +40,12 @@ describe('An individual Traveler', function() {
   it('should be able to return trip data', function() {
 
     expect(bob.getTrips()[0].date).to.equal("2021/01/09");
+
+  });
+
+  it('should be able to return current trip', function() {
+
+    expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
 
   });
 
