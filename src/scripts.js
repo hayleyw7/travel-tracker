@@ -224,13 +224,8 @@ function login() {
       packPromises().then(
 
         promises => {
-
           travelers = promises[0].travelers;
-
-          console.log(travelers[0] + " and id is " + id);
-
           data = travelers.find(traveler => traveler.id === id);
-
           trips = promises[1].trips.filter(trip => trip.userID === id);
 
           destinations = promises[2].destinations.filter(destination => {
@@ -240,15 +235,12 @@ function login() {
           window.user = new Traveler(data, trips, destinations);
 
           storage.setItem('activeUser', id);
-
           storage.setItem('activeUserType', 'Traveler');
         }
-
-      event.preventDefault();
-      showYourTripsDashboardPage();
-
       );
 
+      showYourTripsDashboardPage();
+      
     } else {
 
       dom.updateDashboard("No dice. Need the right password.");
