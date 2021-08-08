@@ -25,6 +25,9 @@ class Trip {
     // this.destinations = destinations
   }
 
+
+  // move to Traveler.js
+  
   getUserTripDates() {
     let tripDuration = this.tripData.duration;
     this.startDate = new Date(this.tripData.date);

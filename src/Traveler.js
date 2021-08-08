@@ -82,6 +82,8 @@ class Traveler {
       return sum;
     }, 0);
   }
+
+  
 }
 
 export default Traveler

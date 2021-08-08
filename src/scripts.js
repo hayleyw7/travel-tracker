@@ -220,42 +220,42 @@ function login() {
 }
 
 function showCurrentTrip() {
-  const displayThis = user.getTripsByStatus(trip.today, 'current')
+  const displayThis = user.getTripsByStatus(trip.today, 'current');
 
-  destinationNameHTML.innerText(`${displayThis.destination}`)
+  destinationNameHTML.innerText(`${displayThis.destination}`);
 
-  dateTimeHTML.innerText(`${displayThis.date}`)
+  dateTimeHTML.innerText(`${displayThis.date}`);
 }
 
 function showPendingTrips() {
-  const displayThis = user.getTripsByStatus(trip.today, 'pending')
+  const displayThis = user.getTripsByStatus(trip.today, 'pending');
 
-  destinationNameHTML.innerText(`${displayThis.destination}`)
+  destinationNameHTML.innerText(`${displayThis.destination}`);
 
-  dateTimeHTML.innerText(`${displayThis.date}`)
+  dateTimeHTML.innerText(`${displayThis.date}`);
 }
 
 function showFutureTrips() {
-  const displayThis = user.getTripsByStatus(trip.today, 'approved')
+  const displayThis = user.getTripsByStatus(trip.today, 'approved');
 
-  destinationNameHTML.innerText(`${displayThis.destination}`)
+  destinationNameHTML.innerText(`${displayThis.destination}`);
 
-  dateTimeHTML.innerText(`${displayThis.date}`)
+  dateTimeHTML.innerText(`${displayThis.date}`);
 }
 
 function showPastTrips() {
-  const displayThis = user.getTripsByStatus(trip.today, 'past')
+  const displayThis = user.getTripsByStatus(trip.today, 'past');
 
-  destinationNameHTML.innerText(`${displayThis.destination}`)
+  destinationNameHTML.innerText(`${displayThis.destination}`);
 
-  dateTimeHTML.innerText(`${displayThis.date}`)
+  dateTimeHTML.innerText(`${displayThis.date}`);
 }
 
 function showTrips() {
-  showCurrentTrip()
-  showPendingTrips()
-  showFutureTrips()
-  showPastTrips()
+  showCurrentTrip();
+  showPendingTrips();
+  showFutureTrips();
+  showPastTrips();
 }
 
 
