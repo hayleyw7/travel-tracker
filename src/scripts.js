@@ -269,7 +269,7 @@ function showTrips() {
 function populateDestinationsDropDown() {
   console.log(destinations)
   destinations.forEach((destinationObj) => {
-    jetFormDestination.insertAdjacentHTML('afterend', `
+    jetFormDestination.insertAdjacentHTML('beforeend', `
       <option value="${destinationObj.destination}">${destinationObj.destination}</option>
     `)
   })
