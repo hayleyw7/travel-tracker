@@ -29,20 +29,20 @@ class Traveler {
     let current = trip.startDate <= today && trip.endDate >= today;
     let future = trip.startDate > today;
     let pending = trip.status === 'pending';
-    let past =  trip.status === 'past';
+    let past = trip.status === 'past';
 
     const result = this.trips.filter(trip => {
       if (current) {
-        this.trips.status = current;
+        trip.status = current;
         return current;
       } else if (future) {
-        this.trips.status = approved;
+        trip.status = approved;
         return future;
       } else if (pending) {
-        this.trips.status = pending;
+        trip.status = pending;
         return pending;
       } else {
-        this.trips.status = complete;
+        trip.status = complete;
         return past;
       }
     })
@@ -66,19 +66,14 @@ class Traveler {
   }
 
   getTotalSpent() {
-
     return this.trips.reduce((sum, trip) => {
 
       const destination = this.getDestination(trip);
-
       const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-
       const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
       const travelAgentFactor = 1.1;
-
       sum += travelAgentFactor * (flightCost + lodgingCost);
-
       return sum;
     }, 0);
   }
@@ -86,4 +81,4 @@ class Traveler {
   
 }
 
-export default Traveler
+export default Traveler;
