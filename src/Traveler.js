@@ -24,6 +24,23 @@ class Traveler {
     return this.trips;
   }
 
+  getTripsString() {
+    const result = this.trips.reduce((tripString, trip) => {
+
+      let destination = this.destinations.find(destination => destination.id === trip.destinationID).destination
+
+      tripString = tripString.concat(destination + '<br>');
+
+      return tripString;
+
+    }, '');
+    return result;
+  }
+
+  getDestination(trip) {
+    return this.destinations.find(destination => destination.id === trip.destinationID);
+  }
+
   getTotalSpent() {
 
     return this.trips.reduce((sum, trip) => {
@@ -34,14 +51,12 @@ class Traveler {
 
       const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-      sum += flightCost + lodgingCost;
+      const travelAgentFactor = 1.1;
+
+      sum += travelAgentFactor * (flightCost + lodgingCost);
 
       return sum;
     }, 0);
-  }
-
-  getDestination(trip) {
-    return this.destinations.find(destination => destination.id === trip.destinationID);
   }
 }
 

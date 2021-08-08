@@ -43,7 +43,7 @@ describe('An individual Traveler', function() {
 
   it('should be able to calculate the cost of all trips', function() {
 
-    expect(bob.getTotalSpent()).to.equal(3750);
+    expect(bob.getTotalSpent()).to.equal(4125);
 
   });
 
