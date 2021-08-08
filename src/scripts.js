@@ -16,15 +16,6 @@ import dom from './domUpdates';
 import Traveler from './Traveler';
 import Trip from './Trip';
 
-// const {
-
-//   usernameInput, ---> loginFormUsername
-//   passwordInput, ---> loginFormPassword
-//   loginButton, ---> loginFormSubmitBtn
-//   loginForm ---> loginPage
-
-// } = dom;
-
 const {
   navBarLinksSection,
   navBarYourTripsBtn,
@@ -213,11 +204,11 @@ function login() {
     enterYourPassToPlan.innerText = `Please fill in both fields.`;
   } else {
   
-    const password = dom.passwordInput.value;
+    const password = dom.loginFormPassword.value;
 
     if (password === "travel") {
 
-      const username = dom.usernameInput.value;
+      const username = dom.loginFormUsername.value;
 
       const id = getID(username);
 
