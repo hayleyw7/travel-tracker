@@ -36,10 +36,13 @@ class Traveler {
         this.trips.status = current;
         return current;
       } else if (future) {
+        this.trips.status = approved;
         return future;
       } else if (pending) {
+        this.trips.status = pending;
         return pending;
       } else {
+        this.trips.status = complete;
         return past;
       }
     })
