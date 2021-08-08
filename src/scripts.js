@@ -31,6 +31,7 @@ const {
   jetFormSubmitBtn,
   estimatedCostHTML,
   letsJetBtn,
+  enterYourPassToPlan
 } = domUpdates;
 
 // ***** EVENT LISTENERS *****
@@ -42,17 +43,10 @@ navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 
 // LOGIN PAGE
-// loginFormUsername.addEventListener('click', functionhere);
-// loginFormPassword.addEventListener('click', functionhere);
-// loginFormSubmitBtn.addEventListener('click', functionhere);
+loginFormSubmitBtn.addEventListener('click', submitPassword);
 
 // WANNA JET PAGE
-// jetFormDate.addEventListener('click', functionhere);
-// jetFormDuration.addEventListener('click', functionhere);
-// jetFormHumans.addEventListener('click', functionhere);
-// jetFormDestination.addEventListener('click', functionhere);
 jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
-// estimatedCostHTML.addEventListener('click', functionhere);
 letsJetBtn.addEventListener('click', createTrip);
 
 // ***** API STUFF *****
@@ -176,7 +170,7 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-
+  event.preventDefault()
   // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
   // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
@@ -184,20 +178,28 @@ function showEstimatedCost() {
   // estimatedCostHTML.innerHTML = `${costToDisplay}`
 
 
-  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
-    estimatedCostHTML.innerText = `If you see this & filled in all 4 input boxes, the bug is fixed!`;
+  if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
+    estimatedCostHTML.innerText = `Please tell us all of the things if you want us to make stuff happen and such!`;
   }  else {
-      event.preventDefault()
     // alert('Please tell us all of the things!');
-    estimatedCostHTML.innerText = `Please tell us all of the things!`;
+    estimatedCostHTML.innerText = `If you see this, THE BUG IS FIXED!`;
+  }
+}
+
+function submitPassword() {
+  event.preventDefault();
+  if (!loginFormPassword.value || !loginFormUsername.value) { 
+    enterYourPassToPlan.innerText = `Please fill in both fields.`
+  } else {
+    showYourTripsDashboardPage()
   }
 }
 
 // test
 
-function testAlert() {
-  alert("I am an alert box!");
-}
+// function testAlert() {
+//   alert("I am an alert box!");
+// }
 
 // help
 
