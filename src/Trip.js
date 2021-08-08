@@ -20,7 +20,7 @@ class Trip {
     this.startDate,
     this.endDate,
     this.estimatedCost,
-    this.today = new Date(),
+    this.today = new Date()
     // maybe pass in destinations later?
     // this.destinations = destinations
   }
