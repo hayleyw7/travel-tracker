@@ -39,7 +39,8 @@ const {
   navBarSignOutBtn,
   replaceYOLO,
   estimatedCostHeaderHTML,
-  name
+  name,
+  yearCost
 } = dom;
 
 // ***** STORAGE & SETUP *****
@@ -143,7 +144,7 @@ function showLoginPage() {
   // event.preventDefault()
   hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   show([loginPage]);
-  name.innerText = `"Oh, the places you'll vibe!`;
+  name.innerText = `"Oh, the places you'll vibe!"`;
 }
 
 function showWannaJetPage() {
@@ -162,6 +163,9 @@ function showYourTripsDashboardPage() {
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
   yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
+  user.totalCostString();
+
+  // yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
 }
 
 // INSTANTIATE TRIP

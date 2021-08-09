@@ -25,6 +25,7 @@ const dom = {
   yourTripsDashboardPage: document.getElementById('yourTripsDashboardPage'),
   destinationNameHTML: document.getElementById('destinationNameHTML'),
   dateTimeHTML: document.getElementById('dateTimeHTML'),
+  yearCost: document.getElementById('yearCost'),
 
   // WANNA JET PAGE
   wannaJetPage: document.getElementById('wannaJetPage'),

@@ -111,6 +111,7 @@ h3 {
   flex-direction: row;
   justify-content: space-evenly;
   margin: 0.5rem; 
+  color: var(--darkgray);
 }
 
 .card-container-2 {
@@ -230,4 +231,8 @@ h3 {
 .lets-jet-btn {
   float: right;
   margin-bottom: 0.4rem;
+}
+
+.dashboard {
+  color: white;
 }
