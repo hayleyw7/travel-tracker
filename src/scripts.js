@@ -140,13 +140,13 @@ function show(elements) {
 // SHOW & HIDE PAGE FUNCTIONS
 
 function showLoginPage() {
-  event.preventDefault()
+  // event.preventDefault()
   hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   show([loginPage]);
 }
 
 function showWannaJetPage() {
-  event.preventDefault();
+  // event.preventDefault();
   name.innerText = `Yo, ${user.name}!`;
   hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
@@ -154,7 +154,7 @@ function showWannaJetPage() {
 }
 
 function showYourTripsDashboardPage() {
-  event.preventDefault();
+  // event.preventDefault();
   // console.log(user.name)
   name.innerText = `Yo, ${user.name}!`;
   // console.log(user)
@@ -198,7 +198,7 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-  event.preventDefault()
+  // event.preventDefault()
 
 
 
@@ -255,13 +255,12 @@ function login() {
           allTrips - promises[1].trips;
 
           window.user = new Traveler(data, trips, destinations);
+          showYourTripsDashboardPage();
         }
       );
-
-      showYourTripsDashboardPage();
       
     } else {
-      event.preventDefault()
+      // event.preventDefault()
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;
       yourTripsDashboardPage.innerHTML = `${user.getTripsHTML()}`;
