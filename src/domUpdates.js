@@ -14,6 +14,7 @@ const dom = {
   navBarLinksSection: document.getElementById('navBarLinksSection'),
   navBarYourTripsBtn: document.getElementById('navBarYourTripsBtn'),
   navBarTripPlannerBtn: document.getElementById('navBarTripPlannerBtn'),
+  navBarSignOutBtn: document.getElementById('navBarSignOutBtn'),
   usernameSection: document.getElementById('usernameSection'),
 
   // LOGIN PAGE

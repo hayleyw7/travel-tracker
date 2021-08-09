@@ -35,7 +35,8 @@ const {
   letsJetBtn,
   enterYourPassToPlan,
   destinationNameHTML,
-  dateTime
+  dateTime,
+  navBarSignOutBtn
 } = dom;
 
 // ***** STORAGE & SETUP *****
@@ -51,6 +52,7 @@ let travelers, trips, destinations, data;
 // NAVBAR
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
+navBarSignOutBtn.addEventListener('click', showLoginPage);
 
 // LOGIN PAGE
 loginFormSubmitBtn.addEventListener('click', login);
@@ -136,21 +138,21 @@ function show(elements) {
 
 function showLoginPage() {
   event.preventDefault()
-  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection]);
+  hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection, navBarSignOutBtn]);
   show([loginPage]);
 }
 
 function showWannaJetPage() {
   event.preventDefault()
-  hide([loginPage, yourTripsDashboardPage]);
-  show([wannaJetPage, navBarLinksSection]);
+  hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
+  show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
   populateDestinationsDropDown();
 }
 
 function showYourTripsDashboardPage() {
   event.preventDefault()
-  hide([loginPage, wannaJetPage]);
-  show([navBarLinksSection, yourTripsDashboardPage]);
+  hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
+  show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
   showTrips()
 }
 
