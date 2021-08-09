@@ -36,7 +36,8 @@ const {
   enterYourPassToPlan,
   destinationNameHTML,
   dateTime,
-  navBarSignOutBtn
+  navBarSignOutBtn,
+  replaceYOLO
 } = dom;
 
 // ***** STORAGE & SETUP *****
@@ -222,8 +223,9 @@ function login() {
       showYourTripsDashboardPage();
       
     } else {
-
-      dom.updateDashboard("No dice. Need the right password.");
+      event.preventDefault()
+      replaceYOLO.innerText = `No dice!`;
+      enterYourPassToPlan.innerText = `You need the right password.`;
 
     }
   }

@@ -23,6 +23,7 @@ const dom = {
   loginFormPassword: document.getElementById('loginFormPassword'),
   loginFormSubmitBtn: document.getElementById('loginFormSubmitBtn'),
   enterYourPassToPlan: document.getElementById('enterYourPassToPlan'),
+  replaceYOLO: document.getElementById('replaceYOLO'),
 
   // YOUR TRIPS DASHBOARD PAGE
   yourTripsDashboardPage: document.getElementById('yourTripsDashboardPage'),
