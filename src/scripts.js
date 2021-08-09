@@ -81,12 +81,12 @@ function packPromises() {
 //       if (!response.ok) {
 //         throw Error(response.statusText);
 //       } else {
-//         //?.innerText = "Success"
+//         //?.innerText = 'Success'
 //         // dom.renderSubmittedHydration(hydrationInput.value)
 //       }
 //     })
 //     .catch(error => {
-//       // ?.innerText = "Fail";
+//       // ?.innerText = 'Fail';
 //       console.log(error)
 //     })
 // }
@@ -143,7 +143,7 @@ function show(elements) {
 function showLoginPage() {
   hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   show([loginPage]);
-  name.innerText = `"Oh, the places you'll vibe!"`;
+  name.innerText = `'Oh, the places you'll vibe!'`;
 }
 
 function showWannaJetPage() {
@@ -177,14 +177,14 @@ function createTrip() {
   
     const trip = new Trip(
       {
-        "id": allTrips.length,
-        "userID": user.id,
-        "destinationID": getDestinationID,
-        "travelers": jetFormHumans.value,
-        "date": jetFormDate.value,
-        "duration": jetFormDuration.value,
-        "status": "pending",
-        "suggestedActivities": []
+        'id': allTrips.length,
+        'userID': user.id,
+        'destinationID': getDestinationID,
+        'travelers': jetFormHumans.value,
+        'date': jetFormDate.value,
+        'duration': jetFormDuration.value,
+        'status': 'pending',
+        'suggestedActivities': []
       });
   }
 
@@ -199,6 +199,18 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
+  const trip = new Trip(
+    {
+      'id': allTrips.length,
+      'userID': user.id,
+      'destinationID': getDestinationID,
+      'travelers': jetFormHumans.value,
+      'date': jetFormDate.value,
+      'duration': jetFormDuration.value,
+      'status': 'pending',
+      'suggestedActivities': []
+    });
+
   user.getTotal()
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
@@ -207,7 +219,7 @@ function showEstimatedCost() {
   }  else {
 
     show([letsJetBtn])
-    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${getTotal()}`
+    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${user.getTotal(trip, destination)}`
     estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
   }
 }
@@ -220,7 +232,7 @@ function login() {
   
     const password = loginFormPassword.value;
 
-    if (password === "travel") {
+    if (password === 'travel') {
 
       const username = loginFormUsername.value;
       const id = getID(username);
@@ -252,37 +264,6 @@ function login() {
   }
 }
 
-function showCurrentTrip() {
-  const displayThis = user.getTripsByStatus(trip.today, 'current');
-  destinationNameHTML.innerText = `${displayThis.destination}`;
-  dateTimeHTML.innerText = `${displayThis.date}`;
-}
-
-function showPendingTrips() {
-  const displayThis = user.getTripsByStatus(trip.today, 'pending');
-  destinationNameHTML.innerText = `${displayThis.destination}`;
-  dateTimeHTML.innerText = `${displayThis.date}`;
-}
-
-function showFutureTrips() {
-  const displayThis = user.getTripsByStatus(trip.today, 'approved');
-  destinationNameHTML.innerText = `${displayThis.destination}`;
-  dateTimeHTML.innerText = `${displayThis.date}`;
-}
-
-function showPastTrips() {
-  const displayThis = user.getTripsByStatus(trip.today, 'past');
-  destinationNameHTML.innerText = `${displayThis.destination}`;
-  dateTimeHTML.innerText = `${displayThis.date}`;
-}
-
-function showTrips() {
-  showCurrentTrip();
-  showPendingTrips();
-  showFutureTrips();
-  showPastTrips();
-}
-
 function populateDestinationsDropDown() {
   allDestinations.sort((destinationObjA, destinationObjB) => {
     if (destinationObjA.destination < destinationObjB.destination) {
@@ -292,21 +273,11 @@ function populateDestinationsDropDown() {
     }
   }).forEach((destinationObj) => {
     jetFormDestination.insertAdjacentHTML('beforeend', `
-      <option value="${destinationObj.destination}">${destinationObj.destination}</option>
+      <option value='${destinationObj.destination}'>${destinationObj.destination}</option>
     `)
   })
 }
 
-
-
-
-
-
-// test
-
-// function testAlert() {
-//   alert("I am an alert box!");
-// }
 
 // help
 
