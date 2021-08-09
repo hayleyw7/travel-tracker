@@ -23,6 +23,7 @@ const dom = {
   loginFormPassword: document.getElementById('loginFormPassword'),
   loginFormSubmitBtn: document.getElementById('loginFormSubmitBtn'),
   enterYourPassToPlan: document.getElementById('enterYourPassToPlan'),
+  replaceYOLO: document.getElementById('replaceYOLO'),
 
   // YOUR TRIPS DASHBOARD PAGE
   yourTripsDashboardPage: document.getElementById('yourTripsDashboardPage'),
@@ -36,6 +37,7 @@ const dom = {
   jetFormHumans: document.getElementById('jetFormHumans'),
   jetFormDestination: document.getElementById('jetFormDestination'),
   jetFormSubmitBtn: document.getElementById('jetFormSubmitBtn'),
+  estimatedCostHeaderHTML: document.getElementById('estimatedCostHeaderHTML'),
   estimatedCostHTML: document.getElementById('estimatedCostHTML'),
   letsJetBtn: document.getElementById('letsJetBtn'),
 }
