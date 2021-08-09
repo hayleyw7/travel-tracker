@@ -158,7 +158,8 @@ function showYourTripsDashboardPage() {
   name.innerText = `Yo, ${user.name}!`;
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  showTrips();
+  console.log(user.getTripsHTML())
+  yourTripsDashboardPage.innerHTML = `${user.getTripsHTML()}`
 }
 
 // INSTANTIATE TRIP
@@ -253,8 +254,6 @@ function login() {
           allTrips - promises[1].trips;
 
           window.user = new Traveler(data, trips, destinations);
-
-          storage.setItem('activeUser', id);
         }
       );
 
