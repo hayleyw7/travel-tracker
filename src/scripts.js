@@ -37,7 +37,8 @@ const {
   destinationNameHTML,
   dateTime,
   navBarSignOutBtn,
-  replaceYOLO
+  replaceYOLO,
+  estimatedCostHeaderHTML
 } = dom;
 
 // ***** STORAGE & SETUP *****
@@ -170,17 +171,18 @@ function createTrip() {
 function showEstimatedCost() {
   event.preventDefault()
 
-  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
+  // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+  // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-  const costWithoutAgent = (flightCost + lodgingCost) * 2;
-  const travelAgentFactor = 1.1;
+  // const costWithoutAgent = (flightCost + lodgingCost) * 2;
+  // const travelAgentFactor = 1.1;
 
-  const costToDisplay = travelAgentFactor * costWithoutAgent;
+  // const costToDisplay = travelAgentFactor * costWithoutAgent;
 
 
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
+    estimatedCostHeaderHTML.innerText = `You tried & failed tbh.`;
     estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
   }  else {
     // alert('Please tell us all of the things!');
@@ -234,33 +236,33 @@ function login() {
 function showCurrentTrip() {
   const displayThis = user.getTripsByStatus(trip.today, 'current');
 
-  destinationNameHTML.innerText(`${displayThis.destination}`);
+  destinationNameHTML.innerText = `${displayThis.destination}`;
 
-  dateTimeHTML.innerText(`${displayThis.date}`);
+  dateTimeHTML.innerText = `${displayThis.date}`;
 }
 
 function showPendingTrips() {
   const displayThis = user.getTripsByStatus(trip.today, 'pending');
 
-  destinationNameHTML.innerText(`${displayThis.destination}`);
+  destinationNameHTML.innerText = `${displayThis.destination}`;
 
-  dateTimeHTML.innerText(`${displayThis.date}`);
+  dateTimeHTML.innerText = `${displayThis.date}`;
 }
 
 function showFutureTrips() {
   const displayThis = user.getTripsByStatus(trip.today, 'approved');
 
-  destinationNameHTML.innerText(`${displayThis.destination}`);
+  destinationNameHTML.innerText = `${displayThis.destination}`;
 
-  dateTimeHTML.innerText(`${displayThis.date}`);
+  dateTimeHTML.innerText = `${displayThis.date}`;
 }
 
 function showPastTrips() {
   const displayThis = user.getTripsByStatus(trip.today, 'past');
 
-  destinationNameHTML.innerText(`${displayThis.destination}`);
+  destinationNameHTML.innerText = `${displayThis.destination}`;
 
-  dateTimeHTML.innerText(`${displayThis.date}`);
+  dateTimeHTML.innerText = `${displayThis.date}`;
 }
 
 function showTrips() {

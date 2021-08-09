@@ -37,6 +37,7 @@ const dom = {
   jetFormHumans: document.getElementById('jetFormHumans'),
   jetFormDestination: document.getElementById('jetFormDestination'),
   jetFormSubmitBtn: document.getElementById('jetFormSubmitBtn'),
+  estimatedCostHeaderHTML: document.getElementById('estimatedCostHeaderHTML'),
   estimatedCostHTML: document.getElementById('estimatedCostHTML'),
   letsJetBtn: document.getElementById('letsJetBtn'),
 }
