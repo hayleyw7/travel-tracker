@@ -38,7 +38,8 @@ const {
   dateTime,
   navBarSignOutBtn,
   replaceYOLO,
-  estimatedCostHeaderHTML
+  estimatedCostHeaderHTML,
+  name
 } = dom;
 
 // ***** STORAGE & SETUP *****
@@ -145,17 +146,19 @@ function showLoginPage() {
 }
 
 function showWannaJetPage() {
-  event.preventDefault()
+  event.preventDefault();
+  name.innerText = `Yo, ${user.name}!`;
   hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
   populateDestinationsDropDown();
 }
 
 function showYourTripsDashboardPage() {
-  event.preventDefault()
+  event.preventDefault();
+  name.innerText = `Yo, ${user.name}!`;
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  showTrips()
+  showTrips();
 }
 
 // INSTANTIATE TRIP
@@ -268,33 +271,25 @@ function login() {
 
 function showCurrentTrip() {
   const displayThis = user.getTripsByStatus(trip.today, 'current');
-
   destinationNameHTML.innerText = `${displayThis.destination}`;
-
   dateTimeHTML.innerText = `${displayThis.date}`;
 }
 
 function showPendingTrips() {
   const displayThis = user.getTripsByStatus(trip.today, 'pending');
-
   destinationNameHTML.innerText = `${displayThis.destination}`;
-
   dateTimeHTML.innerText = `${displayThis.date}`;
 }
 
 function showFutureTrips() {
   const displayThis = user.getTripsByStatus(trip.today, 'approved');
-
   destinationNameHTML.innerText = `${displayThis.destination}`;
-
   dateTimeHTML.innerText = `${displayThis.date}`;
 }
 
 function showPastTrips() {
   const displayThis = user.getTripsByStatus(trip.today, 'past');
-
   destinationNameHTML.innerText = `${displayThis.destination}`;
-
   dateTimeHTML.innerText = `${displayThis.date}`;
 }
 
@@ -306,11 +301,13 @@ function showTrips() {
 }
 
 function populateDestinationsDropDown() {
-  allDestinations.sort((destinationObjA, destinationObjB) =>
-    destinationObjA.destination - destinationObjB.destination         
-  )
-
-  .forEach((destinationObj) => {
+  allDestinations.sort((destinationObjA, destinationObjB) => {
+    if (destinationObjA.destination < destinationObjB.destination) {
+      return -1;
+    } else {
+      return 1
+    }
+  }).forEach((destinationObj) => {
     jetFormDestination.insertAdjacentHTML('beforeend', `
       <option value="${destinationObj.destination}">${destinationObj.destination}</option>
     `)

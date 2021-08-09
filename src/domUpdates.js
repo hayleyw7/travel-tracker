@@ -1,11 +1,12 @@
 const dom = {
 
-  renderFirstName(user) {
-    let name = document.getElementById('name');
-    name.innerText = `${user.getName()}`;
-  },
+  // renderFirstName(user) {
+  //   let name = document.getElementById('name');
+  //   name.innerText = `${user.name}`;
+  // },
 
   // NAVBAR
+  name: document.getElementById('name'),
   navBarLinksSection: document.getElementById('navBarLinksSection'),
   navBarYourTripsBtn: document.getElementById('navBarYourTripsBtn'),
   navBarTripPlannerBtn: document.getElementById('navBarTripPlannerBtn'),

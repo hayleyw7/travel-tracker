@@ -9,7 +9,7 @@ class Traveler {
   }
 
   getName() {
-    return this.name;
+    return this.name.split(' ');
   }
 
   getID() {
