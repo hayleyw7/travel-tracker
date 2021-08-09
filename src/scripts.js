@@ -135,17 +135,20 @@ function show(elements) {
 // SHOW & HIDE PAGE FUNCTIONS
 
 function showLoginPage() {
+  event.preventDefault()
   hide([yourTripsDashboardPage, wannaJetPage, navBarLinksSection]);
   show([loginPage]);
 }
 
 function showWannaJetPage() {
+  event.preventDefault()
   hide([loginPage, yourTripsDashboardPage]);
   show([wannaJetPage, navBarLinksSection]);
   populateDestinationsDropDown();
 }
 
 function showYourTripsDashboardPage() {
+  event.preventDefault()
   hide([loginPage, wannaJetPage]);
   show([navBarLinksSection, yourTripsDashboardPage]);
   showTrips()
@@ -163,20 +166,24 @@ function createTrip() {
 
 function showEstimatedCost() {
   event.preventDefault()
-  // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-  // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-  // const costWithoutAgent = (flightCost + lodgingCost) * 2;
-  // const travelAgentFactor = 1.1;
-  // const costToDisplay = travelAgentFactor * costWithoutAgent;
+  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-  // estimatedCostHTML.innerHTML = `${costToDisplay}`
+  const costWithoutAgent = (flightCost + lodgingCost) * 2;
+  const travelAgentFactor = 1.1;
+
+  const costToDisplay = travelAgentFactor * costWithoutAgent;
+
+
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
-    estimatedCostHTML.innerText = `Please tell us all of the things if you want us to make stuff happen and such!`;
+    estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
   }  else {
     // alert('Please tell us all of the things!');
-    estimatedCostHTML.innerText = `If you see this, THE BUG IS FIXED!`;
+    // estimatedCostHTML.innerText = `If you see this, THE BUG IS FIXED!`;
+
+    estimatedCostHTML.innerHTML = `${costToDisplay}`
   }
 }
 
@@ -260,9 +267,10 @@ function showTrips() {
 }
 
 function populateDestinationsDropDown() {
-  this.destinations.forEach((destination) => {
-    jetFormDestination.innerHTML('afterend', `
-      <option value="${destination.destination}">${destination.destination}</option>
+  console.log(destinations)
+  destinations.forEach((destinationObj) => {
+    jetFormDestination.insertAdjacentHTML('beforeend', `
+      <option value="${destinationObj.destination}">${destinationObj.destination}</option>
     `)
   })
 }

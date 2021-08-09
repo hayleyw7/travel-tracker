@@ -46,13 +46,14 @@ body {
 
 .navbar-right {
   width: 20rem;
+  margin-right: 2rem;
 }
 
 .username-section {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding: 0.5rem 2.2rem 0 0;
+  padding: 0.5rem 0.2rem 0 0;
 }
 
 .name {
@@ -62,13 +63,16 @@ body {
 .navbar-links {
   margin: 0 1rem 0 0;
   padding: 0;
+  border: 0;
+  font-size: 1.1rem;
+  background: var(--pink);
 }
 
 .navbar-links-section {
   display: flex;
   flex-direction: row;
-  font-size: 0.6rem;
-  margin: 0 0 0 0.6rem;
+  // font-size: 0.6rem;
+  margin: 0 0 0 0.8rem;
   padding: 0;
 }
 

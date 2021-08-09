@@ -10,17 +10,17 @@ const data = travelers.find(traveler => traveler.id === 1)
 
 class Trip {
   constructor(tripData) {
-    this.tripData = tripData,
-    this.id = tripData.id,
-    this.userID = tripData.userID,
-    this.destinationID = tripData.destinatonID,
-    this.status = tripData.status,
-    this.suggestedActivities = tripData.suggestedActivities,
+    this.tripData = tripData;
+    this.id = tripData.id;
+    this.userID = tripData.userID;
+    this.destinationID = tripData.destinatonID;
+    this.status = tripData.status;
+    this.suggestedActivities = tripData.suggestedActivities;
 
-    this.startDate,
-    this.endDate,
-    this.estimatedCost,
-    this.today = new Date()
+    this.startDate;
+    this.endDate;
+    this.estimatedCost;
+    this.today = new Date();
     // maybe pass in destinations later?
     // this.destinations = destinations
   }

@@ -1,11 +1,11 @@
 class Traveler {
 
   constructor(data, trips, destinations) {
-    this.id = data.id,
-    this.name = data.name,
-    this.trips = trips,
-    this.destinations = destinations,
-    this.travelerType = data.travelerType
+    this.id = data.id;
+    this.name = data.name;
+    this.trips = trips;
+    this.destinations = destinations;
+    this.travelerType = data.travelerType;
   }
 
   getName() {
