@@ -161,9 +161,33 @@ function showYourTripsDashboardPage() {
 // INSTANTIATE TRIP
 
 function createTrip() {
-  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestinatio.value) {
-    currentTrip = new Trip();
+  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
+    const getDestinationID = allDestinations.find(destinationObj => {
+      if (jetFormDestination.value === destinationObj) {
+        return destinationObj.id
+      }
+      return getDestinationID;
+    })
+  
+    const trip = new Trip(
+      {
+        "id": allTrips.length,
+        "userID": user.id,
+        "destinationID": getDestinationID,
+        "travelers": jetFormHumans.value,
+        "date": jetFormDate.value,
+        "duration": jetFormDuration.value,
+        "status": "pending",
+        "suggestedActivities": []
+      });
   }
+
+
+
+
+
+
+
 }
 
 // DOM UPDATES (will move to domUpdates after test working)
@@ -171,34 +195,15 @@ function createTrip() {
 function showEstimatedCost() {
   event.preventDefault()
 
-  const getDestinationID = allDestinations.find(destinationObj => {
-    if (jetFormDestination.value === destinationObj) {
-      return destinationObj.id
-    }
-    return getDestinationID;
-  })
-  
-  
 
-  const trip = new Trip(
-    {
-      "id": allTrips.length,
-      "userID": user.id,
-      "destinationID": getDestinationID,
-      "travelers": jetFormHumans.value,
-      "date": jetFormDate.value,
-      "duration": jetFormDuration.value,
-      "status": "pending",
-      "suggestedActivities": []
-    });
 
-  const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-  const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
+  // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+  // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
 
-  const costWithoutAgent = (flightCost + lodgingCost) * 2;
-  const travelAgentFactor = 1.1;
+  // const costWithoutAgent = (flightCost + lodgingCost) * 2;
+  // const travelAgentFactor = 1.1;
 
-  const costToDisplay = travelAgentFactor * costWithoutAgent;
+  // const costToDisplay = travelAgentFactor * costWithoutAgent;
 
 
 
@@ -210,7 +215,10 @@ function showEstimatedCost() {
     // estimatedCostHTML.innerText = `If you see this, THE BUG IS FIXED!`;
 
     // estimatedCostHTML.innerHTML = `${costToDisplay}`
-        estimatedCostHTML.innerHTML = `test`
+    show([letsJetBtn])
+    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST:`
+    estimatedCostHTML.innerHTML = `$500`
+
   }
 }
 
