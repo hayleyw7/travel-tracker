@@ -149,13 +149,13 @@ class Traveler {
     }, '');
 
     let result = `
-      <h3>Enjoy your stay!</h3>
+      <h3>We hope that you're enjoying your vibe!</h3>
       ${presentString}
-      <h3>Pending Trips</h3>
+      <h3>Pending Vibes</h3>
       ${pendingString}
-      <h3>Future Trips</h3>
+      <h3>Future Vibes</h3>
       ${futureString}
-      <h3>Past Trips</h3>
+      <h3>Past Vibes</h3>
       ${pastString}
     `
     return result;
@@ -177,22 +177,20 @@ class Traveler {
 
   getTotalSpent() {
     return this.trips.reduce((sum, trip) => {
-
-      const destination = this.getDestination(trip);
-
-      const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-      const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
-      const travelAgentFactor = 1.1;
-      sum += travelAgentFactor * (flightCost + lodgingCost);
+      if (trip.status === 'approved') {
+        const destination = this.getDestination(trip);
+        sum += this.getTotal(trip, destination);
+      }
       return sum;
     }, 0);
   }
 
   getTotal(trip, destination) {
-    const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+    const flightCost = (trip.travelers * destination.estimatedFlightCostPerPerson) * 2
     const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
+    const costWithoutAgent = flightCost + lodgingCost;
     const travelAgentFactor = 1.1;
-    return travelAgentFactor * (flightCost + lodgingCost);
+    return costWithoutAgent * travelAgentFactor;
   }
 }
 

@@ -141,14 +141,12 @@ function show(elements) {
 // SHOW & HIDE PAGE FUNCTIONS
 
 function showLoginPage() {
-  // event.preventDefault()
   hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   show([loginPage]);
   name.innerText = `"Oh, the places you'll vibe!"`;
 }
 
 function showWannaJetPage() {
-  // event.preventDefault();
   name.innerText = `${user.name}`;
   hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
@@ -156,8 +154,6 @@ function showWannaJetPage() {
 }
 
 function showYourTripsDashboardPage() {
-  // event.preventDefault();
-  // console.log(user.name)
   name.innerText = `${user.name}`;
   // console.log(user)
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
@@ -203,32 +199,16 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-  // event.preventDefault()
-
-
-
-  // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-  // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
-
-  // const costWithoutAgent = (flightCost + lodgingCost) * 2;
-  // const travelAgentFactor = 1.1;
-
-  // const costToDisplay = travelAgentFactor * costWithoutAgent;
-
-
+  user.getTotal()
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
     estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
     estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
   }  else {
-    // alert('Please tell us all of the things!');
-    // estimatedCostHTML.innerText = `If you see this, THE BUG IS FIXED!`;
 
-    // estimatedCostHTML.innerHTML = `${costToDisplay}`
     show([letsJetBtn])
-    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST:`
-    estimatedCostHTML.innerHTML = `[price here]`
-
+    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${getTotal()}`
+    estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
   }
 }
 
@@ -265,7 +245,6 @@ function login() {
       );
       
     } else {
-      // event.preventDefault()
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;
       yourTripsDashboardPage.innerHTML = `${user.getTripsHTML()}`;
