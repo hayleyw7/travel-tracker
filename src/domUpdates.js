@@ -1,10 +1,5 @@
 const dom = {
 
-  updateDashboard(message) {
-    let dashboard = document.getElementById("dashboard");
-    dashboard.innerText = message;
-  },
-
   renderFirstName(user) {
     let name = document.getElementById('name');
     name.innerText = `${user.getName()}`;
