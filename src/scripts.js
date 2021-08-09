@@ -47,7 +47,7 @@ const storage = window.localStorage;
 storage.setItem('activeUser', null);
 storage.setItem('activeUserType', null);
 
-let travelers, trips, destinations, data;
+let travelers, trips, destinations, data, allDestinations;
 
 // ***** EVENT LISTENERS *****
 
@@ -216,6 +216,8 @@ function login() {
             return trips.some(trip => trip.destinationID === destination.id);
           });
 
+          allDestinations = promises[2].destinations
+
           window.user = new Traveler(data, trips, destinations);
 
           storage.setItem('activeUser', id);
@@ -273,8 +275,11 @@ function showTrips() {
 }
 
 function populateDestinationsDropDown() {
-  console.log(destinations)
-  destinations.forEach((destinationObj) => {
+  allDestinations.sort((destinationObjA, destinationObjB) =>
+    destinationObjA.destination - destinationObjB.destination         
+  )
+
+  .forEach((destinationObj) => {
     jetFormDestination.insertAdjacentHTML('beforeend', `
       <option value="${destinationObj.destination}">${destinationObj.destination}</option>
     `)
