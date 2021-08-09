@@ -7,13 +7,14 @@ const dom = {
 
   renderFirstName(user) {
     let name = document.getElementById('name');
-    name.innerText = `${[user].getName()}`;
+    name.innerText = `${user.getName()}`;
   },
 
   // NAVBAR
   navBarLinksSection: document.getElementById('navBarLinksSection'),
   navBarYourTripsBtn: document.getElementById('navBarYourTripsBtn'),
   navBarTripPlannerBtn: document.getElementById('navBarTripPlannerBtn'),
+  usernameSection: document.getElementById('usernameSection'),
 
   // LOGIN PAGE
   loginPage: document.getElementById('loginPage'),
