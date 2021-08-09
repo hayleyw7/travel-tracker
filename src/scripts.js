@@ -138,7 +138,7 @@ function show(elements) {
 
 function showLoginPage() {
   event.preventDefault()
-  hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn]);
+  hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   show([loginPage]);
 }
 
