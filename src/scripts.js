@@ -217,7 +217,7 @@ function showEstimatedCost() {
     // estimatedCostHTML.innerHTML = `${costToDisplay}`
     show([letsJetBtn])
     estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST:`
-    estimatedCostHTML.innerHTML = `$500`
+    estimatedCostHTML.innerHTML = `[price here]`
 
   }
 }
