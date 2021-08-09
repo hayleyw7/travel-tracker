@@ -1,6 +1,8 @@
 # Travel Tracker
 
-This is a application to manage and track different trips for users and a travel agency.
+This is an application to manage and track different trips for users and a travel agency.
+
+[It can be accessed here through GitHub Pages.](https://hayleyw7.github.io/travel-tracker/dist/index.html)
 
 ## Motivation and rubric
 
