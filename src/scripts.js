@@ -301,11 +301,13 @@ function showTrips() {
 }
 
 function populateDestinationsDropDown() {
-  allDestinations.sort((destinationObjA, destinationObjB) =>
-    destinationObjA.destination - destinationObjB.destination         
-  )
-
-  .forEach((destinationObj) => {
+  allDestinations.sort((destinationObjA, destinationObjB) => {
+    if (destinationObjA.destination < destinationObjB.destination) {
+      return -1;
+    } else {
+      return 1
+    }
+  }).forEach((destinationObj) => {
     jetFormDestination.insertAdjacentHTML('beforeend', `
       <option value="${destinationObj.destination}">${destinationObj.destination}</option>
     `)
