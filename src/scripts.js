@@ -143,11 +143,12 @@ function showLoginPage() {
   // event.preventDefault()
   hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   show([loginPage]);
+  name.innerText = `"Oh, the places you'll vibe!`;
 }
 
 function showWannaJetPage() {
   // event.preventDefault();
-  name.innerText = `Yo, ${user.name}!`;
+  name.innerText = `${user.name}`;
   hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
   populateDestinationsDropDown();
@@ -156,11 +157,11 @@ function showWannaJetPage() {
 function showYourTripsDashboardPage() {
   // event.preventDefault();
   // console.log(user.name)
-  name.innerText = `Yo, ${user.name}!`;
+  name.innerText = `${user.name}`;
   // console.log(user)
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  yourTripsDashboardPage.innerHTML = `${user.getTripsHTML()}`
+  yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
 }
 
 // INSTANTIATE TRIP
