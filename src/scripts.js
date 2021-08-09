@@ -140,25 +140,28 @@ function show(elements) {
 // SHOW & HIDE PAGE FUNCTIONS
 
 function showLoginPage() {
-  event.preventDefault()
+  // event.preventDefault()
   hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   show([loginPage]);
+  name.innerText = `"Oh, the places you'll vibe!`;
 }
 
 function showWannaJetPage() {
-  event.preventDefault();
-  name.innerText = `Yo, ${user.name}!`;
+  // event.preventDefault();
+  name.innerText = `${user.name}`;
   hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
   populateDestinationsDropDown();
 }
 
 function showYourTripsDashboardPage() {
-  event.preventDefault();
-  name.innerText = `Yo, ${user.name}!`;
+  // event.preventDefault();
+  // console.log(user.name)
+  name.innerText = `${user.name}`;
+  // console.log(user)
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  showTrips();
+  yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
 }
 
 // INSTANTIATE TRIP
@@ -196,7 +199,7 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-  event.preventDefault()
+  // event.preventDefault()
 
 
 
@@ -253,18 +256,15 @@ function login() {
           allTrips - promises[1].trips;
 
           window.user = new Traveler(data, trips, destinations);
-
-          storage.setItem('activeUser', id);
+          showYourTripsDashboardPage();
         }
       );
-
-      showYourTripsDashboardPage();
       
     } else {
-      event.preventDefault()
+      // event.preventDefault()
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;
-
+      yourTripsDashboardPage.innerHTML = `${user.getTripsHTML()}`;
     }
   }
 }
