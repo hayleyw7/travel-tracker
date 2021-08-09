@@ -47,7 +47,7 @@ const storage = window.localStorage;
 storage.setItem('activeUser', null);
 storage.setItem('activeUserType', null);
 
-let travelers, trips, destinations, data, allDestinations;
+let travelers, trips, destinations, data, allDestinations, allTrips;
 
 // ***** EVENT LISTENERS *****
 
@@ -161,15 +161,41 @@ function showYourTripsDashboardPage() {
 // INSTANTIATE TRIP
 
 function createTrip() {
-  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestinatio.value) {
-    currentTrip = new Trip();
+  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
+    const getDestinationID = allDestinations.find(destinationObj => {
+      if (jetFormDestination.value === destinationObj) {
+        return destinationObj.id
+      }
+      return getDestinationID;
+    })
+  
+    const trip = new Trip(
+      {
+        "id": allTrips.length,
+        "userID": user.id,
+        "destinationID": getDestinationID,
+        "travelers": jetFormHumans.value,
+        "date": jetFormDate.value,
+        "duration": jetFormDuration.value,
+        "status": "pending",
+        "suggestedActivities": []
+      });
   }
+
+
+
+
+
+
+
 }
 
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
   event.preventDefault()
+
+
 
   // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
   // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
@@ -182,13 +208,17 @@ function showEstimatedCost() {
 
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
-    estimatedCostHeaderHTML.innerText = `You tried & failed tbh.`;
+    estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
     estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
   }  else {
     // alert('Please tell us all of the things!');
     // estimatedCostHTML.innerText = `If you see this, THE BUG IS FIXED!`;
 
-    estimatedCostHTML.innerHTML = `${costToDisplay}`
+    // estimatedCostHTML.innerHTML = `${costToDisplay}`
+    show([letsJetBtn])
+    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST:`
+    estimatedCostHTML.innerHTML = `$500`
+
   }
 }
 
@@ -198,11 +228,11 @@ function login() {
     enterYourPassToPlan.innerText = `Please fill in both fields.`;
   } else {
   
-    const password = dom.loginFormPassword.value;
+    const password = loginFormPassword.value;
 
     if (password === "travel") {
 
-      const username = dom.loginFormUsername.value;
+      const username = loginFormUsername.value;
       const id = getID(username);
 
       packPromises().then(
@@ -216,7 +246,8 @@ function login() {
             return trips.some(trip => trip.destinationID === destination.id);
           });
 
-          allDestinations = promises[2].destinations
+          allDestinations = promises[2].destinations;
+          allTrips - promises[1].trips;
 
           window.user = new Traveler(data, trips, destinations);
 
