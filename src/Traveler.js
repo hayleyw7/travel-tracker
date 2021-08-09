@@ -148,21 +148,27 @@ class Traveler {
 
     }, '');
 
-    let totalCostString = money.format(this.getTotalSpent());
-
-    yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
-
     let result = `
       <h3>Enjoy your stay!</h3>
       ${presentString}
-      <h3>Pending:</h3>
+      <h3>Pending Trips</h3>
       ${pendingString}
-      <h3>Future:</h3>
+      <h3>Future Trips</h3>
       ${futureString}
-      <h3>Past:</h3>
+      <h3>Past Trips</h3>
       ${pastString}
     `
     return result;
+  }
+
+  totalCostString() {
+    var money = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+    
+    let totalCostString = money.format(this.getTotalSpent());
+    yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
   }
 
   getDestination(trip) {

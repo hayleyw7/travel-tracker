@@ -163,6 +163,7 @@ function showYourTripsDashboardPage() {
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
   yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
+  user.totalCostString();
 
   // yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
 }
