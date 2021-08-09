@@ -43,15 +43,33 @@ describe('An individual Traveler', function() {
 
   });
 
-  it('should be able to return current trip', function() {
-
-    expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
-
-  });
-
   it('should be able to calculate the cost of all trips', function() {
 
     expect(bob.getTotalSpent()).to.equal(4125);
+
+  });
+
+    it.skip('should be able to return current trip', function() {
+
+    // expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
+
+  });
+
+    it.skip('should be able to return future trips', function() {
+
+    // expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
+
+  });
+
+    it.skip('should be able to return pending trips', function() {
+
+    // expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
+
+  });
+
+    it.skip('should be able to return past trips', function() {
+
+    // expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
 
   });
 

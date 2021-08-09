@@ -9,7 +9,7 @@ class Traveler {
   }
 
   getName() {
-    return this.name.split(' ');
+    return this.name;
   }
 
   getID() {
@@ -24,28 +24,52 @@ class Traveler {
     return this.trips;
   }
 
-  getTripsByStatus(dateToday, status) {
-    let today = this.trips.today;
-    let current = trip.startDate <= today && trip.endDate >= today;
-    let future = trip.startDate > today;
-    let pending = trip.status === 'pending';
-    let past = trip.status === 'past';
+ getTripsHTML() {
 
-    const result = this.trips.filter(trip => {
-      if (current) {
-        trip.status = current;
-        return current;
-      } else if (future) {
-        trip.status = approved;
-        return future;
-      } else if (pending) {
-        trip.status = pending;
-        return pending;
-      } else {
-        trip.status = complete;
-        return past;
-      }
-    })
+    var money = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+
+    let approved = this.trips.filter(trip => trip.status === 'approved');
+    let pending = this.trips.filter(trip => trip.status === 'pending');
+
+    let approvedString = approved.reduce((tripsString, trip) => {
+
+      let destination = this.destinations.find(destination => destination.id === trip.destinationID);
+      let destinationName = destination.destination;
+      let cost = this.getTotal(trip, destination);
+
+      tripsString = tripsString.concat(destinationName + "<br><br>Cost: " + money.format(cost) + "<br><br>");
+
+      return tripsString;
+
+    }, "");
+
+    let pendingString = pending.reduce((tripsString, trip) => {
+
+      let destination = this.destinations.find(destination => destination.id === trip.destinationID);
+      let destinationName = destination.destination;
+      let cost = this.getTotal(trip, destination);
+
+      tripsString = tripsString.concat(destinationName + "<br><br>Cost: " + money.format(cost) + "<br><br>");
+
+      return tripsString;
+
+    }, "");
+
+    let totalCostString = money.format(this.getTotalSpent());
+
+    let result =
+      "<h4>Approved:</h4>"
+      + approvedString
+      + "<h4>Pending:</h4>"
+      + pendingString
+      + "<h5>Total Cost:</h5>"
+      + totalCostString;
+
+    return result;
+
   }
 
   getTripsString() {
