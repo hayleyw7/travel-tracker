@@ -155,10 +155,11 @@ function showWannaJetPage() {
 
 function showYourTripsDashboardPage() {
   event.preventDefault();
+  // console.log(user.name)
   name.innerText = `Yo, ${user.name}!`;
+  // console.log(user)
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  console.log(user.getTripsHTML())
   yourTripsDashboardPage.innerHTML = `${user.getTripsHTML()}`
 }
 

@@ -24,7 +24,7 @@ class Traveler {
     return this.trips;
   }
 
- getTripsHTML() {
+  getTripsHTML() {
 
     var money = new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -72,19 +72,6 @@ class Traveler {
 
   }
 
-  getTripsString() {
-    const result = this.trips.reduce((tripString, trip) => {
-
-      let destination = this.destinations.find(destination => destination.id === trip.destinationID).destination;
-
-      tripString = tripString.concat(destination + '<br>');
-
-      return tripString;
-
-    }, '');
-    return result;
-  }
-
   getDestination(trip) {
     return this.destinations.find(destination => destination.id === trip.destinationID);
   }
@@ -101,8 +88,6 @@ class Traveler {
       return sum;
     }, 0);
   }
-
-  
 }
 
 export default Traveler
