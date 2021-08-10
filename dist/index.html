@@ -76,6 +76,7 @@
     <div id='yourTripsDashboardPage' class='dashboard hidden'>
       <h3>We hope that you're enjoying your vibe!</h3>
 
+    <div class='glide-container'>
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
@@ -90,6 +91,15 @@
           <button data-glide-dir=">">▶</button>
         </div>
       </div>
+    </div>
+
+    <!-- don't try to append list items - just add it to the html of this element aka `<li class="glide__slide">3</li>` -->
+
+    <!-- when you start styling, style glide container 1st to get space & then style whole glide container (like tracking, slides, etc) from within html -->
+
+    <!-- // might run into probems with buttons if i don't give enough space -->
+
+    <!-- taking out the place numbers may break it all, but probaby fixed by doing innerHTML -->
 
       <section class='card-container-1'>
 
@@ -259,7 +269,15 @@
     </div>
 
     <script src='bundle.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide">
+  </script>
+  <script>
+    const glide = new Glide('.glide', {});
+    glide.mount();
+  </script>
+
+
   </body>
 </html>  
 

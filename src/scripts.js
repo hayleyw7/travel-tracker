@@ -48,10 +48,6 @@ let travelers, trips, destinations, data;
 
 // EVENT LISTENERS
 
-let glide = new Glide('.glide');
-// console.log(glide);
-glide.mount();
-
 // navbar
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
@@ -116,6 +112,7 @@ function showYourTripsDashboardPage() {
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
   yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
   console.log('this is the console log', user.totalCostString());
+  let glide = new Glide('.glide').mount();
 }
 
 // INSTANTIATE TRIP
