@@ -27,7 +27,7 @@
       </section>
     </section>
   </div>
-  <main>
+  <main>    
 
     <!-- SIGN IN SCREEN!!!!! -->
 
@@ -76,22 +76,37 @@
     <div id='yourTripsDashboardPage' class='dashboard hidden'>
       <h3>We hope that you're enjoying your vibe!</h3>
 
-    <div class='glide-container'>
+
+
+
+
+        <article class='card'>
+          <article class='photo-container'>
+            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'> 
+          </article>
+          <article class='destination-info-container'>
+            <h1 class='destination-name'>We hope that you're vibin!</h1>
+            <p class='date-time' id='yearCost'>NOT YET PULLING!</p>
+          </article>
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <img src='https://c1.wallpaperflare.com/preview/772/331/781/clouds-sky-pink-nature.jpg' alt='Photo of this destination' class='destination-photo'>
-            </li>
-            <li class="glide__slide">
-              <img src='https://c1.wallpaperflare.com/preview/772/331/781/clouds-sky-pink-nature.jpg' alt='Photo of this destination' class='destination-photo'>
-            </li>
-            <li class="glide__slide">
-              <img src='https://c1.wallpaperflare.com/preview/772/331/781/clouds-sky-pink-nature.jpg' alt='Photo of this destination' class='destination-photo'>
-            </li>
-            <li class="glide__slide">
-              <img src='https://c1.wallpaperflare.com/preview/772/331/781/clouds-sky-pink-nature.jpg' alt='Photo of this destination' class='destination-photo'>
-            </li>
+          <ul class="glide__slides" id='currentSlides'>
+
+            <!-- slides go here -->
+
           </ul>
         </div>
         <div data-glide-el="controls">
@@ -99,7 +114,52 @@
           <button data-glide-dir=">">▶</button>
         </div>
       </div>
+
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides" id='pendingSlides'>
+
+            <!-- slides go here -->
+
+          </ul>
+        </div>
+        <div data-glide-el="controls">
+          <button data-glide-dir="<">◀</button>
+          <button data-glide-dir=">">▶</button>
+        </div>
+      </div>
+
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides" id='futureSlides'>
+
+            <!-- slides go here -->
+
+          </ul>
+        </div>
+        <div data-glide-el="controls">
+          <button data-glide-dir="<">◀</button>
+          <button data-glide-dir=">">▶</button>
+        </div>
+      </div>
+
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides" id='pastSlides'>
+
+            <!-- slides go here -->
+
+          </ul>
+        </div>
+        <div data-glide-el="controls">
+          <button data-glide-dir="<">◀</button>
+          <button data-glide-dir=">">▶</button>
+        </div>
+      </div>
+
     </div>
+
+    <!-- GLIDE NOTES -->
 
     <!-- don't try to append list items - just add it to the html of this element aka `<li class="glide__slide">3</li>` -->
 
@@ -108,120 +168,6 @@
     <!-- // might run into probems with buttons if i don't give enough space -->
 
     <!-- taking out the place numbers may break it all, but probaby fixed by doing innerHTML -->
-
-      <section class='card-container-1'>
-
-        <article class='card'>
-          <article class='photo-container'>
-            <img src='https://images.unsplash.com/photo-1489171084589-9b5031ebcf9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80' alt='Destination photo' class='destination-photo'> 
-          </article>
-          <article class='destination-info-container'>
-            <h1 class='destination-name' id='destinationNameHTML'>[DESTINATION NAME]</h1>
-            <p class='date-time' id='dateTimeHTML'>[01/01/2021 - 01/03/2021]</p>
-          </article>
-        </article>
-
-          <article class='card'>
-          <article class='photo-container'>
-            <!-- <img src='https://c1.wallpaperflare.com/preview/772/331/781/clouds-sky-pink-nature.jpg' alt='Photo of this destination' class='destination-photo'>  -->
-          <!-- <img src='https://indemaak.org/wp-content/uploads/2020/02/papers.co-bf68-cloud-metamorphosis-sky-art-nature-29-wallpaper.jpg' alt='Photo of this destination' class='destination-photo'>  -->
-          <!-- <img src='https://media.istockphoto.com/photos/cloud-series-colorful-cotton-candy-soft-fog-and-clouds-with-a-pastel-picture-id1074160890?k=6&m=1074160890&s=612x612&w=0&h=i5KrjZHc4jfYuKc-QJTgF9MJh6bCQhq8WFQ9g0ANr0A=' alt='Photo of this destination' class='destination-photo'>  -->
-            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'> 
-
-
-
-
-          </article>
-          <article class='destination-info-container'>
-            <h1 class='destination-name'>We hope that you're vibin!</h1>
-            <p class='date-time' id='yearCost'>NOT YET PULLING!</p>
-          </article>
-        </article>
-        
-      </section>
-
-
-      <h3>Pending Vibes</h3>
-
-      <section class='card-container-1'>
-
-        <article class='card'>
-          <article class='photo-container'>
-            <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'>  -->
-          </article>
-          <article class='destination-info-container'>
-            <h1 class='destination-name' id='destinationNameHTML'>[DESTINATION NAME]</h1>
-            <p class='date-time' id='dateTimeHTMLHTML'>[01/01/2021 - 01/03/2021]</p>
-          </article>
-        </article>
-        
-        <article class='card'>
-          <article class='photo-container'>
-            <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'>  -->
-          </article>
-          <article class='destination-info-container'>
-            <h1 class='destination-name' id='destinationNameHTML'>[DESTINATION NAME]</h1>
-            <p class='date-time' id='dateTimeHTML'>[01/01/2021 - 01/03/2021]</p>
-          </article>
-        </article>
-
-      </section>
-
-
-
-      <h3>Future Vibes</h3>
-
-      <section class='card-container-1'>
-
-        <article class='card'>
-          <article class='photo-container'>
-            <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'>  -->
-          </article>
-          <article class='destination-info-container'>
-            <h1 class='destination-name' id='destinationNameHTML'>[DESTINATION NAME]</h1>
-            <p class='date-time' id='dateTimeHTML'>[01/01/2021 - 01/03/2021]</p>
-          </article>
-        </article>
-        
-        <article class='card'>
-          <article class='photo-container'>
-            <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'>  -->
-          </article>
-          <article class='destination-info-container'>
-            <h1 class='destination-name' id='destinationNameHTML'>[DESTINATION NAME]</h1>
-            <p class='date-time' id='dateTimeHTML'>[01/01/2021 - 01/03/2021]</p>
-          </article>
-        </article>
-
-      </section>
-
-      <h3>Past Vibes</h3>
-
-      <section class='card-container-1'>
-
-        <article class='card'>
-          <article class='photo-container'>
-            <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'>  -->
-          </article>
-          <article class='destination-info-container'>
-            <h1 class='destination-name' id='destinationNameHTML'>[DESTINATION NAME]</h1>
-            <p class='date-time' id='dateTimeHTML'>[01/01/2021 - 01/03/2021]</p>
-          </article>
-        </article>
-        
-        <article class='card'>
-          <article class='photo-container'>
-            <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'>  -->
-          </article>
-          <article class='destination-info-container'>
-            <h1 class='destination-name' id='destinationNameHTML'>[DESTINATION NAME]</h1>
-            <p class='date-time' id='dateTimeHTML'>[01/01/2021 - 01/03/2021]</p>
-          </article>
-        </article>
-
-      </section>
-
-    </div>
 
     <!-- TRIP PLANNER!!!!!! -->
 
@@ -294,3 +240,9 @@
 <!-- https://media.istockphoto.com/photos/cloud-series-colorful-cotton-candy-soft-fog-and-clouds-with-a-pastel-picture-id1074160890?k=6&m=1074160890&s=612x612&w=0&h=i5KrjZHc4jfYuKc-QJTgF9MJh6bCQhq8WFQ9g0ANr0A= -->
 
  <!-- <img src='https://c1.wallpaperflare.com/preview/772/331/781/clouds-sky-pink-nature.jpg' alt='Photo of this destination' class='destination-photo'>  -->
+
+<!-- <img src='https://c1.wallpaperflare.com/preview/772/331/781/clouds-sky-pink-nature.jpg' alt='Photo of this destination' class='destination-photo'>  -->
+
+<!-- <img src='https://indemaak.org/wp-content/uploads/2020/02/papers.co-bf68-cloud-metamorphosis-sky-art-nature-29-wallpaper.jpg' alt='Photo of this destination' class='destination-photo'>  -->
+
+<!-- <img src='https://media.istockphoto.com/photos/cloud-series-colorful-cotton-candy-soft-fog-and-clouds-with-a-pastel-picture-id1074160890?k=6&m=1074160890&s=612x612&w=0&h=i5KrjZHc4jfYuKc-QJTgF9MJh6bCQhq8WFQ9g0ANr0A=' alt='Photo of this destination' class='destination-photo'>  -->

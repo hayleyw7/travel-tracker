@@ -86,23 +86,47 @@ class Traveler {
 
       let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
+      tripsString = tripsString.concat(`
+        <li class="glide__slide">
+          <article class='card'>
+            <article class='photo-container'>
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+            </article>
+            <article class='destination-info-container'>
+              <h1 class='destination-name'>${destination.destination}</h1>
+              <p class='date-time'>${trip.date}</p>
+            </article>
+          </article>
+        </li>
+      `);
 
       return tripsString;
 
     }, '');
 
-    let approvedString = approved.reduce((tripsString, trip) => {
+    // let approvedString = approved.reduce((tripsString, trip) => {
 
-      let destination = this.destinations.find(destination => destination.id === trip.destinationID);
-      let destinationName = destination.destination;
-      let cost = this.getTotal(trip, destination);
+    //   let destination = this.destinations.find(destination => destination.id === trip.destinationID);
+    //   let destinationName = destination.destination;
+    //   let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
+    //   tripsString = tripsString.concat(`
+    //     <li class="glide__slide">
+    //       <article class='card'>
+    //         <article class='photo-container'>
+    //           <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+    //         </article>
+    //         <article class='destination-info-container'>
+    //           <h1 class='destination-name'>${destination.destination}</h1>
+    //           <p class='date-time'>${trip.date}</p>
+    //         </article>
+    //       </article>
+    //     </li>
+    //   `);
 
-      return tripsString;
+    //   return tripsString;
 
-    }, '');
+    // }, '');
 
     let pendingString = pending.reduce((tripsString, trip) => {
 
@@ -110,7 +134,19 @@ class Traveler {
       let destinationName = destination.destination;
       let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
+      tripsString = tripsString.concat(`
+        <li class="glide__slide">
+          <article class='card'>
+            <article class='photo-container'>
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+            </article>
+            <article class='destination-info-container'>
+              <h1 class='destination-name'>${destination.destination}</h1>
+              <p class='date-time'>${trip.date}</p>
+            </article>
+          </article>
+        </li>
+      `);
 
       return tripsString;
 
@@ -124,9 +160,19 @@ class Traveler {
 
       let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
-
-      
+      tripsString = tripsString.concat(`
+        <li class="glide__slide">
+          <article class='card'>
+            <article class='photo-container'>
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+            </article>
+            <article class='destination-info-container'>
+              <h1 class='destination-name'>${destination.destination}</h1>
+              <p class='date-time'>${trip.date}</p>
+            </article>
+          </article>
+        </li>
+      `);
 
       return tripsString;
 
@@ -134,32 +180,32 @@ class Traveler {
 
     let futureString = future.reduce((tripsString, trip) => {
 
-      // console.log(this.destinations);
-      //
-      // console.log('NEXT ELEMENT: ' + this.destinations.find(destination => destination.id === trip.destinationID).destination + '<br><br>');
-
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
 
       let destinationName = destination.destination;
 
       let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
+      tripsString = tripsString.concat(`
+        <li class="glide__slide">
+          <article class='card'>
+            <article class='photo-container'>
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+            </article>
+            <article class='destination-info-container'>
+              <h1 class='destination-name'>${destination.destination}</h1>
+              <p class='date-time'>${trip.date}</p>
+            </article>
+          </article>
+        </li>
+      `);
 
       return tripsString;
 
     }, '');
 
-    let result = `
-      <h3>We hope that you're enjoying your vibe!</h3>
-      ${presentString}
-      <h3>Pending Vibes</h3>
-      ${pendingString}
-      <h3>Future Vibes</h3>
-      ${futureString}
-      <h3>Past Vibes</h3>
-      ${pastString}
-    `
+    let result = [presentString, pendingString, futureString, pastString]
+    
     return result;
   }
 

@@ -129,6 +129,7 @@ h3 {
   border: 1px var(--lightgray) solid;
   margin: 0.3rem;
   width: 20rem;
+  color: var(--darkgray);
 }
 
 /* ON CARD */
@@ -241,4 +242,10 @@ h3 {
 
 .dashboard {
   color: white;
+}
+
+// glide
+
+.glide-container {
+  // align: center;
 }

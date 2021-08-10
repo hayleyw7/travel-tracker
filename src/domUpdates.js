@@ -6,6 +6,7 @@ const dom = {
   // },
 
   // NAVBAR
+
   name: document.getElementById('name'),
   navBarLinksSection: document.getElementById('navBarLinksSection'),
   navBarYourTripsBtn: document.getElementById('navBarYourTripsBtn'),
@@ -14,6 +15,7 @@ const dom = {
   usernameSection: document.getElementById('usernameSection'),
 
   // LOGIN PAGE
+
   loginPage: document.getElementById('loginPage'),
   loginFormUsername: document.getElementById('loginFormUsername'),
   loginFormPassword: document.getElementById('loginFormPassword'),
@@ -22,12 +24,18 @@ const dom = {
   replaceYOLO: document.getElementById('replaceYOLO'),
 
   // YOUR TRIPS DASHBOARD PAGE
+
   yourTripsDashboardPage: document.getElementById('yourTripsDashboardPage'),
   destinationNameHTML: document.getElementById('destinationNameHTML'),
   dateTimeHTML: document.getElementById('dateTimeHTML'),
   yearCost: document.getElementById('yearCost'),
+  currentSlides: document.getElementById('currentSlides'),
+  pendingSlides: document.getElementById('pendingSlides'),
+  pastSlides: document.getElementById('pastSlides'),
+  futureSlides: document.getElementById('futureSlides'),
 
   // WANNA JET PAGE
+
   wannaJetPage: document.getElementById('wannaJetPage'),
   jetFormDate: document.getElementById('jetFormDate'),
   jetFormDuration: document.getElementById('jetFormDuration'),

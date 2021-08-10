@@ -41,7 +41,11 @@ const {
   replaceYOLO,
   estimatedCostHeaderHTML,
   name,
-  yearCost
+  yearCost,
+  currentSlides,
+  pastSlides,
+  presentSlides,
+  futureSlides
 } = dom;
 
 let travelers, trips, destinations, data;
@@ -110,9 +114,17 @@ function showYourTripsDashboardPage() {
   yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
-  console.log('this is the console log', user.totalCostString());
+
+  // yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
+
+  populateTripSlides();
+  
   let glide = new Glide('.glide').mount();
+}
+
+function populateTripSlides() {
+  let slides = user.getTripsHTML();
+  console.log(slides)
 }
 
 // INSTANTIATE TRIP
