@@ -1,4 +1,8 @@
-// IMPORTS & SETUP
+///////////////////////////////////////////////////
+////////////////////// SETUP //////////////////////
+///////////////////////////////////////////////////
+
+// IMPORTS
 
 import './css/base.scss';
 
@@ -48,80 +52,34 @@ let travelers, trips, destinations, data;
 // EVENT LISTENERS
 
 // navbar
+
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 navBarSignOutBtn.addEventListener('click', showLoginPage);
 
 // login page
+
 loginFormSubmitBtn.addEventListener('click', login);
 
 // trip planner page
+
 jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
 letsJetBtn.addEventListener('click', createTrip);
 
 // API
 
+// fetch
+
 function packPromises() {
   return Promise.all([fetchTravelers(), fetchTrips(), fetchDestinations()]);
 }
 
-///////////////////////////////////////////////////
-//////////////////// FUNCTIONS ////////////////////
-///////////////////////////////////////////////////
-
-// HELPER FUNCTIONS
-
-function hide(elements) {
-  elements.forEach(element => {
-    element.classList.add('hidden');
-  });
-}
-
-function show(elements) {
-  elements.forEach(element => {
-    element.classList.remove('hidden');
-  });
-}
-
-// PAGES (move all of these to the DOM)
-
-// login page
-
-function showLoginPage() {
-  hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
-  show([loginPage]);
-  name.innerText = `'Oh, the places you'll vibe!'`;
-}
-
-// trip planner page
-
-function showWannaJetPage() {
-  name.innerText = `${user.name}`;
-  hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
-  show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
-  populateDestinationsDropDown();
-}
-
-// dashboard page
-
-function showYourTripsDashboardPage() {
-  name.innerText = `${user.name}`;
-  // console.log(user)
-  hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
-  show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
-  user.totalCostString();
-}
-
-// INSTANTIATE TRIP
+// post
 
 function createTrip() {
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
-
-    console.log(allDestinations)
-
     const destination = allDestinations.find(destinationObj => {
-      console.log(jetFormDestination.value + ", " + destinationObj.id)
+
       if (parseInt(jetFormDestination.value) === destinationObj.id) {
         return true;
       }
@@ -129,8 +87,6 @@ function createTrip() {
     })
 
     let destinationID = destination.id;
-    
-    // console.log(destinationID)
   
     const trip = {
       'id': allTrips.length + 1,
@@ -143,57 +99,50 @@ function createTrip() {
       'suggestedActivities': []
     };
 
-    console.log(trip)
-
     postBooking(trip).then(result => {
       if (result.ok) {
-
-        console.log(result);
-
         user.addTrip(trip);
         user.addDestination(destination);
 
         showYourTripsDashboardPage();
 
       } else {
-        console.log(result);
+        // console.log(result);
       }
     });
   }
 }
 
+///////////////////////////////////////////////////
+//////////////////// FUNCTIONS ////////////////////
+///////////////////////////////////////////////////
+
 // DOM UPDATES (will move to domUpdates after test working)
 
-function showEstimatedCost() {
-  let trip = 
-    {
-      'id': allTrips.length + 1,
-      'userID': user.id,
-      'destinationID': parseInt(jetFormDestination.value),
-      'travelers': parseInt(jetFormHumans.value),
-      'date': jetFormDate.value,
-      'duration': parseInt(jetFormDuration.value),
-      'status': 'pending',
-      'suggestedActivities': []
-    };
+// show/hide pages
 
-  let destination = getDestination(trip);
-
-  if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
-    estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
-    estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
-  }  else {
-
-    var money = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    });
-
-    show([letsJetBtn])
-    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${money.format(user.getTotal(trip, destination))}`
-    estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
-  }
+function showLoginPage() {
+  hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
+  show([loginPage]);
+  name.innerText = `'Oh, the places you'll vibe!'`;
 }
+
+function showWannaJetPage() {
+  name.innerText = `${user.name}`;
+  hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
+  show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
+  populateDestinationsDropDown();
+}
+
+function showYourTripsDashboardPage() {
+  name.innerText = `${user.name}`;
+  hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
+  show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
+  yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
+  user.totalCostString();
+}
+
+// login page
 
 function login() {
   if (!loginFormPassword.value || !loginFormUsername.value) { 
@@ -244,6 +193,56 @@ function populateDestinationsDropDown() {
     `)
   })
 }
+
+// trip planner
+
+function showEstimatedCost() {
+  let trip = {
+    'id': allTrips.length + 1,
+    'userID': user.id,
+    'destinationID': parseInt(jetFormDestination.value),
+    'travelers': parseInt(jetFormHumans.value),
+    'date': jetFormDate.value,
+    'duration': parseInt(jetFormDuration.value),
+    'status': 'pending',
+    'suggestedActivities': []
+  };
+
+  let destination = getDestination(trip);
+
+  if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
+    estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
+    estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
+  }  else {
+
+    var money = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+
+    show([letsJetBtn])
+    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${money.format(user.getTotal(trip, destination))}`
+    estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
+  }
+}
+
+// HELPER FUNCTIONS (move these to a new file)
+
+// show/hide
+
+function hide(elements) {
+  elements.forEach(element => {
+    element.classList.add('hidden');
+  });
+}
+
+function show(elements) {
+  elements.forEach(element => {
+    element.classList.remove('hidden');
+  });
+}
+
+// this is only used once - should i just work it into the code & delete it?
 
 function getDestination(trip) {
   return allDestinations.find(destination => destination.id === trip.destinationID);

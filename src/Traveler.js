@@ -1,5 +1,4 @@
 class Traveler {
-
   constructor(data, trips, destinations) {
     this.id = data.id;
     this.name = data.name;
@@ -25,7 +24,6 @@ class Traveler {
   }
 
   getTripsHTML() {
-
     var money = new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -59,13 +57,10 @@ class Traveler {
       if (today < startDate) {
         return true;
       }
-
     });
 
       let present = approved.filter(trip => {
-
       let startDate = new Date(trip.date);
-
       let endDate = new Date(trip.date);
 
       endDate.setDate(endDate.getDate() + trip.duration);
@@ -75,25 +70,9 @@ class Traveler {
       if (today < endDate && today > startDate) {
         return true;
       }
-
     });
 
     let pastString = past.reduce((tripsString, trip) => {
-
-      let destination = this.destinations.find(destination => destination.id === trip.destinationID);
-
-      let destinationName = destination.destination;
-
-      let cost = this.getTotal(trip, destination);
-
-      tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
-
-      return tripsString;
-
-    }, '');
-
-    let approvedString = approved.reduce((tripsString, trip) => {
-
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
       let destinationName = destination.destination;
       let cost = this.getTotal(trip, destination);
@@ -101,11 +80,19 @@ class Traveler {
       tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
 
       return tripsString;
-
     }, '');
+
+    // let approvedString = approved.reduce((tripsString, trip) => {
+    //   let destination = this.destinations.find(destination => destination.id === trip.destinationID);
+    //   let destinationName = destination.destination;
+    //   let cost = this.getTotal(trip, destination);
+
+    //   tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
+
+    //   return tripsString;
+    // }, '');
 
     let pendingString = pending.reduce((tripsString, trip) => {
-
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
       let destinationName = destination.destination;
       let cost = this.getTotal(trip, destination);
@@ -113,41 +100,27 @@ class Traveler {
       tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
 
       return tripsString;
-
     }, '');
 
     let presentString = present.reduce((tripsString, trip) => {
 
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
-
       let destinationName = destination.destination;
-
       let cost = this.getTotal(trip, destination);
 
       tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
 
-      
-
       return tripsString;
-
     }, '');
 
     let futureString = future.reduce((tripsString, trip) => {
-
-      // console.log(this.destinations);
-      //
-      // console.log('NEXT ELEMENT: ' + this.destinations.find(destination => destination.id === trip.destinationID).destination + '<br><br>');
-
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
-
       let destinationName = destination.destination;
-
       let cost = this.getTotal(trip, destination);
 
       tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
 
       return tripsString;
-
     }, '');
 
     let result = `
