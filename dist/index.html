@@ -56,9 +56,7 @@
 
         <article class='card'>
           <article class='photo-container'>
-
             <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'> 
-            
           </article>
 
           <article class='destination-info-container'>
@@ -81,77 +79,24 @@
           </article>
           <article class='destination-info-container'>
             <h1 class='destination-name'>We hope that you're vibin!</h1>
-            <p class='date-time' id='yearCost'>NOT YET PULLING!</p>
+            <p class='date-time' id='yearCost'></p>
           </article>
         </article>
 
       <h3>Current Vibes</h3>
 
-      <!-- <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides" id='currentSlides'> -->
-            <!-- slides go here -->
-          <!-- </ul>
-        </div>
-        <div data-glide-el="controls">
-          <button data-glide-dir="<">◀</button>
-          <button data-glide-dir=">">▶</button>
-        </div>
-      </div> -->
-
       <h3>Pending Vibes</h3>      
 
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides" id='pendingSlides'>
-            <!-- slides go here -->
-          </ul>
-        </div>
-        <div data-glide-el="controls">
-          <button data-glide-dir="<">◀</button>
-          <button data-glide-dir=">">▶</button>
+      <div class="flexible">
+        <div id="pendingSlides">
         </div>
       </div>
 
       <h3>Future Vibes</h3>      
 
-      <!-- <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides" id='futureSlides'> -->
-            <!-- slides go here -->
-          <!-- </ul>
-        </div>
-        <div data-glide-el="controls">
-          <button data-glide-dir="<">◀</button>
-          <button data-glide-dir=">">▶</button>
-        </div>
-      </div> -->
-
       <h3>Past Vibes</h3>      
 
-      <!-- <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides" id='pastSlides'> -->
-            <!-- slides go here -->
-          <!-- </ul>
-        </div>
-        <div data-glide-el="controls">
-          <button data-glide-dir="<">◀</button>
-          <button data-glide-dir=">">▶</button>
-        </div>
-      </div> -->
-
     </div>
-
-    <!-- GLIDE NOTES -->
-
-    <!-- don't try to append list items - just add it to the html of this element aka `<li class="glide__slide">3</li>` -->
-
-    <!-- when you start styling, style glide container 1st to get space & then style whole glide container (like tracking, slides, etc) from within html -->
-
-    <!-- // might run into probems with buttons if i don't give enough space -->
-
-    <!-- taking out the place numbers may break it all, but probaby fixed by doing innerHTML -->
 
     <!-- TRIP PLANNER!!!!!! -->
 
@@ -207,13 +152,6 @@
     </div>
 
     <script src='bundle.js'></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide">
-  </script>
-  <script>
-    const glide = new Glide('.glide', {});
-    glide.mount();
-  </script>
 
 
   </body>

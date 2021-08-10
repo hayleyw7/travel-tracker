@@ -1,7 +1,7 @@
 // IMPORTS & SETUP
 
 import './css/base.scss';
-import Glide from '@glidejs/glide';
+// import Glide from '@glidejs/glide';
 
 import {
   fetchData,
@@ -238,7 +238,8 @@ function login() {
           window.allTrips = promises[1].trips;
           window.user = new Traveler(data, trips, destinations);
 
-          let glide = new Glide('.glide').mount();
+          // let glide = new Glide('.glide').mount();
+          // new Glide('.glide', {}).mount()
 
           showYourTripsDashboardPage();
         }
