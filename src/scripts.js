@@ -1,7 +1,7 @@
 // IMPORTS & SETUP
 
 import './css/base.scss';
-import Glide from '@glidejs/glide'
+import Glide from './glide.min.js';
 
 import {
   fetchData,
@@ -48,10 +48,9 @@ let travelers, trips, destinations, data;
 
 // EVENT LISTENERS
 
-let glide = new Glide('.glide')
-
-console.log(glide)
-glide.mount()
+let glide = new Glide('.glide');
+// console.log(glide);
+glide.mount();
 
 // navbar
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
