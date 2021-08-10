@@ -62,7 +62,7 @@ class Traveler {
 
     });
 
-      let present = approved.filter(trip => {
+      let current = approved.filter(trip => {
 
       let startDate = new Date(trip.date);
 
@@ -152,7 +152,7 @@ class Traveler {
 
     }, '');
 
-    let presentString = present.reduce((tripsString, trip) => {
+    let currentString = current.reduce((tripsString, trip) => {
 
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
 
@@ -204,7 +204,7 @@ class Traveler {
 
     }, '');
 
-    let result = [presentString, pendingString, futureString, pastString]
+    let result = [currentString, pendingString, futureString, pastString]
     
     return result;
   }

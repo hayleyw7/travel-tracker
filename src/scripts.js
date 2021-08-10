@@ -44,7 +44,7 @@ const {
   yearCost,
   currentSlides,
   pastSlides,
-  presentSlides,
+  pendingSlides,
   futureSlides
 } = dom;
 
@@ -124,7 +124,11 @@ function showYourTripsDashboardPage() {
 
 function populateTripSlides() {
   let slides = user.getTripsHTML();
-  console.log(slides)
+
+  currentSlides.innerHTML = slides[0];
+  pendingSlides.innerHTML = slides[1];
+  futureSlides.innerHTML = slides[2];
+  pastSlides.innerHTML = slides[3];
 }
 
 // INSTANTIATE TRIP
