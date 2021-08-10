@@ -169,8 +169,7 @@ class Traveler {
       currency: 'USD',
     });
     
-    let totalCostString = money.format(this.getTotalSpent());
-    yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
+    return money.format(this.getTotalSpent());
   }
 
   getDestination(trip) {

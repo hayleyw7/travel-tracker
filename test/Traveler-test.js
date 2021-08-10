@@ -48,12 +48,12 @@ describe('An individual Traveler', function() {
 
   // this one is keeping the file from pushing to GH
 
-  it.skip('should be able to return current, future, pending, & past trips', function() {
+  it('should be able to return current, future, pending, & past trips', function() {
 
     expect(user.getTripsHTML()).to.equal(`\n      <h3>We hope that you\'re enjoying your vibe!</h3>\n      \n      <h3>Pending Vibes</h3>\n      \n      <h3>Future Vibes</h3>\n      \n      <h3>Past Vibes</h3>\n      San Juan, Puerto Rico<br><br>Cost: $7,095.00 <br><br>\n    `);
   });
 
-  it.skip('should convert totalCost into a string', function() {
+  it('should convert totalCost into a string', function() {
 
     expect(user.totalCostString()).to.equal('x');
   });
