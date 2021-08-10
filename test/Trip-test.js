@@ -12,10 +12,6 @@ const data = travelers.find(traveler => traveler.id === 1)
 
 const bob = new Traveler(data, trips);
 
-
-
-
-
 describe('Trip', () => {
   it('is a function', function() {
     expect(Trip).to.be.a('function');
@@ -27,4 +23,8 @@ describe('Trip', () => {
     expect(trip).to.be.an.instanceof(Trip);
   });
 
-});
+  it.skip('should get user trip dates', function() {
+    let trip = new Trip(trips);
+
+    expect(trip.getUserTripDates()).to.be.an.instanceof(Trip);
+  });});
