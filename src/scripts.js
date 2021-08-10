@@ -1,6 +1,7 @@
 // IMPORTS & SETUP
 
 import './css/base.scss';
+import Glide from '@glidejs/glide';
 
 import {
   fetchData,
@@ -40,7 +41,11 @@ const {
   replaceYOLO,
   estimatedCostHeaderHTML,
   name,
-  yearCost
+  yearCost,
+  // currentSlides,
+  // pastSlides,
+  pendingSlides
+  // futureSlides
 } = dom;
 
 let travelers, trips, destinations, data;
@@ -109,8 +114,21 @@ function showYourTripsDashboardPage() {
   yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
-  console.log('this is the console log', user.totalCostString());
+
+  // yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
+
+  populateTripSlides();
+  
+  // let glide = new Glide('.glide').mount();
+}
+
+function populateTripSlides() {
+  let slides = user.getTripsHTML();
+
+  // currentSlides.innerHTML = slides[0];
+  pendingSlides.innerHTML = slides[1];
+  // futureSlides.innerHTML = slides[2];
+  // pastSlides.innerHTML = slides[3];
 }
 
 // INSTANTIATE TRIP
@@ -219,6 +237,9 @@ function login() {
           window.allDestinations = promises[2].destinations;
           window.allTrips = promises[1].trips;
           window.user = new Traveler(data, trips, destinations);
+
+          let glide = new Glide('.glide').mount();
+
           showYourTripsDashboardPage();
         }
       );
@@ -226,7 +247,6 @@ function login() {
     } else {
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;
-      yourTripsDashboardPage.innerHTML = `${user.getTripsHTMLPast()}` + `${user.getTripsHTMLPresent()}` + `${user.getTripsHTMLFuture()}` + `${user.getTripsHTMLPending()}`;
     }
   }
 }

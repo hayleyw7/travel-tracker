@@ -1,3 +1,9 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// @import 'glide.core.min';
+
+// @import 'glide.theme.min';
+
 // /* This is an example of using Sass, otherwise plain CSS works too*/
 // $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 // ;
@@ -123,6 +129,7 @@ h3 {
   border: 1px var(--lightgray) solid;
   margin: 0.3rem;
   width: 20rem;
+  color: var(--darkgray);
 }
 
 /* ON CARD */
@@ -235,4 +242,15 @@ h3 {
 
 .dashboard {
   color: white;
+}
+
+// glide
+
+.glide {
+  text-align: center;
+  margin: 1rem;
+}
+
+.glide__slide {
+  margin: 1rem;
 }
