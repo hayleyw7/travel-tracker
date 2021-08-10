@@ -1,22 +1,22 @@
-import chai from 'chai';
-import Traveler from '../src/Traveler.js';
-import Trip from '../src/Trip.js';
+// import chai from 'chai';
+// import Traveler from '../src/Traveler.js';
+// import Trip from '../src/Trip.js';
 
-const expect = chai.expect;
+// const expect = chai.expect;
 
-const travelers = require('../src/travelers.js');
-const allTrips = require('../src/trips.js');
-const allDestinations = require('../src/destinations.js');
+// const travelers = require('../src/travelers.js');
+// const allTrips = require('../src/trips.js');
+// const allDestinations = require('../src/destinations.js');
 
-const data = travelers.find(traveler => traveler.id === 1)
-const trips = require('../src/trips.js').filter(trip => trip.userID === data.id);
+// const data = travelers.find(traveler => traveler.id === 1)
+// const trips = require('../src/trips.js').filter(trip => trip.userID === data.id);
 
-const destinations = require('../src/destinations.js').filter(destination => {
-  return trips.some(trip => trip.destinationID === destination.id)
-});
+// const destinations = require('../src/destinations.js').filter(destination => {
+//   return trips.some(trip => trip.destinationID === destination.id)
+// });
 
-const user = new Traveler(data, trips, destinations);
-let trip = new Trip(trips)
+// const user = new Traveler(data, trips, destinations);
+// let trip = new Trip(trips)
 
 // describe('An individual Traveler', function() {
 
