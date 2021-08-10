@@ -226,7 +226,6 @@ function login() {
     } else {
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;
-      yourTripsDashboardPage.innerHTML = `${user.getTripsHTMLPast()}` + `${user.getTripsHTMLPresent()}` + `${user.getTripsHTMLFuture()}` + `${user.getTripsHTMLPending()}`;
     }
   }
 }
