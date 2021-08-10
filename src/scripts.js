@@ -1,3 +1,5 @@
+// IMPORTS & SETUP
+
 import './css/base.scss';
 
 import {
@@ -6,10 +8,8 @@ import {
   fetchTravelers,
   fetchTrips,
   fetchDestinations,
+  postBooking,
   getID
-  // postTravelerData,
-  // postDestinationData,
-  // postTripData
 } from './apiCalls';
 
 import dom from './domUpdates';
@@ -43,88 +43,33 @@ const {
   yearCost
 } = dom;
 
-// ***** STORAGE & SETUP *****
+let travelers, trips, destinations, data;
 
-const storage = window.localStorage;
-storage.setItem('activeUser', null);
-storage.setItem('activeUserType', null);
+// EVENT LISTENERS
 
-let travelers, trips, destinations, data, allDestinations, allTrips;
-
-// ***** EVENT LISTENERS *****
-
-// NAVBAR
+// navbar
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 navBarSignOutBtn.addEventListener('click', showLoginPage);
 
-// LOGIN PAGE
+// login page
 loginFormSubmitBtn.addEventListener('click', login);
 
-// WANNA JET PAGE
+// trip planner page
 jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
 letsJetBtn.addEventListener('click', createTrip);
 
-// ***** API STUFF *****
+// API
 
 function packPromises() {
-
   return Promise.all([fetchTravelers(), fetchTrips(), fetchDestinations()]);
-
 }
 
-///
+///////////////////////////////////////////////////
+//////////////////// FUNCTIONS ////////////////////
+///////////////////////////////////////////////////
 
-// function postTravelerInputs() {
-//   postTravelerData(travelerID, travelerName, travelerType)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error(response.statusText);
-//       } else {
-//         //?.innerText = 'Success'
-//         // dom.renderSubmittedHydration(hydrationInput.value)
-//       }
-//     })
-//     .catch(error => {
-//       // ?.innerText = 'Fail';
-//       console.log(error)
-//     })
-// }
-
-// function postTripInputs() {
-//   postTripData(tripID, tripTravelerID, destinationID, numTravelers, tripDate, tripDuration, travelerStatus, tripStatus, suggestedActivities)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error(response.statusText);
-//       } else {
-//         // ???
-//       }
-//     })
-//     .catch(error => {
-//         // ???
-//       console.log(error)
-//     })
-// }
-
-// function postDestinationInputs() {
-//   postTravelerData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error(response.statusText);
-//       } else {
-//         // ???
-//       }
-//     })
-//     .catch(error => {
-//         // ???
-//       console.log(error)
-//     })
-// }
-
-
-// ***** FUNCTIONS *****
-
-// SHOW & HIDE HELPER FUNCTIONS
+// HELPER FUNCTIONS
 
 function hide(elements) {
   elements.forEach(element => {
@@ -138,13 +83,17 @@ function show(elements) {
   });
 }
 
-// SHOW & HIDE PAGE FUNCTIONS
+// PAGES (move all of these to the DOM)
+
+// login page
 
 function showLoginPage() {
   hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   show([loginPage]);
   name.innerText = `'Oh, the places you'll vibe!'`;
 }
+
+// trip planner page
 
 function showWannaJetPage() {
   name.innerText = `${user.name}`;
@@ -153,6 +102,8 @@ function showWannaJetPage() {
   populateDestinationsDropDown();
 }
 
+// dashboard page
+
 function showYourTripsDashboardPage() {
   name.innerText = `${user.name}`;
   // console.log(user)
@@ -160,62 +111,91 @@ function showYourTripsDashboardPage() {
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
   yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
   user.totalCostString();
-
 }
 
 // INSTANTIATE TRIP
 
 function createTrip() {
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
-    const destinationID = allDestinations.find(destinationObj => {
-      if (jetFormDestination.value === destinationObj.id) {
+
+    console.log(allDestinations)
+
+    const destination = allDestinations.find(destinationObj => {
+      console.log(jetFormDestination.value + ", " + destinationObj.id)
+      if (parseInt(jetFormDestination.value) === destinationObj.id) {
         return true;
       }
       return false;
     })
+
+    let destinationID = destination.id;
+    
+    // console.log(destinationID)
   
-    const trip = new Trip(
-      {
-        'id': allTrips.length + 1,
-        'userID': user.id,
-        'destinationID': parseInt(getDestinationID),
-        'travelers': parseInt(jetFormHumans.value),
-        'date': jetFormDate.value,
-        'duration': parseInt(jetFormDuration.value),
-        'status': 'pending',
-        'suggestedActivities': []
-      });
+    const trip = {
+      'id': allTrips.length + 1,
+      'userID': user.id,
+      'destinationID': destinationID,
+      'travelers': parseInt(jetFormHumans.value),
+      'date': jetFormDate.value.split('-').join('/'),
+      'duration': parseInt(jetFormDuration.value),
+      'status': 'pending',
+      'suggestedActivities': []
+    };
+
+    console.log(trip)
+
+    postBooking(trip).then(result => {
+      if (result.ok) {
+
+        console.log(result);
+
+        user.addTrip(trip);
+        user.addDestination(destination);
+
+        showYourTripsDashboardPage();
+
+      } else {
+        console.log(result);
+      }
+    });
   }
-
-
-
-
-
-
-
 }
 
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
+  let trip = 
+    {
+      'id': allTrips.length + 1,
+      'userID': user.id,
+      'destinationID': parseInt(jetFormDestination.value),
+      'travelers': parseInt(jetFormHumans.value),
+      'date': jetFormDate.value,
+      'duration': parseInt(jetFormDuration.value),
+      'status': 'pending',
+      'suggestedActivities': []
+    };
 
-  // do math to estimate cost
-
-  user.getTotal()
+  let destination = getDestination(trip);
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
     estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
     estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
   }  else {
 
+    var money = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+
     show([letsJetBtn])
-    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${user.getTotal(trip, destination)}`
+    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${money.format(user.getTotal(trip, destination))}`
     estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
   }
 }
 
 function login() {
-
   if (!loginFormPassword.value || !loginFormUsername.value) { 
     enterYourPassToPlan.innerText = `Please fill in both fields.`;
   } else {
@@ -223,7 +203,6 @@ function login() {
     const password = loginFormPassword.value;
 
     if (password === 'travel') {
-
       const username = loginFormUsername.value;
       const id = getID(username);
 
@@ -233,14 +212,12 @@ function login() {
           travelers = promises[0].travelers;
           data = travelers.find(traveler => traveler.id === id);
           trips = promises[1].trips.filter(trip => trip.userID === id);
-
           destinations = promises[2].destinations.filter(destination => {
             return trips.some(trip => trip.destinationID === destination.id);
           });
 
-          allDestinations = promises[2].destinations;
-          allTrips - promises[1].trips;
-
+          window.allDestinations = promises[2].destinations;
+          window.allTrips = promises[1].trips;
           window.user = new Traveler(data, trips, destinations);
           showYourTripsDashboardPage();
         }
@@ -263,12 +240,11 @@ function populateDestinationsDropDown() {
     }
   }).forEach((destinationObj) => {
     jetFormDestination.insertAdjacentHTML('beforeend', `
-      <option value='${destinationObj.destination}'>${destinationObj.destination}</option>
+      <option value='${destinationObj.id}'>${destinationObj.destination}</option>
     `)
   })
 }
 
-
-// help
-
-// fetch the data. assign it to a variable. then filter the results based off your form values and present the options to the user (i.e. .map to return HTML cards)
+function getDestination(trip) {
+  return allDestinations.find(destination => destination.id === trip.destinationID);
+}

@@ -126,6 +126,8 @@ class Traveler {
 
       tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
 
+      
+
       return tripsString;
 
     }, '');
@@ -191,6 +193,16 @@ class Traveler {
     const costWithoutAgent = flightCost + lodgingCost;
     const travelAgentFactor = 1.1;
     return costWithoutAgent * travelAgentFactor;
+  }
+
+  addTrip(trip) {
+    this.trips.push(trip);
+  }
+
+  addDestination(destination) {
+    if (!this.destinations.includes(destination)) {
+      this.destinations.push(destination);
+    }
   }
 }
 

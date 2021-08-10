@@ -33,6 +33,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "fetch": "^1.1.0",
     "node-fetch": "^2.6.1"
   }
