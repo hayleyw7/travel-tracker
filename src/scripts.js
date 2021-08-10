@@ -161,28 +161,27 @@ function showYourTripsDashboardPage() {
   yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
   user.totalCostString();
 
-  // yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
 }
 
 // INSTANTIATE TRIP
 
 function createTrip() {
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
-    const getDestinationID = allDestinations.find(destinationObj => {
-      if (jetFormDestination.value === destinationObj) {
-        return destinationObj.id
+    const destinationID = allDestinations.find(destinationObj => {
+      if (jetFormDestination.value === destinationObj.id) {
+        return true;
       }
-      return getDestinationID;
+      return false;
     })
   
     const trip = new Trip(
       {
-        'id': allTrips.length,
+        'id': allTrips.length + 1,
         'userID': user.id,
-        'destinationID': getDestinationID,
-        'travelers': jetFormHumans.value,
+        'destinationID': parseInt(getDestinationID),
+        'travelers': parseInt(jetFormHumans.value),
         'date': jetFormDate.value,
-        'duration': jetFormDuration.value,
+        'duration': parseInt(jetFormDuration.value),
         'status': 'pending',
         'suggestedActivities': []
       });
@@ -199,17 +198,8 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-  const trip = new Trip(
-    {
-      'id': allTrips.length,
-      'userID': user.id,
-      'destinationID': getDestinationID,
-      'travelers': jetFormHumans.value,
-      'date': jetFormDate.value,
-      'duration': jetFormDuration.value,
-      'status': 'pending',
-      'suggestedActivities': []
-    });
+
+  // do math to estimate cost
 
   user.getTotal()
 
@@ -259,7 +249,7 @@ function login() {
     } else {
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;
-      yourTripsDashboardPage.innerHTML = `${user.getTripsHTML()}`;
+      yourTripsDashboardPage.innerHTML = `${user.getTripsHTMLPast()}` + `${user.getTripsHTMLPresent()}` + `${user.getTripsHTMLFuture()}` + `${user.getTripsHTMLPending()}`;
     }
   }
 }
