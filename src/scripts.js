@@ -48,7 +48,10 @@ let travelers, trips, destinations, data;
 
 // EVENT LISTENERS
 
-new Glide('.glide').mount()
+let glide = new Glide('.glide')
+
+console.log(glide)
+glide.mount()
 
 // navbar
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
