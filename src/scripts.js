@@ -1,7 +1,7 @@
 // IMPORTS & SETUP
 
 import './css/base.scss';
-import Glide from './glide.min.js';
+import Glide from '@glidejs/glide';
 
 import {
   fetchData,
