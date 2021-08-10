@@ -126,6 +126,8 @@ class Traveler {
 
       tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
 
+      
+
       return tripsString;
 
     }, '');
