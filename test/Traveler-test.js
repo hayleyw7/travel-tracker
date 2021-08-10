@@ -55,7 +55,7 @@ describe('An individual Traveler', function() {
 
   it('should convert totalCost into a string', function() {
 
-    expect(user.totalCostString()).to.equal('x');
+    expect(user.totalCostString()).to.equal('$7,095.00');
   });
 
   it.skip('should find a destination for a trip', function() {
@@ -78,11 +78,11 @@ describe('An individual Traveler', function() {
     })).to.equal(5918.000000000001);
   });
 
-  it.skip('should add a trip', function() {
+  it('should add a trip', function() {
 
     expect(user.addTrip({
       "id":50,"userID":44,"destinationID":49,"travelers":1,"date":"2022/09/16","duration":8,"status":"approved","suggestedActivities":[]
-    })).to.equal('x');
+    })).to.equal(true);
   });
 
   it.skip('should add a destination', function() {

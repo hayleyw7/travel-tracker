@@ -195,7 +195,13 @@ class Traveler {
   }
 
   addTrip(trip) {
+    let length = this.trips.length;
     this.trips.push(trip);
+    if (this.trips.length > length) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   addDestination(destination) {
