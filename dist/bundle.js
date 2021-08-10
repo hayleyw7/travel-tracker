@@ -319,7 +319,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* UTILITY */\n:root {\n  --white: #FFF;\n  --black: #000000;\n  --mediumgray: #828282;\n  --darkgray: #222222;\n  --lightgray: #DCDCDC;\n  --blue: #ABEAE1;\n  --pink: #FFC0CB;\n  --green: #E5F3B3;\n}\n\nbody {\n  background: var(--darkgray);\n  color: var(--darkgray);\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n/* NAVBAR */\n.navbar {\n  background: var(--pink);\n  color: var(--darkgray);\n  flex-direction: row;\n  height: 15rem;\n  justify-content: space-between;\n}\n\n.navbar-left {\n  display: grid;\n  padding: 1.5em 0 0 0;\n  margin: 0 0 0 0;\n  width: 40rem;\n}\n\n.navbar-right {\n  width: 20rem;\n  margin-right: 2rem;\n}\n\n.username-section {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  padding: 0.5rem 0.2rem 0 0;\n}\n\n.name {\n  margin: 0.7rem 0 0 0;\n}\n\n.navbar-links {\n  margin: 0 1rem 0 0;\n  padding: 0;\n  border: 0;\n  font-size: 1.1rem;\n  background: var(--pink);\n}\n\n.navbar-links-section {\n  display: flex;\n  flex-direction: row;\n  margin: 0 0 0 0.8rem;\n  padding: 0;\n}\n\n.navbar-icon {\n  height: 1.3rem;\n  padding: 0.5rem;\n  width: 1.3rem;\n}\n\n.logo-icon {\n  height: 4rem;\n  justify-content: flex-end;\n  margin: 0;\n  padding: 2.1rem 0.5rem 0 0.8rem;\n  width: 4rem;\n}\n\n.logo-section {\n  display: flex;\n  font-size: 2.3rem;\n  justify-content: flex-end;\n}\n\n/* MAIN */\nh3 {\n  color: var(--white);\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  padding: 0 0 0 1.3rem;\n}\n\n.card-container-1,\n.card-container-2 {\n  display: grid;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin: 0.5rem;\n}\n\n.card-container-2 {\n  margin-bottom: 1rem;\n}\n\n.card {\n  background: var(--white);\n  border: 1px var(--lightgray) solid;\n  margin: 0.3rem;\n  width: 20rem;\n}\n\n/* ON CARD */\n/* photo section */\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n.right-arrow {\n  background: var(--blue);\n  border-radius: 10rem;\n  height: 3rem;\n  left: 0.5rem;\n  padding: 0.1rem;\n  position: absolute;\n  top: 0.5rem;\n  width: 3rem;\n}\n\n.views,\n.num-views {\n  color: var(--white);\n  padding: 0;\n  position: absolute;\n}\n\n.views {\n  bottom: 11.4rem;\n  font-size: 0.8rem;\n  right: 0.9rem;\n}\n\n.num-views {\n  bottom: 7.9rem;\n  font-size: 2rem;\n  right: 1.1rem;\n}\n\n/* destination info section */\n.destination-name {\n  margin: 0;\n}\n\n.date-time {\n  color: var(--mediumgray);\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-link {\n  background: var(--green);\n  padding: 0.5rem;\n}\n\n.play-attach {\n  font-size: 0.8rem;\n}\n\n.num-attachments {\n  color: var(--blue);\n  font-size: 2rem;\n  margin: 0;\n}\n\n/* MEDIA QUERY */\n@media only screen and (min-width: 680px) {\n  .card-container-1,\n.card-container-2 {\n    display: flex;\n  }\n\n  .navbar {\n    display: flex;\n    margin: 0;\n  }\n\n  .navbar-links-section {\n    display: flex;\n    margin: 5rem 0 0 1.3rem;\n  }\n\n  .navbar {\n    height: 11rem;\n  }\n}\n.hidden {\n  display: none;\n}\n\n.lets-jet-btn {\n  float: right;\n  margin-bottom: 0.4rem;\n}", "",{"version":3,"sources":["webpack://./src/css/base.scss"],"names":[],"mappings":"AAQA,YAAA;AAEA;EACE,aAAA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;EACA,oBAAA;EACA,eAAA;EACA,eAAA;EACA,gBAAA;AARF;;AAWA;EACE,2BAAA;EACA,sBAAA;EACA,kBAAA;EACA,SAAA;EACA,UAAA;AARF;;AAWA,WAAA;AAEA;EACE,uBAAA;EACA,sBAAA;EACA,mBAAA;EACA,aAAA;EACA,8BAAA;AATF;;AAYA;EACE,aAAA;EACA,oBAAA;EACA,eAAA;EACA,YAAA;AATF;;AAYA;EACE,YAAA;EACA,kBAAA;AATF;;AAYA;EACE,aAAA;EACA,mBAAA;EACA,yBAAA;EACA,0BAAA;AATF;;AAYA;EACE,oBAAA;AATF;;AAYA;EACE,kBAAA;EACA,UAAA;EACA,SAAA;EACA,iBAAA;EACA,uBAAA;AATF;;AAYA;EACE,aAAA;EACA,mBAAA;EAEA,oBAAA;EACA,UAAA;AAVF;;AAaA;EACE,cAAA;EACA,eAAA;EACA,aAAA;AAVF;;AAaA;EACE,YAAA;EACA,yBAAA;EACA,SAAA;EACA,+BAAA;EACA,WAAA;AAVF;;AAaA;EACE,aAAA;EACA,iBAAA;EACA,yBAAA;AAVF;;AAaA,SAAA;AAEA;EACE,mBAAA;EACA,iBAAA;EACA,uBAAA;EACA,qBAAA;AAXF;;AAcA;;EAEE,aAAA;EACA,mBAAA;EACA,6BAAA;EACA,cAAA;AAXF;;AAcA;EACE,mBAAA;AAXF;;AAcA;EACE,wBAAA;EACA,kCAAA;EACA,cAAA;EACA,YAAA;AAXF;;AAcA,YAAA;AAEA,kBAAA;AAEA;EACE,gBAAA;EACA,aAAA;AAbF;;AAgBA;EACE,SAAA;EACA,YAAA;AAbF;;AAgBA;EACE,kBAAA;AAbF;;AAgBA;EACE,uBAAA;EACA,oBAAA;EACA,YAAA;EACA,YAAA;EACA,eAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;AAbF;;AAgBA;;EAEE,mBAAA;EACA,UAAA;EACA,kBAAA;AAbF;;AAgBA;EACE,eAAA;EACA,iBAAA;EACA,aAAA;AAbF;;AAgBA;EACE,cAAA;EACA,eAAA;EACA,aAAA;AAbF;;AAgBA,6BAAA;AAEA;EACE,SAAA;AAdF;;AAiBA;EACE,wBAAA;EACA,iBAAA;EACA,SAAA;AAdF;;AAiBA;EACE,wBAAA;EACA,eAAA;AAdF;;AAiBA;EACE,iBAAA;AAdF;;AAiBA;EACE,kBAAA;EACA,eAAA;EACA,SAAA;AAdF;;AAiBA,gBAAA;AAEA;EAEE;;IAEE,aAAA;EAhBF;;EAmBA;IACE,aAAA;IACA,SAAA;EAhBF;;EAmBA;IACE,aAAA;IACA,uBAAA;EAhBF;;EAmBA;IACE,aAAA;EAhBF;AACF;AAmBA;EACE,aAAA;AAjBF;;AAoBA;EACE,YAAA;EACA,qBAAA;AAjBF","sourcesContent":["// /* This is an example of using Sass, otherwise plain CSS works too*/\n// $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);\n// ;\n\n// body {\n//   background: $primary-background;\n// }\n\n/* UTILITY */\n\n:root {\n  --white: #FFF;\n  --black: #000000;\n  --mediumgray: #828282;\n  --darkgray: #222222;\n  --lightgray: #DCDCDC;\n  --blue: #ABEAE1;\n  --pink: #FFC0CB;\n  --green: #E5F3B3;\n}\n\nbody {\n  background: var(--darkgray);\n  color: var(--darkgray);\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n/* NAVBAR */\n\n.navbar {\n  background: var(--pink);\n  color: var(--darkgray);\n  flex-direction: row;\n  height: 15rem;\n  justify-content: space-between;\n}\n\n.navbar-left {\n  display: grid;\n  padding: 1.5em 0 0 0;\n  margin: 0 0 0 0;\n  width: 40rem;\n}\n\n.navbar-right {\n  width: 20rem;\n  margin-right: 2rem;\n}\n\n.username-section {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  padding: 0.5rem 0.2rem 0 0;\n}\n\n.name {\n  margin: 0.7rem 0 0 0;\n}\n\n.navbar-links {\n  margin: 0 1rem 0 0;\n  padding: 0;\n  border: 0;\n  font-size: 1.1rem;\n  background: var(--pink);\n}\n\n.navbar-links-section {\n  display: flex;\n  flex-direction: row;\n  // font-size: 0.6rem;\n  margin: 0 0 0 0.8rem;\n  padding: 0;\n}\n\n.navbar-icon {\n  height: 1.3rem;\n  padding: 0.5rem;\n  width: 1.3rem;\n}\n\n.logo-icon {\n  height: 4rem;\n  justify-content: flex-end;\n  margin: 0;\n  padding: 2.1rem 0.5rem 0 0.8rem;\n  width: 4rem;\n}\n\n.logo-section {\n  display: flex;\n  font-size: 2.3rem;\n  justify-content: flex-end;\n}\n\n/* MAIN */\n\nh3 {\n  color: var(--white);\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  padding: 0 0 0 1.3rem;\n}\n\n.card-container-1,\n.card-container-2 {\n  display: grid;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin: 0.5rem; \n}\n\n.card-container-2 {\n  margin-bottom: 1rem;  \n}\n\n.card {\n  background: var(--white);\n  border: 1px var(--lightgray) solid;\n  margin: 0.3rem;\n  width: 20rem;\n}\n\n/* ON CARD */\n\n/* photo section */\n\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n.right-arrow {\n  background: var(--blue);\n  border-radius: 10rem;\n  height: 3rem;\n  left: 0.5rem;\n  padding: 0.1rem;\n  position: absolute;\n  top: 0.5rem;\n  width: 3rem;\n}\n\n.views,\n.num-views {\n  color: var(--white);\n  padding: 0;\n  position: absolute;\n}\n\n.views {\n  bottom: 11.4rem;\n  font-size: 0.8rem;\n  right: 0.9rem;\n}\n\n.num-views {\n  bottom: 7.9rem;\n  font-size: 2rem;\n  right: 1.1rem;\n}\n\n/* destination info section */\n\n.destination-name {\n  margin: 0;\n}\n\n.date-time {\n  color: var(--mediumgray);\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-link {\n  background: var(--green);\n  padding: 0.5rem\n}\n\n.play-attach {\n  font-size: 0.8rem;\n}\n\n.num-attachments {\n  color: var(--blue);\n  font-size: 2rem;\n  margin: 0;\n}\n\n/* MEDIA QUERY */\n\n@media only screen and (min-width: 680px) {\n\n  .card-container-1,\n  .card-container-2 {\n    display: flex;\n  }\n\n  .navbar {\n    display: flex;\n    margin: 0;\n  }\n \n  .navbar-links-section {\n    display: flex;\n    margin: 5rem 0 0 1.3rem;\n  }\n\n  .navbar {\n    height: 11rem;\n  }\n}\n\n.hidden {\n  display: none;\n}\n\n.lets-jet-btn {\n  float: right;\n  margin-bottom: 0.4rem;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* UTILITY */\n:root {\n  --white: #FFF;\n  --black: #000000;\n  --mediumgray: #828282;\n  --darkgray: #222222;\n  --lightgray: #DCDCDC;\n  --blue: #ABEAE1;\n  --pink: #FFC0CB;\n  --green: #E5F3B3;\n}\n\nbody {\n  background: var(--darkgray);\n  color: var(--darkgray);\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n/* NAVBAR */\n.navbar {\n  background: var(--pink);\n  color: var(--darkgray);\n  flex-direction: row;\n  height: 15rem;\n  justify-content: space-between;\n}\n\n.navbar-left {\n  display: grid;\n  padding: 1.5em 0 0 0;\n  margin: 0 0 0 0;\n  width: 40rem;\n}\n\n.navbar-right {\n  width: 20rem;\n  margin-right: 2rem;\n}\n\n.username-section {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  padding: 0.5rem 0.2rem 0 0;\n}\n\n.name {\n  margin: 0.7rem 0 0 0;\n}\n\n.navbar-links {\n  margin: 0 1rem 0 0;\n  padding: 0;\n  border: 0;\n  font-size: 1.1rem;\n  background: var(--pink);\n}\n\n.navbar-links-section {\n  display: flex;\n  flex-direction: row;\n  margin: 0 0 0 0.8rem;\n  padding: 0;\n}\n\n.navbar-icon {\n  height: 1.3rem;\n  padding: 0.5rem;\n  width: 1.3rem;\n}\n\n.logo-icon {\n  height: 4rem;\n  justify-content: flex-end;\n  margin: 0;\n  padding: 2.1rem 0.5rem 0 0.8rem;\n  width: 4rem;\n}\n\n.logo-section {\n  display: flex;\n  font-size: 2.3rem;\n  justify-content: flex-end;\n}\n\n/* MAIN */\nh3 {\n  color: var(--white);\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  padding: 0 0 0 1.3rem;\n}\n\n.card-container-1,\n.card-container-2 {\n  display: grid;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin: 0.5rem;\n  color: var(--darkgray);\n}\n\n.card-container-2 {\n  margin-bottom: 1rem;\n}\n\n.card {\n  background: var(--white);\n  border: 1px var(--lightgray) solid;\n  margin: 0.3rem;\n  width: 20rem;\n}\n\n/* ON CARD */\n/* photo section */\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n.right-arrow {\n  background: var(--blue);\n  border-radius: 10rem;\n  height: 3rem;\n  left: 0.5rem;\n  padding: 0.1rem;\n  position: absolute;\n  top: 0.5rem;\n  width: 3rem;\n}\n\n.views,\n.num-views {\n  color: var(--white);\n  padding: 0;\n  position: absolute;\n}\n\n.views {\n  bottom: 11.4rem;\n  font-size: 0.8rem;\n  right: 0.9rem;\n}\n\n.num-views {\n  bottom: 7.9rem;\n  font-size: 2rem;\n  right: 1.1rem;\n}\n\n/* destination info section */\n.destination-name {\n  margin: 0;\n}\n\n.date-time {\n  color: var(--mediumgray);\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-link {\n  background: var(--green);\n  padding: 0.5rem;\n}\n\n.play-attach {\n  font-size: 0.8rem;\n}\n\n.num-attachments {\n  color: var(--blue);\n  font-size: 2rem;\n  margin: 0;\n}\n\n/* MEDIA QUERY */\n@media only screen and (min-width: 680px) {\n  .card-container-1,\n.card-container-2 {\n    display: flex;\n  }\n\n  .navbar {\n    display: flex;\n    margin: 0;\n  }\n\n  .navbar-links-section {\n    display: flex;\n    margin: 5rem 0 0 1.3rem;\n  }\n\n  .navbar {\n    height: 11rem;\n  }\n}\n.hidden {\n  display: none;\n}\n\n.lets-jet-btn {\n  float: right;\n  margin-bottom: 0.4rem;\n}\n\n.dashboard {\n  color: white;\n}", "",{"version":3,"sources":["webpack://./src/css/base.scss"],"names":[],"mappings":"AAQA,YAAA;AAEA;EACE,aAAA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;EACA,oBAAA;EACA,eAAA;EACA,eAAA;EACA,gBAAA;AARF;;AAWA;EACE,2BAAA;EACA,sBAAA;EACA,kBAAA;EACA,SAAA;EACA,UAAA;AARF;;AAWA,WAAA;AAEA;EACE,uBAAA;EACA,sBAAA;EACA,mBAAA;EACA,aAAA;EACA,8BAAA;AATF;;AAYA;EACE,aAAA;EACA,oBAAA;EACA,eAAA;EACA,YAAA;AATF;;AAYA;EACE,YAAA;EACA,kBAAA;AATF;;AAYA;EACE,aAAA;EACA,mBAAA;EACA,yBAAA;EACA,0BAAA;AATF;;AAYA;EACE,oBAAA;AATF;;AAYA;EACE,kBAAA;EACA,UAAA;EACA,SAAA;EACA,iBAAA;EACA,uBAAA;AATF;;AAYA;EACE,aAAA;EACA,mBAAA;EAEA,oBAAA;EACA,UAAA;AAVF;;AAaA;EACE,cAAA;EACA,eAAA;EACA,aAAA;AAVF;;AAaA;EACE,YAAA;EACA,yBAAA;EACA,SAAA;EACA,+BAAA;EACA,WAAA;AAVF;;AAaA;EACE,aAAA;EACA,iBAAA;EACA,yBAAA;AAVF;;AAaA,SAAA;AAEA;EACE,mBAAA;EACA,iBAAA;EACA,uBAAA;EACA,qBAAA;AAXF;;AAcA;;EAEE,aAAA;EACA,mBAAA;EACA,6BAAA;EACA,cAAA;EACA,sBAAA;AAXF;;AAcA;EACE,mBAAA;AAXF;;AAcA;EACE,wBAAA;EACA,kCAAA;EACA,cAAA;EACA,YAAA;AAXF;;AAcA,YAAA;AAEA,kBAAA;AAEA;EACE,gBAAA;EACA,aAAA;AAbF;;AAgBA;EACE,SAAA;EACA,YAAA;AAbF;;AAgBA;EACE,kBAAA;AAbF;;AAgBA;EACE,uBAAA;EACA,oBAAA;EACA,YAAA;EACA,YAAA;EACA,eAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;AAbF;;AAgBA;;EAEE,mBAAA;EACA,UAAA;EACA,kBAAA;AAbF;;AAgBA;EACE,eAAA;EACA,iBAAA;EACA,aAAA;AAbF;;AAgBA;EACE,cAAA;EACA,eAAA;EACA,aAAA;AAbF;;AAgBA,6BAAA;AAEA;EACE,SAAA;AAdF;;AAiBA;EACE,wBAAA;EACA,iBAAA;EACA,SAAA;AAdF;;AAiBA;EACE,wBAAA;EACA,eAAA;AAdF;;AAiBA;EACE,iBAAA;AAdF;;AAiBA;EACE,kBAAA;EACA,eAAA;EACA,SAAA;AAdF;;AAiBA,gBAAA;AAEA;EAEE;;IAEE,aAAA;EAhBF;;EAmBA;IACE,aAAA;IACA,SAAA;EAhBF;;EAmBA;IACE,aAAA;IACA,uBAAA;EAhBF;;EAmBA;IACE,aAAA;EAhBF;AACF;AAmBA;EACE,aAAA;AAjBF;;AAoBA;EACE,YAAA;EACA,qBAAA;AAjBF;;AAoBA;EACE,YAAA;AAjBF","sourcesContent":["// /* This is an example of using Sass, otherwise plain CSS works too*/\n// $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);\n// ;\n\n// body {\n//   background: $primary-background;\n// }\n\n/* UTILITY */\n\n:root {\n  --white: #FFF;\n  --black: #000000;\n  --mediumgray: #828282;\n  --darkgray: #222222;\n  --lightgray: #DCDCDC;\n  --blue: #ABEAE1;\n  --pink: #FFC0CB;\n  --green: #E5F3B3;\n}\n\nbody {\n  background: var(--darkgray);\n  color: var(--darkgray);\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n/* NAVBAR */\n\n.navbar {\n  background: var(--pink);\n  color: var(--darkgray);\n  flex-direction: row;\n  height: 15rem;\n  justify-content: space-between;\n}\n\n.navbar-left {\n  display: grid;\n  padding: 1.5em 0 0 0;\n  margin: 0 0 0 0;\n  width: 40rem;\n}\n\n.navbar-right {\n  width: 20rem;\n  margin-right: 2rem;\n}\n\n.username-section {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  padding: 0.5rem 0.2rem 0 0;\n}\n\n.name {\n  margin: 0.7rem 0 0 0;\n}\n\n.navbar-links {\n  margin: 0 1rem 0 0;\n  padding: 0;\n  border: 0;\n  font-size: 1.1rem;\n  background: var(--pink);\n}\n\n.navbar-links-section {\n  display: flex;\n  flex-direction: row;\n  // font-size: 0.6rem;\n  margin: 0 0 0 0.8rem;\n  padding: 0;\n}\n\n.navbar-icon {\n  height: 1.3rem;\n  padding: 0.5rem;\n  width: 1.3rem;\n}\n\n.logo-icon {\n  height: 4rem;\n  justify-content: flex-end;\n  margin: 0;\n  padding: 2.1rem 0.5rem 0 0.8rem;\n  width: 4rem;\n}\n\n.logo-section {\n  display: flex;\n  font-size: 2.3rem;\n  justify-content: flex-end;\n}\n\n/* MAIN */\n\nh3 {\n  color: var(--white);\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  padding: 0 0 0 1.3rem;\n}\n\n.card-container-1,\n.card-container-2 {\n  display: grid;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin: 0.5rem; \n  color: var(--darkgray);\n}\n\n.card-container-2 {\n  margin-bottom: 1rem;  \n}\n\n.card {\n  background: var(--white);\n  border: 1px var(--lightgray) solid;\n  margin: 0.3rem;\n  width: 20rem;\n}\n\n/* ON CARD */\n\n/* photo section */\n\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n.right-arrow {\n  background: var(--blue);\n  border-radius: 10rem;\n  height: 3rem;\n  left: 0.5rem;\n  padding: 0.1rem;\n  position: absolute;\n  top: 0.5rem;\n  width: 3rem;\n}\n\n.views,\n.num-views {\n  color: var(--white);\n  padding: 0;\n  position: absolute;\n}\n\n.views {\n  bottom: 11.4rem;\n  font-size: 0.8rem;\n  right: 0.9rem;\n}\n\n.num-views {\n  bottom: 7.9rem;\n  font-size: 2rem;\n  right: 1.1rem;\n}\n\n/* destination info section */\n\n.destination-name {\n  margin: 0;\n}\n\n.date-time {\n  color: var(--mediumgray);\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-link {\n  background: var(--green);\n  padding: 0.5rem\n}\n\n.play-attach {\n  font-size: 0.8rem;\n}\n\n.num-attachments {\n  color: var(--blue);\n  font-size: 2rem;\n  margin: 0;\n}\n\n/* MEDIA QUERY */\n\n@media only screen and (min-width: 680px) {\n\n  .card-container-1,\n  .card-container-2 {\n    display: flex;\n  }\n\n  .navbar {\n    display: flex;\n    margin: 0;\n  }\n \n  .navbar-links-section {\n    display: flex;\n    margin: 5rem 0 0 1.3rem;\n  }\n\n  .navbar {\n    height: 11rem;\n  }\n}\n\n.hidden {\n  display: none;\n}\n\n.lets-jet-btn {\n  float: right;\n  margin-bottom: 0.4rem;\n}\n\n.dashboard {\n  color: white;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -626,6 +626,7 @@ const dom = {
   yourTripsDashboardPage: document.getElementById('yourTripsDashboardPage'),
   destinationNameHTML: document.getElementById('destinationNameHTML'),
   dateTimeHTML: document.getElementById('dateTimeHTML'),
+  yearCost: document.getElementById('yearCost'),
 
   // WANNA JET PAGE
   wannaJetPage: document.getElementById('wannaJetPage'),
@@ -700,6 +701,50 @@ class Traveler {
       return false;
     });
 
+    let future = approved.filter(trip => {
+      let startDate = new Date(trip.date);
+      let endDate = new Date(trip.date);
+
+      endDate.setDate(endDate.getDate() + trip.duration);
+
+      let today = new Date();
+
+      if (today < startDate) {
+        return true;
+      }
+
+    });
+
+      let present = approved.filter(trip => {
+
+      let startDate = new Date(trip.date);
+
+      let endDate = new Date(trip.date);
+
+      endDate.setDate(endDate.getDate() + trip.duration);
+
+      let today = new Date();
+
+      if (today < endDate && today > startDate) {
+        return true;
+      }
+
+    });
+
+    let pastString = past.reduce((tripsString, trip) => {
+
+      let destination = this.destinations.find(destination => destination.id === trip.destinationID);
+
+      let destinationName = destination.destination;
+
+      let cost = this.getTotal(trip, destination);
+
+      tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
+
+      return tripsString;
+
+    }, '');
+
     let approvedString = approved.reduce((tripsString, trip) => {
 
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
@@ -710,7 +755,7 @@ class Traveler {
 
       return tripsString;
 
-    }, "");
+    }, '');
 
     let pendingString = pending.reduce((tripsString, trip) => {
 
@@ -722,19 +767,61 @@ class Traveler {
 
       return tripsString;
 
-    }, "");
+    }, '');
 
-    let totalCostString = money.format(this.getTotalSpent());
+    let presentString = present.reduce((tripsString, trip) => {
 
-    let result =
-      "<h4>Approved:</h4>"
-      + approvedString
-      + "<h4>Pending:</h4>"
-      + pendingString
-      + "<h5>Total Cost:</h5>"
-      + totalCostString;
+      let destination = this.destinations.find(destination => destination.id === trip.destinationID);
 
+      let destinationName = destination.destination;
+
+      let cost = this.getTotal(trip, destination);
+
+      tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
+
+      return tripsString;
+
+    }, '');
+
+    let futureString = future.reduce((tripsString, trip) => {
+
+      // console.log(this.destinations);
+      //
+      // console.log('NEXT ELEMENT: ' + this.destinations.find(destination => destination.id === trip.destinationID).destination + '<br><br>');
+
+      let destination = this.destinations.find(destination => destination.id === trip.destinationID);
+
+      let destinationName = destination.destination;
+
+      let cost = this.getTotal(trip, destination);
+
+      tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
+
+      return tripsString;
+
+    }, '');
+
+    let result = `
+      <h3>We hope that you're enjoying your vibe!</h3>
+      ${presentString}
+      <h3>Pending Vibes</h3>
+      ${pendingString}
+      <h3>Future Vibes</h3>
+      ${futureString}
+      <h3>Past Vibes</h3>
+      ${pastString}
+    `
     return result;
+  }
+
+  totalCostString() {
+    var money = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+    
+    let totalCostString = money.format(this.getTotalSpent());
+    yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
   }
 
   getDestination(trip) {
@@ -743,22 +830,20 @@ class Traveler {
 
   getTotalSpent() {
     return this.trips.reduce((sum, trip) => {
-
-      const destination = this.getDestination(trip);
-
-      const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-      const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
-      const travelAgentFactor = 1.1;
-      sum += travelAgentFactor * (flightCost + lodgingCost);
+      if (trip.status === 'approved') {
+        const destination = this.getDestination(trip);
+        sum += this.getTotal(trip, destination);
+      }
       return sum;
     }, 0);
   }
 
   getTotal(trip, destination) {
-    const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
+    const flightCost = (trip.travelers * destination.estimatedFlightCostPerPerson) * 2
     const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
+    const costWithoutAgent = flightCost + lodgingCost;
     const travelAgentFactor = 1.1;
-    return travelAgentFactor * (flightCost + lodgingCost);
+    return costWithoutAgent * travelAgentFactor;
   }
 }
 
@@ -12132,7 +12217,8 @@ const {
   navBarSignOutBtn,
   replaceYOLO,
   estimatedCostHeaderHTML,
-  name
+  name,
+  yearCost
 } = _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default;
 
 // ***** STORAGE & SETUP *****
@@ -12173,12 +12259,12 @@ function packPromises() {
 //       if (!response.ok) {
 //         throw Error(response.statusText);
 //       } else {
-//         //?.innerText = "Success"
+//         //?.innerText = 'Success'
 //         // dom.renderSubmittedHydration(hydrationInput.value)
 //       }
 //     })
 //     .catch(error => {
-//       // ?.innerText = "Fail";
+//       // ?.innerText = 'Fail';
 //       console.log(error)
 //     })
 // }
@@ -12233,14 +12319,12 @@ function show(elements) {
 // SHOW & HIDE PAGE FUNCTIONS
 
 function showLoginPage() {
-  // event.preventDefault()
   hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   show([loginPage]);
-  name.innerText = `"Oh, the places you'll vibe!`;
+  name.innerText = `'Oh, the places you'll vibe!'`;
 }
 
 function showWannaJetPage() {
-  // event.preventDefault();
   name.innerText = `${user.name}`;
   hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
@@ -12248,13 +12332,14 @@ function showWannaJetPage() {
 }
 
 function showYourTripsDashboardPage() {
-  // event.preventDefault();
-  // console.log(user.name)
   name.innerText = `${user.name}`;
   // console.log(user)
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
   yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
+  user.totalCostString();
+
+  // yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
 }
 
 // INSTANTIATE TRIP
@@ -12270,14 +12355,14 @@ function createTrip() {
   
     const trip = new _Trip__WEBPACK_IMPORTED_MODULE_4__.default(
       {
-        "id": allTrips.length,
-        "userID": user.id,
-        "destinationID": getDestinationID,
-        "travelers": jetFormHumans.value,
-        "date": jetFormDate.value,
-        "duration": jetFormDuration.value,
-        "status": "pending",
-        "suggestedActivities": []
+        'id': allTrips.length,
+        'userID': user.id,
+        'destinationID': getDestinationID,
+        'travelers': jetFormHumans.value,
+        'date': jetFormDate.value,
+        'duration': jetFormDuration.value,
+        'status': 'pending',
+        'suggestedActivities': []
       });
   }
 
@@ -12292,32 +12377,28 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-  // event.preventDefault()
+  const trip = new _Trip__WEBPACK_IMPORTED_MODULE_4__.default(
+    {
+      'id': allTrips.length,
+      'userID': user.id,
+      'destinationID': getDestinationID,
+      'travelers': jetFormHumans.value,
+      'date': jetFormDate.value,
+      'duration': jetFormDuration.value,
+      'status': 'pending',
+      'suggestedActivities': []
+    });
 
-
-
-  // const flightCost = trip.travelers * destination.estimatedFlightCostPerPerson;
-  // const lodgingCost = trip.duration * destination.estimatedLodgingCostPerDay;
-
-  // const costWithoutAgent = (flightCost + lodgingCost) * 2;
-  // const travelAgentFactor = 1.1;
-
-  // const costToDisplay = travelAgentFactor * costWithoutAgent;
-
-
+  user.getTotal()
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
     estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
     estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
   }  else {
-    // alert('Please tell us all of the things!');
-    // estimatedCostHTML.innerText = `If you see this, THE BUG IS FIXED!`;
 
-    // estimatedCostHTML.innerHTML = `${costToDisplay}`
     show([letsJetBtn])
-    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST:`
-    estimatedCostHTML.innerHTML = `[price here]`
-
+    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${user.getTotal(trip, destination)}`
+    estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
   }
 }
 
@@ -12329,7 +12410,7 @@ function login() {
   
     const password = loginFormPassword.value;
 
-    if (password === "travel") {
+    if (password === 'travel') {
 
       const username = loginFormUsername.value;
       const id = (0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.getID)(username);
@@ -12354,43 +12435,11 @@ function login() {
       );
       
     } else {
-      // event.preventDefault()
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;
       yourTripsDashboardPage.innerHTML = `${user.getTripsHTML()}`;
     }
   }
-}
-
-function showCurrentTrip() {
-  const displayThis = user.getTripsByStatus(trip.today, 'current');
-  destinationNameHTML.innerText = `${displayThis.destination}`;
-  dateTimeHTML.innerText = `${displayThis.date}`;
-}
-
-function showPendingTrips() {
-  const displayThis = user.getTripsByStatus(trip.today, 'pending');
-  destinationNameHTML.innerText = `${displayThis.destination}`;
-  dateTimeHTML.innerText = `${displayThis.date}`;
-}
-
-function showFutureTrips() {
-  const displayThis = user.getTripsByStatus(trip.today, 'approved');
-  destinationNameHTML.innerText = `${displayThis.destination}`;
-  dateTimeHTML.innerText = `${displayThis.date}`;
-}
-
-function showPastTrips() {
-  const displayThis = user.getTripsByStatus(trip.today, 'past');
-  destinationNameHTML.innerText = `${displayThis.destination}`;
-  dateTimeHTML.innerText = `${displayThis.date}`;
-}
-
-function showTrips() {
-  showCurrentTrip();
-  showPendingTrips();
-  showFutureTrips();
-  showPastTrips();
 }
 
 function populateDestinationsDropDown() {
@@ -12402,21 +12451,11 @@ function populateDestinationsDropDown() {
     }
   }).forEach((destinationObj) => {
     jetFormDestination.insertAdjacentHTML('beforeend', `
-      <option value="${destinationObj.destination}">${destinationObj.destination}</option>
+      <option value='${destinationObj.destination}'>${destinationObj.destination}</option>
     `)
   })
 }
 
-
-
-
-
-
-// test
-
-// function testAlert() {
-//   alert("I am an alert box!");
-// }
 
 // help
 
