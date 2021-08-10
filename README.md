@@ -91,7 +91,7 @@ Once you fill out and submit that form, you will see an estimated price, and the
 
 Once you confirm it, you'll be send back to your dashboard, where it will be under "pending".
 
-To end the lesson, click "Log Out".
+To end the session, click "Log Out".
 
 <!-- ## GIF -->
 
