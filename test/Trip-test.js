@@ -10,7 +10,7 @@ const destinations = require('../src/trips');
 
 const data = travelers.find(traveler => traveler.id === 1)
 
-const bob = new Traveler(data, trips);
+const user = new Traveler(data, trips);
 
 describe('Trip', () => {
   it('is a function', function() {
@@ -26,5 +26,9 @@ describe('Trip', () => {
   it.skip('should get user trip dates', function() {
     let trip = new Trip(trips);
 
-    expect(trip.getUserTripDates()).to.be.an.instanceof(Trip);
+    trip.startDate = ''
+    trip.endDate = ''
+    let startDate = '2021/01/09'
+
+    expect(trip.getUserTripDates()).to.equal('x');
   });});
