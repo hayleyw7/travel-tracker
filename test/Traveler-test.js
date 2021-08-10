@@ -58,14 +58,16 @@ describe('An individual Traveler', function() {
     expect(user.totalCostString()).to.equal('$7,095.00');
   });
 
-  it.skip('should find a destination for a trip', function() {
+  it('should find a destination for a trip', function() {
 
-    expect(user.getDestination({
-      "id":1,"userID":44,"destinationID":49,"travelers":1,"date":"2022/09/16","duration":8,"status":"approved","suggestedActivities":[]
-    }))
-    
-    .to.equal({
-      "id":49,"destination":"Castries, St Lucia","estimatedLodgingCostPerDay":650,"estimatedFlightCostPerPerson":90,"image":"https://images.unsplash.com/photo-1524478075552-c2763ea171b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80","alt":"aerial photography of rocky mountain under cloudy sky"
+    expect(user.getDestination(user.getTrips()[0]))
+    .to.deep.equal({
+      "id":28,
+      "destination": "San Juan, Puerto Rico",
+      "estimatedLodgingCostPerDay": 70,
+      "estimatedFlightCostPerPerson": 900,
+      "image": "https://images.unsplash.com/photo-1580237541049-2d715a09486e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2090&q=80",
+      "alt":"white and brown concrete buildings near sea under white clouds during daytime"
     });
   });
 
@@ -85,10 +87,10 @@ describe('An individual Traveler', function() {
     })).to.equal(true);
   });
 
-  it.skip('should add a destination', function() {
+  it('should add a destination', function() {
 
     expect(user.addDestination({
       "id":49,"destination":"Castries, St Lucia","estimatedLodgingCostPerDay":650,"estimatedFlightCostPerPerson":90,"image":"https://images.unsplash.com/photo-1524478075552-c2763ea171b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80","aƒconverlt":"aerial photography of rocky mountain under cloudy sky"
-    })).to.equal('x');
+    })).to.equal(true);
   });  
 });

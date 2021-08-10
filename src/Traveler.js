@@ -206,8 +206,15 @@ class Traveler {
 
   addDestination(destination) {
     if (!this.destinations.includes(destination)) {
+      let length = this.destinations.length;
       this.destinations.push(destination);
+      if (this.destinations.length > length) {
+        return true;
+      } else {
+        return false;
+      }
     }
+    return true;
   }
 }
 
