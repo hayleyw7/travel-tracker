@@ -45,33 +45,13 @@ describe('An individual Traveler', function() {
 
   it('should be able to calculate the cost of all trips', function() {
 
-    expect(bob.getTotalSpent()).to.equal(4125);
+    expect(bob.getTotalSpent()).to.equal(7095.000000000001);
 
   });
 
-    it.skip('should be able to return current trip', function() {
+  it('should be able to return current, future, pending, & past trips', function() {
 
-    // expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
-
-  });
-
-    it.skip('should be able to return future trips', function() {
-
-    // expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
+    expect(bob.getTripsHTML()).to.equal(`\n      <h3>We hope that you\'re enjoying your vibe!</h3>\n      \n      <h3>Pending Vibes</h3>\n      \n      <h3>Future Vibes</h3>\n      \n      <h3>Past Vibes</h3>\n      San Juan, Puerto Rico<br><br>Cost: $7,095.00 <br><br>\n    `);
 
   });
-
-    it.skip('should be able to return pending trips', function() {
-
-    // expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
-
-  });
-
-    it.skip('should be able to return past trips', function() {
-
-    // expect(bob.getTripsByStatus(trip.today, 'current')).to.deep.equal([]);
-
-  });
-
-
 });
