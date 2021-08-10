@@ -169,8 +169,7 @@ class Traveler {
       currency: 'USD',
     });
     
-    let totalCostString = money.format(this.getTotalSpent());
-    yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
+    return money.format(this.getTotalSpent());
   }
 
   getDestination(trip) {
@@ -196,13 +195,26 @@ class Traveler {
   }
 
   addTrip(trip) {
+    let length = this.trips.length;
     this.trips.push(trip);
+    if (this.trips.length > length) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   addDestination(destination) {
     if (!this.destinations.includes(destination)) {
+      let length = this.destinations.length;
       this.destinations.push(destination);
+      if (this.destinations.length > length) {
+        return true;
+      } else {
+        return false;
+      }
     }
+    return true;
   }
 }
 

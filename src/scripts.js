@@ -106,11 +106,11 @@ function showWannaJetPage() {
 
 function showYourTripsDashboardPage() {
   name.innerText = `${user.name}`;
-  // console.log(user)
+  yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
-  user.totalCostString();
+  yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
+  console.log('this is the console log', user.totalCostString());
 }
 
 // INSTANTIATE TRIP
@@ -118,10 +118,10 @@ function showYourTripsDashboardPage() {
 function createTrip() {
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
 
-    console.log(allDestinations)
+    console.log(allDestinations);
 
     const destination = allDestinations.find(destinationObj => {
-      console.log(jetFormDestination.value + ", " + destinationObj.id)
+      console.log(jetFormDestination.value + ", " + destinationObj.id);
       if (parseInt(jetFormDestination.value) === destinationObj.id) {
         return true;
       }
