@@ -42,10 +42,10 @@ const {
   estimatedCostHeaderHTML,
   name,
   yearCost,
-  currentSlides,
-  pastSlides,
-  pendingSlides,
-  futureSlides
+  // currentSlides,
+  // pastSlides,
+  pendingSlides
+  // futureSlides
 } = dom;
 
 let travelers, trips, destinations, data;
@@ -119,16 +119,16 @@ function showYourTripsDashboardPage() {
 
   populateTripSlides();
   
-  let glide = new Glide('.glide').mount();
+  // let glide = new Glide('.glide').mount();
 }
 
 function populateTripSlides() {
   let slides = user.getTripsHTML();
 
-  currentSlides.innerHTML = slides[0];
+  // currentSlides.innerHTML = slides[0];
   pendingSlides.innerHTML = slides[1];
-  futureSlides.innerHTML = slides[2];
-  pastSlides.innerHTML = slides[3];
+  // futureSlides.innerHTML = slides[2];
+  // pastSlides.innerHTML = slides[3];
 }
 
 // INSTANTIATE TRIP
@@ -237,6 +237,9 @@ function login() {
           window.allDestinations = promises[2].destinations;
           window.allTrips = promises[1].trips;
           window.user = new Traveler(data, trips, destinations);
+
+          let glide = new Glide('.glide').mount();
+
           showYourTripsDashboardPage();
         }
       );
