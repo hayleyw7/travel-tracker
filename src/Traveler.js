@@ -194,6 +194,16 @@ class Traveler {
     const travelAgentFactor = 1.1;
     return costWithoutAgent * travelAgentFactor;
   }
+
+  addTrip(trip) {
+    this.trips.push(trip);
+  }
+
+  addDestination(destination) {
+    if (!this.destinations.includes(destination)) {
+      this.destinations.push(destination);
+    }
+  }
 }
 
 export default Traveler

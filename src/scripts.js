@@ -8,10 +8,8 @@ import {
   fetchTravelers,
   fetchTrips,
   fetchDestinations,
+  postBooking,
   getID
-  // postTravelerData,
-  // postDestinationData,
-  // postTripData
 } from './apiCalls';
 
 import dom from './domUpdates';
@@ -67,54 +65,6 @@ function packPromises() {
   return Promise.all([fetchTravelers(), fetchTrips(), fetchDestinations()]);
 }
 
-///
-
-// function postTravelerInputs() {
-//   postTravelerData(travelerID, travelerName, travelerType)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error(response.statusText);
-//       } else {
-//         //?.innerText = 'Success'
-//         // dom.renderSubmittedHydration(hydrationInput.value)
-//       }
-//     })
-//     .catch(error => {
-//       // ?.innerText = 'Fail';
-//       console.log(error)
-//     })
-// }
-
-// function postTripInputs() {
-//   postTripData(tripID, tripTravelerID, destinationID, numTravelers, tripDate, tripDuration, travelerStatus, tripStatus, suggestedActivities)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error(response.statusText);
-//       } else {
-//         // ???
-//       }
-//     })
-//     .catch(error => {
-//         // ???
-//       console.log(error)
-//     })
-// }
-
-// function postDestinationInputs() {
-//   postTravelerData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error(response.statusText);
-//       } else {
-//         // ???
-//       }
-//     })
-//     .catch(error => {
-//         // ???
-//       console.log(error)
-//     })
-// }
-
 ///////////////////////////////////////////////////
 //////////////////// FUNCTIONS ////////////////////
 ///////////////////////////////////////////////////
@@ -167,24 +117,48 @@ function showYourTripsDashboardPage() {
 
 function createTrip() {
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
-    const destinationID = allDestinations.find(destinationObj => {
-      if (jetFormDestination.value === destinationObj.id) {
+
+    console.log(allDestinations)
+
+    const destination = allDestinations.find(destinationObj => {
+      console.log(jetFormDestination.value + ", " + destinationObj.id)
+      if (parseInt(jetFormDestination.value) === destinationObj.id) {
         return true;
       }
       return false;
     })
+
+    let destinationID = destination.id;
+    
+    // console.log(destinationID)
   
-  const trip = 
-    {
+    const trip = {
       'id': allTrips.length + 1,
       'userID': user.id,
-      'destinationID': parseInt(getDestinationID),
+      'destinationID': destinationID,
       'travelers': parseInt(jetFormHumans.value),
-      'date': jetFormDate.value,
+      'date': jetFormDate.value.split('-').join('/'),
       'duration': parseInt(jetFormDuration.value),
       'status': 'pending',
       'suggestedActivities': []
     };
+
+    console.log(trip)
+
+    postBooking(trip).then(result => {
+      if (result.ok) {
+
+        console.log(result);
+
+        user.addTrip(trip);
+        user.addDestination(destination);
+
+        showYourTripsDashboardPage();
+
+      } else {
+        console.log(result);
+      }
+    });
   }
 }
 
