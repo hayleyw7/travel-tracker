@@ -6,22 +6,21 @@
 //   background: $primary-background;
 // }
 
-/* UTILITY */
+@import 'styles';
 
-:root {
-  --white: #FFF;
-  --black: #000000;
-  --mediumgray: #828282;
-  --darkgray: #222222;
-  --lightgray: #DCDCDC;
-  --blue: #ABEAE1;
-  --pink: #FFC0CB;
-  --green: #E5F3B3;
-}
+/* COLORS */
+
+$white: #ffffff;
+$mediumgray: #828282;
+$darkgray: #222222;
+$lightgray: #DCDCDC;
+$blue: #ABEAE1;
+$pink: #FFC0CB;
+$green: #E5F3B3;
 
 body {
-  background: var(--darkgray);
-  color: var(--darkgray);
+  background: $darkgray;
+  color: $darkgray;
   font-family: Arial;
   margin: 0;
   padding: 0;
@@ -31,7 +30,7 @@ body {
 
 .navbar {
   background: var(--pink);
-  color: var(--darkgray);
+  color: $darkgray;
   flex-direction: row;
   height: 15rem;
   justify-content: space-between;
@@ -73,14 +72,6 @@ body {
   width: 1.3rem;
 }
 
-.logo-icon {
-  height: 4rem;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 2.1rem 0.5rem 0 0.8rem;
-  width: 4rem;
-}
-
 .logo-section {
   display: flex;
   font-size: 2.3rem;
@@ -110,7 +101,7 @@ h3 {
 
 .card {
   background: var(--white);
-  border: 1px var(--lightgray) solid;
+  border: 1px $lightgray solid;
   margin: 0.3rem;
   width: 20rem;
 }
@@ -119,12 +110,12 @@ h3 {
 
 /* photo section */
 
-.recipient-info-container {
+.destination-info-container {
   max-width: 20rem;
   padding: 1rem;
 }
 
-.recipient-photo {
+.destination-photo {
   margin: 0;
   width: 20rem;
 }
@@ -133,60 +124,15 @@ h3 {
   position: relative;
 }
 
-.right-arrow {
-  background: var(--blue);
-  border-radius: 10rem;
-  height: 3rem;
-  left: 0.5rem;
-  padding: 0.1rem;
-  position: absolute;
-  top: 0.5rem;
-  width: 3rem;
-}
+/* destination info section */
 
-.views,
-.num-views {
-  color: var(--white);
-  padding: 0;
-  position: absolute;
-}
-
-.views {
-  bottom: 11.4rem;
-  font-size: 0.8rem;
-  right: 0.9rem;
-}
-
-.num-views {
-  bottom: 7.9rem;
-  font-size: 2rem;
-  right: 1.1rem;
-}
-
-/* recipient info section */
-
-.recipient-name {
+.destination-name {
   margin: 0;
 }
 
 .date-time {
   color: var(--mediumgray);
   font-size: 0.9rem;
-  margin: 0;
-}
-
-.recipient-link {
-  background: var(--green);
-  padding: 0.5rem
-}
-
-.play-attach {
-  font-size: 0.8rem;
-}
-
-.num-attachments {
-  color: var(--blue);
-  font-size: 2rem;
   margin: 0;
 }
 
