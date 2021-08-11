@@ -22,14 +22,20 @@ input {
   border-radius: 1rem;
   margin: 0 0.4rem 0 0.4rem;
   padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+
+  &:hover {
+    @include button-hover();
+  }
 }
 
 .lets-jet-btn {
   margin-bottom: 0.4rem;
+
+  &:hover{
+    @include button-hover();    
+  }
 }
 
-.submit-btn:hover,
-.lets-jet-btn:hover,
 .navbar-buttons:hover {
-  @include button-hover()
+  @include button-hover();
 }
