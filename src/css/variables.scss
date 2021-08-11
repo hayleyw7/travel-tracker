@@ -8,3 +8,18 @@ $pink: #FFC0CB;
 // FONT
 
 $font: Arial;
+
+// MIX INS
+
+@mixin input-fields() {
+  border: 1px solid $medium-gray;
+  background: $white;
+  border-radius: 1rem;
+  margin: 0 0.4rem 0 0.4rem;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+  font-family: $font; 
+}
+
+@mixin button-hover() {
+  transform: scale(1.25) perspective(1px);
+}
