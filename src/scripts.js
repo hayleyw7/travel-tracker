@@ -50,7 +50,8 @@ const {
   currentVibes,
   pastVibes,
   pendingVibes,
-  futureVibes
+  futureVibes,
+  loginFormToReset
 } = dom;
 
 let travelers, trips, destinations, data;

@@ -71,6 +71,7 @@ showLoginPage() {
   dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
   dom.show([loginPage]);
   namePhrase.innerText = `'Oh, the places you'll vibe!'`;
+  loginFormToReset.reset();
 },
 
 // trip planner page
@@ -151,6 +152,7 @@ populateTripSlides() {
   loginFormSubmitBtn: document.getElementById('loginFormSubmitBtn'),
   enterYourPassToPlan: document.getElementById('enterYourPassToPlan'),
   replaceYOLO: document.getElementById('replaceYOLO'),
+  loginFormToReset: document.getElementById('loginFormToReset'),
 
   // dashboard
 
