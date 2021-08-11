@@ -108,7 +108,7 @@ function showWannaJetPage() {
 
   hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
-  populateDestinationsDropDown();
+  dom.populateDestinationsDropDown();
 }
 
 // dashboard page
@@ -279,19 +279,19 @@ function login() {
   }
 }
 
-function populateDestinationsDropDown() {
-  allDestinations.sort((destinationObjA, destinationObjB) => {
-    if (destinationObjA.destination < destinationObjB.destination) {
-      return -1;
-    } else {
-      return 1
-    }
-  }).forEach((destinationObj) => {
-    jetFormDestination.insertAdjacentHTML('beforeend', `
-      <option value='${destinationObj.id}'>${destinationObj.destination}</option>
-    `)
-  })
-}
+// function populateDestinationsDropDown() {
+//   allDestinations.sort((destinationObjA, destinationObjB) => {
+//     if (destinationObjA.destination < destinationObjB.destination) {
+//       return -1;
+//     } else {
+//       return 1
+//     }
+//   }).forEach((destinationObj) => {
+//     jetFormDestination.insertAdjacentHTML('beforeend', `
+//       <option value='${destinationObj.id}'>${destinationObj.destination}</option>
+//     `)
+//   })
+// }
 
 function getDestination(trip) {
   return allDestinations.find(destination => destination.id === trip.destinationID);
