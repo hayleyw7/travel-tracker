@@ -57,9 +57,10 @@ const dom = {
     } else if (problem === 'password') {
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;          
-    } else if (problem === 'empty')
+    } else if (problem === 'empty') {
       replaceYOLO.innerText = `No dice!`;
-      enterYourPassToPlan.innerText = `Please fill in both fields.`;       
+      enterYourPassToPlan.innerText = `Please fill in both fields.`;    
+    }
   },
 
 // PAGES
