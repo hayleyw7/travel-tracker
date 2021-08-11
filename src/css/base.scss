@@ -38,7 +38,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 15rem;
-  // justify-content: space-between;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 .navbar-links {
@@ -48,9 +52,9 @@ body {
 }
 
 .navbar-links-section {
-  display: flex;
-  flex-direction: row;
-  font-size: 0.6rem;
+  // display: flex;
+  // flex-direction: row;
+  // font-size: 0.6rem;
 }
 
 /* MAIN */
