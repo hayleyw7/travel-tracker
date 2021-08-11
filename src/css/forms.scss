@@ -1,19 +1,11 @@
-input,
-.dropdown {
-    border: 1px solid $medium-gray;
-    background: $white;
-    border-radius: 1rem;
-    margin: 0 0.4rem 0 0.4rem;
-    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
-    font-family: $font; 
-}
-
 input {
+  @include input-fields();
   font-size: 1.1rem;
   width: 15rem;
 }
 
 .dropdown {
+  @include input-fields();
   font-size: 0.8rem;
   width: 16.1rem;
   height: 2rem;
@@ -30,14 +22,20 @@ input {
   border-radius: 1rem;
   margin: 0 0.4rem 0 0.4rem;
   padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+
+  &:hover {
+    @include button-hover();
+  }
 }
 
 .lets-jet-btn {
   margin-bottom: 0.4rem;
+
+  &:hover{
+    @include button-hover();    
+  }
 }
 
-.submit-btn:hover,
-.lets-jet-btn:hover,
 .navbar-buttons:hover {
-  transform: scale(1.25) perspective(1px);
+  @include button-hover();
 }

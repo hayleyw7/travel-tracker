@@ -18,33 +18,25 @@ h2 {
   color: $dark-gray;
   border-radius: 0.2rem;
   text-align: center;
-}
 
-/* card photo */
+  & .destination-photo {
+    margin: 0;
+    width: 20rem;
+  }
 
-.destination-info-container {
-  max-width: 20rem;
-  padding: 1rem;
-}
+  & .destination-info-container {
+    max-width: 20rem;
+    padding: 1rem;
+  }
 
-.destination-photo {
-  margin: 0;
-  width: 20rem;
-}
+  & .destination-name {
+    margin: 0;
+    font-size: 1.2rem;
+  }
 
-.photo-container {
-  position: relative;
-}
-
-/* card text */
-
-.destination-name {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.date-time {
-  color: $dark-gray;
-  font-size: 0.9rem;
-  margin: 0;
+  & .date-time {
+    color: $dark-gray;
+    font-size: 0.9rem;
+    margin: 0;
+  }
 }
