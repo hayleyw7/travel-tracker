@@ -1,5 +1,4 @@
 class Traveler {
-
   constructor(data, trips, destinations) {
     this.id = data.id;
     this.name = data.name;
@@ -25,7 +24,6 @@ class Traveler {
   }
 
   getTripsHTML() {
-
     var money = new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -87,7 +85,6 @@ class Traveler {
       let cost = this.getTotal(trip, destination);
 
       tripsString = tripsString.concat(`
-        <li class="glide__slide">
           <article class='card'>
             <article class='photo-container'>
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
@@ -97,7 +94,6 @@ class Traveler {
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
-        </li>
       `);
 
       return tripsString;
@@ -135,7 +131,6 @@ class Traveler {
       let cost = this.getTotal(trip, destination);
 
       tripsString = tripsString.concat(`
-        <li class="glide__slide">
           <article class='card'>
             <article class='photo-container'>
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
@@ -145,7 +140,6 @@ class Traveler {
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
-        </li>
       `);
 
       return tripsString;
@@ -161,7 +155,6 @@ class Traveler {
       let cost = this.getTotal(trip, destination);
 
       tripsString = tripsString.concat(`
-        <li class="glide__slide">
           <article class='card'>
             <article class='photo-container'>
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
@@ -171,7 +164,6 @@ class Traveler {
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
-        </li>
       `);
 
       return tripsString;
@@ -187,7 +179,6 @@ class Traveler {
       let cost = this.getTotal(trip, destination);
 
       tripsString = tripsString.concat(`
-        <li class="glide__slide">
           <article class='card'>
             <article class='photo-container'>
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
@@ -197,7 +188,6 @@ class Traveler {
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
-        </li>
       `);
 
       return tripsString;
