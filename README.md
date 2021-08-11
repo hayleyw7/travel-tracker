@@ -14,9 +14,9 @@ The goals and objectives are to use OOP to drive the design of the application a
 
 ## Reflections
 
-A challenges was ____.
+A challenge was getting the new cards displaying on the DOM. This took a large amount of time.
 
-A big success was ____.
+Big successes were the Sass, fetches, and posts. These will be very useful to know moving forward.
 
 ## Languages and technology
 
