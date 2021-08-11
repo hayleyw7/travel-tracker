@@ -42,7 +42,7 @@
         </article> 
 
         <article class='card login-form'>
-          <form>
+          <form id='loginFormToReset'>
             <label for='loginFormUsername'>Username:</label><br>
             <input type='text' id='loginFormUsername' name='username'><br><br>
 
@@ -120,9 +120,9 @@
 
           </article>
           <article class='destination-info-container'>
-            <form>
+            <form id='plannerFormToReset'>
               <label for='date'>Trip Date:</label><br>
-              <input type='date' data-date-inline-picker='true' minDate='0' name='fname' id='jetFormDate'><br><br>
+              <input type='date' data-date-inline-picker='true' id='jetFormDate' min=''><br><br>
 
               <label for='days'>Number of Days:</label><br>
               <input type='number' min="1" id='jetFormDuration'><br><br>
