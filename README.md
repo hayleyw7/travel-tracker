@@ -79,18 +79,30 @@ Enter the following command in the Terminal:
 Enter the following URL in your internet browser:
 `http://localhost:8080/`
 
-[explain site]
+A user logs into the site with the username `traveler` + their ID.
+
+To just try the site to see how it works, use `traveler1`, and then `travel` for the password.
+
+You will be presented a dashboard of current, past, pending, and future trips. You will also see your yearly payments so far.
+
+If you click "Trip Planner", you will be able to schedule a trip.
+
+Once you fill out and submit that form, you will see an estimated price, and then you can confirm it. Note that you will not be charged until it's approved by an agent.
+
+Once you confirm it, you'll be send back to your dashboard, where it will be under "pending".
+
+To end the session, click "Log Out".
 
 ## GIFs
 
 ![dashboard gif](./src/images/dashboard.gif) 
 ![trip planner gif](src/images/trip-planner.gif)
 
-## Future additions
+## Future addition
 
-* [1]
+* I will allow an agent to login to the website to approve pending trips.
 
-* [2]
+* I will let the user decide the order their dashboard categories.
 
 ## Contributors
 
