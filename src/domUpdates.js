@@ -123,7 +123,7 @@ const dom = {
   showYourTripsDashboardPage() {
     namePhrase.innerText = `Yo, ${user.name}!`;
     yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
-    dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
+    dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn, letsJetBtn]);
     dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
 
     dom.populateTripSlides();
