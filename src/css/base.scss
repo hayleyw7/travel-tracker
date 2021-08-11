@@ -35,7 +35,7 @@ body {
 .navbar {
   background: var(--pink);
   color: var(--darkgray);
-  display: flex;
+  // display: flex;
   flex-direction: column;
   height: 15rem;
   text-align: center;
@@ -57,7 +57,7 @@ h1 {
   // font-size: 0.6rem;
 }
 
-/* MAIN */
+/* DASHBOARD */
 
 h3 {
   color: var(--white);
@@ -66,10 +66,15 @@ h3 {
   padding: 0 0 0 1.3rem;
 }
 
+.dashboard {
+  color: white;
+  text-align: center;
+}
+
 .card-container {
   display: grid;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 0.5rem;
   color: var(--darkgray);
   display: flex;
@@ -83,9 +88,7 @@ h3 {
   color: var(--darkgray);
 }
 
-/* ON CARD */
-
-/* photo section */
+/* card photo */
 
 .destination-info-container {
   max-width: 20rem;
@@ -101,16 +104,35 @@ h3 {
   position: relative;
 }
 
-/* destination info section */
+/* card text */
 
 .destination-name {
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .date-time {
   color: var(--darkgray);
   font-size: 0.9rem;
   margin: 0;
+}
+
+// LET'S JET PAGE
+
+.lets-jet-btn {
+  float: right;
+  margin-bottom: 0.4rem;
+}
+
+// HELPERS
+
+.hidden {
+  display: none;
+}
+
+.flexible {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* MEDIA QUERY */
@@ -134,24 +156,4 @@ h3 {
   .navbar {
     height: 11rem;
   }
-}
-
-.hidden {
-  display: none;
-}
-
-.lets-jet-btn {
-  float: right;
-  margin-bottom: 0.4rem;
-}
-
-.dashboard {
-  color: white;
-}
-
-// Flex for Trips
-
-.flexible {
-  display: flex;
-  flex-wrap: wrap;
 }
