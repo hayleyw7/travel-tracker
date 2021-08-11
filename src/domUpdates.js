@@ -57,6 +57,19 @@ const dom = {
     });
   },
 
+  noDice(problem) {
+    if (problem === 'id') {
+      replaceYOLO.innerText = `No dice!`;
+      enterYourPassToPlan.innerText = `ID not found.`;      
+    } else if (problem === 'username') {
+      replaceYOLO.innerText = `No dice!`;
+      enterYourPassToPlan.innerText = `Your username is improperly formatted.`;        
+    } else if (problem === 'password') {
+      replaceYOLO.innerText = `No dice!`;
+      enterYourPassToPlan.innerText = `You need the right password.`;          
+    }
+  },
+
   // NAVBAR
 
   name: document.getElementById('name'),

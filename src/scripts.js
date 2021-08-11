@@ -220,22 +220,15 @@ function login() {
               showYourTripsDashboardPage();
 
             } else {
-              replaceYOLO.innerText = `No dice!`;
-              enterYourPassToPlan.innerText = `ID not found.`;
+              dom.noDice('id');
             }
           }
         );
       } else {
-        replaceYOLO.innerText = `No dice!`;
-        enterYourPassToPlan.innerText = `Your username is improperly formatted.`;
+        dom.noDice('username');
       }
     } else {
-      replaceYOLO.innerText = `No dice!`;
-      enterYourPassToPlan.innerText = `You need the right password.`;
+      dom.noDice('password');
     }
   }
 }
-
-// function getDestination(trip) {
-//   return allDestinations.find(destination => destination.id === trip.destinationID);
-// }
