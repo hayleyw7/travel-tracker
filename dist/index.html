@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  
+
   <title>#JustVibin</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
       </section>
     </section>
   </div>
-  <main>    
+  <main>
 
     <!-- SIGN IN SCREEN!!!!! -->
 
@@ -45,18 +46,20 @@
               <input type='text' id='loginFormUsername' name='username'><br><br>
 
               <label for='password'>Password:</label><br>
-              <input type='text' id='loginFormPassword' name='password'><br><br>              
+              <input type='text' id='loginFormPassword' name='password'><br><br>
 
               <!-- <input type='submit' value='Submit' id='loginFormSubmitBtn'> -->
               <button type='button' id='loginFormSubmitBtn'>Submit</button>
 
-            </form> 
+            </form>
           </article>
         </article>
 
         <article class='card'>
           <article class='photo-container'>
-            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'> 
+
+            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
+
           </article>
 
           <article class='destination-info-container'>
@@ -75,28 +78,53 @@
 
         <article class='card'>
           <article class='photo-container'>
-            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'> 
+            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
           </article>
           <article class='destination-info-container'>
             <h1 class='destination-name'>We hope that you're vibin!</h1>
-            <p class='date-time' id='yearCost'></p>
+            <p class='date-time' id='yearCost'>NOT YET PULLING!</p>
           </article>
         </article>
 
       <h3>Current Vibes</h3>
 
-      <h3>Pending Vibes</h3>      
-
-      <div class="flexible">
-        <div id="pendingSlides">
+        <div class="flexible">
+          <div id="currentSlides">
+          </div>
         </div>
-      </div>
 
-      <h3>Future Vibes</h3>      
+      <h3>Pending Vibes</h3>
 
-      <h3>Past Vibes</h3>      
+        <div class="flexible">
+          <div id="pendingSlides">
+          </div>
+        </div>
+
+      <h3>Future Vibes</h3>
+
+        <div class="flexible">
+          <div id="futureSlides">
+          </div>
+        </div>
+
+      <h3>Past Vibes</h3>
+
+        <div class="flexible">
+          <div id="pastSlides">
+          </div>
+        </div>
 
     </div>
+
+    <!-- GLIDE NOTES -->
+
+    <!-- don't try to append list items - just add it to the html of this element aka `<li class="glide__slide">3</li>` -->
+
+    <!-- when you start styling, style glide container 1st to get space & then style whole glide container (like tracking, slides, etc) from within html -->
+
+    <!-- // might run into probems with buttons if i don't give enough space -->
+
+    <!-- taking out the place numbers may break it all, but probaby fixed by doing innerHTML -->
 
     <!-- TRIP PLANNER!!!!!! -->
 
@@ -127,19 +155,19 @@
                 <!-- <option value="Lima, Peru">Lima, Peru</option>
                 <option value="Stockholm, Sweden">Stockholm, Sweden</option> -->
               </select>
-              
+
               <br><br>
 
               <button type='button' id='jetFormSubmitBtn'>Submit</button>
 
-            </form> 
+            </form>
           </article>
         </article>
-        
+
         <article class='card'>
           <article class='photo-container'>
             <!-- <img src='https://i.pinimg.com/564x/d3/a2/74/d3a2744015363586e04e0ed1b9b090e1.jpg' alt='Destination photo' class='destination-photo'>  -->
-            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'> 
+            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
           </article>
           <article class='destination-info-container'>
             <h1 class='destination-name' id='estimatedCostHeaderHTML'>ESTIMATED COST:</h1>
@@ -155,7 +183,7 @@
 
 
   </body>
-</html>  
+</html>
 
 <!-- other picture ideas: -->
 
