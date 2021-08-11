@@ -41,10 +41,14 @@ const {
   estimatedCostHeaderHTML,
   name,
   yearCost,
-  // currentSlides,
-  // pastSlides,
-  pendingSlides
-  // futureSlides
+  currentSlides,
+  pastSlides,
+  pendingSlides,
+  futureSlides,
+  currentVibes,
+  pendingVibes,
+  pastVibes,
+  futureVibes
 } = dom;
 
 let travelers, trips, destinations, data;
@@ -127,6 +131,19 @@ function populateTripSlides() {
   pendingSlides.innerHTML = slides[1];
   futureSlides.innerHTML = slides[2];
   pastSlides.innerHTML = slides[3];
+
+  if (slides[0].length > 0) {
+    show([currentVibes]);
+  }
+  if (slides[1].length > 0) {
+    show([pendingVibes]);
+  }
+  if (slides[2].length > 0) {
+    show([futureVibes]);
+  }
+  if (slides[3].length > 0) {
+    show([pastVibes]);
+  }
 }
 
 // INSTANTIATE TRIP

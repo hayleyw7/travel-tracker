@@ -29,10 +29,14 @@ const dom = {
   destinationNameHTML: document.getElementById('destinationNameHTML'),
   dateTimeHTML: document.getElementById('dateTimeHTML'),
   yearCost: document.getElementById('yearCost'),
-  // currentSlides: document.getElementById('currentSlides'),
+  currentSlides: document.getElementById('currentSlides'),
   pendingSlides: document.getElementById('pendingSlides'),
-  // pastSlides: document.getElementById('pastSlides'),
-  // futureSlides: document.getElementById('futureSlides'),
+  pastSlides: document.getElementById('pastSlides'),
+  futureSlides: document.getElementById('futureSlides'),
+  currentVibes: document.getElementById('currentVibes'),
+  pendingVibes: document.getElementById('pendingVibes'),
+  pastVibes: document.getElementById('pastVibes'),
+  futureVibes: document.getElementById('futureVibes'),
 
   // WANNA JET PAGE
 
