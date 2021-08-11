@@ -1,0 +1,37 @@
+input,
+.dropdown {
+  border: 1px solid $medium-gray;
+  background: $white;
+  border-radius: 1rem;
+  margin: 0 0.4rem 0 0.4rem;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+  font-family: Arial;  
+}
+
+input {
+  font-size: 1.1rem;
+  width: 15rem;
+}
+
+.dropdown {
+  font-size: 0.8rem;
+  width: 16.1rem;
+  height: 2rem;
+}
+
+.login-form {
+  padding-top: 3.7rem;
+}
+
+.submit-btn {
+  border: 0;
+  font-size: 1.1rem;
+  background: $pink;
+  border-radius: 1rem;
+  margin: 0 0.4rem 0 0.4rem;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+}
+
+.lets-jet-btn {
+  margin-bottom: 0.4rem;
+}
