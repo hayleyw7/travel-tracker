@@ -64,7 +64,7 @@ navBarSignOutBtn.addEventListener('click', showLoginPage);
 loginFormSubmitBtn.addEventListener('click', login);
 
 // trip planner page
-jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
+jetFormSubmitBtn.addEventListener('click', dom.showEstimatedCost);
 letsJetBtn.addEventListener('click', createTrip);
 
 // API
@@ -77,27 +77,15 @@ function packPromises() {
 //////////////////// FUNCTIONS ////////////////////
 ///////////////////////////////////////////////////
 
-// HELPER FUNCTIONS
 
-function hide(elements) {
-  elements.forEach(element => {
-    element.classList.add('hidden');
-  });
-}
-
-function show(elements) {
-  elements.forEach(element => {
-    element.classList.remove('hidden');
-  });
-}
 
 // PAGES (move all of these to the DOM)
 
 // login page
 
 function showLoginPage() {
-  hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
-  show([loginPage]);
+  dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
+  dom.show([loginPage]);
   name.innerText = `'Oh, the places you'll vibe!'`;
 }
 
@@ -106,8 +94,8 @@ function showLoginPage() {
 function showWannaJetPage() {
   name.innerText = `${user.name}`;
 
-  hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
-  show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
+  dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
+  dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
   dom.populateDestinationsDropDown();
 }
 
@@ -116,8 +104,8 @@ function showWannaJetPage() {
 function showYourTripsDashboardPage() {
   name.innerText = `${user.name}`;
   yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
-  hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
-  show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
+  dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
+  dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
 
   // yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
 
@@ -134,16 +122,16 @@ function populateTripSlides() {
   pastSlides.innerHTML = slides[3];
 
   if (slides[0].length > 0) {
-    show([currentVibes]);
+    dom.show([currentVibes]);
   }
   if (slides[1].length > 0) {
-    show([pendingVibes]);
+    dom.show([pendingVibes]);
   }
   if (slides[2].length > 0) {
-    show([futureVibes]);
+    dom.show([futureVibes]);
   }
   if (slides[3].length > 0) {
-    show([pastVibes]);
+    dom.show([pastVibes]);
   }
 }
 
@@ -200,37 +188,6 @@ function createTrip() {
 
 // DOM UPDATES (will move to domUpdates after test working)
 
-function showEstimatedCost() {
-  let trip =
-    {
-      'id': allTrips.length + 1,
-      'userID': user.id,
-      'destinationID': parseInt(jetFormDestination.value),
-      'travelers': parseInt(jetFormHumans.value),
-      'date': jetFormDate.value,
-      'duration': parseInt(jetFormDuration.value),
-      'status': 'pending',
-      'suggestedActivities': []
-    };
-
-  let destination = getDestination(trip);
-
-  if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
-    estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
-    estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
-  }  else {
-
-    var money = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    });
-
-    show([letsJetBtn])
-    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${money.format(user.getTotal(trip, destination))}`
-    estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
-  }
-}
-
 function login() {
   if (!loginFormPassword.value || !loginFormUsername.value) {
     enterYourPassToPlan.innerText = `Please fill in both fields.`;
@@ -279,20 +236,6 @@ function login() {
   }
 }
 
-// function populateDestinationsDropDown() {
-//   allDestinations.sort((destinationObjA, destinationObjB) => {
-//     if (destinationObjA.destination < destinationObjB.destination) {
-//       return -1;
-//     } else {
-//       return 1
-//     }
-//   }).forEach((destinationObj) => {
-//     jetFormDestination.insertAdjacentHTML('beforeend', `
-//       <option value='${destinationObj.id}'>${destinationObj.destination}</option>
-//     `)
-//   })
+// function getDestination(trip) {
+//   return allDestinations.find(destination => destination.id === trip.destinationID);
 // }
-
-function getDestination(trip) {
-  return allDestinations.find(destination => destination.id === trip.destinationID);
-}

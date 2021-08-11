@@ -1,24 +1,61 @@
 const dom = {
 
-  // renderFirstName(user) {
-  //   console.log('poop');
-  //   let name = document.getElementById('name');
-  //   name.innerText = `${user.name}`;
-  // },
-
   populateDestinationsDropDown() {
-  allDestinations.sort((destinationObjA, destinationObjB) => {
-    if (destinationObjA.destination < destinationObjB.destination) {
-      return -1;
-    } else {
-      return 1
+    allDestinations.sort((destinationObjA, destinationObjB) => {
+      if (destinationObjA.destination < destinationObjB.destination) {
+        return -1;
+      } else {
+        return 1
+      }
+    }).forEach((destinationObj) => {
+      jetFormDestination.insertAdjacentHTML('beforeend', `<option value='${destinationObj.id}'>${destinationObj.destination}</option>`)
+    })
+  },
+
+  showEstimatedCost() {
+    let trip =
+      {
+        'id': allTrips.length + 1,
+        'userID': user.id,
+        'destinationID': parseInt(jetFormDestination.value),
+        'travelers': parseInt(jetFormHumans.value),
+        'date': jetFormDate.value,
+        'duration': parseInt(jetFormDuration.value),
+        'status': 'pending',
+        'suggestedActivities': []
+      };
+
+    let destination = allDestinations.find(destination => destination.id === trip.destinationID);
+
+    if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
+      estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
+      estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
+    }  else {
+
+      var money = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      });
+
+      dom.show([letsJetBtn])
+      estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${money.format(user.getTotal(trip, destination))}`
+      estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
     }
-  }).forEach((destinationObj) => {
-    jetFormDestination.insertAdjacentHTML('beforeend', `
-      <option value='${destinationObj.id}'>${destinationObj.destination}</option>
-    `)
-  })
-},
+  },
+
+  // HELPER FUNCTIONS
+
+  hide(elements) {
+    elements.forEach(element => {
+      element.classList.add('hidden');
+    });
+  },
+
+  show(elements) {
+    elements.forEach(element => {
+      element.classList.remove('hidden');
+    });
+  },
 
   // NAVBAR
 
