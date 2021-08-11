@@ -81,6 +81,8 @@ showWannaJetPage() {
   dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
   dom.populateDestinationsDropDown();
+  estimatedCostHeaderHTML.innerText = `ESTIMATED COST:`;
+  estimatedCostHTML.innerText = `Enter your information on the left to see!`;
 },
 
 // dashboard page
