@@ -35,3 +35,9 @@ input {
 .lets-jet-btn {
   margin-bottom: 0.4rem;
 }
+
+.submit-btn:hover,
+.lets-jet-btn:hover,
+.navbar-buttons:hover {
+  transform: scale(1.25) perspective(1px);
+}
