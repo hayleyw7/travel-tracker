@@ -169,6 +169,8 @@ function createTrip() {
         user.addTrip(trip);
         user.addDestination(destination);
 
+        allTrips.push(trip);
+
         showYourTripsDashboardPage();
 
       } else {
@@ -181,6 +183,7 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
+
   let trip =
     {
       'id': allTrips.length + 1,
