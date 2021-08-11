@@ -103,11 +103,21 @@
 
         <article class='card'>
           <article class='photo-container'>
+            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
+          </article>
+          <article class='destination-info-container'>
+            <h4 class='destination-name' id='estimatedCostHeaderHTML'>ESTIMATED COST:</h4>
+            <p class='date-time' id='estimatedCostHTML'>Enter your information on the left to see!</p>
+            <button class='lets-jet-btn hidden' id='letsJetBtn'>Let's vibe!</button>
+          </article>
+        </article>
+
+        <article class='card'>
+          <article class='photo-container'>
 
           </article>
           <article class='destination-info-container'>
             <form>
-
               <label for='date'>Trip Date:</label><br>
               <input type='date' data-date-inline-picker='true' name='fname' id='jetFormDate'><br><br>
 
@@ -119,28 +129,12 @@
 
               <label for='destination'>Destination:</label><br>
               <select name="destination" id="jetFormDestination">
-
-              </select>
-
-              <br><br>
+              </select><br><br>
 
               <button type='button' id='jetFormSubmitBtn'>Submit</button>
-
             </form>
           </article>
         </article>
-
-        <article class='card'>
-          <article class='photo-container'>
-            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
-          </article>
-          <article class='destination-info-container'>
-            <h4 class='destination-name' id='estimatedCostHeaderHTML'>ESTIMATED COST:</h4>
-            <p class='date-time' id='estimatedCostHTML'>Enter your information on the left to see!</p>
-            <button class='lets-jet-btn hidden' id='letsJetBtn'>Let's vibe!</button>
-          </article>
-        </article>
-
       </section>
     </div>
     <script src='bundle.js'></script>
