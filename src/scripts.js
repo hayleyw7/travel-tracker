@@ -134,8 +134,6 @@ function login() {
 function createTrip() {
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
 
-    console.log(allDestinations);
-
     const destination = allDestinations.find(destinationObj => {
       if (parseInt(jetFormDestination.value) === destinationObj.id) {
         return true;
@@ -156,12 +154,8 @@ function createTrip() {
       'suggestedActivities': []
     };
 
-    console.log(trip)
-
     postBooking(trip).then(result => {
       if (result.ok) {
-
-        console.log(result);
 
         user.addTrip(trip);
         user.addDestination(destination);
