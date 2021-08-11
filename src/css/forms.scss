@@ -1,11 +1,11 @@
 input,
 .dropdown {
-  border: 1px solid $medium-gray;
-  background: $white;
-  border-radius: 1rem;
-  margin: 0 0.4rem 0 0.4rem;
-  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
-  font-family: Arial;  
+    border: 1px solid $medium-gray;
+    background: $white;
+    border-radius: 1rem;
+    margin: 0 0.4rem 0 0.4rem;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    font-family: $font; 
 }
 
 input {
