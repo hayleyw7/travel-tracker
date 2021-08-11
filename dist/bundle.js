@@ -11,7 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_base_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
 
             
 
@@ -20,11 +20,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_base_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_base_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 /* 2 */
@@ -319,7 +319,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".glide {\n  position: relative;\n  width: 100%;\n  box-sizing: border-box;\n}\n.glide * {\n  box-sizing: inherit;\n}\n.glide__track {\n  overflow: hidden;\n}\n.glide__slides {\n  position: relative;\n  width: 100%;\n  list-style: none;\n  backface-visibility: hidden;\n  transform-style: preserve-3d;\n  touch-action: pan-Y;\n  overflow: hidden;\n  padding: 0;\n  white-space: nowrap;\n  display: flex;\n  flex-wrap: nowrap;\n  will-change: transform;\n}\n.glide__slides--dragging {\n  user-select: none;\n}\n.glide__slide {\n  width: 100%;\n  height: 100%;\n  flex-shrink: 0;\n  white-space: normal;\n  user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-tap-highlight-color: transparent;\n}\n.glide__slide a {\n  user-select: none;\n  -webkit-user-drag: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n}\n.glide__arrows {\n  -webkit-touch-callout: none;\n  user-select: none;\n}\n.glide__bullets {\n  -webkit-touch-callout: none;\n  user-select: none;\n}\n.glide--rtl {\n  direction: rtl;\n}\n\n/* UTILITY */\n:root {\n  --white: #FFF;\n  --black: #000000;\n  --mediumgray: #828282;\n  --darkgray: #222222;\n  --lightgray: #DCDCDC;\n  --blue: #ABEAE1;\n  --pink: #FFC0CB;\n  --green: #E5F3B3;\n}\n\nbody {\n  background: var(--darkgray);\n  color: var(--darkgray);\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n/* NAVBAR */\n.navbar {\n  background: var(--pink);\n  color: var(--darkgray);\n  flex-direction: row;\n  height: 15rem;\n  justify-content: space-between;\n}\n\n.navbar-left {\n  display: grid;\n  padding: 1.5em 0 0 0;\n  margin: 0 0 0 0;\n  width: 40rem;\n}\n\n.navbar-right {\n  width: 20rem;\n  margin-right: 2rem;\n}\n\n.username-section {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  padding: 0.5rem 0.2rem 0 0;\n}\n\n.name {\n  margin: 0.7rem 0 0 0;\n}\n\n.navbar-links {\n  margin: 0 1rem 0 0;\n  padding: 0;\n  border: 0;\n  font-size: 1.1rem;\n  background: var(--pink);\n}\n\n.navbar-links-section {\n  display: flex;\n  flex-direction: row;\n  margin: 0 0 0 0.8rem;\n  padding: 0;\n}\n\n.navbar-icon {\n  height: 1.3rem;\n  padding: 0.5rem;\n  width: 1.3rem;\n}\n\n.logo-icon {\n  height: 4rem;\n  justify-content: flex-end;\n  margin: 0;\n  padding: 2.1rem 0.5rem 0 0.8rem;\n  width: 4rem;\n}\n\n.logo-section {\n  display: flex;\n  font-size: 2.3rem;\n  justify-content: flex-end;\n}\n\n/* MAIN */\nh3 {\n  color: var(--white);\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  padding: 0 0 0 1.3rem;\n}\n\n.card-container-1,\n.card-container-2 {\n  display: grid;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin: 0.5rem;\n  color: var(--darkgray);\n}\n\n.card-container-2 {\n  margin-bottom: 1rem;\n}\n\n.card {\n  background: var(--white);\n  border: 1px var(--mediumgray) solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: var(--darkgray);\n}\n\n/* ON CARD */\n/* photo section */\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n.right-arrow {\n  background: var(--blue);\n  border-radius: 10rem;\n  height: 3rem;\n  left: 0.5rem;\n  padding: 0.1rem;\n  position: absolute;\n  top: 0.5rem;\n  width: 3rem;\n}\n\n.views,\n.num-views {\n  color: var(--white);\n  padding: 0;\n  position: absolute;\n}\n\n.views {\n  bottom: 11.4rem;\n  font-size: 0.8rem;\n  right: 0.9rem;\n}\n\n.num-views {\n  bottom: 7.9rem;\n  font-size: 2rem;\n  right: 1.1rem;\n}\n\n/* destination info section */\n.destination-name {\n  margin: 0;\n}\n\n.date-time {\n  color: var(--darkgray);\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-link {\n  background: var(--green);\n  padding: 0.5rem;\n}\n\n.play-attach {\n  font-size: 0.8rem;\n}\n\n.num-attachments {\n  color: var(--blue);\n  font-size: 2rem;\n  margin: 0;\n}\n\n/* MEDIA QUERY */\n@media only screen and (min-width: 680px) {\n  .card-container-1,\n.card-container-2 {\n    display: flex;\n  }\n\n  .navbar {\n    display: flex;\n    margin: 0;\n  }\n\n  .navbar-links-section {\n    display: flex;\n    margin: 5rem 0 0 1.3rem;\n  }\n\n  .navbar {\n    height: 11rem;\n  }\n}\n.hidden {\n  display: none;\n}\n\n.lets-jet-btn {\n  float: right;\n  margin-bottom: 0.4rem;\n}\n\n.dashboard {\n  color: white;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n}", "",{"version":3,"sources":["webpack://./node_modules/@glidejs/glide/src/assets/sass/glide.core.scss","webpack://./src/css/base.scss"],"names":[],"mappings":"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","sourcesContent":["@import \"variables\";\r\n\r\n.#{$glide-class} {\r\n  $this: &;\r\n\r\n  $se: $glide-element-separator;\r\n  $sm: $glide-modifier-separator;\r\n\r\n  position: relative;\r\n  width: 100%;\r\n  box-sizing: border-box;\r\n\r\n  * {\r\n    box-sizing: inherit;\r\n  }\r\n\r\n  &#{$se}track {\r\n    overflow: hidden;\r\n  }\r\n\r\n  &#{$se}slides {\r\n    position: relative;\r\n    width: 100%;\r\n    list-style: none;\r\n    backface-visibility: hidden;\r\n    transform-style: preserve-3d;\r\n    touch-action: pan-Y;\r\n    overflow: hidden;\r\n    padding: 0;\r\n    white-space: nowrap;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    will-change: transform;\r\n\r\n    &#{$glide-modifier-separator}dragging {\r\n      user-select: none;\r\n    }\r\n  }\r\n\r\n  &#{$se}slide {\r\n    width: 100%;\r\n    height: 100%;\r\n    flex-shrink: 0;\r\n    white-space: normal;\r\n    user-select: none;\r\n    -webkit-touch-callout: none;\r\n    -webkit-tap-highlight-color: transparent;\r\n\r\n    a {\r\n      user-select: none;\r\n      -webkit-user-drag: none;\r\n      -moz-user-select: none;\r\n      -ms-user-select: none;\r\n    }\r\n  }\r\n\r\n  &#{$se}arrows {\r\n    -webkit-touch-callout: none;\r\n    user-select: none;\r\n  }\r\n\r\n  &#{$se}bullets {\r\n    -webkit-touch-callout: none;\r\n    user-select: none;\r\n  }\r\n\r\n  &#{$sm}rtl {\r\n    direction: rtl;\r\n  }\r\n}\r\n","@import \"node_modules/@glidejs/glide/src/assets/sass/glide.core\";\r\n\r\n// @import 'glide.core.min';\r\n\r\n// @import 'glide.theme.min';\r\n\r\n// /* This is an example of using Sass, otherwise plain CSS works too*/\r\n// $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);\r\n// ;\r\n\r\n// body {\r\n//   background: $primary-background;\r\n// }\r\n\r\n/* UTILITY */\r\n\r\n:root {\r\n  --white: #FFF;\r\n  --black: #000000;\r\n  --mediumgray: #828282;\r\n  --darkgray: #222222;\r\n  --lightgray: #DCDCDC;\r\n  --blue: #ABEAE1;\r\n  --pink: #FFC0CB;\r\n  --green: #E5F3B3;\r\n}\r\n\r\nbody {\r\n  background: var(--darkgray);\r\n  color: var(--darkgray);\r\n  font-family: Arial;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n/* NAVBAR */\r\n\r\n.navbar {\r\n  background: var(--pink);\r\n  color: var(--darkgray);\r\n  flex-direction: row;\r\n  height: 15rem;\r\n  justify-content: space-between;\r\n}\r\n\r\n.navbar-left {\r\n  display: grid;\r\n  padding: 1.5em 0 0 0;\r\n  margin: 0 0 0 0;\r\n  width: 40rem;\r\n}\r\n\r\n.navbar-right {\r\n  width: 20rem;\r\n  margin-right: 2rem;\r\n}\r\n\r\n.username-section {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: flex-end;\r\n  padding: 0.5rem 0.2rem 0 0;\r\n}\r\n\r\n.name {\r\n  margin: 0.7rem 0 0 0;\r\n}\r\n\r\n.navbar-links {\r\n  margin: 0 1rem 0 0;\r\n  padding: 0;\r\n  border: 0;\r\n  font-size: 1.1rem;\r\n  background: var(--pink);\r\n}\r\n\r\n.navbar-links-section {\r\n  display: flex;\r\n  flex-direction: row;\r\n  // font-size: 0.6rem;\r\n  margin: 0 0 0 0.8rem;\r\n  padding: 0;\r\n}\r\n\r\n.navbar-icon {\r\n  height: 1.3rem;\r\n  padding: 0.5rem;\r\n  width: 1.3rem;\r\n}\r\n\r\n.logo-icon {\r\n  height: 4rem;\r\n  justify-content: flex-end;\r\n  margin: 0;\r\n  padding: 2.1rem 0.5rem 0 0.8rem;\r\n  width: 4rem;\r\n}\r\n\r\n.logo-section {\r\n  display: flex;\r\n  font-size: 2.3rem;\r\n  justify-content: flex-end;\r\n}\r\n\r\n/* MAIN */\r\n\r\nh3 {\r\n  color: var(--white);\r\n  font-size: 2.5rem;\r\n  margin: 1.9rem 0 1rem 0;\r\n  padding: 0 0 0 1.3rem;\r\n}\r\n\r\n.card-container-1,\r\n.card-container-2 {\r\n  display: grid;\r\n  flex-direction: row;\r\n  justify-content: space-evenly;\r\n  margin: 0.5rem;\r\n  color: var(--darkgray);\r\n}\r\n\r\n.card-container-2 {\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.card {\r\n  background: var(--white);\r\n  border: 1px var(--mediumgray) solid;\r\n  margin: 0.3rem;\r\n  width: 20rem;\r\n  color: var(--darkgray);\r\n}\r\n\r\n/* ON CARD */\r\n\r\n/* photo section */\r\n\r\n.destination-info-container {\r\n  max-width: 20rem;\r\n  padding: 1rem;\r\n}\r\n\r\n.destination-photo {\r\n  margin: 0;\r\n  width: 20rem;\r\n}\r\n\r\n.photo-container {\r\n  position: relative;\r\n}\r\n\r\n.right-arrow {\r\n  background: var(--blue);\r\n  border-radius: 10rem;\r\n  height: 3rem;\r\n  left: 0.5rem;\r\n  padding: 0.1rem;\r\n  position: absolute;\r\n  top: 0.5rem;\r\n  width: 3rem;\r\n}\r\n\r\n.views,\r\n.num-views {\r\n  color: var(--white);\r\n  padding: 0;\r\n  position: absolute;\r\n}\r\n\r\n.views {\r\n  bottom: 11.4rem;\r\n  font-size: 0.8rem;\r\n  right: 0.9rem;\r\n}\r\n\r\n.num-views {\r\n  bottom: 7.9rem;\r\n  font-size: 2rem;\r\n  right: 1.1rem;\r\n}\r\n\r\n/* destination info section */\r\n\r\n.destination-name {\r\n  margin: 0;\r\n}\r\n\r\n.date-time {\r\n  color: var(--darkgray);\r\n  font-size: 0.9rem;\r\n  margin: 0;\r\n}\r\n\r\n.destination-link {\r\n  background: var(--green);\r\n  padding: 0.5rem\r\n}\r\n\r\n.play-attach {\r\n  font-size: 0.8rem;\r\n}\r\n\r\n.num-attachments {\r\n  color: var(--blue);\r\n  font-size: 2rem;\r\n  margin: 0;\r\n}\r\n\r\n/* MEDIA QUERY */\r\n\r\n@media only screen and (min-width: 680px) {\r\n\r\n  .card-container-1,\r\n  .card-container-2 {\r\n    display: flex;\r\n  }\r\n\r\n  .navbar {\r\n    display: flex;\r\n    margin: 0;\r\n  }\r\n\r\n  .navbar-links-section {\r\n    display: flex;\r\n    margin: 5rem 0 0 1.3rem;\r\n  }\r\n\r\n  .navbar {\r\n    height: 11rem;\r\n  }\r\n}\r\n\r\n.hidden {\r\n  display: none;\r\n}\r\n\r\n.lets-jet-btn {\r\n  float: right;\r\n  margin-bottom: 0.4rem;\r\n}\r\n\r\n.dashboard {\r\n  color: white;\r\n}\r\n\r\n// Flex for Trips\r\n\r\n.flexible {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background: #222222;\n  color: #222222;\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n.navbar {\n  background: #FFC0CB;\n  color: #222222;\n  display: flex;\n  flex-direction: column;\n  height: 12rem;\n  text-align: center;\n  margin: 0 0 2rem 0;\n}\n\nh1 {\n  font-size: 3.5rem;\n  margin: 1.5rem 0 0 0;\n}\n\n.name-phrase {\n  font-size: 1.1rem;\n}\n\n.navbar-buttons {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\ninput,\n.dropdown {\n  border: 1px solid #828282;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n  font-family: Arial;\n}\n\ninput {\n  font-size: 1.1rem;\n  width: 15rem;\n}\n\n.dropdown {\n  font-size: 0.8rem;\n  width: 16.1rem;\n  height: 2rem;\n}\n\n.login-form {\n  padding-top: 3.7rem;\n}\n\n.submit-btn {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFC0CB;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\n.lets-jet-btn {\n  margin-bottom: 0.4rem;\n}\n\n.submit-btn:hover,\n.lets-jet-btn:hover,\n.navbar-buttons:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\n.hidden {\n  display: none;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\nh3 {\n  color: #FFF;\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  text-align: center;\n}\n\n.dashboard {\n  color: white;\n  text-align: center;\n}\n\n.card {\n  background: #FFF;\n  border: 1px #828282 solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: #222222;\n  border-radius: 0.2rem;\n  text-align: center;\n}\n\n/* card photo */\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n/* card text */\n.destination-name {\n  margin: 0;\n  font-size: 1.2rem;\n}\n\n.date-time {\n  color: #222222;\n  font-size: 0.9rem;\n  margin: 0;\n}", "",{"version":3,"sources":["webpack://./src/css/base.scss","webpack://./src/css/variables.scss","webpack://./src/css/index.scss","webpack://./src/css/navbar.scss","webpack://./src/css/forms.scss","webpack://./src/css/helpers.scss","webpack://./src/css/dashboard.scss"],"names":[],"mappings":"AAAA;EACE,mBCGU;EDFV,cCEU;EDDV,kBCMK;EDLL,SAAA;EACA,UAAA;AECF;;ACNA;EACE,mBFIK;EEHL,cFEU;EEDV,aAAA;EACA,sBAAA;EACA,aAAA;EACA,kBAAA;EACA,kBAAA;ADSF;;ACNA;EACE,iBAAA;EACA,oBAAA;ADSF;;ACNA;EACE,iBAAA;ADSF;;ACNA;EACE,SAAA;EACA,iBAAA;EACA,gBFpBM;EEqBN,mBAAA;EACA,yBAAA;EACA,oCAAA;ADSF;;AElCA;;EAEI,yBAAA;EACA,gBHDI;EGEJ,mBAAA;EACA,yBAAA;EACA,oCAAA;EACA,kBHEG;ACmCP;;AElCA;EACE,iBAAA;EACA,YAAA;AFqCF;;AElCA;EACE,iBAAA;EACA,cAAA;EACA,YAAA;AFqCF;;AElCA;EACE,mBAAA;AFqCF;;AElCA;EACE,SAAA;EACA,iBAAA;EACA,mBHvBK;EGwBL,mBAAA;EACA,yBAAA;EACA,oCAAA;AFqCF;;AElCA;EACE,qBAAA;AFqCF;;AElCA;;;EAGE,uCAAA;AFqCF;;AG9EA;EACE,aAAA;AHiFF;;AG9EA;EACE,aAAA;EACA,eAAA;EACA,uBAAA;AHiFF;;AIxFA;EACE,WLCM;EKAN,iBAAA;EACA,uBAAA;EACA,kBAAA;AJ2FF;;AIxFA;EACE,YAAA;EACA,kBAAA;AJ2FF;;AIxFA;EACE,gBLXM;EKYN,yBAAA;EACA,cAAA;EACA,YAAA;EACA,cLbU;EKcV,qBAAA;EACA,kBAAA;AJ2FF;;AIxFA,eAAA;AAEA;EACE,gBAAA;EACA,aAAA;AJ0FF;;AIvFA;EACE,SAAA;EACA,YAAA;AJ0FF;;AIvFA;EACE,kBAAA;AJ0FF;;AIvFA,cAAA;AAEA;EACE,SAAA;EACA,iBAAA;AJyFF;;AItFA;EACE,cL1CU;EK2CV,iBAAA;EACA,SAAA;AJyFF","sourcesContent":["body {\r\n  background: $dark-gray;\r\n  color: $dark-gray;\r\n  font-family: $font;\r\n  margin: 0;\r\n  padding: 0;\r\n}","// COLORS\n\n$white: #FFF;\n$medium-gray: #828282;\n$dark-gray: #222222;\n$pink: #FFC0CB;\n\n// FONT\n\n$font: Arial;\n","body {\n  background: #222222;\n  color: #222222;\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n.navbar {\n  background: #FFC0CB;\n  color: #222222;\n  display: flex;\n  flex-direction: column;\n  height: 12rem;\n  text-align: center;\n  margin: 0 0 2rem 0;\n}\n\nh1 {\n  font-size: 3.5rem;\n  margin: 1.5rem 0 0 0;\n}\n\n.name-phrase {\n  font-size: 1.1rem;\n}\n\n.navbar-buttons {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\ninput,\n.dropdown {\n  border: 1px solid #828282;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n  font-family: Arial;\n}\n\ninput {\n  font-size: 1.1rem;\n  width: 15rem;\n}\n\n.dropdown {\n  font-size: 0.8rem;\n  width: 16.1rem;\n  height: 2rem;\n}\n\n.login-form {\n  padding-top: 3.7rem;\n}\n\n.submit-btn {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFC0CB;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\n.lets-jet-btn {\n  margin-bottom: 0.4rem;\n}\n\n.submit-btn:hover,\n.lets-jet-btn:hover,\n.navbar-buttons:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\n.hidden {\n  display: none;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\nh3 {\n  color: #FFF;\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  text-align: center;\n}\n\n.dashboard {\n  color: white;\n  text-align: center;\n}\n\n.card {\n  background: #FFF;\n  border: 1px #828282 solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: #222222;\n  border-radius: 0.2rem;\n  text-align: center;\n}\n\n/* card photo */\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n/* card text */\n.destination-name {\n  margin: 0;\n  font-size: 1.2rem;\n}\n\n.date-time {\n  color: #222222;\n  font-size: 0.9rem;\n  margin: 0;\n}",".navbar {\n  background: $pink;\n  color: $dark-gray;\n  display: flex;\n  flex-direction: column;\n  height: 12rem;\n  text-align: center;\n  margin: 0 0 2rem 0;\n}\n\nh1 {\n  font-size: 3.5rem;\n  margin: 1.5rem 0 0 0;\n}\n\n.name-phrase {\n  font-size: 1.1rem;\n}\n\n.navbar-buttons {\n  border: 0;\n  font-size: 1.1rem;\n  background: $white;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}","input,\n.dropdown {\n    border: 1px solid $medium-gray;\n    background: $white;\n    border-radius: 1rem;\n    margin: 0 0.4rem 0 0.4rem;\n    padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n    font-family: $font; \n}\n\ninput {\n  font-size: 1.1rem;\n  width: 15rem;\n}\n\n.dropdown {\n  font-size: 0.8rem;\n  width: 16.1rem;\n  height: 2rem;\n}\n\n.login-form {\n  padding-top: 3.7rem;\n}\n\n.submit-btn {\n  border: 0;\n  font-size: 1.1rem;\n  background: $pink;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\n.lets-jet-btn {\n  margin-bottom: 0.4rem;\n}\n\n.submit-btn:hover,\n.lets-jet-btn:hover,\n.navbar-buttons:hover {\n  transform: scale(1.25) perspective(1px);\n}",".hidden {\n  display: none;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}","h3 {\n  color: $white;\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  text-align: center;\n}\n\n.dashboard {\n  color: white;\n  text-align: center;\n}\n\n.card {\n  background: $white;\n  border: 1px $medium-gray solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: $dark-gray;\n  border-radius: 0.2rem;\n  text-align: center;\n}\n\n/* card photo */\n\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n/* card text */\n\n.destination-name {\n  margin: 0;\n  font-size: 1.2rem;\n}\n\n.date-time {\n  color: $dark-gray;\n  font-size: 0.9rem;\n  margin: 0;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -515,21 +515,150 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const dom = {
 
-  // renderFirstName(user) {
-  //   let name = document.getElementById('name');
-  //   name.innerText = `${user.name}`;
-  // },
+  // TRIP PLANNER PAGE
 
-  // NAVBAR
+  populateDestinationsDropDown() {
+    allDestinations.sort((destinationObjA, destinationObjB) => {
+      if (destinationObjA.destination < destinationObjB.destination) {
+        return -1;
+      } else {
+        return 1
+      }
+    }).forEach((destinationObj) => {
+      jetFormDestination.insertAdjacentHTML('beforeend', `<option value='${destinationObj.id}'>${destinationObj.destination}</option>`)
+    })
+  },
 
-  name: document.getElementById('name'),
+  showEstimatedCost() {
+    let trip =
+      {
+        'id': allTrips.length + 1,
+        'userID': user.id,
+        'destinationID': parseInt(jetFormDestination.value),
+        'travelers': parseInt(jetFormHumans.value),
+        'date': jetFormDate.value,
+        'duration': parseInt(jetFormDuration.value),
+        'status': 'pending',
+        'suggestedActivities': []
+      };
+
+    let destination = allDestinations.find(destination => destination.id === trip.destinationID);
+
+    if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
+      estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
+      estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
+    }  else {
+
+      var money = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      });
+
+      dom.show([letsJetBtn])
+      estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${money.format(user.getTotal(trip, destination))}`
+      estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
+    }
+  },
+
+  // LOGIN PAGE
+
+  noDice(problem) {
+    if (problem === 'id') {
+      replaceYOLO.innerText = `No dice!`;
+      enterYourPassToPlan.innerText = `ID not found.`;      
+    } else if (problem === 'username') {
+      replaceYOLO.innerText = `No dice!`;
+      enterYourPassToPlan.innerText = `Your username is improperly formatted.`;        
+    } else if (problem === 'password') {
+      replaceYOLO.innerText = `No dice!`;
+      enterYourPassToPlan.innerText = `You need the right password.`;          
+    } else if (problem === 'empty') {
+      replaceYOLO.innerText = `No dice!`;
+      enterYourPassToPlan.innerText = `Please fill in both fields.`;    
+    }
+  },
+
+// PAGES
+
+// login page
+
+showLoginPage() {
+  dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
+  dom.show([loginPage]);
+  namePhrase.innerText = `'Oh, the places you'll vibe!'`;
+},
+
+// trip planner page
+
+showWannaJetPage() {
+  namePhrase.innerText = `Yo, ${user.name}!`;
+
+  dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
+  dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
+  dom.populateDestinationsDropDown();
+  estimatedCostHeaderHTML.innerText = `ESTIMATED COST:`;
+  estimatedCostHTML.innerText = `Enter your information on the left to see!`;
+},
+
+// dashboard page
+
+showYourTripsDashboardPage() {
+  namePhrase.innerText = `Yo, ${user.name}!`;
+  yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
+  dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
+  dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
+
+  dom.populateTripSlides();
+},
+
+populateTripSlides() {
+  let slides = user.getTripsHTML();
+
+  currentSlides.innerHTML = slides[0];
+  pendingSlides.innerHTML = slides[1];
+  futureSlides.innerHTML = slides[2];
+  pastSlides.innerHTML = slides[3];
+
+  if (slides[0].length > 0) {
+    dom.show([currentVibes]);
+  }
+  if (slides[1].length > 0) {
+    dom.show([pendingVibes]);
+  }
+  if (slides[2].length > 0) {
+    dom.show([futureVibes]);
+  }
+  if (slides[3].length > 0) {
+    dom.show([pastVibes]);
+  }
+},
+
+  // HELPER FUNCTIONS
+
+  hide(elements) {
+    elements.forEach(element => {
+      element.classList.add('hidden');
+    });
+  },
+
+  show(elements) {
+    elements.forEach(element => {
+      element.classList.remove('hidden');
+    });
+  },
+
+  // GET ELEMENT BY ID
+
+  // navbar
+
+  namePhrase: document.getElementById('namePhrase'),
   navBarLinksSection: document.getElementById('navBarLinksSection'),
   navBarYourTripsBtn: document.getElementById('navBarYourTripsBtn'),
   navBarTripPlannerBtn: document.getElementById('navBarTripPlannerBtn'),
   navBarSignOutBtn: document.getElementById('navBarSignOutBtn'),
   usernameSection: document.getElementById('usernameSection'),
 
-  // LOGIN PAGE
+  // login page
 
   loginPage: document.getElementById('loginPage'),
   loginFormUsername: document.getElementById('loginFormUsername'),
@@ -538,7 +667,7 @@ const dom = {
   enterYourPassToPlan: document.getElementById('enterYourPassToPlan'),
   replaceYOLO: document.getElementById('replaceYOLO'),
 
-  // YOUR TRIPS DASHBOARD PAGE
+  // dashboard
 
   yourTripsDashboardPage: document.getElementById('yourTripsDashboardPage'),
   destinationNameHTML: document.getElementById('destinationNameHTML'),
@@ -553,7 +682,7 @@ const dom = {
   pastVibes: document.getElementById('pastVibes'),
   futureVibes: document.getElementById('futureVibes'),
 
-  // WANNA JET PAGE
+  // wanna jet page
 
   wannaJetPage: document.getElementById('wannaJetPage'),
   jetFormDate: document.getElementById('jetFormDate'),
@@ -682,30 +811,6 @@ class Traveler {
 
     }, '');
 
-    // let approvedString = approved.reduce((tripsString, trip) => {
-
-    //   let destination = this.destinations.find(destination => destination.id === trip.destinationID);
-    //   let destinationName = destination.destination;
-    //   let cost = this.getTotal(trip, destination);
-
-    //   tripsString = tripsString.concat(`
-    //     <li class="glide__slide">
-    //       <article class='card'>
-    //         <article class='photo-container'>
-    //           <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
-    //         </article>
-    //         <article class='destination-info-container'>
-    //           <h1 class='destination-name'>${destination.destination}</h1>
-    //           <p class='date-time'>${trip.date}</p>
-    //         </article>
-    //       </article>
-    //     </li>
-    //   `);
-
-    //   return tripsString;
-
-    // }, '');
-
     let pendingString = pending.reduce((tripsString, trip) => {
 
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
@@ -796,7 +901,7 @@ class Traveler {
 
   getTotalSpent() {
     return this.trips.reduce((sum, trip) => {
-      if (trip.status === 'approved') {
+      if (trip.status === 'approved' && trip.date.split('/')[0] === '2021') {
         const destination = this.getDestination(trip);
         sum += this.getTotal(trip, destination);
       }
@@ -868,17 +973,11 @@ class Trip {
     this.destinationID = tripData.destinatonID;
     this.status = tripData.status;
     this.suggestedActivities = tripData.suggestedActivities;
-
     this.startDate;
     this.endDate;
     this.estimatedCost;
     this.today = new Date();
-    // maybe pass in destinations later?
-    // this.destinations = destinations
   }
-
-
-  // move to Traveler.js
   
   getUserTripDates() {
     let tripDuration = this.tripData.duration;
@@ -12171,12 +12270,14 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_base_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _css_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _apiCalls__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 /* harmony import */ var _domUpdates__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 /* harmony import */ var _Traveler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
 /* harmony import */ var _Trip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
-// IMPORTS & SETUP
+///////////////////////////////////////////////////
+///////////////// IMPORTS & SETUP /////////////////
+///////////////////////////////////////////////////
 
 
 
@@ -12209,7 +12310,7 @@ const {
   navBarSignOutBtn,
   replaceYOLO,
   estimatedCostHeaderHTML,
-  name,
+  namePhrase,
   yearCost,
   currentSlides,
   pastSlides,
@@ -12223,187 +12324,35 @@ const {
 
 let travelers, trips, destinations, data;
 
-// EVENT LISTENERS
+///////////////////////////////////////////////////
+///////////////// EVENT LISTENERS /////////////////
+///////////////////////////////////////////////////
 
 // navbar
-navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
-navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
-navBarSignOutBtn.addEventListener('click', showLoginPage);
+navBarYourTripsBtn.addEventListener('click', _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.showYourTripsDashboardPage);
+navBarTripPlannerBtn.addEventListener('click', _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.showWannaJetPage);
+navBarSignOutBtn.addEventListener('click', _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.showLoginPage);
 
 // login page
 loginFormSubmitBtn.addEventListener('click', login);
 
 // trip planner page
-jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
+jetFormSubmitBtn.addEventListener('click', _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.showEstimatedCost);
 letsJetBtn.addEventListener('click', createTrip);
 
-// API
+///////////////////////////////////////////////////
+/////////////////////// API ///////////////////////
+///////////////////////////////////////////////////
+
+// FETCH
 
 function packPromises() {
   return Promise.all([(0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.fetchTravelers)(), (0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.fetchTrips)(), (0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.fetchDestinations)()]);
 }
 
-///////////////////////////////////////////////////
-//////////////////// FUNCTIONS ////////////////////
-///////////////////////////////////////////////////
-
-// HELPER FUNCTIONS
-
-function hide(elements) {
-  elements.forEach(element => {
-    element.classList.add('hidden');
-  });
-}
-
-function show(elements) {
-  elements.forEach(element => {
-    element.classList.remove('hidden');
-  });
-}
-
-// PAGES (move all of these to the DOM)
-
-// login page
-
-function showLoginPage() {
-  hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
-  show([loginPage]);
-  name.innerText = `'Oh, the places you'll vibe!'`;
-}
-
-// trip planner page
-
-function showWannaJetPage() {
-  name.innerText = `${user.name}`;
-
-  hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
-  show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
-  populateDestinationsDropDown();
-}
-
-// dashboard page
-
-function showYourTripsDashboardPage() {
-  name.innerText = `${user.name}`;
-  yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
-  hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
-  show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-
-  // yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
-
-  populateTripSlides();
-
-}
-
-function populateTripSlides() {
-  let slides = user.getTripsHTML();
-
-  currentSlides.innerHTML = slides[0];
-  pendingSlides.innerHTML = slides[1];
-  futureSlides.innerHTML = slides[2];
-  pastSlides.innerHTML = slides[3];
-
-  if (slides[0].length > 0) {
-    show([currentVibes]);
-  }
-  if (slides[1].length > 0) {
-    show([pendingVibes]);
-  }
-  if (slides[2].length > 0) {
-    show([futureVibes]);
-  }
-  if (slides[3].length > 0) {
-    show([pastVibes]);
-  }
-}
-
-// INSTANTIATE TRIP
-
-function createTrip() {
-  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
-
-    console.log(allDestinations);
-
-    const destination = allDestinations.find(destinationObj => {
-      console.log(jetFormDestination.value + ", " + destinationObj.id);
-      if (parseInt(jetFormDestination.value) === destinationObj.id) {
-        return true;
-      }
-      return false;
-    })
-
-    let destinationID = destination.id;
-
-    // console.log(destinationID)
-
-    const trip = {
-      'id': allTrips.length + 1,
-      'userID': user.id,
-      'destinationID': destinationID,
-      'travelers': parseInt(jetFormHumans.value),
-      'date': jetFormDate.value.split('-').join('/'),
-      'duration': parseInt(jetFormDuration.value),
-      'status': 'pending',
-      'suggestedActivities': []
-    };
-
-    console.log(trip)
-
-    ;(0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.postBooking)(trip).then(result => {
-      if (result.ok) {
-
-        console.log(result);
-
-        user.addTrip(trip);
-        user.addDestination(destination);
-
-        allTrips.push(trip);
-
-        showYourTripsDashboardPage();
-
-      } else {
-        console.log(result);
-      }
-    });
-  }
-}
-
-// DOM UPDATES (will move to domUpdates after test working)
-
-function showEstimatedCost() {
-  let trip =
-    {
-      'id': allTrips.length + 1,
-      'userID': user.id,
-      'destinationID': parseInt(jetFormDestination.value),
-      'travelers': parseInt(jetFormHumans.value),
-      'date': jetFormDate.value,
-      'duration': parseInt(jetFormDuration.value),
-      'status': 'pending',
-      'suggestedActivities': []
-    };
-
-  let destination = getDestination(trip);
-
-  if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
-    estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
-    estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
-  }  else {
-
-    var money = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    });
-
-    show([letsJetBtn])
-    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${money.format(user.getTotal(trip, destination))}`
-    estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
-  }
-}
-
 function login() {
   if (!loginFormPassword.value || !loginFormUsername.value) {
-    enterYourPassToPlan.innerText = `Please fill in both fields.`;
+    _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.noDice('empty');
   } else {
 
     const password = loginFormPassword.value;
@@ -12430,43 +12379,69 @@ function login() {
               window.allTrips = promises[1].trips;
               window.user = new _Traveler__WEBPACK_IMPORTED_MODULE_3__.default(data, trips, destinations);
 
-              showYourTripsDashboardPage();
+              _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.showYourTripsDashboardPage();
 
             } else {
-              replaceYOLO.innerText = `No dice!`;
-              enterYourPassToPlan.innerText = `ID not found.`;
+              _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.noDice('id');
             }
           }
         );
       } else {
-        replaceYOLO.innerText = `No dice!`;
-        enterYourPassToPlan.innerText = `Your username is improperly formatted.`;
+        _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.noDice('username');
       }
     } else {
-      replaceYOLO.innerText = `No dice!`;
-      enterYourPassToPlan.innerText = `You need the right password.`;
+      _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.noDice('password');
     }
   }
 }
 
-function populateDestinationsDropDown() {
-  allDestinations.sort((destinationObjA, destinationObjB) => {
-    if (destinationObjA.destination < destinationObjB.destination) {
-      return -1;
-    } else {
-      return 1
-    }
-  }).forEach((destinationObj) => {
-    jetFormDestination.insertAdjacentHTML('beforeend', `
-      <option value='${destinationObj.id}'>${destinationObj.destination}</option>
-    `)
-  })
-}
+// POST
 
-function getDestination(trip) {
-  return allDestinations.find(destination => destination.id === trip.destinationID);
-}
+function createTrip() {
+  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
 
+    console.log(allDestinations);
+
+    const destination = allDestinations.find(destinationObj => {
+      if (parseInt(jetFormDestination.value) === destinationObj.id) {
+        return true;
+      }
+      return false;
+    })
+
+    let destinationID = destination.id;
+
+    const trip = {
+      'id': allTrips.length + 1,
+      'userID': user.id,
+      'destinationID': destinationID,
+      'travelers': parseInt(jetFormHumans.value),
+      'date': jetFormDate.value.split('-').join('/'),
+      'duration': parseInt(jetFormDuration.value),
+      'status': 'pending',
+      'suggestedActivities': []
+    };
+
+    console.log(trip)
+
+    ;(0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.postBooking)(trip).then(result => {
+      if (result.ok) {
+
+        console.log(result);
+
+        user.addTrip(trip);
+        user.addDestination(destination);
+
+        allTrips.push(trip);
+
+        _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default.showYourTripsDashboardPage();
+
+      } else {
+        console.log(result);
+      }
+    });
+  }
+}
 })();
 
 /******/ })()
