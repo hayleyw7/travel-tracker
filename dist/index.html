@@ -4,11 +4,9 @@
   <meta charset='UTF-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-
   <title>#JustVibin</title>
 </head>
 <body>
-
   <div class='navbar'>
     <h1 class'logo'>#JustVibin</h1>
     <p class='name-phrase' id='namePhrase'>"Oh, the places you'll vibe!"</p>
@@ -18,48 +16,32 @@
       <button class='navbar-buttons hidden' id='navBarSignOutBtn'>Sign Out</button>
     </section>
   </div>
-  
   <main>
-
-    <!-- SIGN IN SCREEN!!!!! -->
-
     <div id='loginPage'>
       <h2>Sign in, fam.</h2>
-
       <h2 class="hidden" id="currentVibes">Current Vibes</h2>
-
       <div id="currentSlides" class="flexible">
-
         <article class='card'>
           <article class='photo-container'>
             <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg' alt='Clouds' class='destination-photo'>
           </article>
-
           <article class='destination-info-container'>
             <h3 class='destination-name' id='replaceYOLO'>You only live once!</h3>
             <p class='date-time' id='enterYourPassToPlan'>Enter your deets. Adventure awaits.</p>
           </article>
         </article> 
-
         <article class='card login-form'>
           <form id='loginFormToReset'>
             <label for='loginFormUsername'>Username:</label><br>
             <input type='text' id='loginFormUsername' name='username'><br><br>
-
             <label for='loginFormPassword'>Password:</label><br>
             <input type='text' id='loginFormPassword' name='password'><br><br>
-
             <button type='button' class='submit-btn' id='loginFormSubmitBtn'>Let me in!</button>
           </form>
         </article>
-
       </div>
     </div>
-
-    <!-- YOUR TRIPS DASHBOARD!!!!!! -->
-
     <div id='yourTripsDashboardPage' class='dashboard hidden'>
-
       <div id="currentSlides" class="flexible">
         <article class='card'>
             <article class='photo-container'>
@@ -71,39 +53,23 @@
           </article>
         </article>
       </div>
-
       <h2 class="hidden" id="currentVibes">Current Vibes</h2>
-
       <div id="currentSlides" class="flexible">
       </div>
-
       <h2 class="hidden" id="pendingVibes">Pending Vibes</h2>
-
       <div id="pendingSlides" class="flexible">
       </div>
-
       <h2 class="hidden" id="futureVibes">Future Vibes</h2>
-
       <div id="futureSlides" class="flexible">
       </div>
-
       <h2 class="hidden" id="pastVibes">Past Vibes</h2>
-
       <div id="pastSlides" class="flexible">
       </div>
-
     </div>
-
-    <!-- TRIP PLANNER!!!!!! -->
-
     <div id='wannaJetPage' class='hidden'>
-
       <h2>Wanna vibe somewhere new?</h2>
-
       <h2 class="hidden" id="currentVibes">Current Vibes</h2>
-
       <div id="currentSlides" class="flexible">
-
         <article class='card'>
           <article class='photo-container'>
             <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg' alt='Clouds' class='destination-photo'>
@@ -114,26 +80,20 @@
             <button class='lets-jet-btn hidden submit-btn' id='letsJetBtn'>Let's vibe!</button>
           </article>
         </article>
-
         <article class='card'>
           <article class='photo-container'>
-
           </article>
           <article class='destination-info-container'>
             <form id='plannerFormToReset'>
               <label for='date'>Trip Date:</label><br>
               <input type='date' data-date-inline-picker='true' id='jetFormDate' min=''><br><br>
-
               <label for='days'>Number of Days:</label><br>
               <input type='number' min="1" id='jetFormDuration'><br><br>
-
               <label for='humans'>Number of Humans:</label><br>
               <input type='number' min="1" id='jetFormHumans'><br><br>
-
               <label for='destination'>Destination:</label><br>
               <select name="destination" id="jetFormDestination" class='dropdown'>
               </select><br><br><br>
-              
               <button type='button' id='jetFormSubmitBtn'  class='submit-btn'>How much?</button>
             </form>
           </article>

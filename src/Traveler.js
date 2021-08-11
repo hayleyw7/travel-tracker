@@ -92,7 +92,7 @@ class Traveler {
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
-              <h1 class='destination-name'>${destination.destination}</h1>
+              <h3 class='destination-name'>${destination.destination}</h3>
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
@@ -114,7 +114,7 @@ class Traveler {
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
-              <h1 class='destination-name'>${destination.destination}</h1>
+              <h3 class='destination-name'>${destination.destination}</h3>
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
@@ -138,7 +138,7 @@ class Traveler {
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
-              <h1 class='destination-name'>${destination.destination}</h1>
+              <h3 class='destination-name'>${destination.destination}</h3>
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
@@ -162,7 +162,7 @@ class Traveler {
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
-              <h1 class='destination-name'>${destination.destination}</h1>
+              <h3 class='destination-name'>${destination.destination}</h3>
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
