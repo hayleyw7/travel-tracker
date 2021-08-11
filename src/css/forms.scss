@@ -31,11 +31,7 @@ input {
 .lets-jet-btn {
   margin-bottom: 0.4rem;
 
-  &:hover{
+  &:hover {
     @include button-hover();    
   }
-}
-
-.navbar-buttons:hover {
-  @include button-hover();
 }
