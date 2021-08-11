@@ -68,6 +68,18 @@ const dom = {
   // login page
 
   showLoginPage() {
+    if (currentVibes) {
+      dom.hide([currentVibes])
+    }
+    if (pastVibes) {
+      dom.hide([pastVibes])
+    }
+    if (pendingVibes) {
+      dom.hide([pendingVibes])
+    }
+    if (futureVibes) {
+      dom.hide([futureVibes])
+    }
     dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
     dom.show([loginPage]);
     namePhrase.innerText = `'Oh, the places you'll vibe!'`;
@@ -143,13 +155,17 @@ const dom = {
 
   hide(elements) {
     elements.forEach(element => {
-      element.classList.add('hidden');
+      if (element.classList) {
+        element.classList.add('hidden');
+      }
     });
   },
 
   show(elements) {
     elements.forEach(element => {
-      element.classList.remove('hidden');
+      if (element.classList) {
+        element.classList.remove('hidden');
+      }
     });
   },
 
