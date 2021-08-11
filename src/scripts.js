@@ -56,7 +56,7 @@ let travelers, trips, destinations, data;
 // EVENT LISTENERS
 
 // navbar
-navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
+navBarYourTripsBtn.addEventListener('click', dom.showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', dom.showWannaJetPage);
 navBarSignOutBtn.addEventListener('click', dom.showLoginPage);
 
@@ -67,122 +67,14 @@ loginFormSubmitBtn.addEventListener('click', login);
 jetFormSubmitBtn.addEventListener('click', dom.showEstimatedCost);
 letsJetBtn.addEventListener('click', createTrip);
 
-// API
+///////////////////////////////////////////////////
+/////////////////////// API ///////////////////////
+///////////////////////////////////////////////////
+
+// FETCH
 
 function packPromises() {
   return Promise.all([fetchTravelers(), fetchTrips(), fetchDestinations()]);
-}
-
-///////////////////////////////////////////////////
-//////////////////// FUNCTIONS ////////////////////
-///////////////////////////////////////////////////
-
-
-
-// PAGES (move all of these to the DOM)
-
-// // login page
-
-// function showLoginPage() {
-//   dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
-//   dom.show([loginPage]);
-//   name.innerText = `'Oh, the places you'll vibe!'`;
-// }
-
-// // trip planner page
-
-// function showWannaJetPage() {
-//   name.innerText = `${user.name}`;
-
-//   dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
-//   dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
-//   dom.populateDestinationsDropDown();
-// }
-
-// dashboard page
-
-function showYourTripsDashboardPage() {
-  namePhrase.innerText = `${user.name}`;
-  yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
-  dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
-  dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-
-  // yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
-
-  populateTripSlides();
-
-}
-
-function populateTripSlides() {
-  let slides = user.getTripsHTML();
-
-  currentSlides.innerHTML = slides[0];
-  pendingSlides.innerHTML = slides[1];
-  futureSlides.innerHTML = slides[2];
-  pastSlides.innerHTML = slides[3];
-
-  if (slides[0].length > 0) {
-    dom.show([currentVibes]);
-  }
-  if (slides[1].length > 0) {
-    dom.show([pendingVibes]);
-  }
-  if (slides[2].length > 0) {
-    dom.show([futureVibes]);
-  }
-  if (slides[3].length > 0) {
-    dom.show([pastVibes]);
-  }
-}
-
-// INSTANTIATE TRIP
-
-function createTrip() {
-  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
-
-    console.log(allDestinations);
-
-    const destination = allDestinations.find(destinationObj => {
-      if (parseInt(jetFormDestination.value) === destinationObj.id) {
-        return true;
-      }
-      return false;
-    })
-
-    let destinationID = destination.id;
-
-    // console.log(destinationID)
-
-    const trip = {
-      'id': allTrips.length + 1,
-      'userID': user.id,
-      'destinationID': destinationID,
-      'travelers': parseInt(jetFormHumans.value),
-      'date': jetFormDate.value.split('-').join('/'),
-      'duration': parseInt(jetFormDuration.value),
-      'status': 'pending',
-      'suggestedActivities': []
-    };
-
-    console.log(trip)
-
-    postBooking(trip).then(result => {
-      if (result.ok) {
-
-        console.log(result);
-
-        user.addTrip(trip);
-        user.addDestination(destination);
-
-        allTrips.push(trip);
-
-        showYourTripsDashboardPage();
-
-      } else {
-        console.log(result);
-      }
-    });
-  }
 }
 
 function login() {
@@ -214,7 +106,7 @@ function login() {
               window.allTrips = promises[1].trips;
               window.user = new Traveler(data, trips, destinations);
 
-              showYourTripsDashboardPage();
+              dom.showYourTripsDashboardPage();
 
             } else {
               dom.noDice('id');
@@ -227,5 +119,53 @@ function login() {
     } else {
       dom.noDice('password');
     }
+  }
+}
+
+// POST
+
+function createTrip() {
+  if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
+
+    console.log(allDestinations);
+
+    const destination = allDestinations.find(destinationObj => {
+      if (parseInt(jetFormDestination.value) === destinationObj.id) {
+        return true;
+      }
+      return false;
+    })
+
+    let destinationID = destination.id;
+
+    const trip = {
+      'id': allTrips.length + 1,
+      'userID': user.id,
+      'destinationID': destinationID,
+      'travelers': parseInt(jetFormHumans.value),
+      'date': jetFormDate.value.split('-').join('/'),
+      'duration': parseInt(jetFormDuration.value),
+      'status': 'pending',
+      'suggestedActivities': []
+    };
+
+    console.log(trip)
+
+    postBooking(trip).then(result => {
+      if (result.ok) {
+
+        console.log(result);
+
+        user.addTrip(trip);
+        user.addDestination(destination);
+
+        allTrips.push(trip);
+
+        dom.showYourTripsDashboardPage();
+
+      } else {
+        console.log(result);
+      }
+    });
   }
 }

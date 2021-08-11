@@ -1,5 +1,7 @@
 const dom = {
 
+  // TRIP PLANNER PAGE
+
   populateDestinationsDropDown() {
     allDestinations.sort((destinationObjA, destinationObjB) => {
       if (destinationObjA.destination < destinationObjB.destination) {
@@ -43,19 +45,7 @@ const dom = {
     }
   },
 
-  // HELPER FUNCTIONS
-
-  hide(elements) {
-    elements.forEach(element => {
-      element.classList.add('hidden');
-    });
-  },
-
-  show(elements) {
-    elements.forEach(element => {
-      element.classList.remove('hidden');
-    });
-  },
+  // LOGIN PAGE
 
   noDice(problem) {
     if (problem === 'id') {
@@ -72,18 +62,7 @@ const dom = {
       enterYourPassToPlan.innerText = `Please fill in both fields.`;       
   },
 
-
-
-
-
-
-
-
-
-
-
-
- // PAGES (move all of these to the DOM)
+// PAGES
 
 // login page
 
@@ -96,7 +75,6 @@ showLoginPage() {
 // trip planner page
 
 showWannaJetPage() {
-  console.log(namePhrase)
   namePhrase.innerText = `${user.name}`;
 
   dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
@@ -104,12 +82,56 @@ showWannaJetPage() {
   dom.populateDestinationsDropDown();
 },
 
+// dashboard page
 
+showYourTripsDashboardPage() {
+  namePhrase.innerText = `${user.name}`;
+  yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
+  dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
+  dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
 
+  dom.populateTripSlides();
+},
 
+populateTripSlides() {
+  let slides = user.getTripsHTML();
 
+  currentSlides.innerHTML = slides[0];
+  pendingSlides.innerHTML = slides[1];
+  futureSlides.innerHTML = slides[2];
+  pastSlides.innerHTML = slides[3];
 
-  // NAVBAR
+  if (slides[0].length > 0) {
+    dom.show([currentVibes]);
+  }
+  if (slides[1].length > 0) {
+    dom.show([pendingVibes]);
+  }
+  if (slides[2].length > 0) {
+    dom.show([futureVibes]);
+  }
+  if (slides[3].length > 0) {
+    dom.show([pastVibes]);
+  }
+},
+
+  // HELPER FUNCTIONS
+
+  hide(elements) {
+    elements.forEach(element => {
+      element.classList.add('hidden');
+    });
+  },
+
+  show(elements) {
+    elements.forEach(element => {
+      element.classList.remove('hidden');
+    });
+  },
+
+  // GET ELEMENT BY ID
+
+  // navbar
 
   namePhrase: document.getElementById('namePhrase'),
   navBarLinksSection: document.getElementById('navBarLinksSection'),
@@ -118,7 +140,7 @@ showWannaJetPage() {
   navBarSignOutBtn: document.getElementById('navBarSignOutBtn'),
   usernameSection: document.getElementById('usernameSection'),
 
-  // LOGIN PAGE
+  // login page
 
   loginPage: document.getElementById('loginPage'),
   loginFormUsername: document.getElementById('loginFormUsername'),
@@ -127,7 +149,7 @@ showWannaJetPage() {
   enterYourPassToPlan: document.getElementById('enterYourPassToPlan'),
   replaceYOLO: document.getElementById('replaceYOLO'),
 
-  // YOUR TRIPS DASHBOARD PAGE
+  // dashboard
 
   yourTripsDashboardPage: document.getElementById('yourTripsDashboardPage'),
   destinationNameHTML: document.getElementById('destinationNameHTML'),
@@ -142,7 +164,7 @@ showWannaJetPage() {
   pastVibes: document.getElementById('pastVibes'),
   futureVibes: document.getElementById('futureVibes'),
 
-  // WANNA JET PAGE
+  // wanna jet page
 
   wannaJetPage: document.getElementById('wannaJetPage'),
   jetFormDate: document.getElementById('jetFormDate'),
