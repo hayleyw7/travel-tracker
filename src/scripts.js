@@ -122,12 +122,11 @@ function showYourTripsDashboardPage() {
 
 function populateTripSlides() {
   let slides = user.getTripsHTML();
-  console.log(user.getTripsHTML());
 
-  // currentSlides.innerHTML = slides[0];
+  currentSlides.innerHTML = slides[0];
   pendingSlides.innerHTML = slides[1];
-  // futureSlides.innerHTML = slides[2];
-  // pastSlides.innerHTML = slides[3];
+  futureSlides.innerHTML = slides[2];
+  pastSlides.innerHTML = slides[3];
 }
 
 // INSTANTIATE TRIP

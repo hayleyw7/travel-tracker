@@ -25,6 +25,7 @@ class Trip {
     // this.destinations = destinations
   }
 
+
   // move to Traveler.js
   
   getUserTripDates() {

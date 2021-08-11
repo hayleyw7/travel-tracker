@@ -1,3 +1,9 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// @import 'glide.core.min';
+
+// @import 'glide.theme.min';
+
 // /* This is an example of using Sass, otherwise plain CSS works too*/
 // $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 // ;
@@ -110,12 +116,12 @@ h3 {
   display: grid;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 0.5rem; 
+  margin: 0.5rem;
   color: var(--darkgray);
 }
 
 .card-container-2 {
-  margin-bottom: 1rem;  
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -214,7 +220,7 @@ h3 {
     display: flex;
     margin: 0;
   }
- 
+
   .navbar-links-section {
     display: flex;
     margin: 5rem 0 0 1.3rem;
@@ -238,8 +244,9 @@ h3 {
   color: white;
 }
 
-// flex
+// Flex for Trips
 
 .flexible {
-  display:flex;
+  display: flex;
+  flex-wrap: wrap;
 }
