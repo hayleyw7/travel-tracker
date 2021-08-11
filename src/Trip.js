@@ -21,12 +21,7 @@ class Trip {
     this.endDate;
     this.estimatedCost;
     this.today = new Date();
-    // maybe pass in destinations later?
-    // this.destinations = destinations
   }
-
-
-  // move to Traveler.js
   
   getUserTripDates() {
     let tripDuration = this.tripData.duration;

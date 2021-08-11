@@ -40,13 +40,10 @@ describe('An individual Traveler', function() {
     expect(user.getTrips()[0].date).to.equal("2021/01/09");
   });
 
-  it('should be able to calculate the cost of all approved trips', function() {
+  it('should be able to calculate the cost of all approved trips in 2021', function() {
 
     expect(user.getTotalSpent()).to.equal(7095.000000000001);
   });
-
-
-  // this one is keeping the file from pushing to GH
 
   it('should be able to return current trips', function() {
 

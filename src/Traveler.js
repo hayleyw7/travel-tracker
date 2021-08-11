@@ -192,7 +192,6 @@ class Traveler {
 
   getTotalSpent() {
     return this.trips.reduce((sum, trip) => {
-      console.log(trip.date.split('/')[0])
       if (trip.status === 'approved' && trip.date.split('/')[0] === '2021') {
         const destination = this.getDestination(trip);
         sum += this.getTotal(trip, destination);
