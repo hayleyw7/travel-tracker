@@ -93,6 +93,7 @@ function login() {
     if (password === 'travel') {
       const username = loginFormUsername.value;
       const id = getID(username);
+      const usernameSplit = username.split('');
 
       if (id) {
 
@@ -106,7 +107,7 @@ function login() {
               return trips.some(trip => trip.destinationID === destination.id);
             });
 
-            if (id > 0 && id <= travelers.length) {
+            if (id > 0 && id <= travelers.length && !isNaN(usernameSplit[usernameSplit.length - 1])) {
 
               window.allDestinations = promises[2].destinations;
               window.allTrips = promises[1].trips;
