@@ -10,80 +10,67 @@
 <body>
 
   <div class='navbar'>
-    <section class='navbar-left'>
-      <section class='navbar-links-section' id='navBarLinksSection'>
-        <button class='navbar-links hidden' id='navBarYourTripsBtn'>Your Trips</button>
-        <button class='navbar-links hidden' id='navBarTripPlannerBtn'>Trip Planner</button>
-        <button class='navbar-links hidden' id='navBarSignOutBtn'>Sign Out</button>
-      </section>
-    </section>
-    <section class='navbar-right'>
-      <section class='username-section' id='usernameSection'>
-        <!-- <img src='./assets/destination-icon.png' alt='destination icon' class='navbar-icon'> -->
-        <p class='name' id='namePhrase'>"Oh, the places you'll vibe!"</p>
-      </section>
-      <section class='logo-section'>
-        <h1 class'logo'>#JustVibin</h1>
-      </section>
+    <h1 class'logo'>#JustVibin</h4>
+    <p class='name-phrase' id='namePhrase'>"Oh, the places you'll vibe!"</p>
+    <section class='navbar-buttons-section' id='navBarLinksSection'>
+      <button class='navbar-buttons hidden' id='navBarYourTripsBtn'>Your Trips</button>
+      <button class='navbar-buttons hidden' id='navBarTripPlannerBtn'>Trip Planner</button>
+      <button class='navbar-buttons hidden' id='navBarSignOutBtn'>Sign Out</button>
     </section>
   </div>
+  
   <main>
 
     <!-- SIGN IN SCREEN!!!!! -->
 
     <div id='loginPage'>
-      <h3 id='test'>Sign in, fam.</h2>
+      <h3>Sign in, fam.</h3>
 
-      <section class='card-container-1'>
+      <h3 class="hidden" id="currentVibes">Current Vibes</h3>
 
-        <article class='card'>
-          <article class='photo-container'></article>
-          <article class='destination-info-container' id='test2'>
-            <form>
-
-              <label for='loginFormUsername'>Username:</label><br>
-              <input type='text' id='loginFormUsername' name='username'><br><br>
-
-              <label for='loginFormPassword'>Password:</label><br>
-              <input type='text' id='loginFormPassword' name='password'><br><br>
-
-              <!-- <input type='submit' value='Submit' id='loginFormSubmitBtn'> -->
-              <button type='button' id='loginFormSubmitBtn'>Submit</button>
-
-            </form>
-          </article>
-        </article>
+      <div id="currentSlides" class="flexible">
 
         <article class='card'>
           <article class='photo-container'>
-
-            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
-
+            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg' alt='Clouds' class='destination-photo'>
           </article>
 
           <article class='destination-info-container'>
-            <h1 class='destination-name' id='replaceYOLO'>You only live once!</h1>
+            <h4 class='destination-name' id='replaceYOLO'>You only live once!</h4>
             <p class='date-time' id='enterYourPassToPlan'>Enter your deets. Adventure awaits.</p>
           </article>
+        </article> 
 
+        <article class='card login-form'>
+          <form>
+            <label for='loginFormUsername'>Username:</label><br>
+            <input type='text' id='loginFormUsername' name='username'><br><br>
+
+            <label for='loginFormPassword'>Password:</label><br>
+            <input type='text' id='loginFormPassword' name='password'><br><br>
+
+            <button type='button' class='submit-btn' id='loginFormSubmitBtn'>Let me in!</button>
+          </form>
         </article>
 
-      </section>
+      </div>
     </div>
 
     <!-- YOUR TRIPS DASHBOARD!!!!!! -->
 
     <div id='yourTripsDashboardPage' class='dashboard hidden'>
 
+      <div id="currentSlides" class="flexible">
         <article class='card'>
-          <article class='photo-container'>
-            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
-          </article>
+            <article class='photo-container'>
+              <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg' alt='Clouds' class='destination-photo'>
+            </article>        
           <article class='destination-info-container'>
-            <h1 class='destination-name'>We hope that you're vibin!</h1>
-            <p class='date-time' id='yearCost'>NOT YET PULLING!</p>
+            <h4 class='destination-name'>We hope that you're vibin!</h4>
+            <p class='date-time' id='yearCost'></p>
           </article>
         </article>
+      </div>
 
       <h3 class="hidden" id="currentVibes">Current Vibes</h3>
 
@@ -107,83 +94,52 @@
 
     </div>
 
-    <!-- GLIDE NOTES -->
-
-    <!-- don't try to append list items - just add it to the html of this element aka `<li class="glide__slide">3</li>` -->
-
-    <!-- when you start styling, style glide container 1st to get space & then style whole glide container (like tracking, slides, etc) from within html -->
-
-    <!-- // might run into probems with buttons if i don't give enough space -->
-
-    <!-- taking out the place numbers may break it all, but probaby fixed by doing innerHTML -->
-
     <!-- TRIP PLANNER!!!!!! -->
 
     <div id='wannaJetPage' class='hidden'>
 
-      <h3>Wanna vibe somewhere new?</h2>
+      <h3>Wanna vibe somewhere new?</h3>
 
-      <section class='card-container-1'>
+      <h3 class="hidden" id="currentVibes">Current Vibes</h3>
+
+      <div id="currentSlides" class="flexible">
 
         <article class='card'>
           <article class='photo-container'>
-            <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'>  -->
+            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg' alt='Clouds' class='destination-photo'>
+          </article>
+          <article class='destination-info-container'>
+            <h4 class='destination-name' id='estimatedCostHeaderHTML'>ESTIMATED COST:</h4>
+            <p class='date-time' id='estimatedCostHTML'>Enter your information on the left to see!</p><br>
+            <button class='lets-jet-btn hidden submit-btn' id='letsJetBtn'>Let's vibe!</button>
+          </article>
+        </article>
+
+        <article class='card'>
+          <article class='photo-container'>
+
           </article>
           <article class='destination-info-container'>
             <form>
-
               <label for='date'>Trip Date:</label><br>
               <input type='date' data-date-inline-picker='true' name='fname' id='jetFormDate'><br><br>
 
               <label for='days'>Number of Days:</label><br>
-              <input type='number' id='jetFormDuration' name='lname'><br><br>
+              <input type='number' id='jetFormDuration'><br><br>
 
               <label for='humans'>Number of Humans:</label><br>
-              <input type='number' id='jetFormHumans' name='lname'><br><br>
+              <input type='number' id='jetFormHumans'><br><br>
 
               <label for='destination'>Destination:</label><br>
-              <select name="destination" id="jetFormDestination">
-                <!-- <option value="Lima, Peru">Lima, Peru</option>
-                <option value="Stockholm, Sweden">Stockholm, Sweden</option> -->
-              </select>
-
-              <br><br>
-
-              <button type='button' id='jetFormSubmitBtn'>Submit</button>
-
+              <select name="destination" id="jetFormDestination" class='dropdown'>
+              </select><br><br><br>
+              
+              <button type='button' id='jetFormSubmitBtn'  class='submit-btn'>How much?</button>
             </form>
           </article>
         </article>
-
-        <article class='card'>
-          <article class='photo-container'>
-            <!-- <img src='https://i.pinimg.com/564x/d3/a2/74/d3a2744015363586e04e0ed1b9b090e1.jpg' alt='Destination photo' class='destination-photo'>  -->
-            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
-          </article>
-          <article class='destination-info-container'>
-            <h1 class='destination-name' id='estimatedCostHeaderHTML'>ESTIMATED COST:</h1>
-            <p class='date-time' id='estimatedCostHTML'>Enter your information on the left to see!</p>
-            <button class='lets-jet-btn hidden' id='letsJetBtn'>Let's vibe!</button>
-          </article>
-        </article>
-
       </section>
     </div>
-
     <script src='bundle.js'></script>
-
-
   </body>
 </html>
-
-<!-- other picture ideas: -->
-
-<!-- https://media.istockphoto.com/photos/cloud-series-colorful-cotton-candy-soft-fog-and-clouds-with-a-pastel-picture-id1074160890?k=6&m=1074160890&s=612x612&w=0&h=i5KrjZHc4jfYuKc-QJTgF9MJh6bCQhq8WFQ9g0ANr0A= -->
-
- <!-- <img src='https://c1.wallpaperflare.com/preview/772/331/781/clouds-sky-pink-nature.jpg' alt='Photo of this destination' class='destination-photo'>  -->
-
-<!-- <img src='https://c1.wallpaperflare.com/preview/772/331/781/clouds-sky-pink-nature.jpg' alt='Photo of this destination' class='destination-photo'>  -->
-
-<!-- <img src='https://indemaak.org/wp-content/uploads/2020/02/papers.co-bf68-cloud-metamorphosis-sky-art-nature-29-wallpaper.jpg' alt='Photo of this destination' class='destination-photo'>  -->
-
-<!-- <img src='https://media.istockphoto.com/photos/cloud-series-colorful-cotton-candy-soft-fog-and-clouds-with-a-pastel-picture-id1074160890?k=6&m=1074160890&s=612x612&w=0&h=i5KrjZHc4jfYuKc-QJTgF9MJh6bCQhq8WFQ9g0ANr0A=' alt='Photo of this destination' class='destination-photo'>  -->
