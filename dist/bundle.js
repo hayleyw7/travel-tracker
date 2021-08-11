@@ -319,7 +319,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* UTILITY */\n:root {\n  --white: #FFF;\n  --black: #000000;\n  --mediumgray: #828282;\n  --darkgray: #222222;\n  --lightgray: #DCDCDC;\n  --blue: #ABEAE1;\n  --pink: #FFC0CB;\n  --green: #E5F3B3;\n}\n\nbody {\n  background: var(--darkgray);\n  color: var(--darkgray);\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n/* NAVBAR */\n.navbar {\n  background: var(--pink);\n  color: var(--darkgray);\n  flex-direction: row;\n  height: 15rem;\n  justify-content: space-between;\n}\n\n.navbar-left {\n  display: grid;\n  padding: 1.5em 0 0 0;\n  margin: 0 0 0 0;\n  width: 40rem;\n}\n\n.navbar-right {\n  width: 20rem;\n  margin-right: 2rem;\n}\n\n.username-section {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  padding: 0.5rem 0.2rem 0 0;\n}\n\n.name {\n  margin: 0.7rem 0 0 0;\n}\n\n.navbar-links {\n  margin: 0 1rem 0 0;\n  padding: 0;\n  border: 0;\n  font-size: 1.1rem;\n  background: var(--pink);\n}\n\n.navbar-links-section {\n  display: flex;\n  flex-direction: row;\n  margin: 0 0 0 0.8rem;\n  padding: 0;\n}\n\n.navbar-icon {\n  height: 1.3rem;\n  padding: 0.5rem;\n  width: 1.3rem;\n}\n\n.logo-icon {\n  height: 4rem;\n  justify-content: flex-end;\n  margin: 0;\n  padding: 2.1rem 0.5rem 0 0.8rem;\n  width: 4rem;\n}\n\n.logo-section {\n  display: flex;\n  font-size: 2.3rem;\n  justify-content: flex-end;\n}\n\n/* MAIN */\nh3 {\n  color: var(--white);\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  padding: 0 0 0 1.3rem;\n}\n\n.card-container-1,\n.card-container-2 {\n  display: grid;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin: 0.5rem;\n  color: var(--darkgray);\n}\n\n.card-container-2 {\n  margin-bottom: 1rem;\n}\n\n.card {\n  background: var(--white);\n  border: 1px var(--lightgray) solid;\n  margin: 0.3rem;\n  width: 20rem;\n}\n\n/* ON CARD */\n/* photo section */\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n.right-arrow {\n  background: var(--blue);\n  border-radius: 10rem;\n  height: 3rem;\n  left: 0.5rem;\n  padding: 0.1rem;\n  position: absolute;\n  top: 0.5rem;\n  width: 3rem;\n}\n\n.views,\n.num-views {\n  color: var(--white);\n  padding: 0;\n  position: absolute;\n}\n\n.views {\n  bottom: 11.4rem;\n  font-size: 0.8rem;\n  right: 0.9rem;\n}\n\n.num-views {\n  bottom: 7.9rem;\n  font-size: 2rem;\n  right: 1.1rem;\n}\n\n/* destination info section */\n.destination-name {\n  margin: 0;\n}\n\n.date-time {\n  color: var(--mediumgray);\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-link {\n  background: var(--green);\n  padding: 0.5rem;\n}\n\n.play-attach {\n  font-size: 0.8rem;\n}\n\n.num-attachments {\n  color: var(--blue);\n  font-size: 2rem;\n  margin: 0;\n}\n\n/* MEDIA QUERY */\n@media only screen and (min-width: 680px) {\n  .card-container-1,\n.card-container-2 {\n    display: flex;\n  }\n\n  .navbar {\n    display: flex;\n    margin: 0;\n  }\n\n  .navbar-links-section {\n    display: flex;\n    margin: 5rem 0 0 1.3rem;\n  }\n\n  .navbar {\n    height: 11rem;\n  }\n}\n.hidden {\n  display: none;\n}\n\n.lets-jet-btn {\n  float: right;\n  margin-bottom: 0.4rem;\n}\n\n.dashboard {\n  color: white;\n}", "",{"version":3,"sources":["webpack://./src/css/base.scss"],"names":[],"mappings":"AAQA,YAAA;AAEA;EACE,aAAA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;EACA,oBAAA;EACA,eAAA;EACA,eAAA;EACA,gBAAA;AARF;;AAWA;EACE,2BAAA;EACA,sBAAA;EACA,kBAAA;EACA,SAAA;EACA,UAAA;AARF;;AAWA,WAAA;AAEA;EACE,uBAAA;EACA,sBAAA;EACA,mBAAA;EACA,aAAA;EACA,8BAAA;AATF;;AAYA;EACE,aAAA;EACA,oBAAA;EACA,eAAA;EACA,YAAA;AATF;;AAYA;EACE,YAAA;EACA,kBAAA;AATF;;AAYA;EACE,aAAA;EACA,mBAAA;EACA,yBAAA;EACA,0BAAA;AATF;;AAYA;EACE,oBAAA;AATF;;AAYA;EACE,kBAAA;EACA,UAAA;EACA,SAAA;EACA,iBAAA;EACA,uBAAA;AATF;;AAYA;EACE,aAAA;EACA,mBAAA;EAEA,oBAAA;EACA,UAAA;AAVF;;AAaA;EACE,cAAA;EACA,eAAA;EACA,aAAA;AAVF;;AAaA;EACE,YAAA;EACA,yBAAA;EACA,SAAA;EACA,+BAAA;EACA,WAAA;AAVF;;AAaA;EACE,aAAA;EACA,iBAAA;EACA,yBAAA;AAVF;;AAaA,SAAA;AAEA;EACE,mBAAA;EACA,iBAAA;EACA,uBAAA;EACA,qBAAA;AAXF;;AAcA;;EAEE,aAAA;EACA,mBAAA;EACA,6BAAA;EACA,cAAA;EACA,sBAAA;AAXF;;AAcA;EACE,mBAAA;AAXF;;AAcA;EACE,wBAAA;EACA,kCAAA;EACA,cAAA;EACA,YAAA;AAXF;;AAcA,YAAA;AAEA,kBAAA;AAEA;EACE,gBAAA;EACA,aAAA;AAbF;;AAgBA;EACE,SAAA;EACA,YAAA;AAbF;;AAgBA;EACE,kBAAA;AAbF;;AAgBA;EACE,uBAAA;EACA,oBAAA;EACA,YAAA;EACA,YAAA;EACA,eAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;AAbF;;AAgBA;;EAEE,mBAAA;EACA,UAAA;EACA,kBAAA;AAbF;;AAgBA;EACE,eAAA;EACA,iBAAA;EACA,aAAA;AAbF;;AAgBA;EACE,cAAA;EACA,eAAA;EACA,aAAA;AAbF;;AAgBA,6BAAA;AAEA;EACE,SAAA;AAdF;;AAiBA;EACE,wBAAA;EACA,iBAAA;EACA,SAAA;AAdF;;AAiBA;EACE,wBAAA;EACA,eAAA;AAdF;;AAiBA;EACE,iBAAA;AAdF;;AAiBA;EACE,kBAAA;EACA,eAAA;EACA,SAAA;AAdF;;AAiBA,gBAAA;AAEA;EAEE;;IAEE,aAAA;EAhBF;;EAmBA;IACE,aAAA;IACA,SAAA;EAhBF;;EAmBA;IACE,aAAA;IACA,uBAAA;EAhBF;;EAmBA;IACE,aAAA;EAhBF;AACF;AAmBA;EACE,aAAA;AAjBF;;AAoBA;EACE,YAAA;EACA,qBAAA;AAjBF;;AAoBA;EACE,YAAA;AAjBF","sourcesContent":["// /* This is an example of using Sass, otherwise plain CSS works too*/\n// $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);\n// ;\n\n// body {\n//   background: $primary-background;\n// }\n\n/* UTILITY */\n\n:root {\n  --white: #FFF;\n  --black: #000000;\n  --mediumgray: #828282;\n  --darkgray: #222222;\n  --lightgray: #DCDCDC;\n  --blue: #ABEAE1;\n  --pink: #FFC0CB;\n  --green: #E5F3B3;\n}\n\nbody {\n  background: var(--darkgray);\n  color: var(--darkgray);\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n/* NAVBAR */\n\n.navbar {\n  background: var(--pink);\n  color: var(--darkgray);\n  flex-direction: row;\n  height: 15rem;\n  justify-content: space-between;\n}\n\n.navbar-left {\n  display: grid;\n  padding: 1.5em 0 0 0;\n  margin: 0 0 0 0;\n  width: 40rem;\n}\n\n.navbar-right {\n  width: 20rem;\n  margin-right: 2rem;\n}\n\n.username-section {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  padding: 0.5rem 0.2rem 0 0;\n}\n\n.name {\n  margin: 0.7rem 0 0 0;\n}\n\n.navbar-links {\n  margin: 0 1rem 0 0;\n  padding: 0;\n  border: 0;\n  font-size: 1.1rem;\n  background: var(--pink);\n}\n\n.navbar-links-section {\n  display: flex;\n  flex-direction: row;\n  // font-size: 0.6rem;\n  margin: 0 0 0 0.8rem;\n  padding: 0;\n}\n\n.navbar-icon {\n  height: 1.3rem;\n  padding: 0.5rem;\n  width: 1.3rem;\n}\n\n.logo-icon {\n  height: 4rem;\n  justify-content: flex-end;\n  margin: 0;\n  padding: 2.1rem 0.5rem 0 0.8rem;\n  width: 4rem;\n}\n\n.logo-section {\n  display: flex;\n  font-size: 2.3rem;\n  justify-content: flex-end;\n}\n\n/* MAIN */\n\nh3 {\n  color: var(--white);\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  padding: 0 0 0 1.3rem;\n}\n\n.card-container-1,\n.card-container-2 {\n  display: grid;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin: 0.5rem; \n  color: var(--darkgray);\n}\n\n.card-container-2 {\n  margin-bottom: 1rem;  \n}\n\n.card {\n  background: var(--white);\n  border: 1px var(--lightgray) solid;\n  margin: 0.3rem;\n  width: 20rem;\n}\n\n/* ON CARD */\n\n/* photo section */\n\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n.right-arrow {\n  background: var(--blue);\n  border-radius: 10rem;\n  height: 3rem;\n  left: 0.5rem;\n  padding: 0.1rem;\n  position: absolute;\n  top: 0.5rem;\n  width: 3rem;\n}\n\n.views,\n.num-views {\n  color: var(--white);\n  padding: 0;\n  position: absolute;\n}\n\n.views {\n  bottom: 11.4rem;\n  font-size: 0.8rem;\n  right: 0.9rem;\n}\n\n.num-views {\n  bottom: 7.9rem;\n  font-size: 2rem;\n  right: 1.1rem;\n}\n\n/* destination info section */\n\n.destination-name {\n  margin: 0;\n}\n\n.date-time {\n  color: var(--mediumgray);\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-link {\n  background: var(--green);\n  padding: 0.5rem\n}\n\n.play-attach {\n  font-size: 0.8rem;\n}\n\n.num-attachments {\n  color: var(--blue);\n  font-size: 2rem;\n  margin: 0;\n}\n\n/* MEDIA QUERY */\n\n@media only screen and (min-width: 680px) {\n\n  .card-container-1,\n  .card-container-2 {\n    display: flex;\n  }\n\n  .navbar {\n    display: flex;\n    margin: 0;\n  }\n \n  .navbar-links-section {\n    display: flex;\n    margin: 5rem 0 0 1.3rem;\n  }\n\n  .navbar {\n    height: 11rem;\n  }\n}\n\n.hidden {\n  display: none;\n}\n\n.lets-jet-btn {\n  float: right;\n  margin-bottom: 0.4rem;\n}\n\n.dashboard {\n  color: white;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".glide {\n  position: relative;\n  width: 100%;\n  box-sizing: border-box;\n}\n.glide * {\n  box-sizing: inherit;\n}\n.glide__track {\n  overflow: hidden;\n}\n.glide__slides {\n  position: relative;\n  width: 100%;\n  list-style: none;\n  backface-visibility: hidden;\n  transform-style: preserve-3d;\n  touch-action: pan-Y;\n  overflow: hidden;\n  padding: 0;\n  white-space: nowrap;\n  display: flex;\n  flex-wrap: nowrap;\n  will-change: transform;\n}\n.glide__slides--dragging {\n  user-select: none;\n}\n.glide__slide {\n  width: 100%;\n  height: 100%;\n  flex-shrink: 0;\n  white-space: normal;\n  user-select: none;\n  -webkit-touch-callout: none;\n  -webkit-tap-highlight-color: transparent;\n}\n.glide__slide a {\n  user-select: none;\n  -webkit-user-drag: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n}\n.glide__arrows {\n  -webkit-touch-callout: none;\n  user-select: none;\n}\n.glide__bullets {\n  -webkit-touch-callout: none;\n  user-select: none;\n}\n.glide--rtl {\n  direction: rtl;\n}\n\n/* UTILITY */\n:root {\n  --white: #FFF;\n  --black: #000000;\n  --mediumgray: #828282;\n  --darkgray: #222222;\n  --lightgray: #DCDCDC;\n  --blue: #ABEAE1;\n  --pink: #FFC0CB;\n  --green: #E5F3B3;\n}\n\nbody {\n  background: var(--darkgray);\n  color: var(--darkgray);\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n/* NAVBAR */\n.navbar {\n  background: var(--pink);\n  color: var(--darkgray);\n  flex-direction: row;\n  height: 15rem;\n  justify-content: space-between;\n}\n\n.navbar-left {\n  display: grid;\n  padding: 1.5em 0 0 0;\n  margin: 0 0 0 0;\n  width: 40rem;\n}\n\n.navbar-right {\n  width: 20rem;\n  margin-right: 2rem;\n}\n\n.username-section {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  padding: 0.5rem 0.2rem 0 0;\n}\n\n.name {\n  margin: 0.7rem 0 0 0;\n}\n\n.navbar-links {\n  margin: 0 1rem 0 0;\n  padding: 0;\n  border: 0;\n  font-size: 1.1rem;\n  background: var(--pink);\n}\n\n.navbar-links-section {\n  display: flex;\n  flex-direction: row;\n  margin: 0 0 0 0.8rem;\n  padding: 0;\n}\n\n.navbar-icon {\n  height: 1.3rem;\n  padding: 0.5rem;\n  width: 1.3rem;\n}\n\n.logo-icon {\n  height: 4rem;\n  justify-content: flex-end;\n  margin: 0;\n  padding: 2.1rem 0.5rem 0 0.8rem;\n  width: 4rem;\n}\n\n.logo-section {\n  display: flex;\n  font-size: 2.3rem;\n  justify-content: flex-end;\n}\n\n/* MAIN */\nh3 {\n  color: var(--white);\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  padding: 0 0 0 1.3rem;\n}\n\n.card-container-1,\n.card-container-2 {\n  display: grid;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin: 0.5rem;\n  color: var(--darkgray);\n}\n\n.card-container-2 {\n  margin-bottom: 1rem;\n}\n\n.card {\n  background: var(--white);\n  border: 1px var(--lightgray) solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: var(--darkgray);\n}\n\n/* ON CARD */\n/* photo section */\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n.right-arrow {\n  background: var(--blue);\n  border-radius: 10rem;\n  height: 3rem;\n  left: 0.5rem;\n  padding: 0.1rem;\n  position: absolute;\n  top: 0.5rem;\n  width: 3rem;\n}\n\n.views,\n.num-views {\n  color: var(--white);\n  padding: 0;\n  position: absolute;\n}\n\n.views {\n  bottom: 11.4rem;\n  font-size: 0.8rem;\n  right: 0.9rem;\n}\n\n.num-views {\n  bottom: 7.9rem;\n  font-size: 2rem;\n  right: 1.1rem;\n}\n\n/* destination info section */\n.destination-name {\n  margin: 0;\n}\n\n.date-time {\n  color: var(--mediumgray);\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-link {\n  background: var(--green);\n  padding: 0.5rem;\n}\n\n.play-attach {\n  font-size: 0.8rem;\n}\n\n.num-attachments {\n  color: var(--blue);\n  font-size: 2rem;\n  margin: 0;\n}\n\n/* MEDIA QUERY */\n@media only screen and (min-width: 680px) {\n  .card-container-1,\n.card-container-2 {\n    display: flex;\n  }\n\n  .navbar {\n    display: flex;\n    margin: 0;\n  }\n\n  .navbar-links-section {\n    display: flex;\n    margin: 5rem 0 0 1.3rem;\n  }\n\n  .navbar {\n    height: 11rem;\n  }\n}\n.hidden {\n  display: none;\n}\n\n.lets-jet-btn {\n  float: right;\n  margin-bottom: 0.4rem;\n}\n\n.dashboard {\n  color: white;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n}", "",{"version":3,"sources":["webpack://./node_modules/@glidejs/glide/src/assets/sass/glide.core.scss","webpack://./src/css/base.scss"],"names":[],"mappings":"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","sourcesContent":["@import \"variables\";\r\n\r\n.#{$glide-class} {\r\n  $this: &;\r\n\r\n  $se: $glide-element-separator;\r\n  $sm: $glide-modifier-separator;\r\n\r\n  position: relative;\r\n  width: 100%;\r\n  box-sizing: border-box;\r\n\r\n  * {\r\n    box-sizing: inherit;\r\n  }\r\n\r\n  &#{$se}track {\r\n    overflow: hidden;\r\n  }\r\n\r\n  &#{$se}slides {\r\n    position: relative;\r\n    width: 100%;\r\n    list-style: none;\r\n    backface-visibility: hidden;\r\n    transform-style: preserve-3d;\r\n    touch-action: pan-Y;\r\n    overflow: hidden;\r\n    padding: 0;\r\n    white-space: nowrap;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    will-change: transform;\r\n\r\n    &#{$glide-modifier-separator}dragging {\r\n      user-select: none;\r\n    }\r\n  }\r\n\r\n  &#{$se}slide {\r\n    width: 100%;\r\n    height: 100%;\r\n    flex-shrink: 0;\r\n    white-space: normal;\r\n    user-select: none;\r\n    -webkit-touch-callout: none;\r\n    -webkit-tap-highlight-color: transparent;\r\n\r\n    a {\r\n      user-select: none;\r\n      -webkit-user-drag: none;\r\n      -moz-user-select: none;\r\n      -ms-user-select: none;\r\n    }\r\n  }\r\n\r\n  &#{$se}arrows {\r\n    -webkit-touch-callout: none;\r\n    user-select: none;\r\n  }\r\n\r\n  &#{$se}bullets {\r\n    -webkit-touch-callout: none;\r\n    user-select: none;\r\n  }\r\n\r\n  &#{$sm}rtl {\r\n    direction: rtl;\r\n  }\r\n}\r\n","@import \"node_modules/@glidejs/glide/src/assets/sass/glide.core\";\r\n\r\n// @import 'glide.core.min';\r\n\r\n// @import 'glide.theme.min';\r\n\r\n// /* This is an example of using Sass, otherwise plain CSS works too*/\r\n// $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);\r\n// ;\r\n\r\n// body {\r\n//   background: $primary-background;\r\n// }\r\n\r\n/* UTILITY */\r\n\r\n:root {\r\n  --white: #FFF;\r\n  --black: #000000;\r\n  --mediumgray: #828282;\r\n  --darkgray: #222222;\r\n  --lightgray: #DCDCDC;\r\n  --blue: #ABEAE1;\r\n  --pink: #FFC0CB;\r\n  --green: #E5F3B3;\r\n}\r\n\r\nbody {\r\n  background: var(--darkgray);\r\n  color: var(--darkgray);\r\n  font-family: Arial;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n/* NAVBAR */\r\n\r\n.navbar {\r\n  background: var(--pink);\r\n  color: var(--darkgray);\r\n  flex-direction: row;\r\n  height: 15rem;\r\n  justify-content: space-between;\r\n}\r\n\r\n.navbar-left {\r\n  display: grid;\r\n  padding: 1.5em 0 0 0;\r\n  margin: 0 0 0 0;\r\n  width: 40rem;\r\n}\r\n\r\n.navbar-right {\r\n  width: 20rem;\r\n  margin-right: 2rem;\r\n}\r\n\r\n.username-section {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: flex-end;\r\n  padding: 0.5rem 0.2rem 0 0;\r\n}\r\n\r\n.name {\r\n  margin: 0.7rem 0 0 0;\r\n}\r\n\r\n.navbar-links {\r\n  margin: 0 1rem 0 0;\r\n  padding: 0;\r\n  border: 0;\r\n  font-size: 1.1rem;\r\n  background: var(--pink);\r\n}\r\n\r\n.navbar-links-section {\r\n  display: flex;\r\n  flex-direction: row;\r\n  // font-size: 0.6rem;\r\n  margin: 0 0 0 0.8rem;\r\n  padding: 0;\r\n}\r\n\r\n.navbar-icon {\r\n  height: 1.3rem;\r\n  padding: 0.5rem;\r\n  width: 1.3rem;\r\n}\r\n\r\n.logo-icon {\r\n  height: 4rem;\r\n  justify-content: flex-end;\r\n  margin: 0;\r\n  padding: 2.1rem 0.5rem 0 0.8rem;\r\n  width: 4rem;\r\n}\r\n\r\n.logo-section {\r\n  display: flex;\r\n  font-size: 2.3rem;\r\n  justify-content: flex-end;\r\n}\r\n\r\n/* MAIN */\r\n\r\nh3 {\r\n  color: var(--white);\r\n  font-size: 2.5rem;\r\n  margin: 1.9rem 0 1rem 0;\r\n  padding: 0 0 0 1.3rem;\r\n}\r\n\r\n.card-container-1,\r\n.card-container-2 {\r\n  display: grid;\r\n  flex-direction: row;\r\n  justify-content: space-evenly;\r\n  margin: 0.5rem;\r\n  color: var(--darkgray);\r\n}\r\n\r\n.card-container-2 {\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.card {\r\n  background: var(--white);\r\n  border: 1px var(--lightgray) solid;\r\n  margin: 0.3rem;\r\n  width: 20rem;\r\n  color: var(--darkgray);\r\n}\r\n\r\n/* ON CARD */\r\n\r\n/* photo section */\r\n\r\n.destination-info-container {\r\n  max-width: 20rem;\r\n  padding: 1rem;\r\n}\r\n\r\n.destination-photo {\r\n  margin: 0;\r\n  width: 20rem;\r\n}\r\n\r\n.photo-container {\r\n  position: relative;\r\n}\r\n\r\n.right-arrow {\r\n  background: var(--blue);\r\n  border-radius: 10rem;\r\n  height: 3rem;\r\n  left: 0.5rem;\r\n  padding: 0.1rem;\r\n  position: absolute;\r\n  top: 0.5rem;\r\n  width: 3rem;\r\n}\r\n\r\n.views,\r\n.num-views {\r\n  color: var(--white);\r\n  padding: 0;\r\n  position: absolute;\r\n}\r\n\r\n.views {\r\n  bottom: 11.4rem;\r\n  font-size: 0.8rem;\r\n  right: 0.9rem;\r\n}\r\n\r\n.num-views {\r\n  bottom: 7.9rem;\r\n  font-size: 2rem;\r\n  right: 1.1rem;\r\n}\r\n\r\n/* destination info section */\r\n\r\n.destination-name {\r\n  margin: 0;\r\n}\r\n\r\n.date-time {\r\n  color: var(--mediumgray);\r\n  font-size: 0.9rem;\r\n  margin: 0;\r\n}\r\n\r\n.destination-link {\r\n  background: var(--green);\r\n  padding: 0.5rem\r\n}\r\n\r\n.play-attach {\r\n  font-size: 0.8rem;\r\n}\r\n\r\n.num-attachments {\r\n  color: var(--blue);\r\n  font-size: 2rem;\r\n  margin: 0;\r\n}\r\n\r\n/* MEDIA QUERY */\r\n\r\n@media only screen and (min-width: 680px) {\r\n\r\n  .card-container-1,\r\n  .card-container-2 {\r\n    display: flex;\r\n  }\r\n\r\n  .navbar {\r\n    display: flex;\r\n    margin: 0;\r\n  }\r\n\r\n  .navbar-links-section {\r\n    display: flex;\r\n    margin: 5rem 0 0 1.3rem;\r\n  }\r\n\r\n  .navbar {\r\n    height: 11rem;\r\n  }\r\n}\r\n\r\n.hidden {\r\n  display: none;\r\n}\r\n\r\n.lets-jet-btn {\r\n  float: right;\r\n  margin-bottom: 0.4rem;\r\n}\r\n\r\n.dashboard {\r\n  color: white;\r\n}\r\n\r\n// Flex for Trips\r\n\r\n.flexible {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -446,7 +446,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "fetchTravelers": () => (/* binding */ fetchTravelers),
 /* harmony export */   "fetchTrips": () => (/* binding */ fetchTrips),
 /* harmony export */   "fetchDestinations": () => (/* binding */ fetchDestinations),
-/* harmony export */   "getID": () => (/* binding */ getID)
+/* harmony export */   "getID": () => (/* binding */ getID),
+/* harmony export */   "postBooking": () => (/* binding */ postBooking)
 /* harmony export */ });
 //storage = window.localStorage;
 
@@ -488,106 +489,19 @@ function getID(username) {
 
 }
 
+// POST
 
-//////
+function postBooking(trip) {
+  let url = 'http://localhost:3001/api/v1/trips';
 
-
-// window.fetchTraveler = () => {
-
-//   var username = document.querySelector("#username").value;
-//   var password = document.querySelector("#password").value;
-
-//   if (password === "travel") {
-
-//     id = getID(username);
-
-//     const url = 'http://localhost:3001/api/v1/travelers/' + id;
-
-//     fetch(url)
-//     .then(response => response.json())
-//     .then(data => document.getElementById("dashboard").innerHTML = data.name);
-
-//   } else {
-
-//     document.getElementById("dashboard").innerHTML = "No dice! Try another password."
-
-//   }
-
-// }
-
-// window.getTravelers = () => {
-
-//   fetch('http://localhost:3001/api/v1/travelers/')
-//   .then(response => response.json())
-//   .then(data => {
-//     document.getElementById("dashboard").innerHTML = data.travelers;
-//   })
-
-// }
-
-// function getID(username) {
-
-//   console.log(username);
-//   return username.replace('traveler','');
-
-// }
-
-
-
-///////
-
-
-// export function postTravelerData(travelerID, travelerName, travelerType) {
-//   let body = {
-//     "id": travelerID,
-//     "name": travelerName,
-//     "travelerType": travelerType
-//   }
-//   return fetch(`http://localhost:3001/api/v1/travelers`, {
-//     method: 'POST',
-//     body: JSON.stringify(body),
-//     headers: {
-//       'Content-type': 'application/json'
-//     }
-//   })
-
-//   export function postTripData(tripID, tripTravelerID, destinationID, numTravelers, tripDate, tripDuration, travelerStatus, tripStatus, suggestedActivities) {
-//   let body = {
-//     "id": tripID,
-//     "userID": tripTravelerID,
-//     "destinationID": destinationID,
-//     "travelers": numTravelers,
-//     "date": tripDate,
-//     "duration": tripDuration,
-//     "status": travelerStatus,
-//     "approved": tripStatus,
-//     "suggestedActivities": suggestedActivities
-//   }
-//   return fetch(`http://localhost:3001/api/v1/trips`, {
-//     method: 'POST',
-//     body: JSON.stringify(body),
-//     headers: {
-//       'Content-type': 'application/json'
-//     }
-//   })
-
-//   export function postDestinationData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg) {
-//   let body = {
-//     "id": destinationID,
-//     "destination": destinationLocation,
-//     "estimatedLodgingCostPerDay": dailyLodgingCost,
-//     "estimatedFlightCostPerPerson": flightTicketCost,
-//     "image": destinationImg
-//   }
-//   return fetch(`http://localhost:3001/api/v1/destinations`, {
-//     method: 'POST',
-//     body: JSON.stringify(body),
-//     headers: {
-//       'Content-type': 'application/json'
-//     }
-//   })
-// }
-
+  return fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(trip),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+}
 
 
 /***/ }),
@@ -607,6 +521,7 @@ const dom = {
   // },
 
   // NAVBAR
+
   name: document.getElementById('name'),
   navBarLinksSection: document.getElementById('navBarLinksSection'),
   navBarYourTripsBtn: document.getElementById('navBarYourTripsBtn'),
@@ -615,6 +530,7 @@ const dom = {
   usernameSection: document.getElementById('usernameSection'),
 
   // LOGIN PAGE
+
   loginPage: document.getElementById('loginPage'),
   loginFormUsername: document.getElementById('loginFormUsername'),
   loginFormPassword: document.getElementById('loginFormPassword'),
@@ -623,12 +539,22 @@ const dom = {
   replaceYOLO: document.getElementById('replaceYOLO'),
 
   // YOUR TRIPS DASHBOARD PAGE
+
   yourTripsDashboardPage: document.getElementById('yourTripsDashboardPage'),
   destinationNameHTML: document.getElementById('destinationNameHTML'),
   dateTimeHTML: document.getElementById('dateTimeHTML'),
   yearCost: document.getElementById('yearCost'),
+  currentSlides: document.getElementById('currentSlides'),
+  pendingSlides: document.getElementById('pendingSlides'),
+  pastSlides: document.getElementById('pastSlides'),
+  futureSlides: document.getElementById('futureSlides'),
+  currentVibes: document.getElementById('currentVibes'),
+  pendingVibes: document.getElementById('pendingVibes'),
+  pastVibes: document.getElementById('pastVibes'),
+  futureVibes: document.getElementById('futureVibes'),
 
   // WANNA JET PAGE
+
   wannaJetPage: document.getElementById('wannaJetPage'),
   jetFormDate: document.getElementById('jetFormDate'),
   jetFormDuration: document.getElementById('jetFormDuration'),
@@ -641,6 +567,7 @@ const dom = {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dom);
+
 
 /***/ }),
 /* 8 */
@@ -715,7 +642,7 @@ class Traveler {
 
     });
 
-      let present = approved.filter(trip => {
+      let current = approved.filter(trip => {
 
       let startDate = new Date(trip.date);
 
@@ -739,23 +666,45 @@ class Traveler {
 
       let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
+      tripsString = tripsString.concat(`
+          <article class='card'>
+            <article class='photo-container'>
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
+            </article>
+            <article class='destination-info-container'>
+              <h1 class='destination-name'>${destination.destination}</h1>
+              <p class='date-time'>${trip.date}</p>
+            </article>
+          </article>
+      `);
 
       return tripsString;
 
     }, '');
 
-    let approvedString = approved.reduce((tripsString, trip) => {
+    // let approvedString = approved.reduce((tripsString, trip) => {
 
-      let destination = this.destinations.find(destination => destination.id === trip.destinationID);
-      let destinationName = destination.destination;
-      let cost = this.getTotal(trip, destination);
+    //   let destination = this.destinations.find(destination => destination.id === trip.destinationID);
+    //   let destinationName = destination.destination;
+    //   let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
+    //   tripsString = tripsString.concat(`
+    //     <li class="glide__slide">
+    //       <article class='card'>
+    //         <article class='photo-container'>
+    //           <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
+    //         </article>
+    //         <article class='destination-info-container'>
+    //           <h1 class='destination-name'>${destination.destination}</h1>
+    //           <p class='date-time'>${trip.date}</p>
+    //         </article>
+    //       </article>
+    //     </li>
+    //   `);
 
-      return tripsString;
+    //   return tripsString;
 
-    }, '');
+    // }, '');
 
     let pendingString = pending.reduce((tripsString, trip) => {
 
@@ -763,13 +712,23 @@ class Traveler {
       let destinationName = destination.destination;
       let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + `<br><br>Cost: ${money.format(cost)} <br><br>`);
+      tripsString = tripsString.concat(`
+          <article class='card'>
+            <article class='photo-container'>
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
+            </article>
+            <article class='destination-info-container'>
+              <h1 class='destination-name'>${destination.destination}</h1>
+              <p class='date-time'>${trip.date}</p>
+            </article>
+          </article>
+      `);
 
       return tripsString;
 
     }, '');
 
-    let presentString = present.reduce((tripsString, trip) => {
+    let currentString = current.reduce((tripsString, trip) => {
 
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
 
@@ -777,7 +736,17 @@ class Traveler {
 
       let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
+      tripsString = tripsString.concat(`
+          <article class='card'>
+            <article class='photo-container'>
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
+            </article>
+            <article class='destination-info-container'>
+              <h1 class='destination-name'>${destination.destination}</h1>
+              <p class='date-time'>${trip.date}</p>
+            </article>
+          </article>
+      `);
 
       return tripsString;
 
@@ -785,32 +754,30 @@ class Traveler {
 
     let futureString = future.reduce((tripsString, trip) => {
 
-      // console.log(this.destinations);
-      //
-      // console.log('NEXT ELEMENT: ' + this.destinations.find(destination => destination.id === trip.destinationID).destination + '<br><br>');
-
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);
 
       let destinationName = destination.destination;
 
       let cost = this.getTotal(trip, destination);
 
-      tripsString = tripsString.concat(destinationName + '<br><br>Cost: ' + money.format(cost) + '<br><br>');
+      tripsString = tripsString.concat(`
+          <article class='card'>
+            <article class='photo-container'>
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
+            </article>
+            <article class='destination-info-container'>
+              <h1 class='destination-name'>${destination.destination}</h1>
+              <p class='date-time'>${trip.date}</p>
+            </article>
+          </article>
+      `);
 
       return tripsString;
 
     }, '');
 
-    let result = `
-      <h3>We hope that you're enjoying your vibe!</h3>
-      ${presentString}
-      <h3>Pending Vibes</h3>
-      ${pendingString}
-      <h3>Future Vibes</h3>
-      ${futureString}
-      <h3>Past Vibes</h3>
-      ${pastString}
-    `
+    let result = [currentString, pendingString, futureString, pastString]
+
     return result;
   }
 
@@ -819,9 +786,8 @@ class Traveler {
       style: 'currency',
       currency: 'USD',
     });
-    
-    let totalCostString = money.format(this.getTotalSpent());
-    yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
+
+    return money.format(this.getTotalSpent());
   }
 
   getDestination(trip) {
@@ -845,9 +811,33 @@ class Traveler {
     const travelAgentFactor = 1.1;
     return costWithoutAgent * travelAgentFactor;
   }
+
+  addTrip(trip) {
+    let length = this.trips.length;
+    this.trips.push(trip);
+    if (this.trips.length > length) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  addDestination(destination) {
+    if (!this.destinations.includes(destination)) {
+      let length = this.destinations.length;
+      this.destinations.push(destination);
+      if (this.destinations.length > length) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Traveler);
+
 
 /***/ }),
 /* 9 */
@@ -12186,6 +12176,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _domUpdates__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 /* harmony import */ var _Traveler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
 /* harmony import */ var _Trip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
+// IMPORTS & SETUP
+
 
 
 
@@ -12218,91 +12210,44 @@ const {
   replaceYOLO,
   estimatedCostHeaderHTML,
   name,
-  yearCost
+  yearCost,
+  currentSlides,
+  pastSlides,
+  pendingSlides,
+  futureSlides,
+  currentVibes,
+  pastVibes,
+  pendingVibes,
+  futureVibes
 } = _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default;
 
-// ***** STORAGE & SETUP *****
+let travelers, trips, destinations, data;
 
-const storage = window.localStorage;
-storage.setItem('activeUser', null);
-storage.setItem('activeUserType', null);
+// EVENT LISTENERS
 
-let travelers, trips, destinations, data, allDestinations, allTrips;
-
-// ***** EVENT LISTENERS *****
-
-// NAVBAR
+// navbar
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
 navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
 navBarSignOutBtn.addEventListener('click', showLoginPage);
 
-// LOGIN PAGE
+// login page
 loginFormSubmitBtn.addEventListener('click', login);
 
-// WANNA JET PAGE
+// trip planner page
 jetFormSubmitBtn.addEventListener('click', showEstimatedCost);
 letsJetBtn.addEventListener('click', createTrip);
 
-// ***** API STUFF *****
+// API
 
 function packPromises() {
-
   return Promise.all([(0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.fetchTravelers)(), (0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.fetchTrips)(), (0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.fetchDestinations)()]);
-
 }
 
-///
+///////////////////////////////////////////////////
+//////////////////// FUNCTIONS ////////////////////
+///////////////////////////////////////////////////
 
-// function postTravelerInputs() {
-//   postTravelerData(travelerID, travelerName, travelerType)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error(response.statusText);
-//       } else {
-//         //?.innerText = 'Success'
-//         // dom.renderSubmittedHydration(hydrationInput.value)
-//       }
-//     })
-//     .catch(error => {
-//       // ?.innerText = 'Fail';
-//       console.log(error)
-//     })
-// }
-
-// function postTripInputs() {
-//   postTripData(tripID, tripTravelerID, destinationID, numTravelers, tripDate, tripDuration, travelerStatus, tripStatus, suggestedActivities)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error(response.statusText);
-//       } else {
-//         // ???
-//       }
-//     })
-//     .catch(error => {
-//         // ???
-//       console.log(error)
-//     })
-// }
-
-// function postDestinationInputs() {
-//   postTravelerData(destinationID, destinationLocation, dailyLodgingCost, flightTicketCost, destinationImg)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw Error(response.statusText);
-//       } else {
-//         // ???
-//       }
-//     })
-//     .catch(error => {
-//         // ???
-//       console.log(error)
-//     })
-// }
-
-
-// ***** FUNCTIONS *****
-
-// SHOW & HIDE HELPER FUNCTIONS
+// HELPER FUNCTIONS
 
 function hide(elements) {
   elements.forEach(element => {
@@ -12316,7 +12261,9 @@ function show(elements) {
   });
 }
 
-// SHOW & HIDE PAGE FUNCTIONS
+// PAGES (move all of these to the DOM)
+
+// login page
 
 function showLoginPage() {
   hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
@@ -12324,120 +12271,180 @@ function showLoginPage() {
   name.innerText = `'Oh, the places you'll vibe!'`;
 }
 
+// trip planner page
+
 function showWannaJetPage() {
   name.innerText = `${user.name}`;
+
   hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
   populateDestinationsDropDown();
 }
 
+// dashboard page
+
 function showYourTripsDashboardPage() {
   name.innerText = `${user.name}`;
-  // console.log(user)
+  yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
   hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
-  yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`
-  user.totalCostString();
 
-  // yearCost.innerHTML = `You've spent ${totalCostString} on trips this year.`
+  // yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
+
+  populateTripSlides();
+
+}
+
+function populateTripSlides() {
+  let slides = user.getTripsHTML();
+
+  currentSlides.innerHTML = slides[0];
+  pendingSlides.innerHTML = slides[1];
+  futureSlides.innerHTML = slides[2];
+  pastSlides.innerHTML = slides[3];
+
+  if (slides[0].length > 0) {
+    show([currentVibes]);
+  }
+  if (slides[1].length > 0) {
+    show([pendingVibes]);
+  }
+  if (slides[2].length > 0) {
+    show([futureVibes]);
+  }
+  if (slides[3].length > 0) {
+    show([pastVibes]);
+  }
 }
 
 // INSTANTIATE TRIP
 
 function createTrip() {
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
-    const getDestinationID = allDestinations.find(destinationObj => {
-      if (jetFormDestination.value === destinationObj) {
-        return destinationObj.id
+
+    console.log(allDestinations);
+
+    const destination = allDestinations.find(destinationObj => {
+      console.log(jetFormDestination.value + ", " + destinationObj.id);
+      if (parseInt(jetFormDestination.value) === destinationObj.id) {
+        return true;
       }
-      return getDestinationID;
+      return false;
     })
-  
-    const trip = new _Trip__WEBPACK_IMPORTED_MODULE_4__.default(
-      {
-        'id': allTrips.length,
-        'userID': user.id,
-        'destinationID': getDestinationID,
-        'travelers': jetFormHumans.value,
-        'date': jetFormDate.value,
-        'duration': jetFormDuration.value,
-        'status': 'pending',
-        'suggestedActivities': []
-      });
+
+    let destinationID = destination.id;
+
+    // console.log(destinationID)
+
+    const trip = {
+      'id': allTrips.length + 1,
+      'userID': user.id,
+      'destinationID': destinationID,
+      'travelers': parseInt(jetFormHumans.value),
+      'date': jetFormDate.value.split('-').join('/'),
+      'duration': parseInt(jetFormDuration.value),
+      'status': 'pending',
+      'suggestedActivities': []
+    };
+
+    console.log(trip)
+
+    ;(0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.postBooking)(trip).then(result => {
+      if (result.ok) {
+
+        console.log(result);
+
+        user.addTrip(trip);
+        user.addDestination(destination);
+
+        allTrips.push(trip);
+
+        showYourTripsDashboardPage();
+
+      } else {
+        console.log(result);
+      }
+    });
   }
-
-
-
-
-
-
-
 }
 
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-  const trip = new _Trip__WEBPACK_IMPORTED_MODULE_4__.default(
+  let trip =
     {
-      'id': allTrips.length,
+      'id': allTrips.length + 1,
       'userID': user.id,
-      'destinationID': getDestinationID,
-      'travelers': jetFormHumans.value,
+      'destinationID': parseInt(jetFormDestination.value),
+      'travelers': parseInt(jetFormHumans.value),
       'date': jetFormDate.value,
-      'duration': jetFormDuration.value,
+      'duration': parseInt(jetFormDuration.value),
       'status': 'pending',
       'suggestedActivities': []
-    });
+    };
 
-  user.getTotal()
+  let destination = getDestination(trip);
 
   if (!jetFormDate.value || !jetFormDuration.value || !jetFormHumans.value || !jetFormDestination.value) {
     estimatedCostHeaderHTML.innerText = `You tried & failed tbh :(`;
     estimatedCostHTML.innerText = `Please tell us all of the things and junk if you want us to make stuff happen and whatnot!`;
   }  else {
 
+    var money = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+
     show([letsJetBtn])
-    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${user.getTotal(trip, destination)}`
+    estimatedCostHeaderHTML.innerHTML = `ESTIMATED COST: ${money.format(user.getTotal(trip, destination))}`
     estimatedCostHTML.innerHTML = `You will not be charged until an agent approves your request.`
   }
 }
 
 function login() {
-
-  if (!loginFormPassword.value || !loginFormUsername.value) { 
+  if (!loginFormPassword.value || !loginFormUsername.value) {
     enterYourPassToPlan.innerText = `Please fill in both fields.`;
   } else {
-  
+
     const password = loginFormPassword.value;
 
     if (password === 'travel') {
-
       const username = loginFormUsername.value;
       const id = (0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.getID)(username);
 
-      packPromises().then(
+      if (id) {
 
-        promises => {
-          travelers = promises[0].travelers;
-          data = travelers.find(traveler => traveler.id === id);
-          trips = promises[1].trips.filter(trip => trip.userID === id);
+        packPromises().then(
 
-          destinations = promises[2].destinations.filter(destination => {
-            return trips.some(trip => trip.destinationID === destination.id);
-          });
+          promises => {
+            travelers = promises[0].travelers;
+            data = travelers.find(traveler => traveler.id === id);
+            trips = promises[1].trips.filter(trip => trip.userID === id);
+            destinations = promises[2].destinations.filter(destination => {
+              return trips.some(trip => trip.destinationID === destination.id);
+            });
 
-          allDestinations = promises[2].destinations;
-          allTrips - promises[1].trips;
+            if (id > 0 && id <= travelers.length) {
 
-          window.user = new _Traveler__WEBPACK_IMPORTED_MODULE_3__.default(data, trips, destinations);
-          showYourTripsDashboardPage();
-        }
-      );
-      
+              window.allDestinations = promises[2].destinations;
+              window.allTrips = promises[1].trips;
+              window.user = new _Traveler__WEBPACK_IMPORTED_MODULE_3__.default(data, trips, destinations);
+
+              showYourTripsDashboardPage();
+
+            } else {
+              replaceYOLO.innerText = `No dice!`;
+              enterYourPassToPlan.innerText = `ID not found.`;
+            }
+          }
+        );
+      } else {
+        replaceYOLO.innerText = `No dice!`;
+        enterYourPassToPlan.innerText = `Your username is improperly formatted.`;
+      }
     } else {
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;
-      yourTripsDashboardPage.innerHTML = `${user.getTripsHTML()}`;
     }
   }
 }
@@ -12451,15 +12458,15 @@ function populateDestinationsDropDown() {
     }
   }).forEach((destinationObj) => {
     jetFormDestination.insertAdjacentHTML('beforeend', `
-      <option value='${destinationObj.destination}'>${destinationObj.destination}</option>
+      <option value='${destinationObj.id}'>${destinationObj.destination}</option>
     `)
   })
 }
 
+function getDestination(trip) {
+  return allDestinations.find(destination => destination.id === trip.destinationID);
+}
 
-// help
-
-// fetch the data. assign it to a variable. then filter the results based off your form values and present the options to the user (i.e. .map to return HTML cards)
 })();
 
 /******/ })()
