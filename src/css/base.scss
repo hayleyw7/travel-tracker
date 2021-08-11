@@ -19,10 +19,7 @@
   --black: #000000;
   --mediumgray: #828282;
   --darkgray: #222222;
-  --lightgray: #DCDCDC;
-  --blue: #ABEAE1;
   --pink: #FFC0CB;
-  --green: #E5F3B3;
 }
 
 body {
@@ -189,21 +186,6 @@ h3 {
 .date-time {
   color: var(--darkgray);
   font-size: 0.9rem;
-  margin: 0;
-}
-
-.destination-link {
-  background: var(--green);
-  padding: 0.5rem
-}
-
-.play-attach {
-  font-size: 0.8rem;
-}
-
-.num-attachments {
-  color: var(--blue);
-  font-size: 2rem;
   margin: 0;
 }
 
