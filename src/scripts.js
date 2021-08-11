@@ -39,7 +39,7 @@ const {
   navBarSignOutBtn,
   replaceYOLO,
   estimatedCostHeaderHTML,
-  name,
+  namePhrase,
   yearCost,
   currentSlides,
   pastSlides,
@@ -57,8 +57,8 @@ let travelers, trips, destinations, data;
 
 // navbar
 navBarYourTripsBtn.addEventListener('click', showYourTripsDashboardPage);
-navBarTripPlannerBtn.addEventListener('click', showWannaJetPage);
-navBarSignOutBtn.addEventListener('click', showLoginPage);
+navBarTripPlannerBtn.addEventListener('click', dom.showWannaJetPage);
+navBarSignOutBtn.addEventListener('click', dom.showLoginPage);
 
 // login page
 loginFormSubmitBtn.addEventListener('click', login);
@@ -81,28 +81,28 @@ function packPromises() {
 
 // PAGES (move all of these to the DOM)
 
-// login page
+// // login page
 
-function showLoginPage() {
-  dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
-  dom.show([loginPage]);
-  name.innerText = `'Oh, the places you'll vibe!'`;
-}
+// function showLoginPage() {
+//   dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
+//   dom.show([loginPage]);
+//   name.innerText = `'Oh, the places you'll vibe!'`;
+// }
 
-// trip planner page
+// // trip planner page
 
-function showWannaJetPage() {
-  name.innerText = `${user.name}`;
+// function showWannaJetPage() {
+//   name.innerText = `${user.name}`;
 
-  dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
-  dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
-  dom.populateDestinationsDropDown();
-}
+//   dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
+//   dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
+//   dom.populateDestinationsDropDown();
+// }
 
 // dashboard page
 
 function showYourTripsDashboardPage() {
-  name.innerText = `${user.name}`;
+  namePhrase.innerText = `${user.name}`;
   yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
   dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
@@ -143,7 +143,6 @@ function createTrip() {
     console.log(allDestinations);
 
     const destination = allDestinations.find(destinationObj => {
-      console.log(jetFormDestination.value + ", " + destinationObj.id);
       if (parseInt(jetFormDestination.value) === destinationObj.id) {
         return true;
       }
@@ -185,8 +184,6 @@ function createTrip() {
     });
   }
 }
-
-// DOM UPDATES (will move to domUpdates after test working)
 
 function login() {
   if (!loginFormPassword.value || !loginFormUsername.value) {

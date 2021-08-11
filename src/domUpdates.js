@@ -72,9 +72,46 @@ const dom = {
       enterYourPassToPlan.innerText = `Please fill in both fields.`;       
   },
 
+
+
+
+
+
+
+
+
+
+
+
+ // PAGES (move all of these to the DOM)
+
+// login page
+
+showLoginPage() {
+  dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
+  dom.show([loginPage]);
+  namePhrase.innerText = `'Oh, the places you'll vibe!'`;
+},
+
+// trip planner page
+
+showWannaJetPage() {
+  console.log(namePhrase)
+  namePhrase.innerText = `${user.name}`;
+
+  dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
+  dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
+  dom.populateDestinationsDropDown();
+},
+
+
+
+
+
+
   // NAVBAR
 
-  name: document.getElementById('name'),
+  namePhrase: document.getElementById('namePhrase'),
   navBarLinksSection: document.getElementById('navBarLinksSection'),
   navBarYourTripsBtn: document.getElementById('navBarYourTripsBtn'),
   navBarTripPlannerBtn: document.getElementById('navBarTripPlannerBtn'),
