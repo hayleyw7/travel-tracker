@@ -46,8 +46,8 @@ const {
   pendingSlides,
   futureSlides,
   currentVibes,
-  pendingVibes,
   pastVibes,
+  pendingVibes,
   futureVibes
 } = dom;
 
@@ -105,6 +105,7 @@ function showLoginPage() {
 
 function showWannaJetPage() {
   name.innerText = `${user.name}`;
+
   hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
   populateDestinationsDropDown();
@@ -200,7 +201,6 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-
   let trip =
     {
       'id': allTrips.length + 1,
@@ -242,24 +242,36 @@ function login() {
       const username = loginFormUsername.value;
       const id = getID(username);
 
-      packPromises().then(
+      if (id) {
 
-        promises => {
-          travelers = promises[0].travelers;
-          data = travelers.find(traveler => traveler.id === id);
-          trips = promises[1].trips.filter(trip => trip.userID === id);
-          destinations = promises[2].destinations.filter(destination => {
-            return trips.some(trip => trip.destinationID === destination.id);
-          });
+        packPromises().then(
 
-          window.allDestinations = promises[2].destinations;
-          window.allTrips = promises[1].trips;
-          window.user = new Traveler(data, trips, destinations);
+          promises => {
+            travelers = promises[0].travelers;
+            data = travelers.find(traveler => traveler.id === id);
+            trips = promises[1].trips.filter(trip => trip.userID === id);
+            destinations = promises[2].destinations.filter(destination => {
+              return trips.some(trip => trip.destinationID === destination.id);
+            });
 
-          showYourTripsDashboardPage();
-        }
-      );
+            if (id > 0 && id <= travelers.length) {
 
+              window.allDestinations = promises[2].destinations;
+              window.allTrips = promises[1].trips;
+              window.user = new Traveler(data, trips, destinations);
+
+              showYourTripsDashboardPage();
+
+            } else {
+              replaceYOLO.innerText = `No dice!`;
+              enterYourPassToPlan.innerText = `ID not found.`;
+            }
+          }
+        );
+      } else {
+        replaceYOLO.innerText = `No dice!`;
+        enterYourPassToPlan.innerText = `Your username is improperly formatted.`;
+      }
     } else {
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;
