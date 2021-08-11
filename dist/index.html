@@ -10,23 +10,15 @@
 <body>
 
   <div class='navbar'>
-    <section class='navbar-left'>
-      <section class='navbar-links-section' id='navBarLinksSection'>
-        <button class='navbar-links hidden' id='navBarYourTripsBtn'>Your Trips</button>
-        <button class='navbar-links hidden' id='navBarTripPlannerBtn'>Trip Planner</button>
-        <button class='navbar-links hidden' id='navBarSignOutBtn'>Sign Out</button>
-      </section>
-    </section>
-    <section class='navbar-right'>
-      <section class='username-section' id='usernameSection'>
-        <!-- <img src='./assets/destination-icon.png' alt='destination icon' class='navbar-icon'> -->
-        <p class='name' id='namePhrase'>"Oh, the places you'll vibe!"</p>
-      </section>
-      <section class='logo-section'>
-        <h1 class'logo'>#JustVibin</h1>
-      </section>
+    <h1 class'logo'>#JustVibin</h1>
+    <p class='name' id='namePhrase'>"Oh, the places you'll vibe!"</p>
+    <section class='navbar-links-section' id='navBarLinksSection'>
+      <button class='navbar-links hidden' id='navBarYourTripsBtn'>Your Trips</button>
+      <button class='navbar-links hidden' id='navBarTripPlannerBtn'>Trip Planner</button>
+      <button class='navbar-links hidden' id='navBarSignOutBtn'>Sign Out</button>
     </section>
   </div>
+  
   <main>
 
     <!-- SIGN IN SCREEN!!!!! -->
@@ -34,7 +26,7 @@
     <div id='loginPage'>
       <h3 id='test'>Sign in, fam.</h2>
 
-      <section class='card-container-1'>
+      <section class='card-container'>
 
         <article class='card'>
           <article class='photo-container'></article>
@@ -76,12 +68,9 @@
     <div id='yourTripsDashboardPage' class='dashboard hidden'>
 
         <article class='card'>
-          <article class='photo-container'>
-            <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
-          </article>
           <article class='destination-info-container'>
             <h1 class='destination-name'>We hope that you're vibin!</h1>
-            <p class='date-time' id='yearCost'>NOT YET PULLING!</p>
+            <p class='date-time' id='yearCost'></p>
           </article>
         </article>
 
@@ -123,7 +112,7 @@
 
       <h3>Wanna vibe somewhere new?</h2>
 
-      <section class='card-container-1'>
+      <section class='card-container'>
 
         <article class='card'>
           <article class='photo-container'>
