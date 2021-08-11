@@ -33,13 +33,6 @@ describe('Trip', () => {
     expect(trip.userID).to.equal(44);
   });   
 
-   it('should provide trip destinationID', function() {
-
-     console.log(trip.destinationID)
-
-    expect(trip.destinationID).to.equal(49);
-  });
-
    it('should provide trip status', function() {
 
     expect(trip.status).to.equal('approved');
@@ -48,9 +41,5 @@ describe('Trip', () => {
    it('should provide trip suggested activities', function() {
 
     expect(trip.suggestedActivities).to.deep.equal([]);
-  });       
-
-  it.skip('should get user trip dates', function() {
-
-    expect(trip.getUserTripDates()).to.equal('x');
-  });});
+  });
+ });

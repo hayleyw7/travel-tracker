@@ -16,7 +16,6 @@ class Trip {
     this.destinationID = tripData.destinatonID;
     this.status = tripData.status;
     this.suggestedActivities = tripData.suggestedActivities;
-
     this.startDate;
     this.endDate;
     this.estimatedCost;
