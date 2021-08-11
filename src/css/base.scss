@@ -37,25 +37,27 @@ body {
   color: var(--darkgray);
   display: flex;
   flex-direction: column;
-  height: 15rem;
+  height: 12rem;
   text-align: center;
   margin: 0;
 }
 
 h1 {
   font-size: 3.5rem;
+  margin: 1.5rem 0 0 0;
 }
 
-.navbar-links {
+.name-phrase {
+  font-size: 1.1rem;
+}
+
+.navbar-buttons {
   border: 0;
   font-size: 1.1rem;
-  background: var(--pink);
-}
-
-.navbar-links-section {
-  // display: flex;
-  // flex-direction: row;
-  // font-size: 0.6rem;
+  background: var(--white);
+  border-radius: 1rem;
+  margin: 0 0.4rem 0 0.4rem;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
 }
 
 /* DASHBOARD */
@@ -88,6 +90,7 @@ h3 {
   margin: 0.3rem;
   width: 20rem;
   color: var(--darkgray);
+  border-radius: 0.2rem;
 }
 
 /* card photo */

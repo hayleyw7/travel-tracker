@@ -76,7 +76,7 @@ showLoginPage() {
 // trip planner page
 
 showWannaJetPage() {
-  namePhrase.innerText = `${user.name}`;
+  namePhrase.innerText = `Yo, ${user.name}!`;
 
   dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
   dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
@@ -86,7 +86,7 @@ showWannaJetPage() {
 // dashboard page
 
 showYourTripsDashboardPage() {
-  namePhrase.innerText = `${user.name}`;
+  namePhrase.innerText = `Yo, ${user.name}!`;
   yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
   dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
   dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
