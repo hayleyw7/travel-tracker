@@ -1,7 +1,6 @@
 // IMPORTS & SETUP
 
 import './css/base.scss';
-// import Glide from '@glidejs/glide';
 
 import {
   fetchData,
@@ -42,10 +41,14 @@ const {
   estimatedCostHeaderHTML,
   name,
   yearCost,
-  // currentSlides,
-  // pastSlides,
-  pendingSlides
-  // futureSlides
+  currentSlides,
+  pastSlides,
+  pendingSlides,
+  futureSlides,
+  currentVibes,
+  pendingVibes,
+  pastVibes,
+  futureVibes
 } = dom;
 
 let travelers, trips, destinations, data;
@@ -118,17 +121,29 @@ function showYourTripsDashboardPage() {
   // yourTripsDashboardPage.innerHTML += `${user.getTripsHTML()}`;
 
   populateTripSlides();
-  
-  // let glide = new Glide('.glide').mount();
+
 }
 
 function populateTripSlides() {
   let slides = user.getTripsHTML();
 
-  // currentSlides.innerHTML = slides[0];
+  currentSlides.innerHTML = slides[0];
   pendingSlides.innerHTML = slides[1];
-  // futureSlides.innerHTML = slides[2];
-  // pastSlides.innerHTML = slides[3];
+  futureSlides.innerHTML = slides[2];
+  pastSlides.innerHTML = slides[3];
+
+  if (slides[0].length > 0) {
+    show([currentVibes]);
+  }
+  if (slides[1].length > 0) {
+    show([pendingVibes]);
+  }
+  if (slides[2].length > 0) {
+    show([futureVibes]);
+  }
+  if (slides[3].length > 0) {
+    show([pastVibes]);
+  }
 }
 
 // INSTANTIATE TRIP
@@ -147,9 +162,9 @@ function createTrip() {
     })
 
     let destinationID = destination.id;
-    
+
     // console.log(destinationID)
-  
+
     const trip = {
       'id': allTrips.length + 1,
       'userID': user.id,
@@ -171,6 +186,8 @@ function createTrip() {
         user.addTrip(trip);
         user.addDestination(destination);
 
+        allTrips.push(trip);
+
         showYourTripsDashboardPage();
 
       } else {
@@ -183,7 +200,8 @@ function createTrip() {
 // DOM UPDATES (will move to domUpdates after test working)
 
 function showEstimatedCost() {
-  let trip = 
+
+  let trip =
     {
       'id': allTrips.length + 1,
       'userID': user.id,
@@ -214,10 +232,10 @@ function showEstimatedCost() {
 }
 
 function login() {
-  if (!loginFormPassword.value || !loginFormUsername.value) { 
+  if (!loginFormPassword.value || !loginFormUsername.value) {
     enterYourPassToPlan.innerText = `Please fill in both fields.`;
   } else {
-  
+
     const password = loginFormPassword.value;
 
     if (password === 'travel') {
@@ -238,13 +256,10 @@ function login() {
           window.allTrips = promises[1].trips;
           window.user = new Traveler(data, trips, destinations);
 
-          // let glide = new Glide('.glide').mount();
-          // new Glide('.glide', {}).mount()
-
           showYourTripsDashboardPage();
         }
       );
-      
+
     } else {
       replaceYOLO.innerText = `No dice!`;
       enterYourPassToPlan.innerText = `You need the right password.`;

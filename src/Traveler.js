@@ -1,4 +1,5 @@
 class Traveler {
+
   constructor(data, trips, destinations) {
     this.id = data.id;
     this.name = data.name;
@@ -24,6 +25,7 @@ class Traveler {
   }
 
   getTripsHTML() {
+
     var money = new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -87,7 +89,7 @@ class Traveler {
       tripsString = tripsString.concat(`
           <article class='card'>
             <article class='photo-container'>
-              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
               <h1 class='destination-name'>${destination.destination}</h1>
@@ -110,7 +112,7 @@ class Traveler {
     //     <li class="glide__slide">
     //       <article class='card'>
     //         <article class='photo-container'>
-    //           <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+    //           <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
     //         </article>
     //         <article class='destination-info-container'>
     //           <h1 class='destination-name'>${destination.destination}</h1>
@@ -133,7 +135,7 @@ class Traveler {
       tripsString = tripsString.concat(`
           <article class='card'>
             <article class='photo-container'>
-              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
               <h1 class='destination-name'>${destination.destination}</h1>
@@ -157,7 +159,7 @@ class Traveler {
       tripsString = tripsString.concat(`
           <article class='card'>
             <article class='photo-container'>
-              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
               <h1 class='destination-name'>${destination.destination}</h1>
@@ -181,7 +183,7 @@ class Traveler {
       tripsString = tripsString.concat(`
           <article class='card'>
             <article class='photo-container'>
-              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'> 
+              <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
               <h1 class='destination-name'>${destination.destination}</h1>
@@ -195,7 +197,7 @@ class Traveler {
     }, '');
 
     let result = [currentString, pendingString, futureString, pastString]
-    
+
     return result;
   }
 
@@ -204,7 +206,7 @@ class Traveler {
       style: 'currency',
       currency: 'USD',
     });
-    
+
     return money.format(this.getTotalSpent());
   }
 
