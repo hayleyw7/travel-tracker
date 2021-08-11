@@ -63,62 +63,81 @@ const dom = {
     }
   },
 
-// PAGES
+  // PAGES
 
-// login page
+  // login page
 
-showLoginPage() {
-  dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
-  dom.show([loginPage]);
-  namePhrase.innerText = `'Oh, the places you'll vibe!'`;
-  loginFormToReset.reset();
-},
+  showLoginPage() {
+    dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
+    dom.show([loginPage]);
+    namePhrase.innerText = `'Oh, the places you'll vibe!'`;
+    loginFormToReset.reset();
+  },
 
-// trip planner page
+  // trip planner page
 
-showWannaJetPage() {
-  namePhrase.innerText = `Yo, ${user.name}!`;
+  showWannaJetPage() {
+    namePhrase.innerText = `Yo, ${user.name}!`;
 
-  dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
-  dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
-  dom.populateDestinationsDropDown();
-  estimatedCostHeaderHTML.innerText = `ESTIMATED COST:`;
-  estimatedCostHTML.innerText = `Enter your information on the left to see!`;
-  plannerFormToReset.reset();
-},
+    dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
+    dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
+    dom.populateDestinationsDropDown();
+    estimatedCostHeaderHTML.innerText = `ESTIMATED COST:`;
+    estimatedCostHTML.innerText = `Enter your information on the left to see!`;
+    plannerFormToReset.reset();
+    dom.setCalendarMin();
+  },
 
-// dashboard page
+  setCalendarMin() {
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1;
+    let yyyy = today.getFullYear();
 
-showYourTripsDashboardPage() {
-  namePhrase.innerText = `Yo, ${user.name}!`;
-  yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
-  dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
-  dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
+    if (dd < 10) {
+      dd = '0' + dd;
+    } 
+    
+    if (mm < 10) {
+      mm = '0' + mm;
+    } 
+    
+    today = `${yyyy}-${mm}-${dd}`;
+    jetFormDate.setAttribute("min", today);
+  },
 
-  dom.populateTripSlides();
-},
+  // dashboard page
 
-populateTripSlides() {
-  let slides = user.getTripsHTML();
+  showYourTripsDashboardPage() {
+    namePhrase.innerText = `Yo, ${user.name}!`;
+    yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
+    dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
+    dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
 
-  currentSlides.innerHTML = slides[0];
-  pendingSlides.innerHTML = slides[1];
-  futureSlides.innerHTML = slides[2];
-  pastSlides.innerHTML = slides[3];
+    dom.populateTripSlides();
+  },
 
-  if (slides[0].length > 0) {
-    dom.show([currentVibes]);
-  }
-  if (slides[1].length > 0) {
-    dom.show([pendingVibes]);
-  }
-  if (slides[2].length > 0) {
-    dom.show([futureVibes]);
-  }
-  if (slides[3].length > 0) {
-    dom.show([pastVibes]);
-  }
-},
+  populateTripSlides() {
+    let slides = user.getTripsHTML();
+
+    currentSlides.innerHTML = slides[0];
+    pendingSlides.innerHTML = slides[1];
+    futureSlides.innerHTML = slides[2];
+    pastSlides.innerHTML = slides[3];
+
+    if (slides[0].length > 0) {
+      dom.show([currentVibes]);
+    }
+    if (slides[1].length > 0) {
+      dom.show([pendingVibes]);
+    }
+    if (slides[2].length > 0) {
+      dom.show([futureVibes]);
+    }
+    if (slides[3].length > 0) {
+      dom.show([pastVibes]);
+    }
+  },
 
   // HELPER FUNCTIONS
 
