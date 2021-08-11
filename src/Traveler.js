@@ -102,30 +102,6 @@ class Traveler {
 
     }, '');
 
-    // let approvedString = approved.reduce((tripsString, trip) => {
-
-    //   let destination = this.destinations.find(destination => destination.id === trip.destinationID);
-    //   let destinationName = destination.destination;
-    //   let cost = this.getTotal(trip, destination);
-
-    //   tripsString = tripsString.concat(`
-    //     <li class="glide__slide">
-    //       <article class='card'>
-    //         <article class='photo-container'>
-    //           <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
-    //         </article>
-    //         <article class='destination-info-container'>
-    //           <h1 class='destination-name'>${destination.destination}</h1>
-    //           <p class='date-time'>${trip.date}</p>
-    //         </article>
-    //       </article>
-    //     </li>
-    //   `);
-
-    //   return tripsString;
-
-    // }, '');
-
     let pendingString = pending.reduce((tripsString, trip) => {
 
       let destination = this.destinations.find(destination => destination.id === trip.destinationID);

@@ -26,25 +26,9 @@
     <div id='loginPage'>
       <h3>Sign in, fam.</h2>
 
-      <section class='card-container'>
+      <h3 class="hidden" id="currentVibes">Current Vibes</h3>
 
-        <article class='card'>
-          <article class='photo-container'></article>
-          <article class='destination-info-container' id='test2'>
-            <form>
-
-              <label for='loginFormUsername'>Username:</label><br>
-              <input type='text' id='loginFormUsername' name='username'><br><br>
-
-              <label for='loginFormPassword'>Password:</label><br>
-              <input type='text' id='loginFormPassword' name='password'><br><br>
-
-              <!-- <input type='submit' value='Submit' id='loginFormSubmitBtn'> -->
-              <button type='button' id='loginFormSubmitBtn'>Submit</button>
-
-            </form>
-          </article>
-        </article>
+      <div id="currentSlides" class="flexible">
 
         <article class='card'>
           <article class='photo-container'>
@@ -57,22 +41,33 @@
             <h4 class='destination-name' id='replaceYOLO'>You only live once!</h4>
             <p class='date-time' id='enterYourPassToPlan'>Enter your deets. Adventure awaits.</p>
           </article>
+        </article> 
 
+        <article class='card'>
+          <form>
+            <label for='loginFormUsername'>Username:</label><br>
+            <input type='text' id='loginFormUsername' name='username'><br><br>
+
+            <label for='loginFormPassword'>Password:</label><br>
+            <input type='text' id='loginFormPassword' name='password'><br><br>
+
+            <button type='button' id='loginFormSubmitBtn'>Submit</button>
+          </form>
         </article>
 
-      </section>
+      </div>
     </div>
 
     <!-- YOUR TRIPS DASHBOARD!!!!!! -->
 
     <div id='yourTripsDashboardPage' class='dashboard hidden'>
 
-        <article class='card'>
-          <article class='destination-info-container'>
-            <h4 class='destination-name'>We hope that you're vibin!</h4>
-            <p class='date-time' id='yearCost'></p>
-          </article>
+      <article class='card'>
+        <article class='destination-info-container'>
+          <h4 class='destination-name'>We hope that you're vibin!</h4>
+          <p class='date-time' id='yearCost'></p>
         </article>
+      </article>
 
       <h3 class="hidden" id="currentVibes">Current Vibes</h3>
 
@@ -96,16 +91,6 @@
 
     </div>
 
-    <!-- GLIDE NOTES -->
-
-    <!-- don't try to append list items - just add it to the html of this element aka `<li class="glide__slide">3</li>` -->
-
-    <!-- when you start styling, style glide container 1st to get space & then style whole glide container (like tracking, slides, etc) from within html -->
-
-    <!-- // might run into probems with buttons if i don't give enough space -->
-
-    <!-- taking out the place numbers may break it all, but probaby fixed by doing innerHTML -->
-
     <!-- TRIP PLANNER!!!!!! -->
 
     <div id='wannaJetPage' class='hidden'>
@@ -116,7 +101,7 @@
 
         <article class='card'>
           <article class='photo-container'>
-            <!-- <img src='destination-pic' alt='Destination photo' class='destination-photo'>  -->
+
           </article>
           <article class='destination-info-container'>
             <form>
@@ -132,8 +117,7 @@
 
               <label for='destination'>Destination:</label><br>
               <select name="destination" id="jetFormDestination">
-                <!-- <option value="Lima, Peru">Lima, Peru</option>
-                <option value="Stockholm, Sweden">Stockholm, Sweden</option> -->
+
               </select>
 
               <br><br>
@@ -146,7 +130,6 @@
 
         <article class='card'>
           <article class='photo-container'>
-            <!-- <img src='https://i.pinimg.com/564x/d3/a2/74/d3a2744015363586e04e0ed1b9b090e1.jpg' alt='Destination photo' class='destination-photo'>  -->
             <img src='https://images.pexels.com/photos/2217366/pexels-photo-2217366.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Photo of this destination' class='destination-photo'>
           </article>
           <article class='destination-info-container'>
