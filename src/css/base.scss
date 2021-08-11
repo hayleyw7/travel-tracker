@@ -75,15 +75,6 @@ h3 {
   text-align: center;
 }
 
-.card-container {
-  display: grid;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0.5rem;
-  color: var(--darkgray);
-  display: flex;
-}
-
 .card {
   background: var(--white);
   border: 1px var(--mediumgray) solid;
@@ -139,27 +130,5 @@ h3 {
 .flexible {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-
-/* MEDIA QUERY */
-
-// @media only screen and (min-width: 680px) {
-
-  // .card-container {
-  //   display: flex;
-  // }
-
-  // .navbar {
-  //   display: flex;
-  //   margin: 0;
-  // }
-
-  // .navbar-links-section {
-  //   display: flex;
-  //   margin: 5rem 0 0 1.3rem;
-  // }
-
-  // .navbar {
-  //   height: 11rem;
-  // }
-// }
