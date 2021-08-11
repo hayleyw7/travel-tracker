@@ -84,6 +84,7 @@ showWannaJetPage() {
   dom.populateDestinationsDropDown();
   estimatedCostHeaderHTML.innerText = `ESTIMATED COST:`;
   estimatedCostHTML.innerText = `Enter your information on the left to see!`;
+  plannerFormToReset.reset();
 },
 
 // dashboard page
@@ -180,6 +181,7 @@ populateTripSlides() {
   estimatedCostHeaderHTML: document.getElementById('estimatedCostHeaderHTML'),
   estimatedCostHTML: document.getElementById('estimatedCostHTML'),
   letsJetBtn: document.getElementById('letsJetBtn'),
+  plannerFormToReset: document.getElementById('plannerFormToReset')
 }
 
 export default dom;

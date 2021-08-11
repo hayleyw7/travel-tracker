@@ -51,7 +51,8 @@ const {
   pastVibes,
   pendingVibes,
   futureVibes,
-  loginFormToReset
+  loginFormToReset,
+  plannerFormToReset
 } = dom;
 
 let travelers, trips, destinations, data;
