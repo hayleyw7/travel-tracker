@@ -81,10 +81,10 @@ Enter the following URL in your internet browser:
 
 [explain site]
 
-## GIF
+## GIFs
 
-<!-- replace this with a gif -->
-![travel-tracker gif](url.gif) 
+![dashboard gif](./src/images/dashboard.gif) 
+![trip planner gif](src/images/trip-planner.gif)
 
 ## Future additions
 
