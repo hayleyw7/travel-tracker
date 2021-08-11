@@ -1,0 +1,51 @@
+h3 {
+  color: $white;
+  font-size: 2.5rem;
+  margin: 1.9rem 0 1rem 0;
+  padding: 0 0 0 1.3rem;
+  text-align: center;
+}
+
+.dashboard {
+  color: white;
+  text-align: center;
+}
+
+.card {
+  background: $white;
+  border: 1px $medium-gray solid;
+  margin: 0.3rem;
+  width: 20rem;
+  color: $dark-gray;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+
+/* card photo */
+
+.destination-info-container {
+  max-width: 20rem;
+  padding: 1rem;
+}
+
+.destination-photo {
+  margin: 0;
+  width: 20rem;
+}
+
+.photo-container {
+  position: relative;
+}
+
+/* card text */
+
+.destination-name {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.date-time {
+  color: $dark-gray;
+  font-size: 0.9rem;
+  margin: 0;
+}
