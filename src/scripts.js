@@ -190,7 +190,7 @@ function createTrip() {
 
 function login() {
   if (!loginFormPassword.value || !loginFormUsername.value) {
-    enterYourPassToPlan.innerText = `Please fill in both fields.`;
+    dom.noDice('empty');
   } else {
 
     const password = loginFormPassword.value;
