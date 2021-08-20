@@ -18,22 +18,22 @@ h2 {
   color: $dark-gray;
   border-radius: 0.2rem;
   text-align: center;
+}
 
-  & .destination-photo {
-    margin: 0;
-    width: 20rem;
-  }
+.destination-photo {
+  margin: 0;
+  width: 20rem;
+}
 
-  & .destination-info-container {
-    max-width: 20rem;
-    padding: 1rem;
-  }
+.destination-info-container {
+  max-width: 20rem;
+  padding: 1rem;
+}
 
-  & .date-time {
-    color: $dark-gray;
-    font-size: 0.9rem;
-    margin: 0;
-  }
+.date-time {
+  color: $dark-gray;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .destination-name {
