@@ -2,6 +2,8 @@
 
 This is an application to manage and track different trips for users and a travel agency.
 
+[It can be accessed here through GitHub Pages.](https://hayleyw7.github.io/travel-tracker/dist/index.html)
+
 ## Motivation and rubric
 
 This project was completed as a project at Turing School of Software & Design during Module 2.
