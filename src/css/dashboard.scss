@@ -29,15 +29,15 @@ h2 {
     padding: 1rem;
   }
 
-  & .destination-name {
-    margin: 0;
-    font-size: 1.2rem;
-    color: $dark-gray;
-  }
-
   & .date-time {
     color: $dark-gray;
     font-size: 0.9rem;
     margin: 0;
   }
+}
+
+.destination-name {
+  margin: 0;
+  font-size: 1.2rem;
+  color: $dark-gray;
 }

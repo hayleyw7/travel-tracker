@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hayleyw7/travel-tracker.git"
+    "url": "git+https://github.com/hayleyw7/travel-tracker.git",
+    "homepage": "https://github.com/hayleyw7/travel-tracker.git"
   },
   "author": "Turing School of Software and Design",
   "license": "MIT",
