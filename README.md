@@ -62,7 +62,7 @@ Enter the following command in the Terminal:
 ### Navigate to folder
 
 Enter the following command in the Terminal:
-`cd travel-tracket`
+`cd travel-tracker`
 
 ### Install dependencies
 
