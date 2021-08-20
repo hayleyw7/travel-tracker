@@ -319,7 +319,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background: #222222;\n  color: #222222;\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n.navbar {\n  background: #FFC0CB;\n  color: #222222;\n  display: flex;\n  flex-direction: column;\n  height: 15.5rem;\n  text-align: center;\n  margin: 0 0 2rem 0;\n}\n\nh1 {\n  font-size: 6rem;\n  margin: 1.5rem 0 0 0;\n  font-family: \"Brush Script MT\", cursive;\n}\n\n.name-phrase {\n  font-size: 1.1rem;\n}\n\n.navbar-buttons {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\ninput,\n.dropdown {\n  border: 1px solid #828282;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n  font-family: Arial;\n}\n\ninput {\n  font-size: 1.1rem;\n  width: 15rem;\n}\n\n.dropdown {\n  font-size: 0.8rem;\n  width: 16.1rem;\n  height: 2rem;\n}\n\n.login-form {\n  padding-top: 3.7rem;\n}\n\n.submit-btn {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFC0CB;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\n.lets-jet-btn {\n  margin-bottom: 0.4rem;\n}\n\n.submit-btn:hover,\n.lets-jet-btn:hover,\n.navbar-buttons:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\n.hidden {\n  display: none;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\nh3 {\n  color: #FFF;\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  text-align: center;\n}\n\n.dashboard {\n  color: white;\n  text-align: center;\n}\n\n.card {\n  background: #FFF;\n  border: 1px #828282 solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: #222222;\n  border-radius: 0.2rem;\n  text-align: center;\n}\n\n/* card photo */\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n/* card text */\n.destination-name {\n  margin: 0;\n  font-size: 1.2rem;\n}\n\n.date-time {\n  color: #222222;\n  font-size: 0.9rem;\n  margin: 0;\n}", "",{"version":3,"sources":["webpack://./src/css/base.scss","webpack://./src/css/variables.scss","webpack://./src/css/index.scss","webpack://./src/css/navbar.scss","webpack://./src/css/forms.scss","webpack://./src/css/helpers.scss","webpack://./src/css/dashboard.scss"],"names":[],"mappings":"AAAA;EACE,mBCGU;EDFV,cCEU;EDDV,kBCMK;EDLL,SAAA;EACA,UAAA;AECF;;ACNA;EACE,mBFIK;EEHL,cFEU;EEDV,aAAA;EACA,sBAAA;EACA,eAAA;EACA,kBAAA;EACA,kBAAA;ADSF;;ACNA;EACE,eAAA;EACA,oBAAA;EACA,uCAAA;ADSF;;ACNA;EACE,iBAAA;ADSF;;ACNA;EACE,SAAA;EACA,iBAAA;EACA,gBFrBM;EEsBN,mBAAA;EACA,yBAAA;EACA,oCAAA;ADSF;;AEnCA;;EAEI,yBAAA;EACA,gBHDI;EGEJ,mBAAA;EACA,yBAAA;EACA,oCAAA;EACA,kBHEG;ACoCP;;AEnCA;EACE,iBAAA;EACA,YAAA;AFsCF;;AEnCA;EACE,iBAAA;EACA,cAAA;EACA,YAAA;AFsCF;;AEnCA;EACE,mBAAA;AFsCF;;AEnCA;EACE,SAAA;EACA,iBAAA;EACA,mBHvBK;EGwBL,mBAAA;EACA,yBAAA;EACA,oCAAA;AFsCF;;AEnCA;EACE,qBAAA;AFsCF;;AEnCA;;;EAGE,uCAAA;AFsCF;;AG/EA;EACE,aAAA;AHkFF;;AG/EA;EACE,aAAA;EACA,eAAA;EACA,uBAAA;AHkFF;;AIzFA;EACE,WLCM;EKAN,iBAAA;EACA,uBAAA;EACA,kBAAA;AJ4FF;;AIzFA;EACE,YAAA;EACA,kBAAA;AJ4FF;;AIzFA;EACE,gBLXM;EKYN,yBAAA;EACA,cAAA;EACA,YAAA;EACA,cLbU;EKcV,qBAAA;EACA,kBAAA;AJ4FF;;AIzFA,eAAA;AAEA;EACE,gBAAA;EACA,aAAA;AJ2FF;;AIxFA;EACE,SAAA;EACA,YAAA;AJ2FF;;AIxFA;EACE,kBAAA;AJ2FF;;AIxFA,cAAA;AAEA;EACE,SAAA;EACA,iBAAA;AJ0FF;;AIvFA;EACE,cL1CU;EK2CV,iBAAA;EACA,SAAA;AJ0FF","sourcesContent":["body {\r\n  background: $dark-gray;\r\n  color: $dark-gray;\r\n  font-family: $font;\r\n  margin: 0;\r\n  padding: 0;\r\n}","// COLORS\n\n$white: #FFF;\n$medium-gray: #828282;\n$dark-gray: #222222;\n$pink: #FFC0CB;\n\n// FONT\n\n$font: Arial;\n","body {\n  background: #222222;\n  color: #222222;\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n.navbar {\n  background: #FFC0CB;\n  color: #222222;\n  display: flex;\n  flex-direction: column;\n  height: 15.5rem;\n  text-align: center;\n  margin: 0 0 2rem 0;\n}\n\nh1 {\n  font-size: 6rem;\n  margin: 1.5rem 0 0 0;\n  font-family: \"Brush Script MT\", cursive;\n}\n\n.name-phrase {\n  font-size: 1.1rem;\n}\n\n.navbar-buttons {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\ninput,\n.dropdown {\n  border: 1px solid #828282;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n  font-family: Arial;\n}\n\ninput {\n  font-size: 1.1rem;\n  width: 15rem;\n}\n\n.dropdown {\n  font-size: 0.8rem;\n  width: 16.1rem;\n  height: 2rem;\n}\n\n.login-form {\n  padding-top: 3.7rem;\n}\n\n.submit-btn {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFC0CB;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\n.lets-jet-btn {\n  margin-bottom: 0.4rem;\n}\n\n.submit-btn:hover,\n.lets-jet-btn:hover,\n.navbar-buttons:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\n.hidden {\n  display: none;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\nh3 {\n  color: #FFF;\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  text-align: center;\n}\n\n.dashboard {\n  color: white;\n  text-align: center;\n}\n\n.card {\n  background: #FFF;\n  border: 1px #828282 solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: #222222;\n  border-radius: 0.2rem;\n  text-align: center;\n}\n\n/* card photo */\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n/* card text */\n.destination-name {\n  margin: 0;\n  font-size: 1.2rem;\n}\n\n.date-time {\n  color: #222222;\n  font-size: 0.9rem;\n  margin: 0;\n}",".navbar {\n  background: $pink;\n  color: $dark-gray;\n  display: flex;\n  flex-direction: column;\n  height: 15.5rem;\n  text-align: center;\n  margin: 0 0 2rem 0;\n}\n\nh1 {\n  font-size: 6rem;\n  margin: 1.5rem 0 0 0;\n  font-family: 'Brush Script MT', cursive;\n}\n\n.name-phrase {\n  font-size: 1.1rem;\n}\n\n.navbar-buttons {\n  border: 0;\n  font-size: 1.1rem;\n  background: $white;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}","input,\n.dropdown {\n    border: 1px solid $medium-gray;\n    background: $white;\n    border-radius: 1rem;\n    margin: 0 0.4rem 0 0.4rem;\n    padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n    font-family: $font; \n}\n\ninput {\n  font-size: 1.1rem;\n  width: 15rem;\n}\n\n.dropdown {\n  font-size: 0.8rem;\n  width: 16.1rem;\n  height: 2rem;\n}\n\n.login-form {\n  padding-top: 3.7rem;\n}\n\n.submit-btn {\n  border: 0;\n  font-size: 1.1rem;\n  background: $pink;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n\n.lets-jet-btn {\n  margin-bottom: 0.4rem;\n}\n\n.submit-btn:hover,\n.lets-jet-btn:hover,\n.navbar-buttons:hover {\n  transform: scale(1.25) perspective(1px);\n}",".hidden {\n  display: none;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}","h3 {\n  color: $white;\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  text-align: center;\n}\n\n.dashboard {\n  color: white;\n  text-align: center;\n}\n\n.card {\n  background: $white;\n  border: 1px $medium-gray solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: $dark-gray;\n  border-radius: 0.2rem;\n  text-align: center;\n}\n\n/* card photo */\n\n.destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n\n.destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n\n.photo-container {\n  position: relative;\n}\n\n/* card text */\n\n.destination-name {\n  margin: 0;\n  font-size: 1.2rem;\n}\n\n.date-time {\n  color: $dark-gray;\n  font-size: 0.9rem;\n  margin: 0;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background: #222222;\n  color: #222222;\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n.navbar {\n  background: #FFC0CB;\n  color: #222222;\n  display: flex;\n  flex-direction: column;\n  height: 15.5rem;\n  text-align: center;\n  margin: 0 0 2rem 0;\n}\n\nh1 {\n  font-size: 6rem;\n  margin: 1.5rem 0 0 0;\n  font-family: \"Brush Script MT\", cursive;\n}\n\n.name-phrase {\n  font-size: 1.1rem;\n}\n\n.navbar-buttons {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n.navbar-buttons:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\ninput {\n  border: 1px solid #828282;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n  font-family: Arial;\n  font-size: 1.1rem;\n  width: 15rem;\n}\n\n.dropdown {\n  border: 1px solid #828282;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n  font-family: Arial;\n  font-size: 0.8rem;\n  width: 16.1rem;\n  height: 2rem;\n}\n\n.login-form {\n  padding-top: 3.7rem;\n}\n\n.submit-btn {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFC0CB;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n.submit-btn:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\n.lets-jet-btn {\n  margin-bottom: 0.4rem;\n}\n.lets-jet-btn:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\n.hidden {\n  display: none;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\nh2 {\n  color: #FFF;\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  text-align: center;\n}\n\n.dashboard {\n  color: white;\n  text-align: center;\n}\n\n.card {\n  background: #FFF;\n  border: 1px #828282 solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: #222222;\n  border-radius: 0.2rem;\n  text-align: center;\n}\n.card .destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n.card .destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n.card .date-time {\n  color: #222222;\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-name {\n  margin: 0;\n  font-size: 1.2rem;\n  color: #222222;\n}", "",{"version":3,"sources":["webpack://./src/css/base.scss","webpack://./src/css/variables.scss","webpack://./src/css/index.scss","webpack://./src/css/navbar.scss","webpack://./src/css/forms.scss","webpack://./src/css/helpers.scss","webpack://./src/css/dashboard.scss"],"names":[],"mappings":"AAAA;EACE,mBCGU;EDFV,cCEU;EDDV,kBCMK;EDLL,SAAA;EACA,UAAA;AECF;;ACNA;EACE,mBFIK;EEHL,cFEU;EEDV,aAAA;EACA,sBAAA;EACA,eAAA;EACA,kBAAA;EACA,kBAAA;ADSF;;ACNA;EACE,eAAA;EACA,oBAAA;EACA,uCAAA;ADSF;;ACNA;EACE,iBAAA;ADSF;;ACNA;EACE,SAAA;EACA,iBAAA;EACA,gBFrBM;EEsBN,mBAAA;EACA,yBAAA;EACA,oCAAA;ADSF;ACPE;EFLA,uCAAA;ACeF;;AEtCA;EHcE,yBAAA;EACA,gBAbM;EAcN,mBAAA;EACA,yBAAA;EACA,oCAAA;EACA,kBAVK;EGPL,iBAAA;EACA,YAAA;AF8CF;;AE3CA;EHQE,yBAAA;EACA,gBAbM;EAcN,mBAAA;EACA,yBAAA;EACA,oCAAA;EACA,kBAVK;EGDL,iBAAA;EACA,cAAA;EACA,YAAA;AFmDF;;AEhDA;EACE,mBAAA;AFmDF;;AEhDA;EACE,SAAA;EACA,iBAAA;EACA,mBHfK;EGgBL,mBAAA;EACA,yBAAA;EACA,oCAAA;AFmDF;AEjDE;EHFA,uCAAA;ACsDF;;AE/CA;EACE,qBAAA;AFkDF;AEhDE;EHVA,uCAAA;AC6DF;;AGpFA;EACE,aAAA;AHuFF;;AGpFA;EACE,aAAA;EACA,eAAA;EACA,uBAAA;AHuFF;;AI9FA;EACE,WLCM;EKAN,iBAAA;EACA,uBAAA;EACA,kBAAA;AJiGF;;AI9FA;EACE,YAAA;EACA,kBAAA;AJiGF;;AI9FA;EACE,gBLXM;EKYN,yBAAA;EACA,cAAA;EACA,YAAA;EACA,cLbU;EKcV,qBAAA;EACA,kBAAA;AJiGF;AI/FE;EACE,SAAA;EACA,YAAA;AJiGJ;AI9FE;EACE,gBAAA;EACA,aAAA;AJgGJ;AI7FE;EACE,cL5BQ;EK6BR,iBAAA;EACA,SAAA;AJ+FJ;;AI3FA;EACE,SAAA;EACA,iBAAA;EACA,cLrCU;ACmIZ","sourcesContent":["body {\r\n  background: $dark-gray;\r\n  color: $dark-gray;\r\n  font-family: $font;\r\n  margin: 0;\r\n  padding: 0;\r\n}","// COLORS\n\n$white: #FFF;\n$medium-gray: #828282;\n$dark-gray: #222222;\n$pink: #FFC0CB;\n\n// FONT\n\n$font: Arial;\n\n// MIX INS\n\n@mixin input-fields() {\n  border: 1px solid $medium-gray;\n  background: $white;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n  font-family: $font; \n}\n\n@mixin button-hover() {\n  transform: scale(1.25) perspective(1px);\n}","body {\n  background: #222222;\n  color: #222222;\n  font-family: Arial;\n  margin: 0;\n  padding: 0;\n}\n\n.navbar {\n  background: #FFC0CB;\n  color: #222222;\n  display: flex;\n  flex-direction: column;\n  height: 15.5rem;\n  text-align: center;\n  margin: 0 0 2rem 0;\n}\n\nh1 {\n  font-size: 6rem;\n  margin: 1.5rem 0 0 0;\n  font-family: \"Brush Script MT\", cursive;\n}\n\n.name-phrase {\n  font-size: 1.1rem;\n}\n\n.navbar-buttons {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n.navbar-buttons:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\ninput {\n  border: 1px solid #828282;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n  font-family: Arial;\n  font-size: 1.1rem;\n  width: 15rem;\n}\n\n.dropdown {\n  border: 1px solid #828282;\n  background: #FFF;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n  font-family: Arial;\n  font-size: 0.8rem;\n  width: 16.1rem;\n  height: 2rem;\n}\n\n.login-form {\n  padding-top: 3.7rem;\n}\n\n.submit-btn {\n  border: 0;\n  font-size: 1.1rem;\n  background: #FFC0CB;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n}\n.submit-btn:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\n.lets-jet-btn {\n  margin-bottom: 0.4rem;\n}\n.lets-jet-btn:hover {\n  transform: scale(1.25) perspective(1px);\n}\n\n.hidden {\n  display: none;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\nh2 {\n  color: #FFF;\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  text-align: center;\n}\n\n.dashboard {\n  color: white;\n  text-align: center;\n}\n\n.card {\n  background: #FFF;\n  border: 1px #828282 solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: #222222;\n  border-radius: 0.2rem;\n  text-align: center;\n}\n.card .destination-photo {\n  margin: 0;\n  width: 20rem;\n}\n.card .destination-info-container {\n  max-width: 20rem;\n  padding: 1rem;\n}\n.card .date-time {\n  color: #222222;\n  font-size: 0.9rem;\n  margin: 0;\n}\n\n.destination-name {\n  margin: 0;\n  font-size: 1.2rem;\n  color: #222222;\n}",".navbar {\n  background: $pink;\n  color: $dark-gray;\n  display: flex;\n  flex-direction: column;\n  height: 15.5rem;\n  text-align: center;\n  margin: 0 0 2rem 0;\n}\n\nh1 {\n  font-size: 6rem;\n  margin: 1.5rem 0 0 0;\n  font-family: 'Brush Script MT', cursive;\n}\n\n.name-phrase {\n  font-size: 1.1rem;\n}\n\n.navbar-buttons {\n  border: 0;\n  font-size: 1.1rem;\n  background: $white;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n\n  &:hover {\n    @include button-hover();    \n  }\n}","input {\n  @include input-fields();\n  font-size: 1.1rem;\n  width: 15rem;\n}\n\n.dropdown {\n  @include input-fields();\n  font-size: 0.8rem;\n  width: 16.1rem;\n  height: 2rem;\n}\n\n.login-form {\n  padding-top: 3.7rem;\n}\n\n.submit-btn {\n  border: 0;\n  font-size: 1.1rem;\n  background: $pink;\n  border-radius: 1rem;\n  margin: 0 0.4rem 0 0.4rem;\n  padding: 0.2rem 0.6rem 0.2rem 0.6rem;\n\n  &:hover {\n    @include button-hover();\n  }\n}\n\n.lets-jet-btn {\n  margin-bottom: 0.4rem;\n\n  &:hover {\n    @include button-hover();    \n  }\n}",".hidden {\n  display: none;\n}\n\n.flexible {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}","h2 {\n  color: $white;\n  font-size: 2.5rem;\n  margin: 1.9rem 0 1rem 0;\n  text-align: center;\n}\n\n.dashboard {\n  color: white;\n  text-align: center;\n}\n\n.card {\n  background: $white;\n  border: 1px $medium-gray solid;\n  margin: 0.3rem;\n  width: 20rem;\n  color: $dark-gray;\n  border-radius: 0.2rem;\n  text-align: center;\n\n  & .destination-photo {\n    margin: 0;\n    width: 20rem;\n  }\n\n  & .destination-info-container {\n    max-width: 20rem;\n    padding: 1rem;\n  }\n\n  & .date-time {\n    color: $dark-gray;\n    font-size: 0.9rem;\n    margin: 0;\n  }\n}\n\n.destination-name {\n  margin: 0;\n  font-size: 1.2rem;\n  color: $dark-gray;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -578,72 +578,109 @@ const dom = {
     }
   },
 
-// PAGES
+  // PAGES
 
-// login page
+  // login page
 
-showLoginPage() {
-  dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
-  dom.show([loginPage]);
-  namePhrase.innerText = `'Oh, the places you'll vibe!'`;
-},
+  showLoginPage() {
+    if (currentVibes) {
+      dom.hide([currentVibes])
+    }
+    if (pastVibes) {
+      dom.hide([pastVibes])
+    }
+    if (pendingVibes) {
+      dom.hide([pendingVibes])
+    }
+    if (futureVibes) {
+      dom.hide([futureVibes])
+    }
+    dom.hide([yourTripsDashboardPage, wannaJetPage, navBarSignOutBtn, navBarTripPlannerBtn, navBarSignOutBtn]);
+    dom.show([loginPage]);
+    namePhrase.innerText = `'Oh, the places you'll vibe!'`;
+    loginFormToReset.reset();
+  },
 
-// trip planner page
+  // trip planner page
 
-showWannaJetPage() {
-  namePhrase.innerText = `Yo, ${user.name}!`;
+  showWannaJetPage() {
+    namePhrase.innerText = `Yo, ${user.name}!`;
 
-  dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
-  dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
-  dom.populateDestinationsDropDown();
-  estimatedCostHeaderHTML.innerText = `ESTIMATED COST:`;
-  estimatedCostHTML.innerText = `Enter your information on the left to see!`;
-},
+    dom.hide([loginPage, yourTripsDashboardPage, navBarTripPlannerBtn]);
+    dom.show([wannaJetPage, navBarYourTripsBtn, navBarSignOutBtn]);
+    dom.populateDestinationsDropDown();
+    estimatedCostHeaderHTML.innerText = `ESTIMATED COST:`;
+    estimatedCostHTML.innerText = `Enter your information on the left to see!`;
+    plannerFormToReset.reset();
+    dom.setCalendarMin();
+  },
 
-// dashboard page
+  setCalendarMin() {
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1;
+    let yyyy = today.getFullYear();
 
-showYourTripsDashboardPage() {
-  namePhrase.innerText = `Yo, ${user.name}!`;
-  yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
-  dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn]);
-  dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
+    if (dd < 10) {
+      dd = '0' + dd;
+    } 
+    
+    if (mm < 10) {
+      mm = '0' + mm;
+    } 
+    
+    today = `${yyyy}-${mm}-${dd}`;
+    jetFormDate.setAttribute("min", today);
+  },
 
-  dom.populateTripSlides();
-},
+  // dashboard page
 
-populateTripSlides() {
-  let slides = user.getTripsHTML();
+  showYourTripsDashboardPage() {
+    namePhrase.innerText = `Yo, ${user.name}!`;
+    yearCost.innerHTML = `You've spent ${user.totalCostString()} on trips this year.`;
+    dom.hide([loginPage, wannaJetPage, navBarYourTripsBtn, letsJetBtn]);
+    dom.show([yourTripsDashboardPage, navBarTripPlannerBtn, navBarSignOutBtn]);
 
-  currentSlides.innerHTML = slides[0];
-  pendingSlides.innerHTML = slides[1];
-  futureSlides.innerHTML = slides[2];
-  pastSlides.innerHTML = slides[3];
+    dom.populateTripSlides();
+  },
 
-  if (slides[0].length > 0) {
-    dom.show([currentVibes]);
-  }
-  if (slides[1].length > 0) {
-    dom.show([pendingVibes]);
-  }
-  if (slides[2].length > 0) {
-    dom.show([futureVibes]);
-  }
-  if (slides[3].length > 0) {
-    dom.show([pastVibes]);
-  }
-},
+  populateTripSlides() {
+    let slides = user.getTripsHTML();
+
+    currentSlides.innerHTML = slides[0];
+    pendingSlides.innerHTML = slides[1];
+    futureSlides.innerHTML = slides[2];
+    pastSlides.innerHTML = slides[3];
+
+    if (slides[0].length > 0) {
+      dom.show([currentVibes]);
+    }
+    if (slides[1].length > 0) {
+      dom.show([pendingVibes]);
+    }
+    if (slides[2].length > 0) {
+      dom.show([futureVibes]);
+    }
+    if (slides[3].length > 0) {
+      dom.show([pastVibes]);
+    }
+  },
 
   // HELPER FUNCTIONS
 
   hide(elements) {
     elements.forEach(element => {
-      element.classList.add('hidden');
+      if (element.classList) {
+        element.classList.add('hidden');
+      }
     });
   },
 
   show(elements) {
     elements.forEach(element => {
-      element.classList.remove('hidden');
+      if (element.classList) {
+        element.classList.remove('hidden');
+      }
     });
   },
 
@@ -666,6 +703,7 @@ populateTripSlides() {
   loginFormSubmitBtn: document.getElementById('loginFormSubmitBtn'),
   enterYourPassToPlan: document.getElementById('enterYourPassToPlan'),
   replaceYOLO: document.getElementById('replaceYOLO'),
+  loginFormToReset: document.getElementById('loginFormToReset'),
 
   // dashboard
 
@@ -693,6 +731,7 @@ populateTripSlides() {
   estimatedCostHeaderHTML: document.getElementById('estimatedCostHeaderHTML'),
   estimatedCostHTML: document.getElementById('estimatedCostHTML'),
   letsJetBtn: document.getElementById('letsJetBtn'),
+  plannerFormToReset: document.getElementById('plannerFormToReset')
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dom);
@@ -801,7 +840,7 @@ class Traveler {
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
-              <h1 class='destination-name'>${destination.destination}</h1>
+              <h3 class='destination-name'>${destination.destination}</h3>
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
@@ -823,7 +862,7 @@ class Traveler {
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
-              <h1 class='destination-name'>${destination.destination}</h1>
+              <h3 class='destination-name'>${destination.destination}</h3>
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
@@ -847,7 +886,7 @@ class Traveler {
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
-              <h1 class='destination-name'>${destination.destination}</h1>
+              <h3 class='destination-name'>${destination.destination}</h3>
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
@@ -871,7 +910,7 @@ class Traveler {
               <img src='${destination.image}' alt='${destination.destination} photo' class='destination-photo'>
             </article>
             <article class='destination-info-container'>
-              <h1 class='destination-name'>${destination.destination}</h1>
+              <h3 class='destination-name'>${destination.destination}</h3>
               <p class='date-time'>${trip.date}</p>
             </article>
           </article>
@@ -12319,7 +12358,9 @@ const {
   currentVibes,
   pastVibes,
   pendingVibes,
-  futureVibes
+  futureVibes,
+  loginFormToReset,
+  plannerFormToReset
 } = _domUpdates__WEBPACK_IMPORTED_MODULE_2__.default;
 
 let travelers, trips, destinations, data;
@@ -12360,6 +12401,7 @@ function login() {
     if (password === 'travel') {
       const username = loginFormUsername.value;
       const id = (0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.getID)(username);
+      const usernameSplit = username.split('');
 
       if (id) {
 
@@ -12373,7 +12415,7 @@ function login() {
               return trips.some(trip => trip.destinationID === destination.id);
             });
 
-            if (id > 0 && id <= travelers.length) {
+            if (id > 0 && id <= travelers.length && !isNaN(usernameSplit[usernameSplit.length - 1])) {
 
               window.allDestinations = promises[2].destinations;
               window.allTrips = promises[1].trips;
@@ -12400,8 +12442,6 @@ function login() {
 function createTrip() {
   if (jetFormDate.value && jetFormDuration.value && jetFormHumans.value && jetFormDestination.value) {
 
-    console.log(allDestinations);
-
     const destination = allDestinations.find(destinationObj => {
       if (parseInt(jetFormDestination.value) === destinationObj.id) {
         return true;
@@ -12422,12 +12462,8 @@ function createTrip() {
       'suggestedActivities': []
     };
 
-    console.log(trip)
-
-    ;(0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.postBooking)(trip).then(result => {
+    (0,_apiCalls__WEBPACK_IMPORTED_MODULE_1__.postBooking)(trip).then(result => {
       if (result.ok) {
-
-        console.log(result);
 
         user.addTrip(trip);
         user.addDestination(destination);
