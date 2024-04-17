@@ -81,8 +81,6 @@ Enter the following URL in your internet browser:
 
 A user logs into the site with the username `traveler` + their ID.
 
-To just try the site to see how it works, use `traveler1`, and then `travel` for the password.
-
 You will be presented a dashboard of current, past, pending, and future trips. You will also see your yearly payments so far.
 
 If you click "Trip Planner", you will be able to schedule a trip.
